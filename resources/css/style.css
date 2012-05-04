@@ -1,0 +1,14 @@
+body {
+    margin: 40px 120px;
+}
+
+.app-info {
+    font-size: 75%;
+}
+
+.app-info td {
+    padding-right: 1em;
+}
+
+.editor {width:10em;
+height:3em;};

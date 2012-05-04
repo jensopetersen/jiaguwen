@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<repo:meta xmlns="http://exist-db.org/xquery/repo" xmlns:repo="http://exist-db.org/xquery/repo">
+    <repo:description>TLS</repo:description>
+    <repo:author/>
+    <repo:website/>
+    <repo:status>alpha</repo:status>
+    <repo:license>GNU-LGPL</repo:license>
+    <repo:copyright>true</repo:copyright>
+    <repo:type>application</repo:type>
+    <repo:target>/db/tls</repo:target>
+    <repo:prepare>pre-install.xql</repo:prepare>
+    <repo:finish/>
+    <deployed>2012-04-29T17:28:24.538+02:00</deployed>
+</repo:meta>
