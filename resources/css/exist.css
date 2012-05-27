@@ -129,7 +129,9 @@ blockquote p { padding: 0 0 10px; }
 .code { font: 13px/20px bold "Courier New", Courier, monospace; }
 
 /* ---------------------------------------- Local styles ----------------------------------- */
-form { margin: 20px 0; }
+form { 
+    margin: 20px 0; 
+    }
 .item { 
     background: #FFFFFF;
     margin: 8px 0;
@@ -139,6 +141,7 @@ form { margin: 20px 0; }
     moz-border-radius: 15px;
 }
 .itemhead { background: #E0E0E0; padding-left: 8px; }
+
 .hi { background: #FFED3D; }
 
 .editor {
@@ -154,6 +157,16 @@ form { margin: 20px 0; }
     clear: both;
     height: 100%;
     width: 100%;
+    margin-top: 2em;
 }
 
 .CHANT {font-family: "CHANT" !important;}
+
+#container {
+    1width:700px;
+    margin-left:5em;
+}
+
+#r-bot {
+    display: none;
+    }

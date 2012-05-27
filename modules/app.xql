@@ -1,8 +1,8 @@
 module namespace app="http://exist-db.org/xquery/app";
 declare namespace tei="http://www.tei-c.org/ns/1.0";
 
-declare variable $app:type-options := ('translation', 'transcription');
-declare variable $app:subtype-options := ('yuanwen', 'shiwen', 'Takashima', 'Serruys');
+declare variable $app:type-options := ('transcription', 'translation');
+declare variable $app:subtype-options := ('yuanwen', 'shiwen', 'Serruys', 'Takashima');
 
 import module namespace templates="http://exist-db.org/xquery/templates" at "templates.xql";
 
@@ -29,39 +29,43 @@ declare function app:title($node as node(), $params as element(parameters)?, $mo
 declare function app:textarea($node as node(), $params as element(parameters)?, $model as item()*) 
 {
 (:Why does this not catch the included text elements? They are in the model.:)
-for $text-element in $model//tei:text/tei:group/tei:text
+let $model := $model//tei:text/tei:group/tei:text
+for $text-element in $model
+    let $count-translation := count($model[@type eq 'translation'])
+    let $count-transcription := count($model[@type eq 'transcription'])
+    let $width-transcription := 15 
+    let $width-translation := (100 - ($count-transcription * $count-translation)) div $count-translation 
     let $log := util:log("DEBUG", ("##$model-2): ", $model))
     let $log := util:log("DEBUG", ("##$text-element-1): ", $text-element))
-    let $type := $text-element/@type
-    (:Why do this cause an error?:)
-    (:let $log := util:log("DEBUG", ("##$type): ", $type)):)
-    let $subtype := $text-element/@subtype
-    (:let $log := util:log("DEBUG", ("##$subtype): ", $subtype)):)
+    let $type := $text-element/@type/string()
+    let $subtype := $text-element/@subtype/string()
     return    
         (:<div xmlns="http://www.w3.org/1999/xhtml" class="editor {if($subtype eq 'yuanwen') then 'CHANT' else ()}">:)
-        <div class="editor">
-            <select>
-            {
-                for $option in $app:type-options
-                return
-                    if ($option eq $type)
-                    then <option selected="selected">{$option}</option>
-                    else <option>{$option}</option>
-                }
-                </select>
-                <select>
+        <div class="editor" width="{if ($type eq 'translation') then concat($width-translation, '%') else concat($width-transcription, '%')}">
+            <div class="selects">
+                <select class="type">
                 {
-                for $option in $app:subtype-options
-                return
-                    if ($option eq $subtype)
-                    then <option selected="selected">{$option}</option>
-                    else <option>{$option}</option>
-                }
-            </select>
+                    for $option in $app:type-options
+                    return
+                        if ($option eq $type)
+                        then <option selected="selected">{$option}</option>
+                        else <option>{$option}</option>
+                    }
+                    </select>
+                    <select class="subtype">
+                    {
+                    for $option in $app:subtype-options
+                    return
+                        if ($option eq $subtype)
+                        then <option selected="selected">{$option}</option>
+                        else <option>{$option}</option>
+                    }
+                </select>
+            </div>
         {
         element{node-name($node)}
         {$node/@*, 
-        (:NB: How do I get the html to render here?:)
+        (:NB: How do I get this html to render here?:)
         (:string-join(
             for $seg in $text-element//tei:seg
                 let $string := $seg/text()
@@ -76,5 +80,4 @@ for $text-element in $model//tei:text/tei:group/tei:text
                 return
             $seq/text(), '&#xA;')
         }}</div>
-
 };
