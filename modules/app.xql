@@ -28,21 +28,27 @@ declare function app:title($node as node(), $params as element(parameters)?, $mo
 
 declare function app:textarea($node as node(), $params as element(parameters)?, $model as item()*) 
 {
-(:Why does this not catch the included text elements? They are in the model.:)
+let $log := util:log("DEBUG", ("##$model-1): ", $model))
+(:Why does this not catch the included text elements? They are in the model!:)
+let $model := util:expand($model)
 let $model := $model//tei:text/tei:group/tei:text
+(:let $model := $model//*:text:)
+(:let $model := $model//*:text/*:group/*:text:)
+let $log := util:log("DEBUG", ("##$model-2): ", $model))
 for $text-element in $model
+    let $log := util:log("DEBUG", ("##$text-element): ", $text-element))
     let $count-translation := count($model[@type eq 'translation'])
     let $count-transcription := count($model[@type eq 'transcription'])
+    let $editorWidth := 12 idiv ($count-transcription + $count-translation)
     let $width-transcription := 15 
     let $width-translation := (100 - ($count-transcription * $count-translation)) div $count-translation 
-    let $log := util:log("DEBUG", ("##$model-2): ", $model))
-    let $log := util:log("DEBUG", ("##$text-element-1): ", $text-element))
     let $type := $text-element/@type/string()
     let $subtype := $text-element/@subtype/string()
     return    
         (:<div xmlns="http://www.w3.org/1999/xhtml" class="editor {if($subtype eq 'yuanwen') then 'CHANT' else ()}">:)
-        <div class="editor" width="{if ($type eq 'translation') then concat($width-translation, '%') else concat($width-transcription, '%')}">
-            <div class="selects">
+        (:<div class="editor" style="width:{if ($type eq 'translation') then concat($width-translation, '%') else concat($width-transcription, '%')}">:)
+        <div class="editor span{$editorWidth}">
+        <div class="selects">
                 <select class="type">
                 {
                     for $option in $app:type-options
@@ -73,7 +79,8 @@ for $text-element in $model
                 let $string := replace($string, '(\p{IsCJKUnifiedIdeographs})', '<span xmlns="http://www.w3.org/1999/xhtml" class="CJK">$1</span>')
                 let $string := replace($string, '(\p{IsCJKUnifiedIdeographsExtensionA})', '<span xmlns="http://www.w3.org/1999/xhtml" class="CJK-A">$1</span>')
                 let $string := replace($string, '(\p{IsCJKUnifiedIdeographsExtensionB})', '<span xmlns="http://www.w3.org/1999/xhtml" class="CJK-B">$1</span>')
-                    return $string
+                let $log := util:log("DEBUG", ("##$string): ", $string))
+                    return util:parse(concat('<span>',$string,'</span>'))/span
         , '&#xA;'):)
         string-join(
             for $seq in $text-element//tei:seg

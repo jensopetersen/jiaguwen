@@ -145,7 +145,9 @@ form {
 .hi { background: #FFED3D; }
 
 .editor {
-    1float: left;
+    float: left;
+    height: 300px;
+    width: 90%;
 }
 .editor select {
     float: left;
@@ -161,7 +163,7 @@ form {
 .CHANT {font-family: "CHANT" !important;}
 
 #container {
-    width:700px;
+    1width:700px;
     margin-left:5em;
 }
 
