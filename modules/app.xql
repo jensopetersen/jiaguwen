@@ -30,7 +30,7 @@ declare function app:textarea($node as node(), $params as element(parameters)?, 
 {
 let $model := util:expand($model)
 let $log := util:log("DEBUG", ("##$model-1): ", $model))
-let $line-number := '2'
+let $line-number := '3'
 let $model := $model/tei:text[1]/tei:group[1]/tei:text[@n eq $line-number]/tei:group[1]/tei:text
 let $log := util:log("DEBUG", ("##$model-2): ", $model))
 for $text-element in $model

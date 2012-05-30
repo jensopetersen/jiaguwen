@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg" xml:id="uuid-BD568406-4F41-4487-A085-7344C8410E59">
     <teiHeader>
@@ -16,9 +15,9 @@
     </teiHeader>
     <text>
         <group>
-            <text n="1">
+            <text>
                 <group>
-                    <text type="transcription" subtype="yuanwen">
+                    <text type="transcription" subtype="yuanwen" xml:id="H06834-正-1-yuanwen">
                         <body>
                             <p>
                                 <seg>󾑽󾒂󽲙，</seg>
@@ -27,7 +26,7 @@
                             </p>
                         </body>
                     </text>
-                    <text type="transcription" subtype="shiwen">
+                    <text type="transcription" subtype="shiwen" xml:id="H06834-正-1-shiwen">
                         <body>
                             <p>
                                 <seg>壬子卜，</seg>
@@ -38,16 +37,16 @@
                     </text>
                 </group>
             </text>
-            <text n="2">
+            <text xml:id="H06834-正-2">
                 <group>
-                    <text type="transcription" subtype="yuanwen">
+                    <text type="transcription" subtype="yuanwen" xml:id="H06834-正-2-yuanwen">
                         <body>
                             <p>
                                 <seg>󾖠󽎘󾖂󽗄󽷫󾅊󾁃󽶤󽕦。</seg>
                             </p>
                         </body>
                     </text>
-                    <text type="transcription" subtype="shiwen">
+                    <text type="transcription" subtype="shiwen" xml:id="H06834-正-2-shiwen">
                         <body>
                             <p>
                                 <seg>貞自五日我弗其󰹨󽕦。</seg>
@@ -56,9 +55,9 @@
                     </text>
                 </group>
             </text>
-            <text n="3">
+            <text xml:id="H06834-正-3">
                 <group>
-                    <text type="transcription" subtype="yuanwen">
+                    <text type="transcription" subtype="yuanwen" xml:id="H06834-正-3-yuanwen">
                         <body>
                             <p>
                                 <seg>󾒀󾒕󽲙，</seg>
@@ -74,7 +73,7 @@
                             </p>
                         </body>
                     </text>
-                    <text type="transcription" subtype="shiwen">
+                    <text type="transcription" subtype="shiwen" xml:id="H06834-正-3-shiwen">
                         <body>
                             <p>
                                 <seg>癸丑卜，</seg>
@@ -92,9 +91,9 @@
                     </text>
                 </group>
             </text>
-            <text n="4">
+            <text xml:id="H06834-正-4">
                 <group>
-                    <text type="transcription" subtype="yuanwen">
+                    <text type="transcription" subtype="yuanwen" xml:id="H06834-正-4-yuanwen">
                         <body>
                             <p>
                                 <seg>󾒀󾒕󽲙，󽓹，󾖠󽎘󽫈󽹯󾌗󾑟󾒥󽷫󾅊󾁃󽶤󽕦。
@@ -102,7 +101,7 @@
                             </p>
                         </body>
                     </text>
-                    <text type="transcription" subtype="shiwen">
+                    <text type="transcription" subtype="shiwen" xml:id="H06834-正-4-shiwen">
                         <body>
                             <p>
                                 <seg>癸丑卜，爭，貞自今至于丁巳我弗其󰹨󽕦。 一 二</seg>
@@ -111,9 +110,9 @@
                     </text>
                 </group>
             </text>
-            <text n="5">
+            <text xml:id="H06834-正-5">
                 <group>
-                    <text type="transcription" subtype="yuanwen">
+                    <text type="transcription" subtype="yuanwen" xml:id="H06834-正-5-yuanwen">
                         <body>
                             <p>
                                 <seg>󾑲󾒳󽲙，󾍍，󾖠󽫕󽶒󽹃。󾕾󽗢。
@@ -121,7 +120,7 @@
                             </p>
                         </body>
                     </text>
-                    <text type="transcription" subtype="shiwen">
+                    <text type="transcription" subtype="shiwen" xml:id="H06834-正-5-shiwen">
                         <body>
                             <p>
                                 <seg>庚申卜，王，貞余伐不。三月。 一</seg>
@@ -130,9 +129,9 @@
                     </text>
                 </group>
             </text>
-            <text n="6">
+            <text xml:id="H06834-正-6">
                 <group>
-                    <text type="transcription" subtype="yuanwen">
+                    <text type="transcription" subtype="yuanwen" xml:id="H06834-正-6-yuanwen">
                         <body>
                             <p>
                                 <seg>󾑲〔󾒳󽲙〕，󾍍，󾖠󽫕󽻰󽶒󽹃。
@@ -140,7 +139,7 @@
                             </p>
                         </body>
                     </text>
-                    <text type="transcription" subtype="shiwen">
+                    <text type="transcription" subtype="shiwen" xml:id="H06834-正-6-shiwen">
                         <body>
                             <p>
                                 <seg>庚〔申卜〕，王，貞余勿伐不。 一 二告</seg>
@@ -149,9 +148,9 @@
                     </text>
                 </group>
             </text>
-            <text n="7">
+            <text xml:id="H06834-正-7">
                 <group>
-                    <text type="transcription" subtype="yuanwen">
+                    <text type="transcription" subtype="yuanwen" xml:id="H06834-正-7-yuanwen">
                         <body>
                             <p>
                                 <seg>󾑲󾒳󽲙，󾍍，󾖠󽫕󽶒󽹃。
@@ -159,7 +158,7 @@
                             </p>
                         </body>
                     </text>
-                    <text type="transcription" subtype="shiwen">
+                    <text type="transcription" subtype="shiwen" xml:id="H06834-正-7-shiwen">
                         <body>
                             <p>
                                 <seg>庚申卜，王，貞余伐不。 一</seg>
@@ -168,9 +167,9 @@
                     </text>
                 </group>
             </text>
-            <text n="8">
+            <text xml:id="H06834-正-8">
                 <group>
-                    <text type="transcription" subtype="yuanwen">
+                    <text type="transcription" subtype="yuanwen" xml:id="H06834-正-8-yuanwen">
                         <body>
                             <p>
                                 <seg>󾑲󾒳󽲙，󾍍，󾖠󽫕󽻰󽶒󽹃。
@@ -178,7 +177,7 @@
                             </p>
                         </body>
                     </text>
-                    <text type="transcription" subtype="shiwen">
+                    <text type="transcription" subtype="shiwen" xml:id="H06834-正-8-shiwen">
                         <body>
                             <p>
                                 <seg>庚申卜，王，貞余勿伐不。 一</seg>
@@ -187,9 +186,9 @@
                     </text>
                 </group>
             </text>
-            <text n="9">
+            <text xml:id="H06834-正-9">
                 <group>
-                    <text type="transcription" subtype="yuanwen">
+                    <text type="transcription" subtype="yuanwen" xml:id="H06834-正-9-yuanwen">
                         <body>
                             <p>
                                 <seg>〔󾑲〕󾒳󽲙，〔󾍍〕，󾖠󽥑󽎽。
@@ -197,7 +196,7 @@
                             </p>
                         </body>
                     </text>
-                    <text type="transcription" subtype="shiwen">
+                    <text type="transcription" subtype="shiwen" xml:id="H06834-正-9-shiwen">
                         <body>
                             <p>
                                 <seg>〔庚〕申卜，〔王〕，貞隻缶。 二告</seg>
@@ -206,9 +205,9 @@
                     </text>
                 </group>
             </text>
-            <text n="10">
+            <text xml:id="H06834-正-10">
                 <group>
-                    <text type="transcription" subtype="yuanwen">
+                    <text type="transcription" subtype="yuanwen" xml:id="H06834-正-10-yuanwen">
                         <body>
                             <p>
                                 <seg>󾑲󾒳󽲙，󾍍，󾖠󽦬󾅊〔󾁃〕󽥑󽎽。
@@ -216,7 +215,7 @@
                             </p>
                         </body>
                     </text>
-                    <text type="transcription" subtype="shiwen">
+                    <text type="transcription" subtype="shiwen" xml:id="H06834-正-10-shiwen">
                         <body>
                             <p>
                                 <seg>庚申卜，王，貞雀弗〔其〕隻缶。 一</seg>
@@ -225,9 +224,9 @@
                     </text>
                 </group>
             </text>
-            <text n="11">
+            <text xml:id="H06834-正-11">
                 <group>
-                    <text type="transcription" subtype="yuanwen">
+                    <text type="transcription" subtype="yuanwen" xml:id="H06834-正-11-yuanwen">
                         <body>
                             <p>
                                 <seg>󽦬󾅊󾁃󽥑󽎽。
@@ -235,7 +234,7 @@
                             </p>
                         </body>
                     </text>
-                    <text type="transcription" subtype="shiwen">
+                    <text type="transcription" subtype="shiwen" xml:id="H06834-正-11-shiwen">
                         <body>
                             <p>
                                 <seg>雀弗其隻缶。 一</seg>
@@ -244,9 +243,9 @@
                     </text>
                 </group>
             </text>
-            <text n="12">
+            <text xml:id="H06834-正-12">
                 <group>
-                    <text type="transcription" subtype="yuanwen">
+                    <text type="transcription" subtype="yuanwen" xml:id="H06834-正-12-yuanwen">
                         <body>
                             <p>
                                 <seg>󾑸󾒼󽲙，󾂭，󾖠󽩨󾑽󾒿󽹃󽹯。
@@ -254,7 +253,7 @@
                             </p>
                         </body>
                     </text>
-                    <text type="transcription" subtype="shiwen">
+                    <text type="transcription" subtype="shiwen" xml:id="H06834-正-12-shiwen">
                         <body>
                             <p>
                                 <seg>辛酉卜，㱿，貞翌壬戌不至。 一 二告</seg>
@@ -263,9 +262,9 @@
                     </text>
                 </group>
             </text>
-            <text n="13">
+            <text xml:id="H06834-正-13">
                 <group>
-                    <text type="transcription" subtype="yuanwen">
+                    <text type="transcription" subtype="yuanwen" xml:id="H06834-正-13-yuanwen">
                         <body>
                             <p>
                                 <seg>󾒀󾓆󽲙，󾂭，󾖠󽷫󾄤󽶤󽎽。
@@ -273,7 +272,7 @@
                             </p>
                         </body>
                     </text>
-                    <text type="transcription" subtype="shiwen">
+                    <text type="transcription" subtype="shiwen" xml:id="H06834-正-13-shiwen">
                         <body>
                             <p>
                                 <seg>癸亥卜，㱿，貞我史󰹨缶。 一 二 二告</seg>
@@ -282,9 +281,9 @@
                     </text>
                 </group>
             </text>
-            <text n="14">
+            <text xml:id="H06834-正-14">
                 <group>
-                    <text type="transcription" subtype="yuanwen">
+                    <text type="transcription" subtype="yuanwen" xml:id="H06834-正-14-yuanwen">
                         <body>
                             <p>
                                 <seg>󾒀󾓆󽲙，󾂭，󾖠󽷫󾄤󽈎󾁃󽶤󽎽。
@@ -292,7 +291,7 @@
                             </p>
                         </body>
                     </text>
-                    <text type="transcription" subtype="shiwen">
+                    <text type="transcription" subtype="shiwen" xml:id="H06834-正-14-shiwen">
                         <body>
                             <p>
                                 <seg>癸亥卜，㱿，貞我史母其󰹨缶。 一 二 二告</seg>
@@ -301,9 +300,9 @@
                     </text>
                 </group>
             </text>
-            <text n="15">
+            <text xml:id="H06834-正-15">
                 <group>
-                    <text type="transcription" subtype="yuanwen">
+                    <text type="transcription" subtype="yuanwen" xml:id="H06834-正-15-yuanwen">
                         <body>
                             <p>
                                 <seg>󾒀󾓆󽲙，󾂭，󾖠󽩨󾑕󾒕󾎔󽍘󽶤󽎽。
@@ -311,7 +310,7 @@
                             </p>
                         </body>
                     </text>
-                    <text type="transcription" subtype="shiwen">
+                    <text type="transcription" subtype="shiwen" xml:id="H06834-正-15-shiwen">
                         <body>
                             <p>
                                 <seg>癸亥卜，㱿，貞翌乙丑多臣󰹨缶。 一 二</seg>
@@ -320,9 +319,9 @@
                     </text>
                 </group>
             </text>
-            <text n="16">
+            <text xml:id="H06834-正-16">
                 <group>
-                    <text type="transcription" subtype="yuanwen">
+                    <text type="transcription" subtype="yuanwen" xml:id="H06834-正-16-yuanwen">
                         <body>
                             <p>
                                 <seg>󽩨󾑕󾒕󾎔󽍘󾅊󾁃󽶤󽎽。
@@ -330,7 +329,7 @@
                             </p>
                         </body>
                     </text>
-                    <text type="transcription" subtype="shiwen">
+                    <text type="transcription" subtype="shiwen" xml:id="H06834-正-16-shiwen">
                         <body>
                             <p>
                                 <seg>翌乙丑多臣弗其󰹨缶。 一 二</seg>
@@ -339,9 +338,9 @@
                     </text>
                 </group>
             </text>
-            <text n="17">
+            <text xml:id="H06834-正-17">
                 <group>
-                    <text type="transcription" subtype="yuanwen">
+                    <text type="transcription" subtype="yuanwen" xml:id="H06834-正-17-yuanwen">
                         <body>
                             <p>
                                 <seg>󾑕󾒕󽲙，󾂭，󾖠󽋝󽯒󾅊󾁃󽥑󽐸。
@@ -349,7 +348,7 @@
                             </p>
                         </body>
                     </text>
-                    <text type="transcription" subtype="shiwen">
+                    <text type="transcription" subtype="shiwen" xml:id="H06834-正-17-shiwen">
                         <body>
                             <p>
                                 <seg>乙丑卜，㱿，貞子商弗其隻先。 一 二 三 二告</seg>
@@ -358,9 +357,9 @@
                     </text>
                 </group>
             </text>
-            <text n="18">
+            <text xml:id="H06834-正-18">
                 <group>
-                    <text type="transcription" subtype="yuanwen">
+                    <text type="transcription" subtype="yuanwen" xml:id="H06834-正-18-yuanwen">
                         <body>
                             <p>
                                 <seg>󾑘󾒛󽲙，󽓹，󾖠󽩏󽧶󽩄󽹾󾅍󽡎󽹆。
@@ -368,7 +367,7 @@
                             </p>
                         </body>
                     </text>
-                    <text type="transcription" subtype="shiwen">
+                    <text type="transcription" subtype="shiwen" xml:id="H06834-正-18-shiwen">
                         <body>
                             <p>
                                 <seg>丙寅卜，爭，貞乎󽧶󽩄𥎦專㣇󰺏。 一
@@ -378,9 +377,9 @@
                     </text>
                 </group>
             </text>
-            <text n="19">
+            <text xml:id="H06834-正-19">
                 <group>
-                    <text type="transcription" subtype="yuanwen">
+                    <text type="transcription" subtype="yuanwen" xml:id="H06834-正-19-yuanwen">
                         <body>
                             <p>
                                 <seg>󾖠󽻸󾅊󾁃󽎻󾍍󾄤。
@@ -391,7 +390,7 @@
                             </p>
                         </body>
                     </text>
-                    <text type="transcription" subtype="shiwen">
+                    <text type="transcription" subtype="shiwen" xml:id="H06834-正-19-shiwen">
                         <body>
                             <p>
                                 <seg>貞󽻸弗其󽎻王史。 一 二 二告 一 二 三 四 五 一 二 三 〔四 五〕
