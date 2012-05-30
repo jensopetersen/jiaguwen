@@ -16,55 +16,390 @@
     </teiHeader>
     <text>
         <group>
-            <text type="transcription" subtype="yuanwen" xml:id="yuanwen">
-                <body>
-                    <p>
-                        <seg n="1">󾑽󾒂󽲙，󽓹，󾖠󽎘󽫈󽗄󽷫󽶤󽕦。</seg>
-                        <seg n="2">󾖠󽎘󾖂󽗄󽷫󾅊󾁃󽶤󽕦。</seg>
-                        <seg n="3">󾒀󾒕󽲙，〔󽓹〕，󾖠󽎘󽫈󽹯󾌗󾑟󾒥󽷫󽶤󽕦。󾍍󽲖󽎭︰󾑟󾒥󽷫󽈎󾁃󽶤，󾌗󽠓󾑔󾒂󽶤，󽗻󾐛󾕻󽗄󾒀󾓆󾉸󾅊󽶤。󽐈󽗠󾀾，󾑔󾒂󽀚󽶤。  󾕻  󾕼</seg>
-                        <seg n="4">󾒀󾒕󽲙，󽓹，󾖠󽎘󽫈󽹯󾌗󾑟󾒥󽷫󾅊󾁃󽶤󽕦。  󾕻  󾕼</seg>
-                        <seg n="5">󾑲󾒳󽲙，󾍍，󾖠󽫕󽶒󽹃。󾕾󽗢。  󾕻</seg>
-                        <seg n="6">󾑲〔󾒳󽲙〕，󾍍，󾖠󽫕󽻰󽶒󽹃。  󾕻  󾕼󽎮</seg>
-                        <seg n="7">󾑲󾒳󽲙，󾍍，󾖠󽫕󽶒󽹃。  󾕻</seg>
-                        <seg n="8">󾑲󾒳󽲙，󾍍，󾖠󽫕󽻰󽶒󽹃。  󾕻</seg>
-                        <seg n="9">〔󾑲〕󾒳󽲙，〔󾍍〕，󾖠󽥑󽎽。  󾕼󽎮</seg>
-                        <seg n="10">󾑲󾒳󽲙，󾍍，󾖠󽦬󾅊〔󾁃〕󽥑󽎽。  󾕻</seg>
-                        <seg n="11">󽦬󾅊󾁃󽥑󽎽。  󾕻</seg>
-                        <seg n="12">󾑸󾒼󽲙，󾂭，󾖠󽩨󾑽󾒿󽹃󽹯。  󾕻  󾕼󽎮</seg>
-                        <seg n="13">󾒀󾓆󽲙，󾂭，󾖠󽷫󾄤󽶤󽎽。  󾕻  󾕼  󾕼󽎮</seg>
-                        <seg n="14">󾒀󾓆󽲙，󾂭，󾖠󽷫󾄤󽈎󾁃󽶤󽎽。  󾕻  󾕼  󾕼󽎮</seg>
-                        <seg n="15">󾒀󾓆󽲙，󾂭，󾖠󽩨󾑕󾒕󾎔󽍘󽶤󽎽。  󾕻  󾕼</seg>
-                        <seg n="16">󽩨󾑕󾒕󾎔󽍘󾅊󾁃󽶤󽎽。  󾕻  󾕼</seg>
-                        <seg n="17">󾑕󾒕󽲙，󾂭，󾖠󽋝󽯒󾅊󾁃󽥑󽐸。  󾕻  󾕼  󾕾  󾕼󽎮</seg>
-                        <seg n="18">󾑘󾒛󽲙，󽓹，󾖠󽩏󽧶󽩄󽹾󾅍󽡎󽹆。  󾕻  󾕼</seg>
-                        <seg n="19">󾖠󽻸󾅊󾁃󽎻󾍍󾄤。  󾕻  󾕼  󾕼󽎮  󾕻  󾕼  󾕾  󾖀  󾖂    󾕻  󾕼  󾕾  〔󾖀  󾖂〕    〔󾕻〕  〔󾕼〕  󾕾  󾖀</seg>
-                    </p>
-                </body>
+            <text n="1">
+                <group>
+                    <text type="transcription" subtype="yuanwen">
+                        <body>
+                            <p>
+                                <seg>󾑽󾒂󽲙，</seg>
+                                <seg>󽓹，</seg>
+                                <seg>󾖠󽎘󽫈󽗄󽷫󽶤󽕦。</seg>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="transcription" subtype="shiwen">
+                        <body>
+                            <p>
+                                <seg>壬子卜，</seg>
+                                <seg>爭，</seg>
+                                <seg>貞自今日我󰹨󽕦。</seg>
+                            </p>
+                        </body>
+                    </text>
+                </group>
             </text>
-            <text type="transcription" subtype="shiwen" xml:id="shiwen">
-                <body>
-                    <p>
-                        <seg n="1">壬子卜，爭，貞自今日我󰹨󽕦。</seg>
-                        <seg n="2">貞自五日我弗其󰹨󽕦。</seg>
-                        <seg n="3">癸丑卜，〔爭〕，貞自今至于丁巳我󰹨󽕦。王󰩏曰︰丁巳我母其󰹨，于來甲子󰹨，旬㞢一日癸亥車弗󰹨。之夕󾀾，甲子允󰹨。  一  二</seg>
-                        <seg n="4">癸丑卜，爭，貞自今至于丁巳我弗其󰹨󽕦。  一  二</seg>
-                        <seg n="5">庚申卜，王，貞余伐不。三月。  一</seg>
-                        <seg n="6">庚〔申卜〕，王，貞余勿伐不。  一  二告</seg>
-                        <seg n="7">庚申卜，王，貞余伐不。  一</seg>
-                        <seg n="8">庚申卜，王，貞余勿伐不。  一</seg>
-                        <seg n="9">〔庚〕申卜，〔王〕，貞隻缶。  二告</seg>
-                        <seg n="10">庚申卜，王，貞雀弗〔其〕隻缶。  一</seg>
-                        <seg n="11">雀弗其隻缶。  一</seg>
-                        <seg n="12">辛酉卜，㱿，貞翌壬戌不至。  一  二告</seg>
-                        <seg n="13">癸亥卜，㱿，貞我史󰹨缶。  一  二  二告</seg>
-                        <seg n="14">癸亥卜，㱿，貞我史母其󰹨缶。  一  二  二告</seg>
-                        <seg n="15">癸亥卜，㱿，貞翌乙丑多臣󰹨缶。  一  二</seg>
-                        <seg n="16">翌乙丑多臣弗其󰹨缶。  一  二</seg>
-                        <seg n="17">乙丑卜，㱿，貞子商弗其隻先。  一  二  三  二告</seg>
-                        <seg n="18">丙寅卜，爭，貞乎󽧶󽩄𥎦專㣇󰺏。  一  二</seg>
-                        <seg n="19">貞󽻸弗其󽎻王史。  一  二  二告  一  二  三  四  五    一  二  三  〔四  五〕    〔一〕  〔二〕  三  四</seg>
-                    </p>
-                </body>
+            <text n="2">
+                <group>
+                    <text type="transcription" subtype="yuanwen">
+                        <body>
+                            <p>
+                                <seg>󾖠󽎘󾖂󽗄󽷫󾅊󾁃󽶤󽕦。</seg>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="transcription" subtype="shiwen">
+                        <body>
+                            <p>
+                                <seg>貞自五日我弗其󰹨󽕦。</seg>
+                            </p>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text n="3">
+                <group>
+                    <text type="transcription" subtype="yuanwen">
+                        <body>
+                            <p>
+                                <seg>󾒀󾒕󽲙，</seg>
+                                <seg>〔󽓹〕，</seg>
+                                <seg>󾖠󽎘󽫈󽹯󾌗󾑟󾒥󽷫󽶤󽕦。</seg>
+                                <seg>󾍍󽲖󽎭︰</seg>
+                                <seg>󾑟󾒥󽷫󽈎󾁃󽶤，</seg>
+                                <seg>󾌗󽠓󾑔󾒂󽶤，</seg>
+                                <seg>󽗻󾐛󾕻󽗄󾒀󾓆󾉸󾅊󽶤。</seg>
+                                <seg>󽐈󽗠󾀾，</seg>
+                                <seg>󾑔󾒂󽀚󽶤。</seg>
+                                <seg>󾕻 󾕼</seg>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="transcription" subtype="shiwen">
+                        <body>
+                            <p>
+                                <seg>癸丑卜，</seg>
+                                <seg>〔爭〕，</seg>
+                                <seg>貞自今至于丁巳我󰹨󽕦。</seg>
+                                <seg>王󰩏曰︰</seg>
+                                <seg>丁巳我母其󰹨，</seg>
+                                <seg>于來甲子󰹨，</seg>
+                                <seg>旬㞢一日癸亥車弗󰹨。</seg>
+                                <seg>之夕󾀾，</seg>
+                                <seg>甲子允󰹨。</seg>
+                                <seg>一 二</seg>
+                            </p>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text n="4">
+                <group>
+                    <text type="transcription" subtype="yuanwen">
+                        <body>
+                            <p>
+                                <seg>󾒀󾒕󽲙，󽓹，󾖠󽎘󽫈󽹯󾌗󾑟󾒥󽷫󾅊󾁃󽶤󽕦。
+                                    󾕻 󾕼</seg>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="transcription" subtype="shiwen">
+                        <body>
+                            <p>
+                                <seg>癸丑卜，爭，貞自今至于丁巳我弗其󰹨󽕦。 一 二</seg>
+                            </p>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text n="5">
+                <group>
+                    <text type="transcription" subtype="yuanwen">
+                        <body>
+                            <p>
+                                <seg>󾑲󾒳󽲙，󾍍，󾖠󽫕󽶒󽹃。󾕾󽗢。
+                                    󾕻</seg>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="transcription" subtype="shiwen">
+                        <body>
+                            <p>
+                                <seg>庚申卜，王，貞余伐不。三月。 一</seg>
+                            </p>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text n="6">
+                <group>
+                    <text type="transcription" subtype="yuanwen">
+                        <body>
+                            <p>
+                                <seg>󾑲〔󾒳󽲙〕，󾍍，󾖠󽫕󽻰󽶒󽹃。
+                                    󾕻 󾕼󽎮</seg>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="transcription" subtype="shiwen">
+                        <body>
+                            <p>
+                                <seg>庚〔申卜〕，王，貞余勿伐不。 一 二告</seg>
+                            </p>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text n="7">
+                <group>
+                    <text type="transcription" subtype="yuanwen">
+                        <body>
+                            <p>
+                                <seg>󾑲󾒳󽲙，󾍍，󾖠󽫕󽶒󽹃。
+                                    󾕻</seg>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="transcription" subtype="shiwen">
+                        <body>
+                            <p>
+                                <seg>庚申卜，王，貞余伐不。 一</seg>
+                            </p>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text n="8">
+                <group>
+                    <text type="transcription" subtype="yuanwen">
+                        <body>
+                            <p>
+                                <seg>󾑲󾒳󽲙，󾍍，󾖠󽫕󽻰󽶒󽹃。
+                                    󾕻</seg>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="transcription" subtype="shiwen">
+                        <body>
+                            <p>
+                                <seg>庚申卜，王，貞余勿伐不。 一</seg>
+                            </p>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text n="9">
+                <group>
+                    <text type="transcription" subtype="yuanwen">
+                        <body>
+                            <p>
+                                <seg>〔󾑲〕󾒳󽲙，〔󾍍〕，󾖠󽥑󽎽。
+                                    󾕼󽎮</seg>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="transcription" subtype="shiwen">
+                        <body>
+                            <p>
+                                <seg>〔庚〕申卜，〔王〕，貞隻缶。 二告</seg>
+                            </p>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text n="10">
+                <group>
+                    <text type="transcription" subtype="yuanwen">
+                        <body>
+                            <p>
+                                <seg>󾑲󾒳󽲙，󾍍，󾖠󽦬󾅊〔󾁃〕󽥑󽎽。
+                                    󾕻</seg>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="transcription" subtype="shiwen">
+                        <body>
+                            <p>
+                                <seg>庚申卜，王，貞雀弗〔其〕隻缶。 一</seg>
+                            </p>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text n="11">
+                <group>
+                    <text type="transcription" subtype="yuanwen">
+                        <body>
+                            <p>
+                                <seg>󽦬󾅊󾁃󽥑󽎽。
+                                    󾕻</seg>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="transcription" subtype="shiwen">
+                        <body>
+                            <p>
+                                <seg>雀弗其隻缶。 一</seg>
+                            </p>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text n="12">
+                <group>
+                    <text type="transcription" subtype="yuanwen">
+                        <body>
+                            <p>
+                                <seg>󾑸󾒼󽲙，󾂭，󾖠󽩨󾑽󾒿󽹃󽹯。
+                                    󾕻 󾕼󽎮</seg>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="transcription" subtype="shiwen">
+                        <body>
+                            <p>
+                                <seg>辛酉卜，㱿，貞翌壬戌不至。 一 二告</seg>
+                            </p>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text n="13">
+                <group>
+                    <text type="transcription" subtype="yuanwen">
+                        <body>
+                            <p>
+                                <seg>󾒀󾓆󽲙，󾂭，󾖠󽷫󾄤󽶤󽎽。
+                                    󾕻 󾕼 󾕼󽎮</seg>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="transcription" subtype="shiwen">
+                        <body>
+                            <p>
+                                <seg>癸亥卜，㱿，貞我史󰹨缶。 一 二 二告</seg>
+                            </p>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text n="14">
+                <group>
+                    <text type="transcription" subtype="yuanwen">
+                        <body>
+                            <p>
+                                <seg>󾒀󾓆󽲙，󾂭，󾖠󽷫󾄤󽈎󾁃󽶤󽎽。
+                                    󾕻 󾕼 󾕼󽎮</seg>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="transcription" subtype="shiwen">
+                        <body>
+                            <p>
+                                <seg>癸亥卜，㱿，貞我史母其󰹨缶。 一 二 二告</seg>
+                            </p>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text n="15">
+                <group>
+                    <text type="transcription" subtype="yuanwen">
+                        <body>
+                            <p>
+                                <seg>󾒀󾓆󽲙，󾂭，󾖠󽩨󾑕󾒕󾎔󽍘󽶤󽎽。
+                                    󾕻 󾕼</seg>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="transcription" subtype="shiwen">
+                        <body>
+                            <p>
+                                <seg>癸亥卜，㱿，貞翌乙丑多臣󰹨缶。 一 二</seg>
+                            </p>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text n="16">
+                <group>
+                    <text type="transcription" subtype="yuanwen">
+                        <body>
+                            <p>
+                                <seg>󽩨󾑕󾒕󾎔󽍘󾅊󾁃󽶤󽎽。
+                                    󾕻 󾕼</seg>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="transcription" subtype="shiwen">
+                        <body>
+                            <p>
+                                <seg>翌乙丑多臣弗其󰹨缶。 一 二</seg>
+                            </p>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text n="17">
+                <group>
+                    <text type="transcription" subtype="yuanwen">
+                        <body>
+                            <p>
+                                <seg>󾑕󾒕󽲙，󾂭，󾖠󽋝󽯒󾅊󾁃󽥑󽐸。
+                                    󾕻 󾕼 󾕾 󾕼󽎮</seg>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="transcription" subtype="shiwen">
+                        <body>
+                            <p>
+                                <seg>乙丑卜，㱿，貞子商弗其隻先。 一 二 三 二告</seg>
+                            </p>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text n="18">
+                <group>
+                    <text type="transcription" subtype="yuanwen">
+                        <body>
+                            <p>
+                                <seg>󾑘󾒛󽲙，󽓹，󾖠󽩏󽧶󽩄󽹾󾅍󽡎󽹆。
+                                    󾕻 󾕼</seg>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="transcription" subtype="shiwen">
+                        <body>
+                            <p>
+                                <seg>丙寅卜，爭，貞乎󽧶󽩄𥎦專㣇󰺏。 一
+                                    二</seg>
+                            </p>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text n="19">
+                <group>
+                    <text type="transcription" subtype="yuanwen">
+                        <body>
+                            <p>
+                                <seg>󾖠󽻸󾅊󾁃󽎻󾍍󾄤。
+                                    󾕻 󾕼 󾕼󽎮 󾕻 󾕼
+                                    󾕾 󾖀 󾖂 󾕻 󾕼 󾕾
+                                    〔󾖀 󾖂〕 〔󾕻〕 〔󾕼〕 󾕾
+                                    󾖀</seg>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="transcription" subtype="shiwen">
+                        <body>
+                            <p>
+                                <seg>貞󽻸弗其󽎻王史。 一 二 二告 一 二 三 四 五 一 二 三 〔四 五〕
+                                    〔一〕 〔二〕 三 四</seg>
+                            </p>
+                        </body>
+                    </text>
+                </group>
             </text>
         </group>
     </text>

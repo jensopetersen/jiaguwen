@@ -28,12 +28,10 @@ declare function app:title($node as node(), $params as element(parameters)?, $mo
 
 declare function app:textarea($node as node(), $params as element(parameters)?, $model as item()*) 
 {
-let $log := util:log("DEBUG", ("##$model-1): ", $model))
-(:Why does this not catch the included text elements? They are in the model!:)
 let $model := util:expand($model)
-let $model := $model//tei:text/tei:group/tei:text
-(:let $model := $model//*:text:)
-(:let $model := $model//*:text/*:group/*:text:)
+let $log := util:log("DEBUG", ("##$model-1): ", $model))
+let $line-number := '2'
+let $model := $model/tei:text[1]/tei:group[1]/tei:text[@n eq $line-number]/tei:group[1]/tei:text
 let $log := util:log("DEBUG", ("##$model-2): ", $model))
 for $text-element in $model
     let $log := util:log("DEBUG", ("##$text-element): ", $text-element))
@@ -44,7 +42,7 @@ for $text-element in $model
     let $width-translation := (100 - ($count-transcription * $count-translation)) div $count-translation 
     let $type := $text-element/@type/string()
     let $subtype := $text-element/@subtype/string()
-    return    
+    return
         (:<div xmlns="http://www.w3.org/1999/xhtml" class="editor {if($subtype eq 'yuanwen') then 'CHANT' else ()}">:)
         (:<div class="editor" style="width:{if ($type eq 'translation') then concat($width-translation, '%') else concat($width-transcription, '%')}">:)
         <div class="editor span{$editorWidth}">
