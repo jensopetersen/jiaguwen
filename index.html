@@ -2,20 +2,35 @@
 <div class="templates:surround?with=templates/page.html&amp;at=content">
     <h1>Text Input</h1>
     <div class="app:load">
-        <form>
+        <form class="form-horizontal">
             <fieldset>
                 <label>OBI Input</label>
-                <div>
-                    <label>Title</label>
-                    <input type="text" name="title" class="app:title"/>
+                <div class="control-group">
+                    <label class="control-label">Title</label>
+                    <div class="controls">
+                        <input type="text" name="title" class="app:title"/>
+                    </div>
+                </div>
+                <div class="control-group">
+                    <label class="control-label">Line:</label>
+                    <div class="controls">
+                        <select id="line-select" name="line" class="app:line-select"/>
+                    </div>
                 </div>
             </fieldset>
-            <fieldset>
-                <label>Transcription and Translation</label>
-                <div class="row">
-                    <textarea name="transcription" class="app:textarea"/>
+            <label>Transcription and Translation</label>
+            <div class="row">
+                <div class="app:editor?type=transcription&amp;subtype=Takashima">
+                    <div class="editor">
+                        <textarea name="editor1">1234</textarea>
+                    </div>
                 </div>
-            </fieldset>
+                <div class="app:editor?type=translation&amp;subtype=Takashima">
+                    <div class="editor">
+                        <textarea name="editor2">ABCDE</textarea>
+                    </div>
+                </div>
+            </div>
         </form>
     </div>
 </div>

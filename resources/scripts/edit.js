@@ -1,16 +1,25 @@
 $(document).ready(function() {
-    $(".editor").each(function(){new Atomic.Editor(this)});
-    
+    var editors = [];
+    var line = $("#line-select").val();
+    $(".editor-container").each(function() {
+        editors.push(new TLS.Editor(this, line));
+    });
+    $("#line-select").change(function(ev) {
+        var line = $(this).val();
+        for (var i = 0; i < editors.length; i++) {
+            editors[i].setLine(line);
+        }
+    });
 });
 
-var Atomic = Atomic || {};
+var TLS = TLS || {};
 
 /**
  * Namespace function. Required by all other classes.
  */
-Atomic.namespace = function (ns_string) {
+TLS.namespace = function (ns_string) {
     var parts = ns_string.split('.'),
-        parent = Atomic,
+        parent = TLS,
 		i;
 	if (parts[0] == "Atomic") {
 		parts = parts.slice(1);
@@ -26,7 +35,50 @@ Atomic.namespace = function (ns_string) {
 	return parent;
 };
 
-Atomic.Editor = (function () {
+TLS.Editor = (function() {
+    
+    Constr = function(container, line) {
+        this.container = $(container);
+        this.line = line;
+        
+        this.editor = new TLS.Ace($(".editor", container)[0]);
+        
+        var $this = this;
+        $(".type-select", container).click(function(ev) {
+            ev.preventDefault();
+            $this.load();
+        });
+        $(".editor-save", container).click(function(ev) {
+            ev.preventDefault();
+            var value = $this.editor.getValue();
+            var type = $this.getType();
+            $.post("modules/store.xql", { data: value, type: type });
+        });
+    };
+    
+    Constr.prototype.getType = function() {
+        return this.container.find("select[name='type']").val();
+    };
+    
+    Constr.prototype.setLine = function(line) {
+        console.log("Changing to line %s", line);
+        this.line = line;
+        this.load();
+    };
+    
+    Constr.prototype.load = function() {
+        var $this = this;
+        var type = this.getType();
+        $.get("modules/get-lines.xql", { type: type, line: this.line },
+            function(data) {
+                $this.editor.setValue(data);
+            }
+        );
+    };
+    return Constr;
+}());
+
+TLS.Ace = (function () {
     
     var Renderer = require("ace/virtual_renderer").VirtualRenderer;
     var Editor = require("ace/editor").Editor;
@@ -72,6 +124,14 @@ Atomic.Editor = (function () {
         var value = this.editor.getSession().getValue();
         this.input.val(value);
     };
-        
+    
+    Constr.prototype.getValue = function() {
+        return this.editor.getSession().getValue();
+    }
+    
+    Constr.prototype.setValue = function(data) {
+        this.editor.getSession().setValue(data);
+    };
+    
     return Constr;
 }());

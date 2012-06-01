@@ -11,22 +11,70 @@ import module namespace templates="http://exist-db.org/xquery/templates" at "tem
  : are required for a function to be callable from the templating system. To build 
  : your application, add more functions to this module.
  :)
-declare function app:load($node as node(), $params as element(parameters)?, $model as item()*) {
+declare function app:load($node as node(), $model as map(*)) {
 let $doc := collection("/db/tls/data/BB")/(id("uuid-1C03C3AB-3553-4325-9C69-52EEA33225B6"))
 (:let $log := util:log("DEBUG", ("##$doc): ", $doc)):)
-    for $model in $doc
-    (:let $log := util:log("DEBUG", ("##$model-1): ", $model)):)
+(:let $log := util:log("DEBUG", ("##$model-1): ", $model)):)
+return
+    map { "data" := $doc }
+
+};
+
+declare function app:title($node as node(), $model as map(*)) {
+    element{node-name($node)}{$node/@*, attribute value{$model("data")/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title}}
+};
+
+declare 
+    %templates:wrap
+function app:line-select($node as node(), $model as map(*)) {
+    for $line in $model("data")/tei:text[1]/tei:group[1]/tei:text/@n
     return
-        templates:process($node/*, $model)
-
+        <option>{$line/string()}</option>
 };
 
-declare function app:title($node as node(), $params as element(parameters)?, $model as item()*) {
-    element{node-name($node)}{$node/@*, attribute value{$model/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title}}
+declare function app:get-lines($body as element(tei:TEI), $line-number as xs:string, 
+    $type as xs:string, $subtype as xs:string) {
+    let $text :=
+        $body/tei:text[1]/tei:group[1]/tei:text[@n eq $line-number]/tei:group[1]/tei:text[@type = $type][@subtype = $subtype]
+    return string-join(
+        for $line in $text//tei:seg/text()
+        return
+            normalize-space($line), 
+        "&#10;"
+    )
 };
 
+declare function app:editor($node as node(), $model as map(*), $type as xs:string, $subtype as xs:string) {
+    let $model := util:expand($model("data"))
+    let $line-number := '1'
+    let $lines := app:get-lines($model, $line-number, $type, $subtype)
+    let $width := if ($type = "translation") then 6 else 6
+    let $texts := $model/tei:text[1]/tei:group[1]/tei:text[@n eq $line-number]/tei:group[1]/tei:text
+    let $options :=
+        for $text in $texts return concat($text/@type, "/", $text/@subtype)
+    let $currentOption := concat($type, "/", $subtype)
+    return
+        <div class="editor-container span{$width}">
+            <div class="selects">
+                <select class="type-select" name="type">
+                {
+                    for $option in $options
+                    return
+                        <option>
+                        { if ($option = $currentOption) then attribute selected { "selected" } else () }
+                        {$option}
+                        </option>
+                }
+                </select>
+                <button class="btn editor-save">Save</button>
+            </div>
+            <div class="editor">
+                <textarea name="editor1">{$lines}</textarea>
+            </div>
+        </div>
+};
 
-declare function app:textarea($node as node(), $params as element(parameters)?, $model as item()*) 
+declare function app:textarea($node as node(), $model as item()*) 
 {
 let $model := util:expand($model)
 let $log := util:log("DEBUG", ("##$model-1): ", $model))
