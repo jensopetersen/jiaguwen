@@ -36,12 +36,15 @@ declare function app:get-lines($body as element(tei:TEI), $line-number as xs:str
     $type as xs:string, $subtype as xs:string) {
     let $text :=
         $body/tei:text[1]/tei:group[1]/tei:text[@n eq $line-number]/tei:group[1]/tei:text[@type = $type][@subtype = $subtype]
-    return string-join(
-        for $line in $text//tei:seg/text()
-        return
-            normalize-space($line), 
-        "&#10;"
-    )
+    let $editable := (: if ($text/@xml:id) then "false" else "true" :) "true"
+    return
+        <ol contenteditable="{$editable}">
+        {
+            for $line in $text//tei:seg/text()
+            return
+                <li>{normalize-space($line)}</li>
+        }
+        </ol>
 };
 
 declare function app:editor($node as node(), $model as map(*), $type as xs:string, $subtype as xs:string) {
@@ -68,9 +71,7 @@ declare function app:editor($node as node(), $model as map(*), $type as xs:strin
                 </select>
                 <button class="btn editor-save">Save</button>
             </div>
-            <div class="editor">
-                <textarea name="editor1">{$lines}</textarea>
-            </div>
+            <div class="editor">{$lines}</div>
         </div>
 };
 

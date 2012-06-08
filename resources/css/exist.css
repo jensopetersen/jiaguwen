@@ -1,9 +1,15 @@
 @charset "utf-8";
 /* CSS Document */
 
-@import url('reset.css');
 @import url('dropdowns.css');
 
+@font-face {
+    font-family: 'CHANT';
+    src: local('CHANT'), 
+        url('../fonts/CHANT.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* ---------------------------------------- LAYOUT ---------------------------------------- */
 
@@ -153,6 +159,11 @@ form {
     position: relative;
     width: 100%;
     height: 300px;
+    padding: 10px 8px;
+}
+
+.editor ol li {
+    font-family: CHANT;
 }
 
 .editor textarea {
@@ -164,7 +175,7 @@ form {
     height: 300px;
 }
 
-.CHANT {font-family: "CHANT" !important;}
+.CHANT { font-family: "CHANT" !important; }
 
 #r-bot {
     display: none;
