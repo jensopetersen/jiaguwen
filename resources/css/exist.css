@@ -152,7 +152,7 @@ form {
 
 .selects select {
     float: left;
-    width: 220px;
+    width: 170px;
 }
 
 .editor {
@@ -162,21 +162,65 @@ form {
     padding: 10px 8px;
 }
 
-.editor ol li {
+/*Styling list numbers begins*/
+/*based on <http://www.456bereastreet.com/archive/201105/styling_ordered_list_numbers/>*/
+
+.editor ol {
+    counter-reset:li; /* Initiate a counter */
+    margin-left:0; /* Remove the default left margin */
+    padding-left:0; /* Remove the default left padding */
+}
+
+.editor ol > li {
+    position:relative; /* Create a positioning context */
+    margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+    padding:4px 8px; /* Add some spacing around the content */
+    list-style:none; /* Disable the normal item numbering */
+    border-top:1px solid #666;
+    background:#f6f6f6;
+}
+
+.editor ol > li:before {
+    content:counter(li); /* Use the counter as content */
+    counter-increment:li; /* Increment the counter by 1 */
+    /* Position and style the number */
+    position:absolute;
+    top:-1px;
+    left:-2em;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    width:2em;
+    /* Some space between the number and the content in browsers that support
+       generated content but not positioning it (Camino 2 is one example) */
+    margin-right:8px;
+    padding:4px;
+    border-top:1px solid #666;
+    color:#fff;
+    background:#666;
+    font-weight:bold;
+    font-family:"Helvetica Neue", Arial, sans-serif;
+    text-align:center;
+}
+
+.editor li ol,
+
+.editor li ul {margin-top:6px;}
+
+.editor ol ol li:last-child {margin-bottom:0;}
+
+/*Styling list numbers ends;*/
+
+.CHANT {
     font-family: CHANT;
 }
+
 
 .editor textarea {
     width: 100%;
 }
 
-.code-editor {
-    width: 100%;
-    height: 300px;
+button.btn, input.btn[type="submit"]  {
+    padding-left: 5px;
+    padding-right: 5px;
 }
-
-.CHANT { font-family: "CHANT" !important; }
-
-#r-bot {
-    display: none;
-    }
