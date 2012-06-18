@@ -32,11 +32,9 @@ function app:line-select($node as node(), $model as map(*)) {
         <option>{$i}</option>
 };
 
-declare function app:get-lines($model as element(tei:TEI), $line-number as xs:string, 
-    $type as xs:string, $subtype as xs:string) {
+declare function app:get-lines($model as element(tei:TEI), $line-number as xs:string, $type as xs:string, $subtype as xs:string) {
+    let $text := $model/tei:text[1]/tei:group[1]/tei:text[@n eq $line-number]/tei:group[1]/tei:text[@type eq $type][@subtype eq $subtype]
     let $host-id := $model/@xml:id/string()
-    let $text :=
-        $model/tei:text[1]/tei:group[1]/tei:text[@n eq $line-number]/tei:group[1]/tei:text[@type eq $type][@subtype eq $subtype]
     let $text-id := $text/@xml:id/string()
     let $doc := collection("/db/tls/data")/(id($text-id))/ancestor::tei:TEI    
     let $doc-id := $doc/@xml:id/string()
@@ -57,6 +55,7 @@ declare function app:editor($node as node(), $model as map(*), $type as xs:strin
     let $model := util:expand($model("data"))
     let $line-number := '1'
     let $lines := app:get-lines($model, $line-number, $type, $subtype)
+    let $editable := $lines/@contenteditable
     let $width := if ($type = "translation") then 9 else 3
     let $texts := $model/tei:text[1]/tei:group[1]/tei:text[@n eq $line-number]/tei:group[1]/tei:text
     let $options :=
@@ -70,12 +69,13 @@ declare function app:editor($node as node(), $model as map(*), $type as xs:strin
                         for $option in $options
                         return
                             <option>
-                            { if ($option = $currentOption) then attribute selected { "selected" } else () }
+                            { if ($option eq $currentOption) then attribute selected { "selected" } else () }
                             {$option}
                             </option>
                     }
                     </select>
-                    <button class="btn editor-save">Save</button>
+                    <!--"enabled"/"disabled" does not refresh.-->
+                    <button class="btn editor-save { if ($editable eq "true") then "enabled" else "disabled" }">Save</button>
                 </div>
                 <div class="editor">{$lines}</div>
             </div>

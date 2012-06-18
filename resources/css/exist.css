@@ -18,7 +18,7 @@ body { font: 12px/20px Verdana, Arial, Helvetica, sans-serif; color: #222; backg
 #grey-top { background: #F3F3F3 url(../images/horizontal.gif) repeat-x 50% 0; float: left; width: 100%; height: 100%; }
 #grey-bot { background: url(../images/body-base.gif) repeat-x 50% 100%; float: left; width: 100%; height: 100%; }
 
-#container { width: 960px; margin: 0 auto; }
+#container { width: 1200px; margin: 0 auto; }
 
 #header { margin: 0 auto; width: 960px; float: left; background: url(../images/header.gif) no-repeat; height: 120px; }
 
@@ -223,4 +223,33 @@ form {
 button.btn, input.btn[type="submit"]  {
     padding-left: 5px;
     padding-right: 5px;
+}
+
+fieldset {
+    position: relative;
+    padding-bottom:3em;
+}
+
+.title {
+    position: absolute;
+    float:left;
+    width:300px;
+    
+}
+
+.line {
+    position: absolute;
+    left:300px;   
+}
+
+.editor ol[contenteditable=true] > li {
+    border-top-width:0;
+}
+
+#line-select {
+    width:60px;
+}
+
+.disabled {
+    display:none;
 }

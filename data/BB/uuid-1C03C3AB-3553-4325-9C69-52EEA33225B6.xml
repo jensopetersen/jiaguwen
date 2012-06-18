@@ -30,20 +30,20 @@
                 <group>
                     <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-1-yuanwen">
                         <xi:fallback>
-                            <note>The XInclude didn't work! Scratch your head!</note>
+                            <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
                     <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-1-shiwen">
                         <xi:fallback>
-                            <note>The XInclude didn't work! Scratch your head!</note>
+                            <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-1-o-transcription-Takashima">
                         <body>
                             <p>
-                                <seg n="1">壬子卜，</seg>
-                                <seg n="2">爭貞，</seg>
-                                <seg n="3">自今日我󰹨󽕦。</seg>
+                                <seg>壬子卜，</seg>
+                                <seg>爭貞，</seg>
+                                <seg>自今日我󰹨󽕦。</seg>
                             </p>
                         </body>
                     </text>
@@ -74,12 +74,12 @@
                 <group>
                     <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-2-yuanwen">
                         <xi:fallback>
-                            <note>The XInclude didn't work! Scratch your head!</note>
+                            <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
                     <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-2-shiwen">
                         <xi:fallback>
-                            <note>The XInclude didn't work! Scratch your head!</note>
+                            <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-2-o-transcription-Takashima">
@@ -112,12 +112,12 @@
                 <group>
                     <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-3-yuanwen">
                         <xi:fallback>
-                            <note>The XInclude didn't work! Scratch your head!</note>
+                            <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
                     <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-3-shiwen">
                         <xi:fallback>
-                            <note>The XInclude didn't work! Scratch your head!</note>
+                            <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-3-o-transcription-Takashima">
@@ -184,17 +184,23 @@
             </text>
             <text n="4">
                 <group>
-                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="xpointer(//text[@n eq '4']/group/text[@type eq 'transcription'])">
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-4-yuanwen">
                         <xi:fallback>
-                            <note>The XInclude didn't work! Scratch your head!</note>
+                            <note>XInclude failed!</note>
+                        </xi:fallback>
+                    </xi:include>
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-4-shiwen">
+                        <xi:fallback>
+                            <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-4-o-transcription-Takashima">
                         <body>
                             <p>
-                                <seg n="1">壬子卜，</seg>
-                                <seg n="2">爭貞，</seg>
-                                <seg n="3">自今日我󰹨󽕦。</seg>
+                                <seg>癸丑卜，</seg>
+                                <seg>爭，</seg>
+                                <seg>貞自今至于丁巳我弗其󰹨󽕦。</seg>
+                                <seg>一 二</seg>
                             </p>
                         </body>
                     </text>
@@ -220,17 +226,24 @@
             </text>
             <text n="5">
                 <group>
-                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="xpointer(//text[@n eq '5']/group/text[@type eq 'transcription'])">
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-5-yuanwen">
                         <xi:fallback>
-                            <note>The XInclude didn't work! Scratch your head!</note>
+                            <note>XInclude failed!</note>
+                        </xi:fallback>
+                    </xi:include>
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-5-shiwen">
+                        <xi:fallback>
+                            <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-5-o-transcription-Takashima">
                         <body>
                             <p>
-                                <seg n="1">壬子卜，</seg>
-                                <seg n="2">爭貞，</seg>
-                                <seg n="3">自今日我󰹨󽕦。</seg>
+                                <seg>庚申卜，</seg>
+                                <seg>王，</seg>
+                                <seg>貞余伐不。</seg>
+                                <seg>三月。</seg>
+                                <seg>一</seg>
                             </p>
                         </body>
                     </text>
@@ -255,26 +268,30 @@
             </text>
             <text n="6">
                 <group>
-                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="xpointer(//text[@n eq '6']/group/text[@type eq 'transcription'])">
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-6-yuanwen">
                         <xi:fallback>
-                            <note>The XInclude didn't work! Scratch your head!</note>
+                            <note>XInclude failed!</note>
+                        </xi:fallback>
+                    </xi:include>
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-6-shiwen">
+                        <xi:fallback>
+                            <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-6-o-transcription-Takashima">
                         <body>
                             <p>
-                                <seg n="1">壬子卜，</seg>
-                                <seg n="2">爭貞，</seg>
-                                <seg n="3">自今日我󰹨󽕦。</seg>
+                                <seg>庚〔申卜〕，</seg>
+                                <seg>王，</seg>
+                                <seg>貞余勿伐不。</seg>
+                                <seg>一 二告</seg>
                             </p>
                         </body>
                     </text>
                     <text type="translation" subtype="Takashima" xml:id="BB-6-o-translation-Takashima">
                         <body>
                             <p>
-                                <seg n="6">Crack making on the gengshen day [57], His Majesty
-                                    tested: I should not launch an attack against the Pi [‘]. Second
-                                    announcement [ 7].15</seg>
+                                <seg>Crack making on the gengshen day [57], His Majesty tested: I should not launch an attack against the Pi [‘]. Second announcement [ 7].</seg>
                             </p>
                         </body>
                     </text>
@@ -291,25 +308,32 @@
             </text>
             <text n="7">
                 <group>
-                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="xpointer(//text[@n eq '7']/group/text[@type eq 'transcription'])">
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-7-yuanwen">
                         <xi:fallback>
-                            <note>The XInclude didn't work! Scratch your head!</note>
+                            <note>XInclude failed!</note>
+                        </xi:fallback>
+                    </xi:include>
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-7-shiwen">
+                        <xi:fallback>
+                            <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-7-o-transcription-Takashima">
                         <body>
                             <p>
-                                <seg n="1">壬子卜，</seg>
-                                <seg n="2">爭貞，</seg>
-                                <seg n="3">自今日我󰹨󽕦。</seg>
+                                <seg>庚申卜，</seg>
+                                <seg>王，</seg>
+                                <seg>貞余伐不。</seg>
+                                <seg>一</seg>
                             </p>
                         </body>
                     </text>
                     <text type="translation" subtype="Takashima" xml:id="BB-7-o-translation-Takashima">
                         <body>
                             <p>
-                                <seg n="7">Crack making on the gengshen day [57], His Majesty
-                                    tested: I should launch an attack against the Pi.</seg>
+                                <seg>Crack making on the gengshen day [57],</seg>
+                                <seg>His Majesty tested:</seg>
+                                <seg>I should launch an attack against the Pi.</seg>
                             </p>
                         </body>
                     </text>
@@ -325,17 +349,23 @@
             </text>
             <text n="8">
                 <group>
-                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="xpointer(//text[@n eq '8']/group/text[@type eq 'transcription'])">
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-8-yuanwen">
                         <xi:fallback>
-                            <note>The XInclude didn't work! Scratch your head!</note>
+                            <note>XInclude failed!</note>
+                        </xi:fallback>
+                    </xi:include>
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-8-shiwen">
+                        <xi:fallback>
+                            <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-8-o-transcription-Takashima">
                         <body>
                             <p>
-                                <seg n="1">壬子卜，</seg>
-                                <seg n="2">爭貞，</seg>
-                                <seg n="3">自今日我󰹨󽕦。</seg>
+                                <seg>庚申卜，</seg>
+                                <seg>王貞，</seg>
+                                <seg>余勿伐不。</seg>
+                                <seg>一</seg>
                             </p>
                         </body>
                     </text>
@@ -359,9 +389,14 @@
             </text>
             <text n="9">
                 <group>
-                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="xpointer(//text[@n eq '9']/group/text[@type eq 'transcription'])">
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-9-yuanwen">
                         <xi:fallback>
-                            <note>The XInclude didn't work! Scratch your head!</note>
+                            <note>XInclude failed!</note>
+                        </xi:fallback>
+                    </xi:include>
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-9-shiwen">
+                        <xi:fallback>
+                            <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-9-o-transcription-Takashima">
@@ -394,9 +429,14 @@
             </text>
             <text n="10">
                 <group>
-                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="xpointer(//text[@n eq '10']/group/text[@type eq 'transcription'])">
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-10-yuanwen">
                         <xi:fallback>
-                            <note>The XInclude didn't work! Scratch your head!</note>
+                            <note>XInclude failed!</note>
+                        </xi:fallback>
+                    </xi:include>
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-10-shiwen">
+                        <xi:fallback>
+                            <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-10-o-transcription-Takashima">
@@ -429,9 +469,14 @@
             </text>
             <text n="11">
                 <group>
-                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="xpointer(//text[@n eq '11']/group/text[@type eq 'transcription'])">
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-11-yuanwen">
                         <xi:fallback>
-                            <note>The XInclude didn't work! Scratch your head!</note>
+                            <note>XInclude failed!</note>
+                        </xi:fallback>
+                    </xi:include>
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-11-shiwen">
+                        <xi:fallback>
+                            <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-11-o-transcription-Takashima">
@@ -463,9 +508,14 @@
             </text>
             <text n="12">
                 <group>
-                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="xpointer(//text[@n eq '12']/group/text[@type eq 'transcription'])">
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-12-yuanwen">
                         <xi:fallback>
-                            <note>The XInclude didn't work! Scratch your head!</note>
+                            <note>XInclude failed!</note>
+                        </xi:fallback>
+                    </xi:include>
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-12-shiwen">
+                        <xi:fallback>
+                            <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-12-o-transcription-Takashima">
@@ -498,9 +548,14 @@
             </text>
             <text n="13">
                 <group>
-                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="xpointer(//text[@n eq '13']/group/text[@type eq 'transcription'])">
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-13-yuanwen">
                         <xi:fallback>
-                            <note>The XInclude didn't work! Scratch your head!</note>
+                            <note>XInclude failed!</note>
+                        </xi:fallback>
+                    </xi:include>
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-13-shiwen">
+                        <xi:fallback>
+                            <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-13-o-transcription-Takashima">
@@ -533,9 +588,14 @@
             </text>
             <text n="14">
                 <group>
-                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="xpointer(//text[@n eq '14']/group/text[@type eq 'transcription'])">
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-14-yuanwen">
                         <xi:fallback>
-                            <note>The XInclude didn't work! Scratch your head!</note>
+                            <note>XInclude failed!</note>
+                        </xi:fallback>
+                    </xi:include>
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-14-shiwen">
+                        <xi:fallback>
+                            <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-14-o-transcription-Takashima">
@@ -569,9 +629,14 @@
             </text>
             <text n="15">
                 <group>
-                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="xpointer(//text[@n eq '15']/group/text[@type eq 'transcription'])">
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-15-yuanwen">
                         <xi:fallback>
-                            <note>The XInclude didn't work! Scratch your head!</note>
+                            <note>XInclude failed!</note>
+                        </xi:fallback>
+                    </xi:include>
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-15-shiwen">
+                        <xi:fallback>
+                            <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-15-o-transcription-Takashima">
@@ -604,9 +669,14 @@
             </text>
             <text n="16">
                 <group>
-                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="xpointer(//text[@n eq '16']/group/text[@type eq 'transcription'])">
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-16-yuanwen">
                         <xi:fallback>
-                            <note>The XInclude didn't work! Scratch your head!</note>
+                            <note>XInclude failed!</note>
+                        </xi:fallback>
+                    </xi:include>
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-16-shiwen">
+                        <xi:fallback>
+                            <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-16-o-transcription-Takashima">
@@ -639,9 +709,14 @@
             </text>
             <text n="17">
                 <group>
-                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="xpointer(//text[@n eq '17']/group/text[@type eq 'transcription'])">
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-17-yuanwen">
                         <xi:fallback>
-                            <note>The XInclude didn't work! Scratch your head!</note>
+                            <note>XInclude failed!</note>
+                        </xi:fallback>
+                    </xi:include>
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-17-shiwen">
+                        <xi:fallback>
+                            <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-17-o-transcription-Takashima">
@@ -674,9 +749,14 @@
             </text>
             <text n="18">
                 <group>
-                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="xpointer(//text[@n eq '18']/group/text[@type eq 'transcription'])">
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-18-yuanwen">
                         <xi:fallback>
-                            <note>The XInclude didn't work! Scratch your head!</note>
+                            <note>XInclude failed!</note>
+                        </xi:fallback>
+                    </xi:include>
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-18-shiwen">
+                        <xi:fallback>
+                            <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-18-o-transcription-Takashima">
@@ -708,9 +788,14 @@
             </text>
             <text n="19">
                 <group>
-                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="xpointer(//text[@n eq '19']/group/text[@type eq 'transcription'])">
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-19-yuanwen">
                         <xi:fallback>
-                            <note>The XInclude didn't work! Scratch your head!</note>
+                            <note>XInclude failed!</note>
+                        </xi:fallback>
+                    </xi:include>
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-19-shiwen">
+                        <xi:fallback>
+                            <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-19-o-transcription-Takashima">
