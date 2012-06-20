@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg" xml:id="uuid-A6B48345-E34E-4E3A-A1E7-EC9D23B20C10">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>BB 2 (reverse):</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Publication Information</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>
+                    
+                </p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text>
+        <group>
+            <text n="1">
+                <group>
+                    <xi:include href="/db/tls/data/Heji/uuid-22815787-003E-4070-A0C1-74BC0270F422.xml" xpointer="H06834-反-1-yuanwen">
+                        <xi:fallback>
+                            <note>XInclude failed!</note>
+                        </xi:fallback>
+                    </xi:include>
+                    <xi:include href="/db/tls/data/Heji/uuid-22815787-003E-4070-A0C1-74BC0270F422.xml" xpointer="H06834-反-1-shiwen">
+                        <xi:fallback>
+                            <note>XInclude failed!</note>
+                        </xi:fallback>
+                    </xi:include>
+                    <text type="transcription" subtype="Takashima" xml:id="BB-2-r-1-transcription-Takashima">
+                        <body>
+                            <p>
+                                <seg/>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="translation" subtype="Takashima" xml:id="BB-2-r-1-translation-Takashima">
+                        <body>
+                            <p>
+                                <seg>Crack making on the xinyou day [58], Nan tested: We shall have no (occasion)
+                                    to wait.</seg>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="translation" subtype="Serruys" xml:id="BB-2-r-1-translation-Serruys">
+                        <body>
+                            <p>
+                                <seg>At xinyou day [58] divination, Gu tested: we will not have [cause] to wait.</seg>
+                            </p>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text n="2">
+                <group>
+                    <xi:include href="/db/tls/data/Heji/uuid-22815787-003E-4070-A0C1-74BC0270F422.xml" xpointer="H06834-反-2-yuanwen">
+                        <xi:fallback>
+                            <note>XInclude failed!</note>
+                        </xi:fallback>
+                    </xi:include>
+                    <xi:include href="/db/tls/data/Heji/uuid-22815787-003E-4070-A0C1-74BC0270F422.xml" xpointer="H06834-反-2-shiwen">
+                        <xi:fallback>
+                            <note>XInclude failed!</note>
+                        </xi:fallback>
+                    </xi:include>
+                    <text type="transcription" subtype="Takashima" xml:id="BB-2-r-2-transcription-Takashima">
+                        <body>
+                            <p>
+                                <seg/>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="translation" subtype="Takashima" xml:id="BB-2-r-2-translation-Takashima">
+                        <body>
+                            <p>
+                                <seg>Crack making on the xinyou day, Nan tested: … it is not … (an) inauspicious
+                                    (sign).</seg>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="translation" subtype="Serruys" xml:id="BB-2-r-2-translation-Serruys">
+                        <body>
+                            <p>
+                                <seg>[No translation given.]</seg>
+                            </p>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text n="3">
+                <group>
+                    <xi:include href="/db/tls/data/Heji/uuid-22815787-003E-4070-A0C1-74BC0270F422.xml" xpointer="H06834-反-3-yuanwen">
+                        <xi:fallback>
+                            <note>XInclude failed!</note>
+                        </xi:fallback>
+                    </xi:include>
+                    <xi:include href="/db/tls/data/Heji/uuid-22815787-003E-4070-A0C1-74BC0270F422.xml" xpointer="H06834-反-3-shiwen">
+                        <xi:fallback>
+                            <note>XInclude failed!</note>
+                        </xi:fallback>
+                    </xi:include>
+                    <text type="transcription" subtype="Takashima" xml:id="BB-2-r-3-transcription-Takashima">
+                        <body>
+                            <p>
+                                <seg/>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="translation" subtype="Takashima" xml:id="BB-2-r-3-translation-Takashima">
+                        <body>
+                            <p>
+                                <seg>Nan.</seg>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="translation" subtype="Serruys" xml:id="BB-2-r-3-translation-Serruys">
+                        <body>
+                            <p>
+                                <seg>Gu (signature).3</seg>
+                            </p>
+                        </body>
+                    </text>
+                </group>
+            </text>
+        </group>
+    </text>
+</TEI>

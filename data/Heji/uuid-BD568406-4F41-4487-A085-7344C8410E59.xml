@@ -14,25 +14,25 @@
             </sourceDesc>
         </fileDesc>
     </teiHeader>
-    <text>
+    <text xml:id="H06834-正">
         <group>
-            <text>
+            <text xml:id="H06834-正-1">
                 <group>
                     <text type="transcription" subtype="yuanwen" xml:id="H06834-正-1-yuanwen">
                         <body>
                             <p>
-                                <seg n="1">󾑽󾒂󽲙，</seg>
-                                <seg n="2">󽓹，</seg>
-                                <seg n="3">󾖠󽎘󽫈󽗄󽷫󽶤󽕦。</seg>
+                                <seg>󾑽󾒂󽲙，</seg>
+                                <seg>󽓹，</seg>
+                                <seg>󾖠󽎘󽫈󽗄󽷫󽶤󽕦。</seg>
                             </p>
                         </body>
                     </text>
                     <text type="transcription" subtype="shiwen" xml:id="H06834-正-1-shiwen">
                         <body>
                             <p>
-                                <seg n="1">壬子卜，</seg>
-                                <seg n="2">爭，</seg>
-                                <seg n="3">貞自今日我󰹨󽕦。</seg>
+                                <seg>壬子卜，</seg>
+                                <seg>爭，</seg>
+                                <seg>貞自今日我󰹨󽕦。</seg>
                             </p>
                         </body>
                     </text>
@@ -43,14 +43,14 @@
                     <text type="transcription" subtype="yuanwen" xml:id="H06834-正-2-yuanwen">
                         <body>
                             <p>
-                                <seg n="1">󾖠󽎘󾖂󽗄󽷫󾅊󾁃󽶤󽕦。</seg>
+                                <seg>󾖠󽎘󾖂󽗄󽷫󾅊󾁃󽶤󽕦。</seg>
                             </p>
                         </body>
                     </text>
                     <text type="transcription" subtype="shiwen" xml:id="H06834-正-2-shiwen">
                         <body>
                             <p>
-                                <seg n="1">貞自五日我弗其󰹨󽕦。</seg>
+                                <seg>貞自五日我弗其󰹨󽕦。</seg>
                             </p>
                         </body>
                     </text>
@@ -61,32 +61,32 @@
                     <text type="transcription" subtype="yuanwen" xml:id="H06834-正-3-yuanwen">
                         <body>
                             <p>
-                                <seg n="1">󾒀󾒕󽲙，</seg>
-                                <seg n="2">〔󽓹〕，</seg>
-                                <seg n="3">󾖠󽎘󽫈󽹯󾌗󾑟󾒥󽷫󽶤󽕦。</seg>
-                                <seg n="4">󾍍󽲖󽎭︰</seg>
-                                <seg n="5">󾑟󾒥󽷫󽈎󾁃󽶤，</seg>
-                                <seg n="6">󾌗󽠓󾑔󾒂󽶤，</seg>
-                                <seg n="7">󽗻󾐛󾕻󽗄󾒀󾓆󾉸󾅊󽶤。</seg>
-                                <seg n="8">󽐈󽗠󾀾，</seg>
-                                <seg n="9">󾑔󾒂󽀚󽶤。</seg>
-                                <seg n="10">󾕻 󾕼</seg>
+                                <seg>󾒀󾒕󽲙，</seg>
+                                <seg>〔󽓹〕，</seg>
+                                <seg>󾖠󽎘󽫈󽹯󾌗󾑟󾒥󽷫󽶤󽕦。</seg>
+                                <seg>󾍍󽲖󽎭︰</seg>
+                                <seg>󾑟󾒥󽷫󽈎󾁃󽶤，</seg>
+                                <seg>󾌗󽠓󾑔󾒂󽶤，</seg>
+                                <seg>󽗻󾐛󾕻󽗄󾒀󾓆󾉸󾅊󽶤。</seg>
+                                <seg>󽐈󽗠󾀾，</seg>
+                                <seg>󾑔󾒂󽀚󽶤。</seg>
+                                <seg>󾕻 󾕼</seg>
                             </p>
                         </body>
                     </text>
                     <text type="transcription" subtype="shiwen" xml:id="H06834-正-3-shiwen">
                         <body>
                             <p>
-                                <seg n="1">癸丑卜，</seg>
-                                <seg n="2">〔爭〕，</seg>
-                                <seg n="3">貞自今至于丁巳我󰹨󽕦。</seg>
-                                <seg n="4">王󰩏曰︰</seg>
-                                <seg n="5">丁巳我母其󰹨，</seg>
-                                <seg n="6">于來甲子󰹨，</seg>
-                                <seg n="7">旬㞢一日癸亥車弗󰹨。</seg>
-                                <seg n="8">之夕󾀾，</seg>
-                                <seg n="9">甲子允󰹨。</seg>
-                                <seg n="10">一 二</seg>
+                                <seg>癸丑卜，</seg>
+                                <seg>〔爭〕，</seg>
+                                <seg>貞自今至于丁巳我󰹨󽕦。</seg>
+                                <seg>王󰩏曰︰</seg>
+                                <seg>丁巳我母其󰹨，</seg>
+                                <seg>于來甲子󰹨，</seg>
+                                <seg>旬㞢一日癸亥車弗󰹨。</seg>
+                                <seg>之夕󾀾，</seg>
+                                <seg>甲子允󰹨。</seg>
+                                <seg>一 二</seg>
                             </p>
                         </body>
                     </text>
