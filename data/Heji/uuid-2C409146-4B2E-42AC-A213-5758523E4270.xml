@@ -1,25 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg" xml:id="uuid-1C03C3AB-3553-4325-9C69-52EEA33225B6">
+<TEI xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg" xml:id="uuid-2C409146-4B2E-42AC-A213-5758523E4270">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>BB 1 (obverse):</title>
+                <title>BB 3 (obverse):</title>
             </titleStmt>
             <publicationStmt>
                 <p>Publication Information</p>
             </publicationStmt>
             <sourceDesc>
                 <p>
-                    <list>
-                        <item>BB 1 (HJ 6834o), GN</item>
-                        <item>YH 127</item>
-                        <item>Grooves evenly engraved</item>
-                        <item>Divination cracks carved</item>
-                        <item>Larger characters filled with red pigment</item>
-                        <item>Smaller characters filled with dark-brown pigment</item>
-                        <item>Wu Ding period </item>
-                    </list>
                 </p>
             </sourceDesc>
         </fileDesc>
@@ -38,33 +29,24 @@
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-1-o-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-1-transcription-Takashima">
                         <body>
                             <p>
-                                <seg>壬子卜，</seg>
-                                <seg>爭貞，</seg>
-                                <seg>自今日我󰹨󽕦。</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-1-o-translation-Takashima">
+                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-1-translation-Takashima">
                         <body>
                             <p>
-                                <seg n="1">Crack making on the renzi day [49], </seg>
-                                <seg n="1">Zheng tested : </seg>
-                                <seg n="1">Starting from the present, in five days (or: In five days
-                                    from now), we (will) (be able to) harm (or: smite) the
-                                    You.</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-1-o-translation-Serruys">
+                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-1-translation-Serruys">
                         <body>
                             <p>
-                                <seg n="1">At renzi day [49] divination,</seg>
-                                <seg n="2">(diviner) Zheng tested: </seg>
-                                <seg n="3">Starting from the present day, we shall destroy the
-                                    Zhou.</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
@@ -82,27 +64,24 @@
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-2-o-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-2-transcription-Takashima">
                         <body>
                             <p>
-                                <seg>貞自五日我弗其󰹨󽕦。</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-2-o-translation-Takashima">
+                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-2-translation-Takashima">
                         <body>
                             <p>
-                                <seg>Tested: Starting from [the present], in five days (or: five
-                                    days from now), we might not (be able to) harm (or: smite) the
-                                    You.</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-2-o-translation-Serruys">
+                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-2-translation-Serruys">
                         <body>
                             <p>
-                                <seg n="2">(He) tested: Starting from the fifth day, we shall not
-                                    anticipate that (we will) destroy the Zhou.</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
@@ -120,63 +99,24 @@
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-3-transcription-Takashima">
                         <body>
                             <p>
-                                <seg>癸丑卜，</seg>
-                                <seg>〔爭〕貞，</seg>
-                                <seg>自今至于丁巳我󰹨󽕦。</seg>
-                                <seg>王󰩏曰︰</seg>
-                                <seg>丁巳我母其󰹨，</seg>
-                                <seg>于來甲子󰹨，</seg>
-                                <seg>旬㞢一日癸亥車弗󰹨。</seg>
-                                <seg>之夕󾀾甲子，</seg>
-                                <seg>允󰹨。</seg>
-                                <seg>一 二</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-translation-Takashima">
+                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-3-translation-Takashima">
                         <body>
                             <p>
-                                <seg>Crack making on the guichou day [50], </seg>
-                                <seg>Zheng tested: </seg>
-                                <seg>Starting from the present down to the dingsi day (or: between
-                                    now and the dingsi day), we (will be able to) harm (or: smite)
-                                    the You. </seg>
-                                <seg>His Majesty, having prognosticated, declared:</seg>
-                                <seg>“(On) the dingsi day [54], we might not (be able to) harm (or:
-                                    smite) (them), </seg>
-                                <seg>(but) on the coming jiazi day [1] we will (be able to) harm
-                                    (or: smite) (them).”</seg>
-                                <seg>In eleven days, (on) the guihai day [60], Ju [could] not harm
-                                    (or: smite) (them), </seg>
-                                <seg>(but when) that night [i.e., of the guihai day] cut into (or:
-                                    intersected with) [-] the jiazi day,</seg>
-                                <seg>(we) did indeed harm (or: smite) (them).</seg>
-                                <seg>-</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-translation-Serruys">
+                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-3-translation-Serruys">
                         <body>
                             <p>
-                                <seg>At guichou day [50] divination, </seg>
-                                <seg>(diviner) Zheng tested: </seg>
-                                <seg>Starting from the present, reaching till day dingsi [54], we
-                                    shall destroy the Zhou.</seg>
-                                <seg>The king prognosticating said/says: </seg>
-                                <seg>“On day dingsi [54] be it not anticipated8 that we will destroy
-                                    (them), </seg>
-                                <seg>(but) by the coming day jiazi [1] (we shall) destroy
-                                    (them).</seg>
-                                <seg>(Having/making it) a (full ten-day week) cycle (and) having (in
-                                    addition) one day (&gt; i.e., after a week and one day, eleventh
-                                    day), guihai [60], (the) Ju did not destroy (them, i.e.) the
-                                    Zhou, </seg>
-                                <seg>(but) coming (to) the evening through(next day) jiazi [1]</seg>
-                                <seg>(we/they?) did indeed destroy (them).</seg>
-                                <seg>-</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
@@ -194,31 +134,24 @@
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-4-o-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-4-transcription-Takashima">
                         <body>
                             <p>
-                                <seg>癸丑卜，</seg>
-                                <seg>爭，</seg>
-                                <seg>貞自今至于丁巳我弗其󰹨󽕦。</seg>
-                                <seg>一 二</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-4-o-translation-Takashima">
+                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-4-translation-Takashima">
                         <body>
                             <p>
-                                <seg n="4">Crack making on the guichou day [50], Zheng tested:
-                                    Between now and the dingsi day [54], we might not (be able to)
-                                    harm (or: smite) the You [ ].</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-4-o-translation-Serruys">
+                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-4-translation-Serruys">
                         <body>
                             <p>
-                                <seg n="4">At guichou day [50] divination, (diviner) Zheng tested:
-                                    Starting from the present reaching till the day dingsi [54], we
-                                    shall not anticipate to destroy the Zhou.</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
@@ -236,31 +169,24 @@
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-5-o-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-5-transcription-Takashima">
                         <body>
                             <p>
-                                <seg>庚申卜，</seg>
-                                <seg>王，</seg>
-                                <seg>貞余伐不。</seg>
-                                <seg>三月。</seg>
-                                <seg>一</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-5-o-translation-Takashima">
+                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-5-translation-Takashima">
                         <body>
                             <p>
-                                <seg n="5">Crack making on the gengshen day [57], His Majesty
-                                    tested: I should launch an attack against the Pi [‘].13 Third
-                                    month.</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-5-o-translation-Serruys">
+                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-5-translation-Serruys">
                         <body>
                             <p>
-                                <seg n="5">At gengshen day [57] divination, the king tested: I shall
-                                    attack (the) Bu. Third moon.</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
@@ -278,29 +204,24 @@
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-6-o-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-6-transcription-Takashima">
                         <body>
                             <p>
-                                <seg>庚〔申卜〕，</seg>
-                                <seg>王，</seg>
-                                <seg>貞余勿伐不。</seg>
-                                <seg>一 二告</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-6-o-translation-Takashima">
+                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-6-translation-Takashima">
                         <body>
                             <p>
-                                <seg>Crack making on the gengshen day [57], His Majesty tested: I should not launch an attack against the Pi [‘]. Second announcement [ 7].</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-6-o-translation-Serruys">
+                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-6-translation-Serruys">
                         <body>
                             <p>
-                                <seg n="6">At gengshen day [57] divination, the king tested: I do
-                                    not attack (do not have [them] attack, do not decide/assume to
-                                    attack) the Bu.14</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
@@ -318,30 +239,24 @@
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-7-o-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-7-transcription-Takashima">
                         <body>
                             <p>
-                                <seg>庚申卜，</seg>
-                                <seg>王，</seg>
-                                <seg>貞余伐不。</seg>
-                                <seg>一</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-7-o-translation-Takashima">
+                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-7-translation-Takashima">
                         <body>
                             <p>
-                                <seg>Crack making on the gengshen day [57],</seg>
-                                <seg>His Majesty tested:</seg>
-                                <seg>I should launch an attack against the Pi.</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-7-o-translation-Serruys">
+                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-7-translation-Serruys">
                         <body>
                             <p>
-                                <seg n="7">At gengshen day [57] divination, the king tested: I do
-                                    attack/punish16 the Bu/Pei.</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
@@ -359,29 +274,24 @@
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-8-o-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-8-transcription-Takashima">
                         <body>
                             <p>
-                                <seg>庚申卜，</seg>
-                                <seg>王貞，</seg>
-                                <seg>余勿伐不。</seg>
-                                <seg>一</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-8-o-translation-Takashima">
+                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-8-translation-Takashima">
                         <body>
                             <p>
-                                <seg n="8">At gengshen day [57] divination, the king tested: I do
-                                    not attack/punish the Bu/Pei.</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-8-o-translation-Serruys">
+                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-8-translation-Serruys">
                         <body>
                             <p>
-                                <seg n="8">Crack making on the gengshen day [57], His Majesty
-                                    tested: I should not launch an attack against the Pi.</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
@@ -399,29 +309,24 @@
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-9-o-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-9-transcription-Takashima">
                         <body>
                             <p>
-                                <seg n="1">壬子卜，</seg>
-                                <seg n="2">爭貞，</seg>
-                                <seg n="3">自今日我󰹨󽕦。</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-9-o-translation-Takashima">
+                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-9-translation-Takashima">
                         <body>
                             <p>
-                                <seg n="9">Crack making on the gengshen day [57], [His Majesty]
-                                    tested: (Qiao should be able to) capture the Fou/Tao (or Bao)
-                                    [:].18 Second announcement [ 7].</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-9-o-translation-Serruys">
+                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-9-translation-Serruys">
                         <body>
                             <p>
-                                <seg n="9">At gengshen day [57] divination, (he) tested: (one, we)17
-                                    shall capture the Fou.</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
@@ -439,29 +344,24 @@
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-10-o-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-10-transcription-Takashima">
                         <body>
                             <p>
-                                <seg n="1">壬子卜，</seg>
-                                <seg n="2">爭貞，</seg>
-                                <seg n="3">自今日我󰹨󽕦。</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-10-o-translation-Takashima">
+                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-10-translation-Takashima">
                         <body>
                             <p>
-                                <seg n="10">Crack making on the gengshen day [57], His Majesty
-                                    tested: Qiao might not (be able to) capture the Fou/Tao (or Bao)
-                                    [:].</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-1-o-translation-Serruys">
+                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-10-translation-Serruys">
                         <body>
                             <p>
-                                <seg n="10">At gengshen day [57] divination, the king tested: Que,
-                                    (one) shall not anticipate he will capture the Fou.19</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
@@ -479,28 +379,24 @@
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-11-o-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-11-transcription-Takashima">
                         <body>
                             <p>
-                                <seg n="1">壬子卜，</seg>
-                                <seg n="2">爭貞，</seg>
-                                <seg n="3">自今日我󰹨󽕦。</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-11-o-translation-Takashima">
+                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-11-translation-Takashima">
                         <body>
                             <p>
-                                <seg n="11">Qiao might not (be able to) capture the Fou/Tao (or
-                                    Bao).</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-11-o-translation-Serruys">
+                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-11-translation-Serruys">
                         <body>
                             <p>
-                                <seg n="11">As to Que, (one) shall not anticipate he will capture
-                                    the Fou.</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
@@ -518,29 +414,24 @@
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-12-o-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-12-transcription-Takashima">
                         <body>
                             <p>
-                                <seg n="1">壬子卜，</seg>
-                                <seg n="2">爭貞，</seg>
-                                <seg n="3">自今日我󰹨󽕦。</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-12-o-translation-Takashima">
+                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-12-translation-Takashima">
                         <body>
                             <p>
-                                <seg n="12">Crack making on the xinyou day [58], Nan [b]21 [tested]:
-                                    (On) the following renxu day [59], Pi [‘] will arrive. Second
-                                    announcement [7].</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-12-o-translation-Serruys">
+                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-12-translation-Serruys">
                         <body>
                             <p>
-                                <seg n="12">At xinyou day [58] divination, Gu [tested]: (On) the
-                                    next day renxu [59] Bu (Pei) will arrive.</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
@@ -558,29 +449,24 @@
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-13-o-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-13-transcription-Takashima">
                         <body>
                             <p>
-                                <seg n="1">壬子卜，</seg>
-                                <seg n="2">爭貞，</seg>
-                                <seg n="3">自今日我󰹨󽕦。</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-13-o-translation-Takashima">
+                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-13-translation-Takashima">
                         <body>
                             <p>
-                                <seg n="13">Crack making on the guihai day [60], Nan [b] tested: Our
-                                    (military) officer will (be able to) harm (or: smite) the
-                                    Fou/Tao (or Bao). Second announcement.</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-13-o-translation-Serruys">
+                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-13-translation-Serruys">
                         <body>
                             <p>
-                                <seg n="13">At guihai day [60] divination, Gu tested: our envoy(s)
-                                    will destroy the Fou.</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
@@ -598,30 +484,24 @@
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-14-o-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-14-transcription-Takashima">
                         <body>
                             <p>
-                                <seg n="1">壬子卜，</seg>
-                                <seg n="2">爭貞，</seg>
-                                <seg n="3">自今日我󰹨󽕦。</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-14-o-translation-Takashima">
+                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-14-translation-Takashima">
                         <body>
                             <p>
-                                <seg n="14">Crack making on the guihai day [60], Nan tested: Our
-                                    (military) officer might not (be able to) harm (or: smite) the
-                                    Fou/Tao (or Bao). Second announcement [ 7].</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-14-o-translation-Serruys">
+                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-14-translation-Serruys">
                         <body>
                             <p>
-                                <seg n="14">At guihai day [60] divination, Gu tested: our
-                                    envoy(s),22 be it not anticipated23 that they will destroy the
-                                    Fou.</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
@@ -639,29 +519,24 @@
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-15-o-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-15-transcription-Takashima">
                         <body>
                             <p>
-                                <seg n="1">壬子卜，</seg>
-                                <seg n="2">爭貞，</seg>
-                                <seg n="3">自今日我󰹨󽕦。</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-15-o-translation-Takashima">
+                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-15-translation-Takashima">
                         <body>
                             <p>
-                                <seg n="15">Crack making on the guihai day [60], Nan tested: (On)
-                                    the following yichou day [2] the Many Servitors will (be able
-                                    to) harm (or: smite) the Fou/Tao (or Bao).</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-15-o-translation-Serruys">
+                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-15-translation-Serruys">
                         <body>
                             <p>
-                                <seg n="15">At guihai day [60] divination, Gu tested: (On) the next
-                                    day yichou [2] the many servants will destroy the Fou.</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
@@ -679,29 +554,24 @@
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-16-o-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-16-transcription-Takashima">
                         <body>
                             <p>
-                                <seg n="1">壬子卜，</seg>
-                                <seg n="2">爭貞，</seg>
-                                <seg n="3">自今日我󰹨󽕦。</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-16-o-translation-Takashima">
+                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-16-translation-Takashima">
                         <body>
                             <p>
-                                <seg n="16">(On) the next yichou day [2] the Many Servitors might
-                                    not (succeed in) harming the Fou/Tao (or Bao). ( (N.B. “succeed”
-                                    = “be able to” used synonymously)</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-16-o-translation-Serruys">
+                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-16-translation-Serruys">
                         <body>
                             <p>
-                                <seg n="16">Next day yichou [2] the many servants, (one) shall not
-                                    anticipate that they will destroy the Fou.</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
@@ -719,29 +589,24 @@
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-17-o-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-17-transcription-Takashima">
                         <body>
                             <p>
-                                <seg n="1">壬子卜，</seg>
-                                <seg n="2">爭貞，</seg>
-                                <seg n="3">自今日我󰹨󽕦。</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-17-o-translation-Takashima">
+                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-17-translation-Takashima">
                         <body>
                             <p>
-                                <seg n="17">Crack making on the yichou day, Nan tested: Zi Shang [E]
-                                    might not (succeed in) capturing the Xin [F]. Second
-                                    announcement [7].</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-17-o-translation-Serruys">
+                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-17-translation-Serruys">
                         <body>
                             <p>
-                                <seg n="17">At yichou day [2] divination, Gu tested: Childe Shang,
-                                    (one) shall not anticipate that he will capture the Xian.</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
@@ -759,28 +624,24 @@
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-18-o-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-18-transcription-Takashima">
                         <body>
                             <p>
-                                <seg n="1">壬子卜，</seg>
-                                <seg n="2">爭貞，</seg>
-                                <seg n="3">自今日我󰹨󽕦。</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-18-o-translation-Takashima">
+                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-18-translation-Takashima">
                         <body>
                             <p>
-                                <seg n="18">Crack making on the bingyin day [3], Zheng tested: (We)
-                                    should call upon Long, Lao, Hou Zhuan to afflict Pi [‘].24</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-18-o-translation-Serruys">
+                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-18-translation-Serruys">
                         <body>
                             <p>
-                                <seg n="18">At bingyin day [3] divination, Zheng [tested]: (One)
-                                    shall call upon Long, Lao, Marquis Zhuan to afflict Bu.</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
@@ -798,28 +659,189 @@
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-19-o-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-19-transcription-Takashima">
                         <body>
                             <p>
-                                <seg n="1">壬子卜，</seg>
-                                <seg n="2">爭貞，</seg>
-                                <seg n="3">自今日我󰹨󽕦。</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-19-o-translation-Takashima">
+                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-19-translation-Takashima">
                         <body>
                             <p>
-                                <seg n="19">Tested: Da might not (succeed in) managing [P] the
-                                    king’s business.25 Second announcement [ 7].</seg>
+                                <seg/>
                             </p>
                         </body>
                     </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-19-o-translation-Serruys">
+                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-19-translation-Serruys">
                         <body>
                             <p>
-                                <seg n="19">Tested: Da, one shall not anticipate he will harmonize
-                                    (collaborate) with the king’s affairs.</seg>
+                                <seg/>
+                            </p>
+                        </body>
+                    </text>
+                </group>
+                <group>
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-20-yuanwen">
+                        <xi:fallback>
+                            <note>XInclude failed!</note>
+                        </xi:fallback>
+                    </xi:include>
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-20-shiwen">
+                        <xi:fallback>
+                            <note>XInclude failed!</note>
+                        </xi:fallback>
+                    </xi:include>
+                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-20-transcription-Takashima">
+                        <body>
+                            <p>
+                                <seg/>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-20-translation-Takashima">
+                        <body>
+                            <p>
+                                <seg/>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-20-translation-Serruys">
+                        <body>
+                            <p>
+                                <seg/>
+                            </p>
+                        </body>
+                    </text>
+                </group>
+                <group>
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-21-yuanwen">
+                        <xi:fallback>
+                            <note>XInclude failed!</note>
+                        </xi:fallback>
+                    </xi:include>
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-21-shiwen">
+                        <xi:fallback>
+                            <note>XInclude failed!</note>
+                        </xi:fallback>
+                    </xi:include>
+                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-21-transcription-Takashima">
+                        <body>
+                            <p>
+                                <seg/>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-21-translation-Takashima">
+                        <body>
+                            <p>
+                                <seg/>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-21-translation-Serruys">
+                        <body>
+                            <p>
+                                <seg/>
+                            </p>
+                        </body>
+                    </text>
+                </group>
+                <group>
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-22-yuanwen">
+                        <xi:fallback>
+                            <note>XInclude failed!</note>
+                        </xi:fallback>
+                    </xi:include>
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-22-shiwen">
+                        <xi:fallback>
+                            <note>XInclude failed!</note>
+                        </xi:fallback>
+                    </xi:include>
+                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-22-transcription-Takashima">
+                        <body>
+                            <p>
+                                <seg/>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-22-translation-Takashima">
+                        <body>
+                            <p>
+                                <seg/>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-22-translation-Serruys">
+                        <body>
+                            <p>
+                                <seg/>
+                            </p>
+                        </body>
+                    </text>
+                </group>
+                <group>
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-23-yuanwen">
+                        <xi:fallback>
+                            <note>XInclude failed!</note>
+                        </xi:fallback>
+                    </xi:include>
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-23-shiwen">
+                        <xi:fallback>
+                            <note>XInclude failed!</note>
+                        </xi:fallback>
+                    </xi:include>
+                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-23-transcription-Takashima">
+                        <body>
+                            <p>
+                                <seg/>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-23-translation-Takashima">
+                        <body>
+                            <p>
+                                <seg/>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-23-translation-Serruys">
+                        <body>
+                            <p>
+                                <seg/>
+                            </p>
+                        </body>
+                    </text>
+                </group>
+                <group>
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-24-yuanwen">
+                        <xi:fallback>
+                            <note>XInclude failed!</note>
+                        </xi:fallback>
+                    </xi:include>
+                    <xi:include href="/db/tls/data/Heji/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-24-shiwen">
+                        <xi:fallback>
+                            <note>XInclude failed!</note>
+                        </xi:fallback>
+                    </xi:include>
+                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-24-transcription-Takashima">
+                        <body>
+                            <p>
+                                <seg/>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-24-translation-Takashima">
+                        <body>
+                            <p>
+                                <seg/>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-24-translation-Serruys">
+                        <body>
+                            <p>
+                                <seg/>
                             </p>
                         </body>
                     </text>

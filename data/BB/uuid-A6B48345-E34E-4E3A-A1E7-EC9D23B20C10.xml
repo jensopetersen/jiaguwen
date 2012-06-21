@@ -10,9 +10,10 @@
                 <p>Publication Information</p>
             </publicationStmt>
             <sourceDesc>
-                <p>
-                    
-                </p>
+                <ab>
+                    <note target="BB-2-r-1-transcription-Takashima">s</note>
+                    <note target="BB-2-r-1-transcription-Takashima">s</note>
+                </ab>
             </sourceDesc>
         </fileDesc>
     </teiHeader>

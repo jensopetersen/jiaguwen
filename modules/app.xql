@@ -14,6 +14,7 @@ import module namespace templates="http://exist-db.org/xquery/templates" at "tem
  :)
 declare function app:load($node as node(), $model as map(*)) {
 let $host-id := "uuid-1C03C3AB-3553-4325-9C69-52EEA33225B6"
+(:let $host-id := "uuid-A6B48345-E34E-4E3A-A1E7-EC9D23B20C10":)
 let $doc := collection("/db/tls/data/BB")/(id($host-id))
     return
         map { "data" := $doc }

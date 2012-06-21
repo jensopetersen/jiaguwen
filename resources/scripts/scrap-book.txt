@@ -1,0 +1,561 @@
+string-join
+(for $bone in doc('/db/test/bones.2.xml')//*
+where string-length($bone/transcription-1) ne string-length($bone/transcription-2)
+return ($bone/@n/string(), string-length($bone/transcription-1), string-length($bone/transcription-2))
+, '-')
+
+##
+
+string-join
+(for $bone in doc('/db/test/bones.2.xml')//*
+where string-length($bone/transcription-1) ne string-length($bone/transcription-2)
+return $bone/@n/string()
+, '-')
+
+##
+(:save bones without bone-part:)
+declare namespace util="http://exist-db.org/xquery/util";
+declare namespace xmldb="http://exist-db.org/xquery/xmldb";
+declare namespace functx = "http:/www.functx.com";
+
+declare option exist:serialize "method=xml media-type=text/xml omit-xml-declaration=yes indent=yes";
+
+declare variable $username as xs:string := "admin";
+declare variable $password as xs:string := "";
+
+declare variable $out-collection := 'xmldb:exist:///db/test/out';
+
+
+declare function functx:add-attribute ($element as element(), $name as xs:string, $value as xs:string?) as element() {
+element { node-name($element)}
+{ attribute {$name} {$value},
+$element/@*,
+$element/node() }
+};
+
+declare function local:save-file($doc) {
+  let $login := xmldb:login($out-collection, $username, $password)
+  let $myuid := concat("uuid-",util:uuid())
+  let $a2 := $doc/functx:add-attribute($doc, "xml:id", $myuid)
+  
+  return
+    xmldb:store($out-collection,  concat($myuid, ".xml"), $a2)
+};
+
+
+let  $input  := doc('/db/test/bones.2.xml')
+
+
+for $rec in $input//bone
+return
+     (
+     system:as-user($username,$password,local:save-file($rec))
+    )
+
+##
+
+(:Save bones with bone-part:)
+declare namespace util="http://exist-db.org/xquery/util";
+declare namespace xmldb="http://exist-db.org/xquery/xmldb";
+declare namespace functx = "http:/www.functx.com";
+
+declare option exist:serialize "method=xml media-type=text/xml omit-xml-declaration=yes indent=yes";
+
+declare variable $username as xs:string := "admin";
+declare variable $password as xs:string := "";
+
+declare variable $out-collection := 'xmldb:exist:///db/test/out';
+
+
+declare function functx:add-attribute ($element as element(), $name as xs:string, $value as xs:string?) as element() {
+element { node-name($element)}
+{ attribute {$name} {$value},
+$element/@*,
+$element/node() }
+};
+
+
+  let $input := doc('/db/test/bones.2.xml')
+  let $bone-ids := distinct-values($input//bone-id)
+  
+  for $bone-id in $bone-ids
+    let $same := $input//bone[bone-id eq $bone-id]
+    let $myuid := concat("uuid-",util:uuid())
+    let $a := <collection>{$same}</collection>
+    let $a := $a/functx:add-attribute($a, "xml:id", $myuid)
+    return
+        xmldb:store($out-collection,  concat($myuid, ".xml"), $a)
+
+##
+
+
+(:Save bones with and without bone-part:)
+declare namespace util="http://exist-db.org/xquery/util";
+declare namespace xmldb="http://exist-db.org/xquery/xmldb";
+declare namespace functx = "http:/www.functx.com";
+
+declare option exist:serialize "method=xml media-type=text/xml omit-xml-declaration=yes indent=yes";
+
+declare variable $username as xs:string := "admin";
+declare variable $password as xs:string := "";
+declare variable $bones := doc('/db/test/bones.xml');
+declare variable $out-collection := 'xmldb:exist:///db/test/out';
+
+declare function local:save-file($doc) {
+  let $login := xmldb:login($out-collection, $username, $password)
+  let $myuid := concat("uuid-",util:uuid())
+  let $a2 := $doc/functx:add-attribute($doc, "xml:id", $myuid)
+  
+  return
+    xmldb:store($out-collection,  concat($myuid, ".xml"), $a2)
+};
+
+
+declare function functx:add-attribute ($element as element(), $name as xs:string, $value as xs:string?) as element() {
+element { node-name($element)}
+{ attribute {$name} {$value},
+$element/@*,
+$element/node() }
+};
+
+
+let $bones-with-bone-parts := <bones>{$bones//*[bone-part[string-length(.) gt 0]]}</bones>
+let $bone-ids-of-bones-with-bone-parts := distinct-values($bones-with-bone-parts//bone-id)
+for $bone-id in $bone-ids-of-bones-with-bone-parts
+    let $same-bone := $bones-with-bone-parts//*[bone-id eq $bone-id]
+    let $a := <wrapper>{$same-bone}</wrapper>
+    return
+        system:as-user($username,$password,local:save-file($a))
+,
+
+let $bones-without-bone-parts := <bones>{$bones//*[bone-part[string-length(.) eq 0]]}</bones>
+for $bone in $bones-without-bone-parts//bone
+let $a := <wrapper>{$bone}</wrapper>
+    return
+        system:as-user($username,$password,local:save-file($a))
+        
+##
+
+(:move comments:)
+
+declare namespace util="http://exist-db.org/xquery/util";
+declare namespace xmldb="http://exist-db.org/xquery/xmldb";
+declare namespace functx = "http:/www.functx.com";
+
+declare option exist:serialize "method=xml media-type=text/xml omit-xml-declaration=yes indent=yes";
+
+declare variable $username as xs:string := "admin";
+declare variable $password as xs:string := "";
+declare variable $in-collection := collection('/db/test/in');
+declare variable $out-collection := 'xmldb:exist:///db/test/out';
+
+
+declare function local:save-file($doc) {
+  let $login := xmldb:login($out-collection, $username, $password)
+  let $doc-uid := $doc/@xml:id
+  return
+    xmldb:store($out-collection,  concat($doc-uid, ".xml"), $doc)
+};
+
+
+declare function functx:wrap-values-in-elements 
+  ( $values as xs:anyAtomicType* ,
+    $elementName as xs:QName )  as element()* {   
+   for $value in $values
+   return element {$elementName} {$value}
+ } ;
+ 
+declare function local:remove-named-element($nodes as node()*, $name as xs:string)  as node()* {
+   for $node in $nodes
+   return
+     if ($node instance of element())
+     then if (name($node) = $name)
+          then ()
+          else element { node-name($node)}
+                { $node/@*,
+                  local:remove-named-element($node/node(), $name)}
+     else if ($node instance of document-node())
+     then local:remove-named-element($node/node(), $name)
+     else $node
+ } ;
+
+for $doc in $in-collection
+let $log := util:log("DEBUG", ("##$doc): ", $doc))
+
+let $comments := $doc//comments
+let $log := util:log("DEBUG", ("##$comments): ", $comments))
+let $comments-count := count(distinct-values($comments))
+let $log := util:log("DEBUG", ("##$comments-count): ", $comments-count))
+let $comments := distinct-values($comments)
+let $comments-wrapper := <comments>{functx:wrap-values-in-elements($comments, xs:QName('comment'))}</comments>
+let $doc-minus-comments := 
+    local:remove-named-element($doc, 'comments')
+let $log := util:log("DEBUG", ("##$doc-minus-comments): ", $doc-minus-comments))
+
+let $chant-ids := distinct-values($doc//chant-id)
+let $chant-ids-wrapper := <chant-ids>{functx:wrap-values-in-elements($chant-ids, xs:QName('chant-id'))}</chant-ids>
+let $log := util:log("DEBUG", ("##$chant-ids-wrapper): ", $chant-ids-wrapper))
+let $doc-minus-chant-ids := 
+    local:remove-named-element($doc-minus-comments, 'chant-id')
+
+let $bone-ids := distinct-values($doc//bone-id)
+let $bone-ids-wrapper := <bone-ids>{functx:wrap-values-in-elements($bone-ids, xs:QName('bone-id'))}</bone-ids>
+let $log := util:log("DEBUG", ("##$bone-ids-wrapper): ", $bone-ids-wrapper))
+let $doc-minus-bone-ids := 
+    local:remove-named-element($doc-minus-chant-ids, 'bone-id')
+
+let $document :=
+        element{node-name($doc-minus-bone-ids)}
+        {$doc-minus-bone-ids/@*,$doc-minus-bone-ids/*,
+        $comments-wrapper, 
+        $chant-ids-wrapper,
+        $bone-ids-wrapper
+        }
+return
+    local:save-file($document)
+
+##
+
+xquery version "1.0";
+
+let $string := "&#x8c9e;&#xfdef8;&#x5f17;&#x5176;&#xfd3bb;&#x738b;&#x53f2;&#x3002; &#x4e00; &#x4e8c; &#x4e8c;&#x544a; &#x4e00; &#x4e8c; &#x4e09; &#x56db; &#x4e94; &#x4e00; &#x4e8c; &#x4e09; &#x3014;&#x56db; &#x4e94;&#x3015; &#x3014;&#x4e00;&#x3015; &#x3014;&#x4e8c;&#x3015; &#x4e09; &#x56db;"
+let $string := concat($string, "¿")
+let $replace := replace($string,'(.+?[¿。，])', '<seg>$1</seg>')
+let $replace := replace($replace,'¿', '')
+return $replace
+
+
+##
+
+xquery version "1.0";
+let $bones :=
+<bones>
+<bone n="018886"><bone-id>H07352-&#x6b63;</bone-id><bone-part>1</bone-part><transcription-1>&#xfe46d;&#xfe4ac;&#xfdc99;&#xff0c;&#xfd4f9;&#xff0c;&#xfe5a0;&#xfe34d;&#xfe4c6;&#xfd84e;&#xfddeb;&#x3002;  &#xfe57b;</transcription-1><transcription-2>&#x5df1;&#x672a;&#x535c;&#xff0c;&#x722d;&#xff0c;&#x8c9e;&#x738b;&#x4ea5;&#x38c7;&#x6211;&#x3002;  &#x4e00;</transcription-2><comments></comments><chant-id>H07352 &#x6b63;</chant-id></bone>
+<bone n="018887"><bone-id>H07352-&#x6b63;</bone-id><bone-part>2</bone-part><transcription-1>&#xfe5a0;&#xfe34d;&#xfe4c6;&#xfde43;&#xfddeb;&#xfd84e;&#x3002;  &#xfe57b;</transcription-1><transcription-2>&#x8c9e;&#x738b;&#x4ea5;&#x4e0d;&#x6211;&#x38c7;&#x3002;  &#x4e00;</transcription-2><comments></comments><chant-id>H07352 &#x6b63;</chant-id></bone>
+<bone n="018888"><bone-id>H07352-&#x6b63;</bone-id><bone-part>3</bone-part><transcription-1>&#xfe5a0;&#xfddeb;&#xfe043;&#xfe41b;&#xfdc87;&#x3002;  &#xfe57b;  &#xfe57c;&#xfd3ae;  &#xfe57c;</transcription-1><transcription-2>&#x8c9e;&#x6211;&#x5176;&#x37a2;&#x211a5;&#x3002;  &#x4e00;  &#x4e8c;&#x544a;  &#x4e8c;</transcription-2><comments></comments><chant-id>H07352 &#x6b63;</chant-id></bone>
+</bones>
+return
+    <bone><yuanwen>{
+for $bone at $i in $bones/*
+let $string := $bone/transcription-1
+let $string := concat($string, "¿")
+let $replace := replace($string,'(.+?[¿。，])', '<seg>$1</seg>')
+let $replace := replace($replace,'¿', '')
+return element {concat('line', $i)} {$replace}
+}</yuanwen>
+    <shiwen>{
+for $bone at $i in $bones/*
+let $string := $bone/transcription-2
+let $string := concat($string, "¿")
+let $replace := replace($string,'(.+?[¿。，])', '<seg>$1</seg>')
+let $replace := replace($replace,'¿', '')
+return element {concat('line', $i)} {$replace}
+}</shiwen>
+</bone>
+
+##
+
+xquery version "1.0";
+declare namespace tei="http://www.tei-c.org/ns/1.0";
+declare namespace math="http://www.w3.org/1998/Math/MathML";
+declare namespace svg="http://www.w3.org/2000/svg";
+declare namespace xi="http://www.w3.org/2001/XInclude";
+
+declare namespace functx = "http://www.functx.com"; 
+declare function functx:number-of-matches 
+  ( $arg as xs:string?, $pattern as xs:string )  as xs:integer {
+   count(tokenize($arg, $pattern)) - 1
+ } ;
+ 
+let $uuid := concat("uuid-",util:uuid())
+let $bones :=
+<bones>
+<bone n="002875"><bone-id>H00201-&#x53cd;</bone-id><bone-part>1</bone-part><transcription-1>&#xfe34d;&#x3014;&#xfdc96;&#x3015;&#xfd3ad;&#x2026;</transcription-1><transcription-2>&#x738b;&#x3014;&#xf0a4f;&#x3015;&#x66f0;&#x2026;</transcription-2><comments>&#xff08;&#x6731;&#x66f8;&#xff09;</comments><chant-id>H00201 &#x53cd;</chant-id></bone>
+<bone n="002876"><bone-id>H00201-&#x53cd;</bone-id><bone-part>2</bone-part><transcription-1>&#xfe5a0;&#xfe0a4;&#x2026;</transcription-1><transcription-2>&#x8c9e;&#x5357;&#x2026;</transcription-2><comments>&#xff08;&#x6731;&#x66f8;&#xff09;</comments><chant-id>H00201 &#x53cd;</chant-id></bone>
+<bone n="002877"><bone-id>H00201-&#x53cd;</bone-id><bone-part>3</bone-part><transcription-1>&#x2026;&#xfd949;&#x2026;</transcription-1><transcription-2>&#x2026;&#x96b9;&#x2026;</transcription-2><comments></comments><chant-id>H00201 &#x53cd;</chant-id></bone>
+<bone n="002878"><bone-id>H00201-&#x53cd;</bone-id><bone-part>4</bone-part><transcription-1>&#x2026;&#xfe203;&#x2026;&#xfd949;&#x2026;</transcription-1><transcription-2>&#x2026;&#x5922;&#x2026;&#x96b9;&#x2026;</transcription-2><comments></comments><chant-id>H00201 &#x53cd;</chant-id></bone>
+<bone n="002879"><bone-id>H00201-&#x53cd;</bone-id><bone-part>5</bone-part><transcription-1>&#x3014;&#xfe34d;&#xfdc96;&#x3015;&#xfd3ad;&#xff1a;&#xfd949;&#xfd49d;&#xfe455;&#x3002;</transcription-1><transcription-2>&#x3014;&#x738b;&#xf0a4f;&#x3015;&#x66f0;&#xff1a;&#x96b9;&#x7236;&#x4e59;&#x3002;</transcription-2><comments>&#xff08;&#x6731;&#x66f8;&#xff09;</comments><chant-id>H00201 &#x53cd;</chant-id></bone>
+<bone n="002880"><bone-id>H00201-&#x53cd;</bone-id><bone-part>6</bone-part><transcription-1>&#xfe47d;&#x25a1;&#xfdc99;&#x3002;</transcription-1><transcription-2>&#x58ec;&#x25a1;&#x535c;&#x3002;</transcription-2><comments></comments><chant-id>H00201 &#x53cd;</chant-id></bone>
+<bone n="002881"><bone-id>H00201-&#x53cd;</bone-id><bone-part>7</bone-part><transcription-1>&#x25a1;&#xfd01d;&#xfd398;&#xfddeb;&#xfe57c;&#xfe3eb;&#x3002;</transcription-1><transcription-2>&#x25a1;&#x4ee5;&#x81ea;&#x6211;&#x4e8c;&#x5341;&#x3002;</transcription-2><comments>&#xff08;&#x7532;&#x6a4b;&#x523b;&#x8fad;&#xff09;</comments><chant-id>H00201 &#x53cd;</chant-id></bone>
+</bones>
+let $title := distinct-values($bones//bone-id)[1]
+return
+<tei:TEI xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:svg="http://www.w3.org/2000/svg" 
+    xml:id="{$uuid}">
+    <tei:teiHeader>
+        <tei:fileDesc>
+            <tei:titleStmt>
+                <tei:title>{$title}</tei:title>
+            </tei:titleStmt>
+            <tei:publicationStmt>
+                <tei:p>Publication Information</tei:p>
+            </tei:publicationStmt>
+            <tei:sourceDesc>
+                <tei:ab>
+                {
+                    for $bone at $i in $bones/*
+                    let $comment := string($bone/comments)
+                    let $comment := 
+                        if (functx:number-of-matches($comment, "&#xff08;") eq 1 and functx:number-of-matches($comment, "&#xff09;") eq 1)
+                        then replace(replace($comment, "&#xff08;", ""), "&#xff09;", "")
+                        else $comment
+                    return
+                        if (string($comment)) then
+                        <tei:note target="{concat("#", $title, '-', $i)}">{$comment}</tei:note>
+                        else ()
+                }
+                    
+                </tei:ab>
+            </tei:sourceDesc>
+        </tei:fileDesc>
+    </tei:teiHeader>
+    <tei:text xml:id="{$title}"><tei:group>{
+for $bone at $i in $bones/*
+return 
+    <tei:text xml:id="{concat($title, '-', $i)}"><tei:group>
+{let $string := string($bone/transcription-1)
+let $string := concat($string, "&#xbf;")
+let $string := replace($string,'(.+?[&#xbf;&#x3002;&#xff0c;])', '<tei:seg>$1</tei:seg>')
+let $string := replace($string,'&#xbf;', '')
+return <tei:text xml:id="{concat($title, '-', $i, '-yuanwen')}"><tei:body><tei:p>{$string}</tei:p></tei:body></tei:text>,
+let $string := string($bone/transcription-2)
+let $string := concat($string, "&#xbf;")
+let $string := replace($string,'(.+?[&#xbf;&#x3002;&#xff0c;])', '<tei:seg>$1</tei:seg>')
+let $string := replace($string,'&#xbf;', '')
+return <tei:text xml:id="{concat($title, '-', $i, '-shiwen')}"><tei:body><tei:p>{$string}</tei:p></tei:body></tei:text>
+}</tei:group></tei:text>}</tei:group></tei:text></tei:TEI>
+
+
+##
+
+(:move comments:)
+
+declare namespace util="http://exist-db.org/xquery/util";
+declare namespace xmldb="http://exist-db.org/xquery/xmldb";
+declare namespace functx = "http:/www.functx.com";
+
+declare option exist:serialize "method=xml media-type=text/xml omit-xml-declaration=yes indent=yes";
+
+declare variable $username as xs:string := "admin";
+declare variable $password as xs:string := "";
+declare variable $in-collection := collection('/db/test/in');
+declare variable $out-collection := 'xmldb:exist:///db/test/out';
+
+
+declare function local:save-file($doc) {
+  let $login := xmldb:login($out-collection, $username, $password)
+  let $doc-uid := $doc/@xml:id
+  return
+    xmldb:store($out-collection,  concat($doc-uid, ".xml"), $doc)
+};
+
+
+declare function functx:wrap-values-in-elements 
+  ( $values as xs:anyAtomicType* ,
+    $elementName as xs:QName )  as element()* {   
+   for $value in $values
+   return element {$elementName} {$value}
+ } ;
+ 
+declare function local:remove-named-element($nodes as node()*, $name as xs:string)  as node()* {
+   for $node in $nodes
+   return
+     if ($node instance of element())
+     then if (name($node) = $name)
+          then ()
+          else element { node-name($node)}
+                { $node/@*,
+                  local:remove-named-element($node/node(), $name)}
+     else if ($node instance of document-node())
+     then local:remove-named-element($node/node(), $name)
+     else $node
+ } ;
+
+for $doc in $in-collection
+let $log := util:log("DEBUG", ("##$doc): ", $doc))
+
+let $comments := $doc//comments
+let $log := util:log("DEBUG", ("##$comments): ", $comments))
+let $comments-count := count(distinct-values($comments))
+let $log := util:log("DEBUG", ("##$comments-count): ", $comments-count))
+let $comments := distinct-values($comments)
+let $comments-wrapper := <comments>{functx:wrap-values-in-elements($comments, xs:QName('comment'))}</comments>
+let $doc-minus-comments := 
+    local:remove-named-element($doc, 'comments')
+let $log := util:log("DEBUG", ("##$doc-minus-comments): ", $doc-minus-comments))
+
+let $chant-ids := distinct-values($doc//chant-id)
+let $chant-ids-wrapper := <chant-ids>{functx:wrap-values-in-elements($chant-ids, xs:QName('chant-id'))}</chant-ids>
+let $log := util:log("DEBUG", ("##$chant-ids-wrapper): ", $chant-ids-wrapper))
+let $doc-minus-chant-ids := 
+    local:remove-named-element($doc-minus-comments, 'chant-id')
+
+let $bone-ids := distinct-values($doc//bone-id)
+let $bone-ids-wrapper := <bone-ids>{functx:wrap-values-in-elements($bone-ids, xs:QName('bone-id'))}</bone-ids>
+let $log := util:log("DEBUG", ("##$bone-ids-wrapper): ", $bone-ids-wrapper))
+let $doc-minus-bone-ids := 
+    local:remove-named-element($doc-minus-chant-ids, 'bone-id')
+
+let $bone-id := replace(string-join($bone-ids, ''), '\+','_')
+let $log := util:log("DEBUG", ("##$bone-id): ", $bone-id))
+let $bone-part := $doc-minus-bone-ids//bone-part
+let $log := util:log("DEBUG", ("##$bone-part1): ", $bone-part))
+let $bone-part := if($bone-part) then string-join($bone-part, '') else ''
+let $bone-part := if($bone-part) then concat('-', $bone-part) else ''
+let $log := util:log("DEBUG", ("##$bone-part2): ", $bone-part))
+let $log := util:log("DEBUG", ("##$bone-part2): ", $bone-part))
+
+let $document :=
+        element{node-name($doc-minus-bone-ids)}
+        {$doc-minus-bone-ids/@*,
+        for $bone at $i in $doc-minus-bone-ids/*
+        return
+        <text>
+        <group>
+            <text>
+                <group>
+                    <text type="transcription" subtype="yuanwen" xml:id="{$bone-id}-yuanwen-{$i}">
+                        <body>
+                            <p>
+                                {$bone/transcription-1}
+                            </p>
+                        </body>
+                    </text>,
+                    <text type="transcription" subtype="shiwen" xml:id="{$bone-id}-shiwen-{$i}">
+                        <body>
+                            <p>
+                                {$bone/transcription-2}
+                            </p>
+                        </body>
+                    </text>
+                    </group>
+                    </text>
+                    </group>
+                        
+                    </text>
+                    ,
+        <teiHeader>{$comments-wrapper, 
+        $chant-ids-wrapper,
+        $bone-ids-wrapper}</teiHeader>
+        }
+return
+    local:save-file($document)
+
+##
+
+(:make basic document:)
+
+declare namespace util="http://exist-db.org/xquery/util";
+declare namespace xmldb="http://exist-db.org/xquery/xmldb";
+declare namespace functx = "http:/www.functx.com";
+
+declare option exist:serialize "method=xml media-type=text/xml omit-xml-declaration=yes indent=yes";
+
+declare variable $username as xs:string := "admin";
+declare variable $password as xs:string := "";
+declare variable $in-collection := collection('/db/test/in');
+declare variable $out-collection := 'xmldb:exist:///db/test/out';
+
+
+declare function local:save-file($doc) {
+  let $login := xmldb:login($out-collection, $username, $password)
+  let $doc-uid := $doc/@xml:id
+  return
+    xmldb:store($out-collection,  concat($doc-uid, ".xml"), $doc)
+};
+
+
+declare function functx:wrap-values-in-elements 
+  ( $values as xs:anyAtomicType* ,
+    $elementName as xs:QName )  as element()* {   
+   for $value in $values
+   return element {$elementName} {$value}
+ } ;
+ 
+declare function local:remove-named-element($nodes as node()*, $name as xs:string)  as node()* {
+   for $node in $nodes
+   return
+     if ($node instance of element())
+     then if (name($node) = $name)
+          then ()
+          else element { node-name($node)}
+                { $node/@*,
+                  local:remove-named-element($node/node(), $name)}
+     else if ($node instance of document-node())
+     then local:remove-named-element($node/node(), $name)
+     else $node
+ } ;
+
+for $doc in $in-collection
+let $log := util:log("DEBUG", ("##$doc): ", $doc))
+
+let $comments := $doc//comments
+let $log := util:log("DEBUG", ("##$comments): ", $comments))
+let $comments-count := count(distinct-values($comments))
+let $log := util:log("DEBUG", ("##$comments-count): ", $comments-count))
+let $comments := distinct-values($comments)
+let $comments-wrapper := <comments>{functx:wrap-values-in-elements($comments, xs:QName('comment'))}</comments>
+let $doc-minus-comments := 
+    local:remove-named-element($doc, 'comments')
+let $log := util:log("DEBUG", ("##$doc-minus-comments): ", $doc-minus-comments))
+
+let $chant-ids := distinct-values($doc//chant-id)
+let $chant-ids-wrapper := <chant-ids>{functx:wrap-values-in-elements($chant-ids, xs:QName('chant-id'))}</chant-ids>
+let $log := util:log("DEBUG", ("##$chant-ids-wrapper): ", $chant-ids-wrapper))
+let $doc-minus-chant-ids := 
+    local:remove-named-element($doc-minus-comments, 'chant-id')
+
+let $bone-ids := distinct-values($doc//bone-id)
+let $bone-ids-wrapper := <bone-ids>{functx:wrap-values-in-elements($bone-ids, xs:QName('bone-id'))}</bone-ids>
+let $log := util:log("DEBUG", ("##$bone-ids-wrapper): ", $bone-ids-wrapper))
+let $doc-minus-bone-ids := 
+    local:remove-named-element($doc-minus-chant-ids, 'bone-id')
+
+let $bone-id := replace(string-join($bone-ids, ''), '\+','_')
+let $log := util:log("DEBUG", ("##$bone-id): ", $bone-id))
+let $bone-part := $doc-minus-bone-ids//bone-part
+let $log := util:log("DEBUG", ("##$bone-part1): ", $bone-part))
+let $bone-part := if($bone-part) then string-join($bone-part, '') else ''
+let $bone-part := if($bone-part) then concat('-', $bone-part) else ''
+let $log := util:log("DEBUG", ("##$bone-part2): ", $bone-part))
+let $log := util:log("DEBUG", ("##$bone-part2): ", $bone-part))
+
+let $document :=
+        element{node-name($doc-minus-bone-ids)}
+        {$doc-minus-bone-ids/@*,
+        <teiHeader><fileDesc>{
+        <titleStmt><title>{$bone-ids-wrapper/string()}</title></titleStmt>,
+            <sourceDesc>{$comments-wrapper, 
+        $chant-ids-wrapper}</sourceDesc>
+        }</fileDesc></teiHeader>
+        ,
+        for $bone at $i in $doc-minus-bone-ids/*
+        return
+        <text>
+        <group>
+            <text>
+                <group>
+                    <text type="transcription" subtype="yuanwen" xml:id="{$bone-id}-yuanwen-{$i}">
+                        <body>
+                            <p>
+                                {$bone/transcription-1}
+                            </p>
+                        </body>
+                    </text>,
+                    <text type="transcription" subtype="shiwen" xml:id="{$bone-id}-shiwen-{$i}">
+                        <body>
+                            <p>
+                                {$bone/transcription-2}
+                            </p>
+                        </body>
+                    </text>
+                    </group>
+                    </text>
+                    </group>
+                        
+                    </text>
+        
+        }
+return
+    local:save-file($document)
+
