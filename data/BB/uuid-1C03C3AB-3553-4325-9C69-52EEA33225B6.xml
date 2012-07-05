@@ -240,8 +240,8 @@
                         <body>
                             <p>
                                 <seg>庚申卜，</seg>
-                                <seg>王，</seg>
-                                <seg>貞余伐不。</seg>
+                                <seg>王貞，</seg>
+                                <seg>余伐不。</seg>
                                 <seg>三月。</seg>
                                 <seg>一</seg>
                             </p>
@@ -250,9 +250,10 @@
                     <text type="translation" subtype="Takashima" xml:id="BB-5-o-translation-Takashima">
                         <body>
                             <p>
-                                <seg n="5">Crack making on the gengshen day [57], His Majesty
-                                    tested: I should launch an attack against the Pi [‘].13 Third
-                                    month.</seg>
+                                <seg>Crack making on the gengshen day [57], </seg>
+                                <seg>His Majesty tested: </seg>
+                                <seg>I should launch an attack against the Pi [‘]. </seg>
+                                <seg>Third month.</seg>
                             </p>
                         </body>
                     </text>
@@ -291,7 +292,10 @@
                     <text type="translation" subtype="Takashima" xml:id="BB-6-o-translation-Takashima">
                         <body>
                             <p>
-                                <seg>Crack making on the gengshen day [57], His Majesty tested: I should not launch an attack against the Pi [‘]. Second announcement [ 7].</seg>
+                                <seg>Crack making on the gengshen day [57], </seg>
+                                <seg>His Majesty tested: </seg>
+                                <seg>I should not launch an attack against the Pi [‘]. </seg>
+                                <seg>Second announcement [ 7].</seg>
                             </p>
                         </body>
                     </text>

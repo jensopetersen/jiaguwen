@@ -11,7 +11,9 @@ declare function local:replace($doc as element(), $line as xs:integer, $type as 
         {
             for $seg in $segs
             return
-                <seg>{$seg/text()}</seg>
+                <seg>{
+                translate($seg/text(), '&#160;', '')
+                }</seg>
         }
         </p>
     let $log := util:log("DEBUG", ($segs, " Replace: ", $line/tei:p, " with ", $content))
@@ -20,10 +22,12 @@ declare function local:replace($doc as element(), $line as xs:integer, $type as 
 };
 
 let $doc := collection("/db/tls/data/BB")/(id("uuid-1C03C3AB-3553-4325-9C69-52EEA33225B6"))
-let $data := util:parse(request:get-parameter("data", ()))/*
+let $data := util:parse-html(request:get-parameter("data", ()))/*
 let $type := request:get-parameter("type", ())
 let $line := request:get-parameter("line", "3")
 let $subtype := substring-after($type, "/")
 let $type := substring-before($type, "/")
 return
     local:replace($doc, $line, $type, $subtype, $data)
+    
+    

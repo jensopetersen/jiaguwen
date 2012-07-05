@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <collection xmlns="http://exist-db.org/collection-config/1.0">
-    <index xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink">
-        <fulltext default="none" attributes="false"/>
+    <index xmlns:tei="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:mods="http://www.loc.gov/mods/v3">
         <ngram qname="tei:seg"/>
-        <ngram qname="tei:p"/>
+        <ngram qname="tei:title"/>
     </index>
 </collection>
