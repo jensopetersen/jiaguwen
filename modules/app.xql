@@ -92,13 +92,15 @@ function tls:editor($node as node(), $model as map(*), $type as xs:string, $subt
 declare 
     %templates:default("type", "text")
 function tls:search($node as node(), $model as map(*), $type as xs:string, $query as xs:string?) {
-    let $log := util:log("DEBUG", ("Query: ", $query))
+    let $log := util:log("DEBUG", ("##$query: ", $query))
     let $result := 
         switch ($type)
             case "text" return
                 collection($config:app-root || "/data")//tei:seg[ngram:contains(., $query)]
+            case "translation" return
+                collection($config:app-root || "/data")//tei:seg[ft:query(., $query)]
             default return
-                collection($config:app-root || "/data")//tei:title[ngram:contains(., $query)]
+                collection($config:app-root || "/data")//tei:title[ft:query(., $query)]
     return
         map { "search":= $result }
 };
@@ -107,15 +109,22 @@ declare
     %templates:wrap
 function tls:display($node as node(), $model as map(*)) {
     for $hit in $model("search")
-    let $doc-id := $hit/ancestor::tei:TEI/@xml:id
-    (:let $log := util:log("DEBUG", ("##$collection): ", $collection)):)
-    (:let $text-id := $hit/../../../@xml:id:)
+    let $log := util:log("DEBUG", ("##$hit): ", $hit))
+    let $doc-id := $hit/ancestor::tei:TEI/@xml:id/string()
+    let $log := util:log("DEBUG", ("##$doc-id): ", $doc-id))
     let $text-n := $hit/ancestor::tei:text[2]/@n
     let $log := util:log("DEBUG", ("##$text-n): ", $text-n/string()))
+    let $text-id := $hit/ancestor::tei:text[1]/@xml:id
+    let $hit-title := $hit/ancestor::tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title/text()
+    let $type := $hit/ancestor::tei:text[1]/@type/string()
+    let $subtype := $hit/ancestor::tei:text[1]/@subtype/string()
+    let $log := util:log("DEBUG", ("##$hit-title): ", $hit-title))
     return
         <li>
-        <a href="edit.html?doc-id={$doc-id}&amp;text-n={$text-n}">&lt;</a>
-        {$hit/text()}
+        <a href="edit.html?doc-id={$doc-id}&amp;text-n={string($text-n)}">&lt;&lt;</a>
+        <span class="hit-title">{$hit-title}</span>
+        <span class="hit-type">{$type}/{$subtype}</span>
+        <span class="hit-text {$type}">{$hit/text()}</span>
         </li>
 };
 
@@ -124,5 +133,12 @@ declare
 function tls:hit-count($node as node(), $model as map(*)) {
     "Found: " || count($model("search"))
     
+};
+
+declare function tls:link-to-home($node as node(), $model as map(*)) {
+    <a href="{request:get-context-path()}/apps/tls">{ 
+        $node/@* except $node/@href,
+        $node/node() 
+    }</a>
 };
 

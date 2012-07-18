@@ -97,7 +97,7 @@ body { font: 12px/20px Verdana, Arial, Helvetica, sans-serif; color: #222; backg
 /* ---------------------------------------- TYPE ---------------------------------------- */
 
 #main ul { padding: 0 10px; }
-#main ul li { list-style-type: disc; padding: 0 5px; margin: 5px 20px; }
+#main ul li { list-style-type: none; padding: 0 5px; margin: 5px 20px; }
 #main ul li ul li { list-style-type: circle; padding: 0 5px; margin: 5px 20px; }
 
 #right ol { padding: 0 0 20px 30px; color: #FFF; }
@@ -211,10 +211,29 @@ form {
 
 /*Styling list numbers ends;*/
 
-.CHANT {
+li .transcription {
     font-family: CHANT;
 }
-
+a {
+    width: 3em;
+    }
+.hit-title {
+    color:grey;
+    margin-left:1em;
+    }
+.hit-type {
+    color:grey;
+    margin-left:3em;
+}
+.hit-subtype {
+    color:grey;
+    margin-left:3em;
+    margin-right:4em;
+    }
+.hit-text {
+    margin-left:2.5em;
+    display: block;
+    }
 
 .editor textarea {
     width: 100%;
