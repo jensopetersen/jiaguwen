@@ -211,28 +211,34 @@ form {
 
 /*Styling list numbers ends;*/
 
-li .transcription {
+.transcription,
+.CHANT 
+    {
     font-family: CHANT;
 }
-a {
-    width: 3em;
+
+table {
+    width:100%
+}
+.hit-info {
+    
+}
+.hit-link {
+    width: 5%;
     }
 .hit-title {
     color:grey;
-    margin-left:1em;
+    width:10%;
+    }
+.text-n {
+    width: 5%;
     }
 .hit-type {
     color:grey;
-    margin-left:3em;
+    width:80%;
 }
-.hit-subtype {
-    color:grey;
-    margin-left:3em;
-    margin-right:4em;
-    }
 .hit-text {
-    margin-left:2.5em;
-    display: block;
+    font-size: 150%;
     }
 
 .editor textarea {

@@ -107,26 +107,44 @@ function tls:search($node as node(), $model as map(*), $type as xs:string, $quer
 
 declare 
     %templates:wrap
-function tls:display($node as node(), $model as map(*)) {
+function tls:display-line($node as node(), $model as map(*)) {
     for $hit in $model("search")
     let $log := util:log("DEBUG", ("##$hit): ", $hit))
     let $doc-id := $hit/ancestor::tei:TEI/@xml:id/string()
     let $log := util:log("DEBUG", ("##$doc-id): ", $doc-id))
-    let $text-n := $hit/ancestor::tei:text[2]/@n
-    let $log := util:log("DEBUG", ("##$text-n): ", $text-n/string()))
+    let $editable :=  exists(collection("/db/tls/data/BB")/(id($doc-id))/@xml:id/string())
+    let $log := util:log("DEBUG", ("##$editable): ", $editable))
+    let $text-n := $hit/ancestor::tei:text[2]/@n/string()
+    let $log := util:log("DEBUG", ("##$text-n): ", $text-n))
     let $text-id := $hit/ancestor::tei:text[1]/@xml:id
     let $hit-title := $hit/ancestor::tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title/text()
     let $type := $hit/ancestor::tei:text[1]/@type/string()
     let $subtype := $hit/ancestor::tei:text[1]/@subtype/string()
     let $log := util:log("DEBUG", ("##$hit-title): ", $hit-title))
     return
-        <li>
-        <a href="edit.html?doc-id={$doc-id}&amp;text-n={string($text-n)}">&lt;&lt;</a>
-        <span class="hit-title">{$hit-title}</span>
-        <span class="hit-type">{$type}/{$subtype}</span>
-        <span class="hit-text {$type}">{$hit/text()}</span>
-        </li>
+        (
+        <tr class="hit-info">
+            <td class="hit-link">
+                <a href="display.html?doc-id={$doc-id}"><img src="resources/images/text.png"/></a>
+            </td>
+            <td class="hit-title">{$hit-title}</td>
+            <td class="hit-link">
+            {
+            if ($editable) then 
+                <a href="edit.html?doc-id={$doc-id}&amp;text-n={string($text-n)}"><img src="resources/images/page-edit-icon.png"/></a>
+                else 
+                ()
+            }
+            </td>
+            <td class="text-n">{$text-n}</td>
+            <td class="hit-type">{$type}/{$subtype}</td>
+        </tr>,
+        <tr class="hit-text">
+            <td colspan="4" class="{$type}">{$hit/text()}</td>
+        </tr>
+        )
 };
+
 
 declare 
     %templates:wrap
