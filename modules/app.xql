@@ -9,6 +9,7 @@ declare variable $tls:subtype-options := ('yuanwen', 'shiwen', 'Serruys', 'Takas
 
 import module namespace templates="http://exist-db.org/xquery/templates" at "templates.xql";
 import module namespace config="http://exist-db.org/xquery/apps/config" at "config.xql";
+import module namespace tei2html="http://xmlopenfoundation.org/tei2html" at "tei2html.xqm";
 
 (:~
  : This function can be called from the HTML templating. It shows which parameters
@@ -140,7 +141,7 @@ function tls:display-line($node as node(), $model as map(*)) {
             <td class="hit-type">{$type}/{$subtype}</td>
         </tr>,
         <tr class="hit-text">
-            <td colspan="4" class="{$type}">{$hit/text()}</td>
+            <td colspan="5" class="{$type}">{$hit/text()}</td>
         </tr>
         )
 };
@@ -160,3 +161,12 @@ declare function tls:link-to-home($node as node(), $model as map(*)) {
     }</a>
 };
 
+declare 
+    %templates:wrap
+function tls:display($node as node(), $model as map(*), $doc-id as xs:string) {
+let $doc := collection("/db/tls/data")/(id($doc-id))
+let $doc := util:expand($doc)
+return
+        tei2html:main($doc)
+
+};
