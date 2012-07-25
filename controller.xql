@@ -9,13 +9,16 @@ if ($exist:path eq '') then
         <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
             <redirect url="{concat(request:get-uri(), '/')}"/>
         </dispatch>
-else if ($exist:path eq "/") then
+else if ($exist:path = ("/", "")) then
     (: forward root path to index.xql :)
     <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
         <redirect url="index.html"/>
     </dispatch>
 else if ($exist:resource = "edit.html") then
     let $loggedIn := login:set-user("org.exist.login", ())
+    (:NB: temporary!:)
+    let $loggedIn := true()
+
     return
         if ($loggedIn) then
             <dispatch xmlns="http://exist.sourceforge.net/NS/exist">

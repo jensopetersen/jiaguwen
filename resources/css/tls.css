@@ -258,8 +258,7 @@ fieldset {
 .title {
     position: absolute;
     float:left;
-    width:300px;
-    
+    width:200px;    
 }
 
 .line {
@@ -278,3 +277,34 @@ fieldset {
 .disabled {
     display:none;
 }
+
+.middle .text-output {
+    position:relative;
+    width:1220px;
+    }
+
+.middle .transcription {
+    top:0;
+    left:0;
+    position:absolute;
+    padding:15px;
+    width:220px;
+    float:left;
+}
+.middle .translation {
+    top:0;
+    left:250px;
+    padding:15px;
+    position:absolute;
+    width:1000px;
+    float:left;
+    
+}
+#content .middle .text-output ul {
+padding:0;
+margin:0;}
+#content .middle .text-output ul li {
+padding:0;
+margin:0;}
+
+.bone-image img {width:200px;}

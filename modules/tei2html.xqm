@@ -13,7 +13,8 @@ declare function tei2html:main($content as node()*) as item()* {
         
             case text() return $node
             case element(tei:TEI) return tei2html:TEI($node)
-            case element(tei:p) return tei2html:p($node)
+            case element(tei:teiHeader) return ()
+            case element(tei:p) return tei2html:recurse($node) (:skip <p>, it is only used to store <seg> in. :)
             case element(tei:seg) return tei2html:seg($node)(:no attributes:)
             case element(tei:group) return tei2html:group($node) (:no attributes:)
             case element(tei:text) return tei2html:text($node) 
@@ -39,6 +40,9 @@ declare function tei2html:TEI($node as element(tei:TEI)) as element() {
     </html>
 };
 
+declare function tei2html:teiHeader($node as element(tei:teiHeader)) as element() {
+    ()
+};
    
 
 declare function tei2html:list($node as element(tei:list)) as element() {
@@ -49,30 +53,69 @@ declare function tei2html:list($node as element(tei:list)) as element() {
 
 
 
-declare function tei2html:p($node as element(tei:p)) as element() {
-    <p>
-       {tei2html:recurse($node)}
-    </p>
-};
-
 declare function tei2html:seg($node as element(tei:seg)) as element() {
-    <div type="seg">
+    let $type := $node/ancestor::tei:text/@type
+    let $subtype := $node/ancestor::tei:text/@subtype
+    return
+    <li class="seg {$type} {$subtype}">
        {tei2html:recurse($node)}
-    </div>
+    </li>
 };
 
 declare function tei2html:group($node as element(tei:group)) as element() {
-    <div type="group">
+    <div class="group">
        {tei2html:recurse($node)}
     </div>
 };
 
-declare function tei2html:text($node as element(tei:text)) as element() {
-    if ($node/parent::tei:TEI) (:an outer text:)
-    then <div type="outer"> "{tei2html:recurse($node)}"</div>
+(:declare function tei2html:text($node as element(tei:text)) as element()? {
+    if ($node/parent::tei:TEI) (\:an outer text:\)
+    then 
+        <div class="outer">
+            {tei2html:recurse($node)}
+        </div>
     else 
-        if (($node/parent::tei:group) and ($node/child::tei:group)) (:an middle text:)
-        then <div type="middle"> "{tei2html:recurse($node)}"</div>
-        else <div type="inner"> "{tei2html:recurse($node)}"</div>
+        if (($node/parent::tei:group) and ($node/child::tei:group)) (\:an middle text:\)
+        then
+            <div class="middle">
+                <h3>Text {$node/@n/string()}</h3>
+                {tei2html:recurse($node)}
+            </div>
+        else
+            if ($node/@subtype eq 'Takashima')
+            then
+            <div class="inner">
+                <h4>{$node/@type/string()}/{$node/@subtype/string()}</h4>
+                {tei2html:recurse($node)}
+            </div>
+            else ()
             
+            
+};
+:)
+
+declare function tei2html:text($node as element(tei:text)) as element()? {
+    if ($node/parent::tei:TEI)
+    then 
+        <div class="outer">
+            {tei2html:recurse($node)}
+        </div>
+    else 
+        if (($node/parent::tei:group) and ($node/child::tei:group))
+        then
+            <div class="middle">
+                <h3>Text {$node/@n/string()}</h3>
+                <div class="text-output">
+                {for $t in $node/tei:group/tei:text
+                    [@subtype eq 'Takashima']
+                    (:[@subtype ne 'Serruys']:)
+                return 
+                if ($t/@type eq 'transcription')
+                then
+                    <ul class="transcription {$t/@subtype}">{tei2html:recurse($t)}</ul>
+                else
+                    <ul class="translation {$t/@subtype}">{tei2html:recurse($t)}</ul>
+                }</div>
+            </div>
+        else ()
 };

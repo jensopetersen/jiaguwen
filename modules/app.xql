@@ -66,7 +66,7 @@ declare
 function tls:editor($node as node(), $model as map(*), $type as xs:string, $subtype as xs:string, $text-n as xs:string) {
     let $model := util:expand($model("data"))
     let $lines := tls:get-lines($model, $text-n, $type, $subtype)
-    let $width := if ($type = "translation") then 9 else 3
+    let $width := if ($type = "translation") then 12 else 3
     let $texts := $model/tei:text[1]/tei:group[1]/tei:text[@n eq $text-n]/tei:group[1]/tei:text
     let $options :=
         for $text in $texts return concat($text/@type, "/", $text/@subtype)
@@ -163,10 +163,32 @@ declare function tls:link-to-home($node as node(), $model as map(*)) {
 
 declare 
     %templates:wrap
-function tls:display($node as node(), $model as map(*), $doc-id as xs:string) {
+function tls:display-text($node as node(), $model as map(*), $doc-id as xs:string) {
 let $doc := collection("/db/tls/data")/(id($doc-id))
 let $doc := util:expand($doc)
 return
         tei2html:main($doc)
+
+};
+
+declare 
+    %templates:wrap
+function tls:display-image($node as node(), $model as map(*), $doc-id as xs:string) {
+let $doc := collection("/db/tls/data")/(id($doc-id))
+let $doc := util:expand($doc)
+let $log := util:log("DEBUG", ("##$doc): ", $doc))
+let $image := $doc/tei:text[1]//tei:text[1]//tei:text[1]/@xml:id/string()
+let $log := util:log("DEBUG", ("##$image): ", $image))
+let $image := substring-after($image, 'H')
+let $image-part := substring-before(substring-after($image, '-'), '-')
+let $log := util:log("DEBUG", ("##$image-part): ", $image-part))
+let $image := substring-before($image, '-')
+let $log := util:log("DEBUG", ("##$image): ", $image))
+let $image := concat($image, if ($image-part eq '正') then '.00001' else '.00002', '.png')
+let $log := util:log("DEBUG", ("##$image): ", $image))
+let $image := concat('data/Heji/images/', $image)
+let $log := util:log("DEBUG", ("##$image): ", $image))
+return
+        <img src="{$image}"/>
 
 };
