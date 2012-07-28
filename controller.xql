@@ -17,27 +17,31 @@ else if ($exist:path = ("/", "")) then
 else if ($exist:resource = "edit.html") then
     let $loggedIn := login:set-user("org.exist.login", ())
     (:NB: temporary!:)
-    let $loggedIn := true()
-
     return
         if ($loggedIn) then
             <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
                 <view>
-                    <forward url="modules/view.xql"/>
+                    <forward url="modules/view.xql">
+                    {login:set-user("org.exist.login", ())}
+                    </forward>
                 </view>
             </dispatch>
         else
             <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
                 <forward url="index.html"/>
                 <view>
-                    <forward url="modules/view.xql"/>
+                    <forward url="modules/view.xql">
+                    {login:set-user("org.exist.login", ())}
+                    </forward>
                 </view>
             </dispatch>
 else if (ends-with($exist:resource, ".html")) then
     (: the html page is run through view.xql to expand templates :)
     <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
         <view>
-            <forward url="modules/view.xql"/>
+            <forward url="modules/view.xql">
+            {login:set-user("org.exist.login", ())}
+            </forward>
         </view>
     </dispatch>
 (: paths starting with /libs/ will be loaded from the webapp directory on the file system :)

@@ -54,10 +54,11 @@ return
 
 ##
 
-(:Save bones with bone-part:)
+(:Collection texts into bones (bone-parts into bones):)
 declare namespace util="http://exist-db.org/xquery/util";
 declare namespace xmldb="http://exist-db.org/xquery/xmldb";
 declare namespace functx = "http:/www.functx.com";
+declare namespace tei="http://www.tei-c.org/ns/1.0";
 
 declare option exist:serialize "method=xml media-type=text/xml omit-xml-declaration=yes indent=yes";
 
@@ -81,7 +82,7 @@ $element/node() }
   for $bone-id in $bone-ids
     let $same := $input//bone[bone-id eq $bone-id]
     let $myuid := concat("uuid-",util:uuid())
-    let $a := <collection>{$same}</collection>
+    let $a := <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">{$same}</TEI>
     let $a := $a/functx:add-attribute($a, "xml:id", $myuid)
     return
         xmldb:store($out-collection,  concat($myuid, ".xml"), $a)

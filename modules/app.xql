@@ -23,8 +23,18 @@ let $doc := collection("/db/tls/data")/(id($doc-id))
 
 };
 
-declare function tls:title($node as node(), $model as map(*)) {
+(:declare function tls:title($node as node(), $model as map(*)) {
     element{node-name($node)}{$node/@*, attribute value{$model("data")/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title}}
+};
+:)
+
+declare 
+    %templates:wrap    
+function tls:title($node as node(), $model as map(*)) {
+    let $title := $model("data")/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title/string()
+    let $log := util:log("DEBUG", ("##$title): ", $title))
+
+    return $title
 };
 
 declare 
@@ -90,26 +100,42 @@ function tls:editor($node as node(), $model as map(*), $type as xs:string, $subt
             </div>
 };
 
-declare 
-    %templates:default("type", "text")
-function tls:search($node as node(), $model as map(*), $type as xs:string, $query as xs:string?) {
-    let $log := util:log("DEBUG", ("##$query: ", $query))
-    let $result := 
-        switch ($type)
-            case "text" return
-                collection($config:app-root || "/data")//tei:seg[ngram:contains(., $query)]
-            case "translation" return
-                collection($config:app-root || "/data")//tei:seg[ft:query(., $query)]
-            default return
-                collection($config:app-root || "/data")//tei:title[ft:query(., $query)]
+declare %private function tls:get-collections($collections as xs:string*) {
+    for $collection in $collections
     return
-        map { "search":= $result }
+        collection($config:app-root || "/data/" || $collection)
 };
 
 declare 
-    %templates:wrap
-function tls:display-line($node as node(), $model as map(*)) {
-    for $hit in $model("search")
+    %templates:default("type", "text")
+function tls:search($node as node(), $model as map(*), $type as xs:string, $query as xs:string?, $collection as xs:string*) {
+    let $log := util:log("DEBUG", ("##$query: ", $query))
+    let $collections := tls:get-collections($collection)
+    let $result := 
+        switch ($type)
+            case "text" return
+                $collections//tei:seg[ngram:contains(., $query)]
+            case "translation" return
+                $collections//tei:seg[ft:query(., $query)]
+            default return
+                $collections//tei:title[ft:query(., $query)]
+    return (
+        session:set-attribute("tls.result", $result),
+        map { "search":= $result }
+    )
+};
+
+declare function tls:from-session($node as node(), $model as map(*)) {
+    let $results := session:get-attribute("tls.result")
+    return
+        map { "search" := $results }
+};
+
+declare
+    %templates:default("start", 1)
+function tls:display-line($node as node(), $model as map(*), $start as xs:integer) {
+    let $results := $model("search")
+    for $hit in subsequence($results, $start, 10)
     let $log := util:log("DEBUG", ("##$hit): ", $hit))
     let $doc-id := $hit/ancestor::tei:TEI/@xml:id/string()
     let $log := util:log("DEBUG", ("##$doc-id): ", $doc-id))
@@ -174,21 +200,23 @@ return
 declare 
     %templates:wrap
 function tls:display-image($node as node(), $model as map(*), $doc-id as xs:string) {
-let $doc := collection("/db/tls/data")/(id($doc-id))
-let $doc := util:expand($doc)
-let $log := util:log("DEBUG", ("##$doc): ", $doc))
-let $image := $doc/tei:text[1]//tei:text[1]//tei:text[1]/@xml:id/string()
-let $log := util:log("DEBUG", ("##$image): ", $image))
-let $image := substring-after($image, 'H')
-let $image-part := substring-before(substring-after($image, '-'), '-')
-let $log := util:log("DEBUG", ("##$image-part): ", $image-part))
-let $image := substring-before($image, '-')
-let $log := util:log("DEBUG", ("##$image): ", $image))
-let $image := concat($image, if ($image-part eq '正') then '.00001' else '.00002', '.png')
-let $log := util:log("DEBUG", ("##$image): ", $image))
-let $image := concat('data/Heji/images/', $image)
-let $log := util:log("DEBUG", ("##$image): ", $image))
-return
-        <img src="{$image}"/>
-
+    let $doc := collection("/db/tls/data")/(id($doc-id))
+    let $doc := util:expand($doc)
+    let $log := util:log("DEBUG", ("##$doc): ", $doc))
+    let $image := $doc/tei:text[1]//tei:text[1]//tei:text[1]/@xml:id/string()
+    let $log := util:log("DEBUG", ("##$image): ", $image))
+    let $image := substring-after($image, 'H')
+    let $image-part := substring-before(substring-after($image, '-'), '-')
+    let $log := util:log("DEBUG", ("##$image-part): ", $image-part))
+    let $image := substring-before($image, '-')
+    let $log := util:log("DEBUG", ("##$image): ", $image))
+    let $image := concat($image, if ($image-part eq '正') then '.00001' else '.00002', '.png')
+    let $log := util:log("DEBUG", ("##$image): ", $image))
+    let $image := concat('data/Heji/images/', $image)
+    let $log := util:log("DEBUG", ("##$image): ", $image))
+    return
+        <a href="{$image}" class="cloud-zoom"
+            rel="zoomWidth: 400">
+            <img src="{$image}" alt="" title="" />
+        </a>
 };

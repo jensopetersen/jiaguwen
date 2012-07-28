@@ -5,6 +5,7 @@
         <link rel="shortcut icon" href="resources/images/favicon.ico"/>
         <link href="resources/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link rel="stylesheet" type="text/css" href="resources/css/tls.css"/>
+        <link rel="stylesheet" type="text/css" href="resources/css/cloud-zoom.css"/>
         <script type="text/javascript" src="libs/scripts/jquery/jquery-1.7.1.min.js"/>
         <script type="text/javascript" src="resources/scripts/jquery.scrollExtend.min.js"/>
     </head>
@@ -13,81 +14,11 @@
             <div id="grey-bot">
                 <div id="container">
                     <div id="header">
-                        <a class="demo:link-to-home" href="/" id="logo">eXistDB</a>
+                        <img alt="TLS" src="http://localhost:8080/exist/rest/db/tls/resources/images/header.gif"/>
                     </div><!--/header-->
-                    <div id="navigation" class="templates:fix-links?root=context">
-                        <ul id="nav" class="dropdown dropdown-horizontal">
-                            <li class="dir" id="about">
-                                <span>About Us</span>
-                                <ul>
-                                    <li>
-                                        <a href="/credits.xml">Who we are</a>
-                                    </li>
-                                    <li>
-                                        <a href="/acknowledge.xml">Acknowledgements</a>
-                                    </li>
-                                    <li>
-                                        <a href="http://atomic.exist-db.org/blogs/eXist/Press/">Press/Contact</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dir" id="documentation">
-                                <span>Documentation</span>
-                                <ul>
-                                    <li>
-                                        <a href="/quickstart.xml">Quick Start</a>
-                                    </li>
-                                    <li>
-                                        <a href="/xquery/functions.xql">Function Library</a>
-                                    </li>
-                                    <li>
-                                        <a href="/documentation.xml">Main Documentation</a>
-                                    </li>
-                                    <li>
-                                        <a href="http://en.wikibooks.org/wiki/XQuery">XQuery Wikibook</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dir" id="community">
-                                <span>Community</span>
-                                <ul>
-                                    <li>
-                                        <a href="/index.xml#mailing">Mailing List/IRC</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dir" id="development">
-                                <span>Development</span>
-                                <ul>
-                                    <li>
-                                        <a href="/eXide/">eXide (XQuery IDE)</a>
-                                    </li>
-                                    <li>
-                                        <a href="/api/index.html">Javadocs</a>
-                                    </li>
-                                    <li>
-                                        <a href="http://sourceforge.net/tracker/?group_id=17691&amp;atid=117691">Bug Tracker</a>
-                                    </li>
-                                    <li>
-                                        <a href="http://sourceforge.net/svn/?group_id=17691">Subversion</a>
-                                    </li>
-                                    <li>
-                                        <a href="http://sourceforge.net/tracker/?atid=317691&amp;group_id=17691&amp;func=browse">Submit Patches</a>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li class="dir" id="administration">
-                                <span>Administration</span>
-                                <ul>
-                                    <li>
-                                        <a href="/admin/admin.xql">Admin</a>
-                                    </li>
-                                    <li>
-                                        <a href="/webstart/exist.jnlp">Webstart Client</a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
+                    <div id="navigation">
+                        <span class="main-title">Thesaurus Linguae Sericae</span>
+                        <span class="subtitle">An Historical and Comparative Encyclopaedia of Chinese Conceptual Schemes</span>
                     </div>
                     <div class="container-fluid" id="main">
                         <div class="row-fluid" id="container-body">
@@ -111,6 +42,7 @@
         <!--script src="resources/scripts/ace/ace.js" type="text/javascript" charset="utf-8"/>
         <script src="resources/scripts/ace/theme-tomorrow.js" type="text/javascript" charset="utf-8"/>
         <script src="libs/scripts/jquery/jquery-1.7.1.min.js" type="text/javascript"/-->
+        <script type="text/javascript" src="resources/scripts/cloud-zoom.1.0.2.min.js"/>
         <script src="resources/scripts/edit.js" type="text/javascript" charset="utf-8"/>
     </body>
 </html>

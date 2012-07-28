@@ -10,6 +10,30 @@ $(document).ready(function() {
             editors[i].setLine(line);
         }
     });
+    
+    /*
+     * We use the onScrollBeyond jQuery plugin to dynamically load
+     * additional search results when the users scrolls down the page.
+     */
+    var itemsPerPage = 10;
+    var current = 1;
+    var loading = false;
+    jQuery(document).ready(function () {
+        $("#results").onScrollBeyond(function () {
+            if (loading) {
+                return;
+            }
+            loading = true;
+            current = current + itemsPerPage;
+            $.ajax("ajax.html", {
+                data: { start: current },
+                success: function (data) {
+                    $("#results").append(data);
+                    loading = false;
+                }
+            });
+        });
+    });
 });
 
 var TLS = TLS || {};

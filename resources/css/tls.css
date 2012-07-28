@@ -20,11 +20,11 @@ body { font: 12px/20px Verdana, Arial, Helvetica, sans-serif; color: #222; backg
 
 #container { width: 1200px; margin: 0 auto; }
 
-#header { margin: 0 auto; width: 960px; float: left; background: url(../images/header.gif) no-repeat; height: 120px; }
+#header { margin: 0 auto; width: 960px; float: left; height: 120px; }
 
 #header a#logo { display: block; width: 220px; height: 100px; outline: 0; text-indent: -999em; overflow: hidden; float: left; margin: 10px 0; }
 
-#navigation { float: left; height: 70px; width: 960px; font-size: 10px; }
+#navigation { float: left; height: 70px; width: 1220px; font-size: 10px; }
 
 #main { padding: 0 0 30px; }
 
@@ -277,28 +277,26 @@ fieldset {
 .disabled {
     display:none;
 }
+.middle {    
+    clear:both;}
 
 .middle .text-output {
-    position:relative;
     width:1220px;
     }
 
-.middle .transcription {
+.middle ul.transcription {
     top:0;
     left:0;
-    position:absolute;
     padding:15px;
     width:220px;
     float:left;
 }
-.middle .translation {
+.middle ul.translation {
     top:0;
     left:250px;
     padding:15px;
-    position:absolute;
     width:1000px;
     float:left;
-    
 }
 #content .middle .text-output ul {
 padding:0;
@@ -308,3 +306,76 @@ padding:0;
 margin:0;}
 
 .bone-image img {width:200px;}
+
+.page-controls {display:block}
+
+.title {
+    width:200px;
+}
+
+#navigation {
+    margin-top:1em;
+} 
+
+#navigation .main-title {
+    color:white;
+    font-size:275%;}
+    
+#navigation .subtitle {
+    color:white;
+    font-size:150%;
+    margin-left:3em;
+    }
+#header img {
+    width:250px;
+    float:right;
+    margin-top:1em;
+}
+
+form {
+    position:relative;
+}
+.checkbox {
+    position:absolute;
+    left:0;
+    float:left;
+    padding-right:5px;
+    width:50px;
+}
+
+select {
+    position:absolute;
+    left:75px;
+    float:left;
+    padding:5px;
+    width:200px;
+}
+
+input.text {
+    position:absolute;
+    left:300px;
+    float:left;
+    padding:5px;
+    width:200px;
+}
+
+button {
+    position:absolute;
+    left:520px;
+    float:left;
+    padding:5px;
+    margin-top:5px;
+    width:50px;
+}
+
+.result {
+    display:block;
+}
+
+#results {
+    margin-top:1em;
+}
+
+.hit-count {
+    margin-top:5em;
+}
