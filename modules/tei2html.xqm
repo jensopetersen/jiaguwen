@@ -100,11 +100,15 @@ declare function tei2html:text($node as element(tei:text)) as element()? {
         <div class="outer">
             {tei2html:recurse($node)}
         </div>
-    else 
+    else
+        let $doc-id := $node/ancestor-or-self::tei:TEI/@xml:id
+        let $text-n := $node/@n/string()
+        return
         if (($node/parent::tei:group) and ($node/child::tei:group))
         then
             <div class="middle">
-                <h3>Text {$node/@n/string()}</h3>
+                
+                <h3><a href="edit.html?doc-id={$doc-id}&amp;text-n={string($text-n)}"><img src="resources/images/page-edit-icon.png"/></a> Text {$node/@n/string()}</h3>
                 <div class="text-output">
                 {for $t in $node/tei:group/tei:text
                     [@subtype eq 'Takashima']

@@ -1,29 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <div class="templates:surround?with=templates/page.html&amp;at=content">
-    <h1>Text Input</h1>
-    <div class="tls:load">
-        <form class="form-horizontal">
-            <fieldset>
-                <div class="tls:title title"/>
-                <div class="control-group line">
-                    <label class="control-label">Text No.:</label>
-                    <div class="controls">
-                        <select id="line-select" name="line" class="tls:line-select"/>
+    <div id="edit">
+        <h1>Text Input and Editing</h1>
+        <div class="tls:load">
+            <form class="form-horizontal">
+                <fieldset>
+                    <div class="tls:display-link-to-text link"/>
+                    <div class="tls:title title"/>
+                    <div class="control-group line">
+                        <label class="control-label">Text No.:</label>
+                        <div class="controls">
+                            <select id="line-select" name="line" class="tls:line-select"/>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="tls:display-image bone-image"/>
+                <div class="row">
+                    <div class="tls:editor?type=transcription&amp;subtype=Takashima">
+                        <div class="editor" contenteditable="true"/>
+                    </div>
+                    <div class="tls:editor?type=translation&amp;subtype=Takashima">
+                        <div class="editor" contenteditable="true"/>
                     </div>
                 </div>
-            </fieldset>
-            <div class="tls:display-image bone-image"/>
-            <div class="row">
-                <div class="tls:editor?type=transcription&amp;subtype=Takashima">
-                    <div class="editor" contenteditable="true"/>
-                </div>
-                <div class="tls:editor?type=translation&amp;subtype=Takashima">
-                    <div class="editor" contenteditable="true"/>
-                </div>
-            </div>
-        </form>
-        <a href="index.html?logout">Log Out</a>
-        <br/>
-        <a href="search.html">Search</a>
+            </form>
+            <a href="index.html?logout">Log Out</a>
+            <br/>
+            <a href="search.html">Search</a>
+        </div>
     </div>
 </div>

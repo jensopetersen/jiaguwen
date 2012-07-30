@@ -189,6 +189,15 @@ declare function tls:link-to-home($node as node(), $model as map(*)) {
 
 declare 
     %templates:wrap
+function tls:display-link-to-text($node as node(), $model as map(*), $doc-id as xs:string) {
+let $doc-id := $doc-id
+return
+        <a href="display.html?doc-id={$doc-id}"><img src="resources/images/text.png"/></a>
+
+};
+
+declare 
+    %templates:wrap
 function tls:display-text($node as node(), $model as map(*), $doc-id as xs:string) {
 let $doc := collection("/db/tls/data")/(id($doc-id))
 let $doc := util:expand($doc)

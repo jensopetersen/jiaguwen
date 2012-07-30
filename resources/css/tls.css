@@ -150,11 +150,6 @@ form {
 
 .hi { background: #FFED3D; }
 
-.selects select {
-    float: left;
-    width: 170px;
-}
-
 .editor {
     position: relative;
     width: 100%;
@@ -255,22 +250,31 @@ fieldset {
     padding-bottom:3em;
 }
 
-.title {
+#edit .link {
     position: absolute;
     float:left;
-    width:200px;    
+    width:50px;
+    font-size:150%;    
 }
 
-.line {
+#edit .title {
     position: absolute;
-    left:300px;   
+    float:left;
+    left:50px;
+    width:250px;
+    font-size:150%;    
+}
+
+#edit .line {
+    position: absolute;
+    left:150px;   
 }
 
 .editor ol[contenteditable=true] > li {
     border-top-width:0;
 }
 
-#line-select {
+#edit #line-select {
     width:60px;
 }
 
@@ -305,13 +309,18 @@ margin:0;}
 padding:0;
 margin:0;}
 
-.bone-image img {width:200px;}
+.bone-image {
+    float:right;
+    margin-right:350px;
+    margin-top:-100px;
+}
+
+.bone-image img {
+    width:200px;
+}
 
 .page-controls {display:block}
 
-.title {
-    width:200px;
-}
 
 #navigation {
     margin-top:1em;
@@ -335,37 +344,50 @@ margin:0;}
 form {
     position:relative;
 }
-.checkbox {
+
+#search .checkbox {
     position:absolute;
     left:0;
     float:left;
     padding-right:5px;
     width:50px;
+    background-color:#FFF;
+    border:1px solid gray;
 }
 
-select {
+#search select {
     position:absolute;
     left:75px;
     float:left;
     padding:5px;
     width:200px;
+    margin-left:1em;
 }
 
-input.text {
+#search input.text {
     position:absolute;
-    left:300px;
+    left:275px;
     float:left;
     padding:5px;
     width:200px;
 }
 
-button {
+#search  button {
     position:absolute;
-    left:520px;
+    left:500px;
     float:left;
     padding:5px;
     margin-top:5px;
     width:50px;
+}
+
+#search select {
+    width:175px;
+}
+
+
+button.login {
+    left:0;
 }
 
 .result {
@@ -378,4 +400,17 @@ button {
 
 .hit-count {
     margin-top:5em;
+}
+
+.row {
+    margin-top:250px;
+    
+}
+
+.selects {
+    margin-top:-3em;
+}
+
+#edit select {
+    width:175px;
 }

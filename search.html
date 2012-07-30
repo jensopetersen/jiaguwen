@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<div class="templates:surround?with=templates/page.html&amp;at=content">
-    <h1 class="rounded">Search Form</h1>
-    <form method="POST" action="" class="login">
-        <div class="checkbox">
-            <input type="checkbox" name="collection" value="BB"/> BB<br/>
-            <input type="checkbox" name="collection" value="Heji"/> Heji<br/>
+<div class="templates:surround?with=templates/page.html&amp;at=content search-and-display">
+    <div id="search">
+        <h1 class="rounded">Search Form</h1>
+        <form method="POST" action="" class="login">
+            <div class="checkbox">
+                <input type="checkbox" name="collection" value="BB"/> BB<br/>
+                <input type="checkbox" name="collection" value="Heji"/> Heji<br/>
+            </div>
+            <select name="type" class="templates:form-control">
+                <option value="text">Text</option>
+                <option value="title">Title</option>
+                <option value="translation">Translation</option>
+            </select>
+            <input type="text" name="query" class="templates:form-control text"/>
+            <button type="submit">Search</button>
+        </form>
+        <div class="tls:search result">
+            <div class="tls:hit-count hit-count"/>
+            <table id="results">
+                <tbody>
+                    <tr class="tls:display-line"/>
+                </tbody>
+            </table>
+            <ul class="tls:display-bone"/>
         </div>
-        <select name="type" class="templates:form-control">
-            <option value="text">Text</option>
-            <option value="title">Title</option>
-            <option value="translation">Translation</option>
-        </select>
-        <input type="text" name="query" class="templates:form-control text"/>
-        <button type="submit">Search</button>
-    </form>
-    <div class="tls:search result">
-        <div class="tls:hit-count hit-count"/>
-        <table id="results">
-            <tbody>
-                <tr class="tls:display-line"/>
-            </tbody>
-        </table>
-        <ul class="tls:display-bone"/>
     </div>
 </div>
