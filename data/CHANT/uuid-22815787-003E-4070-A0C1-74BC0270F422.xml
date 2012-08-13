@@ -1,0 +1,82 @@
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<TEI xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg" xml:id="uuid-22815787-003E-4070-A0C1-74BC0270F422">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>H06834-反</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Publication Information</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Information about the source</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text xml:id="H06834-反" facs="06834.00002.png">
+        <group>
+            <text xml:id="H06834-反-1">
+                <group>
+                    <text type="transcription" subtype="yuanwen" xml:id="H06834-反-1-yuanwen">
+                        <body>
+                            <p>
+                                <seg>󾑸󾒼󽲙，</seg>
+                                <seg>󾂭，</seg>
+                                <seg>󾖠󽷫󾐼󽁌。</seg>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="transcription" subtype="shiwen" xml:id="H06834-反-1-shiwen">
+                        <body>
+                            <p>
+                                <seg>辛酉卜，</seg>
+                                <seg>㱿，</seg>
+                                <seg>貞我亡須。</seg>
+                            </p>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text xml:id="H06834-反-2">
+                <group>
+                    <text type="transcription" subtype="yuanwen" xml:id="H06834-反-2-yuanwen">
+                        <body>
+                            <p>
+                                <seg>󾑸󾒼󽲙，</seg>
+                                <seg>󾂭，</seg>
+                                <seg>󾖠□〔󽹃〕…〔󽲇〕。</seg>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="transcription" subtype="shiwen" xml:id="H06834-反-2-shiwen">
+                        <body>
+                            <p>
+                                <seg>辛酉卜，</seg>
+                                <seg>㱿，</seg>
+                                <seg>貞□〔不〕…〔𡆥〕。</seg>
+                            </p>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text xml:id="H06834-反-3">
+                <group>
+                    <text type="transcription" subtype="yuanwen" xml:id="H06834-反-3-yuanwen">
+                        <body>
+                            <p>
+                                <seg>󾂭。</seg>
+                            </p>
+                        </body>
+                    </text>
+                    <text type="transcription" subtype="shiwen" xml:id="H06834-反-3-shiwen">
+                        <body>
+                            <p>
+                                <seg>㱿。</seg>
+                            </p>
+                        </body>
+                    </text>
+                </group>
+            </text>
+        </group>
+    </text>
+</TEI>

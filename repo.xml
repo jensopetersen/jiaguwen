@@ -9,6 +9,7 @@
     <repo:type>application</repo:type>
     <repo:target>/db/tls</repo:target>
     <repo:prepare>pre-install.xql</repo:prepare>
+    <repo:finish>post-install.xql</repo:finish>
     <repo:finish/>
-    <deployed>2012-04-29T17:28:24.538+02:00</deployed>
+    <deployed>2012-08-13T15:10:43.188+02:00</deployed>
 </repo:meta>

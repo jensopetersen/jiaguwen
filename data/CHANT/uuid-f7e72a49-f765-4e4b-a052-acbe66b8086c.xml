@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tei:TEI xmlns:tei="http://www.tei-c.org/ns/1.0" xml:id="uuid-f7e72a49-f765-4e4b-a052-acbe66b8086c">
+    <tei:teiHeader>
+        <tei:fileDesc>
+            <tei:titleStmt>
+                <tei:title>H00110-正</tei:title>
+            </tei:titleStmt>
+            <tei:publicationStmt>
+                <tei:p>Publication Information</tei:p>
+            </tei:publicationStmt>
+            <tei:sourceDesc>
+                <tei:p>Information about the source</tei:p>
+            </tei:sourceDesc>
+        </tei:fileDesc>
+    </tei:teiHeader>
+    <tei:text xml:id="H00110-正">
+        <tei:group>
+            <tei:text xml:id="H00110-正-1">
+                <tei:group>
+                    <tei:text xml:id="H00110-正-1-yuanwen">
+                        <tei:body>
+                            <tei:p>
+                                <tei:seg>󾖠󾍍󽎈󽥉󽸟。</tei:seg>
+                                <tei:seg> 󾕻</tei:seg>
+                            </tei:p>
+                        </tei:body>
+                    </tei:text>
+                    <tei:text xml:id="H00110-正-1-shiwen">
+                        <tei:body>
+                            <tei:p>
+                                <tei:seg>貞王𦔻隹󱊅。</tei:seg>
+                                <tei:seg> 一</tei:seg>
+                            </tei:p>
+                        </tei:body>
+                    </tei:text>
+                </tei:group>
+            </tei:text>
+            <tei:text xml:id="H00110-正-2">
+                <tei:group>
+                    <tei:text xml:id="H00110-正-2-yuanwen">
+                        <tei:body>
+                            <tei:p>
+                                <tei:seg>󾖠󽹃󽸡。</tei:seg>
+                                <tei:seg> 󾕻</tei:seg>
+                            </tei:p>
+                        </tei:body>
+                    </tei:text>
+                    <tei:text xml:id="H00110-正-2-shiwen">
+                        <tei:body>
+                            <tei:p>
+                                <tei:seg>貞不孽。</tei:seg>
+                                <tei:seg> 一</tei:seg>
+                            </tei:p>
+                        </tei:body>
+                    </tei:text>
+                </tei:group>
+            </tei:text>
+            <tei:text xml:id="H00110-正-3">
+                <tei:group>
+                    <tei:text xml:id="H00110-正-3-yuanwen">
+                        <tei:body>
+                            <tei:p>
+                                <tei:seg>󽀁󾑭󽨁󾍍。</tei:seg>
+                            </tei:p>
+                        </tei:body>
+                    </tei:text>
+                    <tei:text xml:id="H00110-正-3-shiwen">
+                        <tei:body>
+                            <tei:p>
+                                <tei:seg>匕己󰩫王。</tei:seg>
+                            </tei:p>
+                        </tei:body>
+                    </tei:text>
+                </tei:group>
+            </tei:text>
+            <tei:text xml:id="H00110-正-4">
+                <tei:group>
+                    <tei:text xml:id="H00110-正-4-yuanwen">
+                        <tei:body>
+                            <tei:p>
+                                <tei:seg>󾑭󾒥󽲙，</tei:seg>
+                                <tei:seg>󾂭，</tei:seg>
+                                <tei:seg>󾖠󽦬󾁃󽁓。</tei:seg>
+                                <tei:seg> 󾕻</tei:seg>
+                            </tei:p>
+                        </tei:body>
+                    </tei:text>
+                    <tei:text xml:id="H00110-正-4-shiwen">
+                        <tei:body>
+                            <tei:p>
+                                <tei:seg>己巳卜，</tei:seg>
+                                <tei:seg>㱿，</tei:seg>
+                                <tei:seg>貞雀其󰭱。</tei:seg>
+                                <tei:seg> 一</tei:seg>
+                            </tei:p>
+                        </tei:body>
+                    </tei:text>
+                </tei:group>
+            </tei:text>
+            <tei:text xml:id="H00110-正-5">
+                <tei:group>
+                    <tei:text xml:id="H00110-正-5-yuanwen">
+                        <tei:body>
+                            <tei:p>
+                                <tei:seg>󾖠󽦬󽹃󽁓。</tei:seg>
+                                <tei:seg>󾕼󽗢。</tei:seg>
+                            </tei:p>
+                        </tei:body>
+                    </tei:text>
+                    <tei:text xml:id="H00110-正-5-shiwen">
+                        <tei:body>
+                            <tei:p>
+                                <tei:seg>貞雀不󰭱。</tei:seg>
+                                <tei:seg>二月。</tei:seg>
+                            </tei:p>
+                        </tei:body>
+                    </tei:text>
+                </tei:group>
+            </tei:text>
+            <tei:text xml:id="H00110-正-6">
+                <tei:group>
+                    <tei:text xml:id="H00110-正-6-yuanwen">
+                        <tei:body>
+                            <tei:p>
+                                <tei:seg>󾑲󾒩󽲙，</tei:seg>
+                                <tei:seg>󽭝，</tei:seg>
+                                <tei:seg>󾖠󽰵󽢤󾁪。</tei:seg>
+                                <tei:seg> 󾕼</tei:seg>
+                            </tei:p>
+                        </tei:body>
+                    </tei:text>
+                    <tei:text xml:id="H00110-正-6-shiwen">
+                        <tei:body>
+                            <tei:p>
+                                <tei:seg>庚午卜，</tei:seg>
+                                <tei:seg>𡧊，</tei:seg>
+                                <tei:seg>貞田彘󰩩。</tei:seg>
+                                <tei:seg> 二</tei:seg>
+                            </tei:p>
+                        </tei:body>
+                    </tei:text>
+                </tei:group>
+            </tei:text>
+            <tei:text xml:id="H00110-正-7">
+                <tei:group>
+                    <tei:text xml:id="H00110-正-7-yuanwen">
+                        <tei:body>
+                            <tei:p>
+                                <tei:seg>󾖠󽰵󾅊󾁃󽢤󾁪。</tei:seg>
+                            </tei:p>
+                        </tei:body>
+                    </tei:text>
+                    <tei:text xml:id="H00110-正-7-shiwen">
+                        <tei:body>
+                            <tei:p>
+                                <tei:seg>貞田弗其彘󰩩。</tei:seg>
+                            </tei:p>
+                        </tei:body>
+                    </tei:text>
+                </tei:group>
+            </tei:text>
+            <tei:text xml:id="H00110-正-8">
+                <tei:group>
+                    <tei:text xml:id="H00110-正-8-yuanwen">
+                        <tei:body>
+                            <tei:p>
+                                <tei:seg>󾖠󽰵󾁪。</tei:seg>
+                            </tei:p>
+                        </tei:body>
+                    </tei:text>
+                    <tei:text xml:id="H00110-正-8-shiwen">
+                        <tei:body>
+                            <tei:p>
+                                <tei:seg>貞田󰩩。</tei:seg>
+                            </tei:p>
+                        </tei:body>
+                    </tei:text>
+                </tei:group>
+            </tei:text>
+            <tei:text xml:id="H00110-正-9">
+                <tei:group>
+                    <tei:text xml:id="H00110-正-9-yuanwen">
+                        <tei:body>
+                            <tei:p>
+                                <tei:seg>󾅊󾁃󽢤。</tei:seg>
+                            </tei:p>
+                        </tei:body>
+                    </tei:text>
+                    <tei:text xml:id="H00110-正-9-shiwen">
+                        <tei:body>
+                            <tei:p>
+                                <tei:seg>弗其彘。</tei:seg>
+                            </tei:p>
+                        </tei:body>
+                    </tei:text>
+                </tei:group>
+            </tei:text>
+            <tei:text xml:id="H00110-正-10">
+                <tei:group>
+                    <tei:text xml:id="H00110-正-10-yuanwen">
+                        <tei:body>
+                            <tei:p>
+                                <tei:seg>󾑲󾒠󽲙，</tei:seg>
+                                <tei:seg>󽭝，</tei:seg>
+                                <tei:seg>󾖠󽩏󽍺󽅦󽒙󾌗󽎫。</tei:seg>
+                            </tei:p>
+                        </tei:body>
+                    </tei:text>
+                    <tei:text xml:id="H00110-正-10-shiwen">
+                        <tei:body>
+                            <tei:p>
+                                <tei:seg>庚辰卜，</tei:seg>
+                                <tei:seg>𡧊，</tei:seg>
+                                <tei:seg>貞乎取󽅦芻于口。</tei:seg>
+                            </tei:p>
+                        </tei:body>
+                    </tei:text>
+                </tei:group>
+            </tei:text>
+            <tei:text xml:id="H00110-正-11">
+                <tei:group>
+                    <tei:text xml:id="H00110-正-11-yuanwen">
+                        <tei:body>
+                            <tei:p>
+                                <tei:seg>󾒀… 󾕻 〔󾕼 󾕾〕 󾖀</tei:seg>
+                            </tei:p>
+                        </tei:body>
+                    </tei:text>
+                    <tei:text xml:id="H00110-正-11-shiwen">
+                        <tei:body>
+                            <tei:p>
+                                <tei:seg>癸… 一 〔二 三〕 四</tei:seg>
+                            </tei:p>
+                        </tei:body>
+                    </tei:text>
+                </tei:group>
+            </tei:text>
+            <tei:text xml:id="H00110-正-12">
+                <tei:group>
+                    <tei:text xml:id="H00110-正-12-yuanwen">
+                        <tei:body>
+                            <tei:p>
+                                <tei:seg>󽫈󾕼□。</tei:seg>
+                                <tei:seg> 󾕻</tei:seg>
+                            </tei:p>
+                        </tei:body>
+                    </tei:text>
+                    <tei:text xml:id="H00110-正-12-shiwen">
+                        <tei:body>
+                            <tei:p>
+                                <tei:seg>今二□。</tei:seg>
+                                <tei:seg> 一</tei:seg>
+                            </tei:p>
+                        </tei:body>
+                    </tei:text>
+                </tei:group>
+            </tei:text>
+        </tei:group>
+    </tei:text>
+</tei:TEI>
