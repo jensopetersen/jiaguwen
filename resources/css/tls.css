@@ -13,10 +13,10 @@
 
 /* ---------------------------------------- LAYOUT ---------------------------------------- */
 
-body { font: 12px/20px Verdana, Arial, Helvetica, sans-serif; color: #222; background: url(../images/body.gif) repeat 50% 100%; }
+body { font: 12px/20px Verdana, Arial, Helvetica, sans-serif; color: #222; /*background: url(../images/body.gif) repeat 50% 100%; */}
 
-#grey-top { background: #F3F3F3 url(../images/horizontal.gif) repeat-x 50% 0; float: left; width: 100%; height: 100%; }
-#grey-bot { background: url(../images/body-base.gif) repeat-x 50% 100%; float: left; width: 100%; height: 100%; }
+#grey-top { background: #fafafa /*url(../images/horizontal.gif) repeat-x 50% 0*/; float: left; width: 100%; height: 100%; }
+#grey-bot { /*background: url(../images/body-base.gif) repeat-x 50% 100%; */float: left; width: 100%; height: 100%; }
 
 #container { width: 1200px; margin: 0 auto; }
 
@@ -87,11 +87,11 @@ body { font: 12px/20px Verdana, Arial, Helvetica, sans-serif; color: #222; backg
 
 #footer ul { float: left; width: 640px; margin: 0 0 0 -4px; }
 #footer ul li { display: inline; }
-#footer ul li a { padding: 2px 4px; color: #ffcb05; }
+#footer ul li a { padding: 2px 4px; color: #4d4d4d; }
 #footer ul li a:hover { background: #333; }
 
 #copyright { float: right; width: 220px; }
-#copyright p { padding: 0; color: #F3F3F3; }
+#copyright p { padding: 0; color: #4d4d4d; }
 
 
 /* ---------------------------------------- TYPE ---------------------------------------- */
@@ -109,7 +109,7 @@ p { padding: 5px 0; }
 
 h1 { font-size: 16px; padding: 0px 0 5px; margin: 0; font-weight: bold; font-family: "Century Gothic", Verdana, Helvetica, sans-serif; letter-spacing: 1px; }
 h2 { font-size: 1.2em; padding: 10px 0; font-weight: bold; font-family: "Century Gothic", Verdana, Helvetica, sans-serif; letter-spacing: 1px; }
-h3 { font-size: 1.2em; padding: 10px 0 5px; margin: 0 0 5px; font-weight: bold; border-bottom: 1px dotted; }
+h3 { font-size: 1.2em; padding: 10px 0 5px; margin: 0 0 5px; font-weight: bold; border-top: 1px dotted; }
 h4 { font-size: 1.1em; padding: 10px 0; font-weight: bold; }
 h5 { font-size: 1.0em; padding: 10px 0; font-weight: bold; }
 
@@ -215,23 +215,29 @@ form {
 table {
     width:100%
 }
+
 .hit-info {
     
 }
+
 .hit-link {
     width: 5%;
     }
+
 .hit-title {
     color:grey;
     width:10%;
     }
+
 .text-n {
     width: 5%;
     }
+
 .hit-type {
     color:grey;
     width:80%;
 }
+
 .hit-text {
     font-size: 150%;
     }
@@ -281,8 +287,15 @@ fieldset {
 .disabled {
     display:none;
 }
+
 .middle {    
-    clear:both;}
+    clear:both;
+    padding-top: 1em;
+    }
+
+.middle img {    
+    padding-bottom: .5em;
+    }
 
 .middle .text-output {
     width:1220px;
@@ -295,6 +308,7 @@ fieldset {
     width:220px;
     float:left;
 }
+
 .middle ul.translation {
     top:0;
     left:250px;
@@ -302,9 +316,11 @@ fieldset {
     width:1000px;
     float:left;
 }
+
 #content .middle .text-output ul {
 padding:0;
 margin:0;}
+
 #content .middle .text-output ul li {
 padding:0;
 margin:0;}
@@ -326,17 +342,19 @@ margin:0;}
     margin-top:1em;
 } 
 
-#navigation .main-title {
-    color:white;
-    font-size:275%;}
+#header .main-title {
+    color:#5db0e6;
+    font-size:275%;
+    margin-top: 1em;
+    }
     
-#navigation .subtitle {
-    color:white;
+#header .subtitle {
+    color:#5db0e6;
     font-size:150%;
-    margin-left:3em;
+    margin-top: 1em;
     }
 #header img {
-    width:250px;
+    width:200px;
     float:right;
     margin-top:1em;
 }
