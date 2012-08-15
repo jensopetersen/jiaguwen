@@ -158,7 +158,8 @@ function tls:display-line($node as node(), $model as map(*), $start as xs:intege
             }
             </td>
             <td class="text-n">{$text-n}</td>
-            <td class="hit-type">{$type}/{$subtype}</td>
+            (:there are no types and subtypes if the hit is on title.:)
+            <td class="hit-type">{$type}{if ($type and $subtype) then "/" else ()}{$subtype}</td>
         </tr>,
         <tr class="hit-text">
             <td colspan="5" class="{$type}">{$hit/text()}</td>
@@ -205,7 +206,9 @@ function tls:display-image($node as node(), $model as map(*), $doc-id as xs:stri
     let $doc := collection("/db/tls-data")/(id($doc-id))
     let $doc := util:expand($doc)
     let $image := $doc/tei:text/@facs/string()
-    let $image := ('../tls-data/Heji-images/' ||  $image)
+    (:let $image-dir := substring($image, 1, 2)
+    let $image := ('../tls-data/Heji-images/' || $image-dir || "/" || $image):)
+    let $image := ('../tls-data/Heji-images/' || $image)
     return
         <a href="{$image}" class="cloud-zoom"
             rel="zoomWidth: 400">

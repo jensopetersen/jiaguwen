@@ -75,8 +75,8 @@ util:log($log-level, "Create users and groups: Done."),
 
 (: Load collection.xconf documents :)
 util:log($log-level, "Config: Loading collection configuration ..."),
-    local:mkcol($system-collection, $tls-collection),
-    xdb:store-files-from-pattern(fn:concat($system-collection, $tls-collection), $dir, "*.xconf"),
+    local:mkcol($system-collection, $tls-data-collection),
+    xdb:store-files-from-pattern(fn:concat($system-collection, $tls-data-collection), $dir, "*.xconf"),
 util:log($log-level, "Loading collection.xconf documents: Done."),
 
 (: Create data collections :)
@@ -84,15 +84,15 @@ util:log($log-level, fn:concat("Config: Creating data collection '", $CHANT-coll
     for $col in ($BB-collection, $CHANT-collection, $Heji-image-collection) return
     (
         local:mkcol($db-root, local:strip-prefix($col, fn:concat($db-root, "/"))),
-        xdb:set-collection-permissions($col, $tls-admin-user, $tls-users-group, util:base-to-integer(0755, 8))
+        xdb:set-collection-permissions($col, $tls-admin-user, $tls-users-group, util:base-to-integer(0775, 8))
     ),
     util:log($log-level, "...Config: Uploading data..."),
         xdb:store-files-from-pattern($BB-collection, $dir, "data/BB/*.xml"),
-        local:set-collection-resource-permissions($BB-collection, $tls-admin-user, $tls-users-group, util:base-to-integer(0755, 8)),
+        local:set-collection-resource-permissions($BB-collection, $tls-admin-user, $tls-users-group, util:base-to-integer(0775, 8)),
         xdb:store-files-from-pattern($CHANT-collection, $dir, "data/CHANT/*.xml"),
-        local:set-collection-resource-permissions($CHANT-collection, $tls-admin-user, $tls-users-group, util:base-to-integer(0755, 8)),
+        local:set-collection-resource-permissions($CHANT-collection, $tls-admin-user, $tls-users-group, util:base-to-integer(0775, 8)),
         xdb:store-files-from-pattern($Heji-image-collection, $dir, "data/Heji-images/*.png"),
-        local:set-collection-resource-permissions($Heji-image-collection, $tls-admin-user, $tls-users-group, util:base-to-integer(0755, 8)),
+        local:set-collection-resource-permissions($Heji-image-collection, $tls-admin-user, $tls-users-group, util:base-to-integer(0444, 8)),
     util:log($log-level, "...Config: Done Uploading data."),
 util:log($log-level, "Config: Done."), 
 
