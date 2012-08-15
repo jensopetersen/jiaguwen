@@ -102,15 +102,16 @@ declare %private function tls:get-collections($collections as xs:string*) {
 
 declare 
     %templates:default("type", "text")
-function tls:search($node as node(), $model as map(*), $type as xs:string, $query as xs:string?, $collection as xs:string*) {
-    (:let $log := util:log("DEBUG", ("##$query: ", $query)):)
-    let $collections := tls:get-collections($collection)
+function tls:search($node as node(), $model as map(*), $type as xs:string, $query as xs:string?) {
+    let $collections := request:get-parameter("collection", '')
+    let $collections := tls:get-collections($collections)
     let $result := 
         switch ($type)
             case "text" return
                 $collections//tei:seg[ngram:contains(., $query)]
             case "translation" return
-                $collections//tei:seg[ft:query(., $query)]
+                $collections//tei:seg[ft:query(., $query)]                
+            (:title is treated as default:)
             default return
                 $collections//tei:title[ft:query(., $query)]
     return (
@@ -158,7 +159,7 @@ function tls:display-line($node as node(), $model as map(*), $start as xs:intege
             }
             </td>
             <td class="text-n">{$text-n}</td>
-            (:there are no types and subtypes if the hit is on title.:)
+            <!--there are no types and subtypes if the hit is on title.-->
             <td class="hit-type">{$type}{if ($type and $subtype) then "/" else ()}{$subtype}</td>
         </tr>,
         <tr class="hit-text">
@@ -206,6 +207,7 @@ function tls:display-image($node as node(), $model as map(*), $doc-id as xs:stri
     let $doc := collection("/db/tls-data")/(id($doc-id))
     let $doc := util:expand($doc)
     let $image := $doc/tei:text/@facs/string()
+    (:NB: when in production, Heji images will be placed in subdirectories.:)
     (:let $image-dir := substring($image, 1, 2)
     let $image := ('../tls-data/Heji-images/' || $image-dir || "/" || $image):)
     let $image := ('../tls-data/Heji-images/' || $image)
