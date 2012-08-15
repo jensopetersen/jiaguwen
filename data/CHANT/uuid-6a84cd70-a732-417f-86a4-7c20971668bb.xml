@@ -1,242 +1,241 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<tei:TEI xmlns:tei="http://www.tei-c.org/ns/1.0" xml:id="uuid-6a84cd70-a732-417f-86a4-7c20971668bb">
-    <tei:teiHeader>
-        <tei:fileDesc>
-            <tei:titleStmt>
-                <tei:title>H00150-正</tei:title>
-            </tei:titleStmt>
-            <tei:publicationStmt>
-                <tei:p>Publication Information</tei:p>
-            </tei:publicationStmt>
-            <tei:sourceDesc>
-                <tei:p>Information about the source</tei:p>
-            </tei:sourceDesc>
-        </tei:fileDesc>
-    </tei:teiHeader>
-    <tei:text xml:id="H00150-正">
-        <tei:group>
-            <tei:text xml:id="H00150-正-1">
-                <tei:group>
-                    <tei:text xml:id="H00150-正-1-yuanwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>󽥳󽒙󾌗󽣥。</tei:seg>
-                                <tei:seg> 󾕼 󾕼󽎮</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                    <tei:text xml:id="H00150-正-1-shiwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>雝芻于󰰪。</tei:seg>
-                                <tei:seg> 二 二告</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                </tei:group>
-            </tei:text>
-            <tei:text xml:id="H00150-正-2">
-                <tei:group>
-                    <tei:text xml:id="H00150-正-2-yuanwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>󽥳󽒙󽻰󾌗󽣥。</tei:seg>
-                                <tei:seg> 󾕻</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                    <tei:text xml:id="H00150-正-2-shiwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>雝芻勿于󰰪。</tei:seg>
-                                <tei:seg> 一</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                </tei:group>
-            </tei:text>
-            <tei:text xml:id="H00150-正-3">
-                <tei:group>
-                    <tei:text xml:id="H00150-正-3-yuanwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>󽥳󽒙󾌗󽨷。</tei:seg>
-                                <tei:seg> 󾕻</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                    <tei:text xml:id="H00150-正-3-shiwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>雝芻于󰾧。</tei:seg>
-                                <tei:seg> 一</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                </tei:group>
-            </tei:text>
-            <tei:text xml:id="H00150-正-4">
-                <tei:group>
-                    <tei:text xml:id="H00150-正-4-yuanwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>󽥳󽒙󽻰󾌗󽨷。</tei:seg>
-                                <tei:seg> 󾕻</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                    <tei:text xml:id="H00150-正-4-shiwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>雝芻勿于󰾧。</tei:seg>
-                                <tei:seg> 一</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                </tei:group>
-            </tei:text>
-            <tei:text xml:id="H00150-正-5">
-                <tei:group>
-                    <tei:text xml:id="H00150-正-5-yuanwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>󾖠󽥳󽒙󾌗󽣦。</tei:seg>
-                                <tei:seg> 󾕻 󾕼</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                    <tei:text xml:id="H00150-正-5-shiwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>貞雝芻于󰰪。</tei:seg>
-                                <tei:seg> 一 二</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                </tei:group>
-            </tei:text>
-            <tei:text xml:id="H00150-正-6">
-                <tei:group>
-                    <tei:text xml:id="H00150-正-6-yuanwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>󽥳󽒙󾌗󽯽。</tei:seg>
-                                <tei:seg> 󾕻</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                    <tei:text xml:id="H00150-正-6-shiwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>雝芻于雇。</tei:seg>
-                                <tei:seg> 一</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                </tei:group>
-            </tei:text>
-            <tei:text xml:id="H00150-正-7">
-                <tei:group>
-                    <tei:text xml:id="H00150-正-7-yuanwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>󽻰󾌗󽯽。</tei:seg>
-                                <tei:seg> 󾕻 󾕼󽎮</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                    <tei:text xml:id="H00150-正-7-shiwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>勿于雇。</tei:seg>
-                                <tei:seg> 一 二告</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                </tei:group>
-            </tei:text>
-            <tei:text xml:id="H00150-正-8">
-                <tei:group>
-                    <tei:text xml:id="H00150-正-8-yuanwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>󽓪󽐏󽁿󽎻〔󾍍󾄤〕。</tei:seg>
-                                <tei:seg> 󾕻 󾕼󽎮</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                    <tei:text xml:id="H00150-正-8-shiwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>󰩒󰪁化󽎻〔王史〕。</tei:seg>
-                                <tei:seg> 一 二告</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                </tei:group>
-            </tei:text>
-            <tei:text xml:id="H00150-正-9">
-                <tei:group>
-                    <tei:text xml:id="H00150-正-9-yuanwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>󾅊󾁃󽎻󾍍󾄤。</tei:seg>
-                                <tei:seg> 󾕻 󾕼󽎮</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                    <tei:text xml:id="H00150-正-9-shiwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>弗其󽎻王史。</tei:seg>
-                                <tei:seg> 一 二告</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                </tei:group>
-            </tei:text>
-            <tei:text xml:id="H00150-正-10">
-                <tei:group>
-                    <tei:text xml:id="H00150-正-10-yuanwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>󾖠󾁃󽪤󾐛󽲞，</tei:seg>
-                                <tei:seg>󽖇󽆜。</tei:seg>
-                                <tei:seg> 󾕻 󾕼 󾕼󽎮 󾕾</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                    <tei:text xml:id="H00150-正-10-shiwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>貞其入㞢匚，</tei:seg>
-                                <tei:seg>示若。</tei:seg>
-                                <tei:seg> 一 二 二告 三</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                </tei:group>
-            </tei:text>
-            <tei:text xml:id="H00150-正-11">
-                <tei:group>
-                    <tei:text xml:id="H00150-正-11-yuanwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>󾖠󽻰󾐛󽲞。</tei:seg>
-                                <tei:seg> 󾕻 󾕼 󾕾</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                    <tei:text xml:id="H00150-正-11-shiwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>貞勿㞢匚。</tei:seg>
-                                <tei:seg> 一 二 三</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                </tei:group>
-            </tei:text>
-        </tei:group>
-    </tei:text>
-</tei:TEI>
+<TEI xmlns:tei="http://www.tei-c.org/ns/1.0" xml:id="uuid-6a84cd70-a732-417f-86a4-7c20971668bb">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>H00150-正</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Publication Information</p>
+            </publicationStmt>
+            <sourceDesc>
+                <p>Information about the source</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text xml:id="H00150-正">
+        <group>
+            <text xml:id="H00150-正-1">
+                <group>
+                    <text xml:id="H00150-正-1-yuanwen">
+                        <body>
+                            <ab>
+                                <seg>󽥳󽒙󾌗󽣥。</seg>
+                                <seg> 󾕼 󾕼󽎮</seg>
+                            </ab>
+                        </body>
+                    </text>
+                    <text xml:id="H00150-正-1-shiwen">
+                        <body>
+                            <ab>
+                                <seg>雝芻于󰰪。</seg>
+                                <seg> 二 二告</seg>
+                            </ab>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text xml:id="H00150-正-2">
+                <group>
+                    <text xml:id="H00150-正-2-yuanwen">
+                        <body>
+                            <ab>
+                                <seg>󽥳󽒙󽻰󾌗󽣥。</seg>
+                                <seg> 󾕻</seg>
+                            </ab>
+                        </body>
+                    </text>
+                    <text xml:id="H00150-正-2-shiwen">
+                        <body>
+                            <ab>
+                                <seg>雝芻勿于󰰪。</seg>
+                                <seg> 一</seg>
+                            </ab>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text xml:id="H00150-正-3">
+                <group>
+                    <text xml:id="H00150-正-3-yuanwen">
+                        <body>
+                            <ab>
+                                <seg>󽥳󽒙󾌗󽨷。</seg>
+                                <seg> 󾕻</seg>
+                            </ab>
+                        </body>
+                    </text>
+                    <text xml:id="H00150-正-3-shiwen">
+                        <body>
+                            <ab>
+                                <seg>雝芻于󰾧。</seg>
+                                <seg> 一</seg>
+                            </ab>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text xml:id="H00150-正-4">
+                <group>
+                    <text xml:id="H00150-正-4-yuanwen">
+                        <body>
+                            <ab>
+                                <seg>󽥳󽒙󽻰󾌗󽨷。</seg>
+                                <seg> 󾕻</seg>
+                            </ab>
+                        </body>
+                    </text>
+                    <text xml:id="H00150-正-4-shiwen">
+                        <body>
+                            <ab>
+                                <seg>雝芻勿于󰾧。</seg>
+                                <seg> 一</seg>
+                            </ab>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text xml:id="H00150-正-5">
+                <group>
+                    <text xml:id="H00150-正-5-yuanwen">
+                        <body>
+                            <ab>
+                                <seg>󾖠󽥳󽒙󾌗󽣦。</seg>
+                                <seg> 󾕻 󾕼</seg>
+                            </ab>
+                        </body>
+                    </text>
+                    <text xml:id="H00150-正-5-shiwen">
+                        <body>
+                            <ab>
+                                <seg>貞雝芻于󰰪。</seg>
+                                <seg> 一 二</seg>
+                            </ab>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text xml:id="H00150-正-6">
+                <group>
+                    <text xml:id="H00150-正-6-yuanwen">
+                        <body>
+                            <ab>
+                                <seg>󽥳󽒙󾌗󽯽。</seg>
+                                <seg> 󾕻</seg>
+                            </ab>
+                        </body>
+                    </text>
+                    <text xml:id="H00150-正-6-shiwen">
+                        <body>
+                            <ab>
+                                <seg>雝芻于雇。</seg>
+                                <seg> 一</seg>
+                            </ab>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text xml:id="H00150-正-7">
+                <group>
+                    <text xml:id="H00150-正-7-yuanwen">
+                        <body>
+                            <ab>
+                                <seg>󽻰󾌗󽯽。</seg>
+                                <seg> 󾕻 󾕼󽎮</seg>
+                            </ab>
+                        </body>
+                    </text>
+                    <text xml:id="H00150-正-7-shiwen">
+                        <body>
+                            <ab>
+                                <seg>勿于雇。</seg>
+                                <seg> 一 二告</seg>
+                            </ab>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text xml:id="H00150-正-8">
+                <group>
+                    <text xml:id="H00150-正-8-yuanwen">
+                        <body>
+                            <ab>
+                                <seg>󽓪󽐏󽁿󽎻〔󾍍󾄤〕。</seg>
+                                <seg> 󾕻 󾕼󽎮</seg>
+                            </ab>
+                        </body>
+                    </text>
+                    <text xml:id="H00150-正-8-shiwen">
+                        <body>
+                            <ab>
+                                <seg>󰩒󰪁化󽎻〔王史〕。</seg>
+                                <seg> 一 二告</seg>
+                            </ab>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text xml:id="H00150-正-9">
+                <group>
+                    <text xml:id="H00150-正-9-yuanwen">
+                        <body>
+                            <ab>
+                                <seg>󾅊󾁃󽎻󾍍󾄤。</seg>
+                                <seg> 󾕻 󾕼󽎮</seg>
+                            </ab>
+                        </body>
+                    </text>
+                    <text xml:id="H00150-正-9-shiwen">
+                        <body>
+                            <ab>
+                                <seg>弗其󽎻王史。</seg>
+                                <seg> 一 二告</seg>
+                            </ab>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text xml:id="H00150-正-10">
+                <group>
+                    <text xml:id="H00150-正-10-yuanwen">
+                        <body>
+                            <ab>
+                                <seg>󾖠󾁃󽪤󾐛󽲞，</seg>
+                                <seg>󽖇󽆜。</seg>
+                                <seg> 󾕻 󾕼 󾕼󽎮 󾕾</seg>
+                            </ab>
+                        </body>
+                    </text>
+                    <text xml:id="H00150-正-10-shiwen">
+                        <body>
+                            <ab>
+                                <seg>貞其入㞢匚，</seg>
+                                <seg>示若。</seg>
+                                <seg> 一 二 二告 三</seg>
+                            </ab>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text xml:id="H00150-正-11">
+                <group>
+                    <text xml:id="H00150-正-11-yuanwen">
+                        <body>
+                            <ab>
+                                <seg>󾖠󽻰󾐛󽲞。</seg>
+                                <seg> 󾕻 󾕼 󾕾</seg>
+                            </ab>
+                        </body>
+                    </text>
+                    <text xml:id="H00150-正-11-shiwen">
+                        <body>
+                            <ab>
+                                <seg>貞勿㞢匚。</seg>
+                                <seg> 一 二 三</seg>
+                            </ab>
+                        </body>
+                    </text>
+                </group>
+            </text>
+        </group>
+    </text>
+</TEI>

@@ -1,151 +1,150 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<tei:TEI xmlns:tei="http://www.tei-c.org/ns/1.0" xml:id="uuid-843217fb-cdf4-44cc-b257-68dfbf941d9e">
-    <tei:teiHeader>
-        <tei:fileDesc>
-            <tei:titleStmt>
-                <tei:title>H00201-反</tei:title>
-            </tei:titleStmt>
-            <tei:publicationStmt>
-                <tei:p>Publication Information</tei:p>
-            </tei:publicationStmt>
-            <tei:sourceDesc>
-                <tei:ab>
-                    <tei:note target="#H00201-反-1">（朱書）</tei:note>
-                    <tei:note target="#H00201-反-2">（朱書）</tei:note>
-                    <tei:note target="#H00201-反-5">（朱書）</tei:note>
-                    <tei:note target="#H00201-反-7">（甲橋刻辭）</tei:note>
-                </tei:ab>
-            </tei:sourceDesc>
-        </tei:fileDesc>
-    </tei:teiHeader>
-    <tei:text xml:id="H00201-反">
-        <tei:group>
-            <tei:text xml:id="H00201-反-1">
-                <tei:group>
-                    <tei:text xml:id="H00201-反-1-yuanwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>󾍍〔󽲖〕󽎭…</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                    <tei:text xml:id="H00201-反-1-shiwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>王〔󰩏〕曰…</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                </tei:group>
-            </tei:text>
-            <tei:text xml:id="H00201-反-2">
-                <tei:group>
-                    <tei:text xml:id="H00201-反-2-yuanwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>󾖠󾂤…</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                    <tei:text xml:id="H00201-反-2-shiwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>貞南…</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                </tei:group>
-            </tei:text>
-            <tei:text xml:id="H00201-反-3">
-                <tei:group>
-                    <tei:text xml:id="H00201-反-3-yuanwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>…󽥉…</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                    <tei:text xml:id="H00201-反-3-shiwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>…隹…</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                </tei:group>
-            </tei:text>
-            <tei:text xml:id="H00201-反-4">
-                <tei:group>
-                    <tei:text xml:id="H00201-反-4-yuanwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>…󾈃…󽥉…</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                    <tei:text xml:id="H00201-反-4-shiwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>…夢…隹…</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                </tei:group>
-            </tei:text>
-            <tei:text xml:id="H00201-反-5">
-                <tei:group>
-                    <tei:text xml:id="H00201-反-5-yuanwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>〔󾍍󽲖〕󽎭：󽥉󽒝󾑕。</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                    <tei:text xml:id="H00201-反-5-shiwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>〔王󰩏〕曰：隹父乙。</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                </tei:group>
-            </tei:text>
-            <tei:text xml:id="H00201-反-6">
-                <tei:group>
-                    <tei:text xml:id="H00201-反-6-yuanwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>󾑽□󽲙。</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                    <tei:text xml:id="H00201-反-6-shiwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>壬□卜。</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                </tei:group>
-            </tei:text>
-            <tei:text xml:id="H00201-反-7">
-                <tei:group>
-                    <tei:text xml:id="H00201-反-7-yuanwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>□󽀝󽎘󽷫󾕼󾏫。</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                    <tei:text xml:id="H00201-反-7-shiwen">
-                        <tei:body>
-                            <tei:p>
-                                <tei:seg>□以自我二十。</tei:seg>
-                            </tei:p>
-                        </tei:body>
-                    </tei:text>
-                </tei:group>
-            </tei:text>
-        </tei:group>
-    </tei:text>
-</tei:TEI>
+<TEI xmlns:tei="http://www.tei-c.org/ns/1.0" xml:id="uuid-843217fb-cdf4-44cc-b257-68dfbf941d9e">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>H00201-反</title>
+            </titleStmt>
+            <publicationStmt>
+                <p>Publication Information</p>
+            </publicationStmt>
+            <sourceDesc>
+                <ab>
+                    <note target="#H00201-反-1">（朱書）</note>
+                    <note target="#H00201-反-2">（朱書）</note>
+                    <note target="#H00201-反-5">（朱書）</note>
+                    <note target="#H00201-反-7">（甲橋刻辭）</note>
+                </ab>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text xml:id="H00201-反">
+        <group>
+            <text xml:id="H00201-反-1">
+                <group>
+                    <text xml:id="H00201-反-1-yuanwen">
+                        <body>
+                            <ab>
+                                <seg>󾍍〔󽲖〕󽎭…</seg>
+                            </ab>
+                        </body>
+                    </text>
+                    <text xml:id="H00201-反-1-shiwen">
+                        <body>
+                            <ab>
+                                <seg>王〔󰩏〕曰…</seg>
+                            </ab>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text xml:id="H00201-反-2">
+                <group>
+                    <text xml:id="H00201-反-2-yuanwen">
+                        <body>
+                            <ab>
+                                <seg>󾖠󾂤…</seg>
+                            </ab>
+                        </body>
+                    </text>
+                    <text xml:id="H00201-反-2-shiwen">
+                        <body>
+                            <ab>
+                                <seg>貞南…</seg>
+                            </ab>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text xml:id="H00201-反-3">
+                <group>
+                    <text xml:id="H00201-反-3-yuanwen">
+                        <body>
+                            <ab>
+                                <seg>…󽥉…</seg>
+                            </ab>
+                        </body>
+                    </text>
+                    <text xml:id="H00201-反-3-shiwen">
+                        <body>
+                            <ab>
+                                <seg>…隹…</seg>
+                            </ab>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text xml:id="H00201-反-4">
+                <group>
+                    <text xml:id="H00201-反-4-yuanwen">
+                        <body>
+                            <ab>
+                                <seg>…󾈃…󽥉…</seg>
+                            </ab>
+                        </body>
+                    </text>
+                    <text xml:id="H00201-反-4-shiwen">
+                        <body>
+                            <ab>
+                                <seg>…夢…隹…</seg>
+                            </ab>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text xml:id="H00201-反-5">
+                <group>
+                    <text xml:id="H00201-反-5-yuanwen">
+                        <body>
+                            <ab>
+                                <seg>〔󾍍󽲖〕󽎭：󽥉󽒝󾑕。</seg>
+                            </ab>
+                        </body>
+                    </text>
+                    <text xml:id="H00201-反-5-shiwen">
+                        <body>
+                            <ab>
+                                <seg>〔王󰩏〕曰：隹父乙。</seg>
+                            </ab>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text xml:id="H00201-反-6">
+                <group>
+                    <text xml:id="H00201-反-6-yuanwen">
+                        <body>
+                            <ab>
+                                <seg>󾑽□󽲙。</seg>
+                            </ab>
+                        </body>
+                    </text>
+                    <text xml:id="H00201-反-6-shiwen">
+                        <body>
+                            <ab>
+                                <seg>壬□卜。</seg>
+                            </ab>
+                        </body>
+                    </text>
+                </group>
+            </text>
+            <text xml:id="H00201-反-7">
+                <group>
+                    <text xml:id="H00201-反-7-yuanwen">
+                        <body>
+                            <ab>
+                                <seg>□󽀝󽎘󽷫󾕼󾏫。</seg>
+                            </ab>
+                        </body>
+                    </text>
+                    <text xml:id="H00201-反-7-shiwen">
+                        <body>
+                            <ab>
+                                <seg>□以自我二十。</seg>
+                            </ab>
+                        </body>
+                    </text>
+                </group>
+            </text>
+        </group>
+    </text>
+</TEI>

@@ -9,14 +9,14 @@
                 <p>Publication Information</p>
             </publicationStmt>
             <sourceDesc>
-                <ab>
+                <p>
                     <note target="BB-2-r-1-transcription-Takashima">s</note>
                     <note target="BB-2-r-1-transcription-Takashima">s</note>
-                </ab>
+                </p>
             </sourceDesc>
         </fileDesc>
     </teiHeader>
-    <text>
+    <text facs="06834.00002.png">
         <group>
             <text n="1">
                 <group>
@@ -32,24 +32,24 @@
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-2-r-1-transcription-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg/>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Takashima" xml:id="BB-2-r-1-translation-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg>Crack making on the xinyou day [58], Nan tested: We shall have no (occasion)
                                     to wait.</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Serruys" xml:id="BB-2-r-1-translation-Serruys">
                         <body>
-                            <p>
+                            <ab>
                                 <seg>At xinyou day [58] divination, Gu tested: we will not have [cause] to wait.</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                 </group>
@@ -68,24 +68,24 @@
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-2-r-2-transcription-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg/>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Takashima" xml:id="BB-2-r-2-translation-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg>Crack making on the xinyou day, Nan tested: … it is not … (an) inauspicious
                                     (sign).</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Serruys" xml:id="BB-2-r-2-translation-Serruys">
                         <body>
-                            <p>
+                            <ab>
                                 <seg>[No translation given.]</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                 </group>
@@ -104,23 +104,23 @@
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-2-r-3-transcription-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg/>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Takashima" xml:id="BB-2-r-3-translation-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg>Nan.</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Serruys" xml:id="BB-2-r-3-translation-Serruys">
                         <body>
-                            <p>
+                            <ab>
                                 <seg>Gu (signature).3</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                 </group>

@@ -19,20 +19,20 @@
                 <group>
                     <text type="transcription" subtype="yuanwen" xml:id="H06834-反-1-yuanwen">
                         <body>
-                            <p>
+                            <ab>
                                 <seg>󾑸󾒼󽲙，</seg>
                                 <seg>󾂭，</seg>
                                 <seg>󾖠󽷫󾐼󽁌。</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="transcription" subtype="shiwen" xml:id="H06834-反-1-shiwen">
                         <body>
-                            <p>
+                            <ab>
                                 <seg>辛酉卜，</seg>
                                 <seg>㱿，</seg>
                                 <seg>貞我亡須。</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                 </group>
@@ -41,20 +41,20 @@
                 <group>
                     <text type="transcription" subtype="yuanwen" xml:id="H06834-反-2-yuanwen">
                         <body>
-                            <p>
+                            <ab>
                                 <seg>󾑸󾒼󽲙，</seg>
                                 <seg>󾂭，</seg>
                                 <seg>󾖠□〔󽹃〕…〔󽲇〕。</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="transcription" subtype="shiwen" xml:id="H06834-反-2-shiwen">
                         <body>
-                            <p>
+                            <ab>
                                 <seg>辛酉卜，</seg>
                                 <seg>㱿，</seg>
                                 <seg>貞□〔不〕…〔𡆥〕。</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                 </group>
@@ -63,16 +63,16 @@
                 <group>
                     <text type="transcription" subtype="yuanwen" xml:id="H06834-反-3-yuanwen">
                         <body>
-                            <p>
+                            <ab>
                                 <seg>󾂭。</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="transcription" subtype="shiwen" xml:id="H06834-反-3-shiwen">
                         <body>
-                            <p>
+                            <ab>
                                 <seg>㱿。</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                 </group>

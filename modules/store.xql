@@ -7,7 +7,7 @@ declare function local:replace($doc as element(), $line as xs:integer, $type as 
     let $line := $doc/tei:text/tei:group/tei:text[@n = $line]/tei:group/tei:text[@type = $type][@subtype = $subtype]/tei:body
     let $segs := $data//li
     let $content :=
-        <p xmlns="http://www.tei-c.org/ns/1.0">
+        <ab xmlns="http://www.tei-c.org/ns/1.0">
         {
             for $seg in $segs
             return
@@ -15,10 +15,10 @@ declare function local:replace($doc as element(), $line as xs:integer, $type as 
                 translate($seg/text(), '&#160;', '')
                 }</seg>
         }
-        </p>
-    let $log := util:log("DEBUG", ($segs, " Replace: ", $line/tei:p, " with ", $content))
+        </ab>
+    let $log := util:log("DEBUG", ($segs, " Replace: ", $line/tei:ab, " with ", $content))
     return
-        update replace $line/tei:p with $content
+        update replace $line/tei:ab with $content
 };
 
 let $doc := collection("/db/tls-data/BB")/(id("uuid-1C03C3AB-3553-4325-9C69-52EEA33225B6"))
@@ -29,5 +29,3 @@ let $subtype := substring-after($type, "/")
 let $type := substring-before($type, "/")
 return
     local:replace($doc, $line, $type, $subtype, $data)
-    
-    

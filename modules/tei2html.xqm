@@ -14,7 +14,7 @@ declare function tei2html:main($content as node()*) as item()* {
             case text() return $node
             case element(tei:TEI) return tei2html:TEI($node)
             case element(tei:teiHeader) return ()
-            case element(tei:p) return tei2html:recurse($node) (:skip <p>, it is only used to store <seg> in. :)
+            case element(tei:p) return tei2html:recurse($node) (:skip <p>, it is only used to store other elements in. :)
             case element(tei:ab) return tei2html:recurse($node) (:skip <ab>, it is only used to store <seg> in. :)
             case element(tei:seg) return tei2html:seg($node)(:no attributes:)
             case element(tei:group) return tei2html:group($node) (:no attributes:)

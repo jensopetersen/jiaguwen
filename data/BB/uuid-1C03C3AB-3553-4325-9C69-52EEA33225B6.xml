@@ -23,7 +23,7 @@
             </sourceDesc>
         </fileDesc>
     </teiHeader>
-    <text>
+    <text facs="06834.00001.png">
         <group>
             <text n="1">
                 <group>
@@ -39,32 +39,32 @@
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-1-o-transcription-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg>壬子卜，</seg>
                                 <seg>爭貞，</seg>
                                 <seg>自今日我󰹨󽕦。</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Takashima" xml:id="BB-1-o-translation-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="1">Crack making on the renzi day [49], </seg>
                                 <seg n="1">Zheng tested : </seg>
                                 <seg n="1">Starting from the present, in five days (or: In five days
                                     from now), we (will) (be able to) harm (or: smite) the
                                     You.</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Serruys" xml:id="BB-1-o-translation-Serruys">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="1">At renzi day [49] divination,</seg>
                                 <seg n="2">(diviner) Zheng tested: </seg>
                                 <seg n="3">Starting from the present day, we shall destroy the
                                     Zhou.</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                 </group>
@@ -83,26 +83,26 @@
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-2-o-transcription-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg>貞自五日我弗其󰹨󽕦。</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Takashima" xml:id="BB-2-o-translation-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg>Tested: Starting from [the present], </seg>
                                 <seg>in five days (or: five days from now), </seg>
                                 <seg>we might not (be able to) harm (or: smite) the You.</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Serruys" xml:id="BB-2-o-translation-Serruys">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="2">(He) tested: Starting from the fifth day, we shall not
                                     anticipate that (we will) destroy the Zhou.</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                 </group>
@@ -121,7 +121,7 @@
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-3-o-transcription-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg>癸丑卜，</seg>
                                 <seg>〔爭〕貞，</seg>
                                 <seg>自今至于丁巳我󰹨󽕦。</seg>
@@ -132,12 +132,12 @@
                                 <seg>之夕󾀾甲子，</seg>
                                 <seg>允󰹨。</seg>
                                 <seg>一 二</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Takashima" xml:id="BB-3-o-translation-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg>Crack making on the guichou day [50], </seg>
                                 <seg>Zheng tested: </seg>
                                 <seg>Starting from the present down to the dingsi day (or: between
@@ -154,12 +154,12 @@
                                     intersected with) [-] the jiazi day,</seg>
                                 <seg>(we) did indeed harm (or: smite) (them).</seg>
                                 <seg>-</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Serruys" xml:id="BB-3-o-translation-Serruys">
                         <body>
-                            <p>
+                            <ab>
                                 <seg>At guichou day [50] divination, </seg>
                                 <seg>(diviner) Zheng tested: </seg>
                                 <seg>Starting from the present, reaching till day dingsi [54], we
@@ -176,7 +176,7 @@
                                 <seg>(but) coming (to) the evening through(next day) jiazi [1]</seg>
                                 <seg>(we/they?) did indeed destroy (them).</seg>
                                 <seg>-</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                 </group>
@@ -195,30 +195,30 @@
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-4-o-transcription-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg>癸丑卜，</seg>
-                                <seg>爭，</seg>
-                                <seg>貞自今至于丁巳我弗其󰹨󽕦。</seg>
+                                <seg>爭貞，</seg>
+                                <seg>自今至于丁巳我弗其󰹨󽕦。</seg>
                                 <seg>一 二</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Takashima" xml:id="BB-4-o-translation-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="4">Crack making on the guichou day [50], Zheng tested:
                                     Between now and the dingsi day [54], we might not (be able to)
                                     harm (or: smite) the You [ ].</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Serruys" xml:id="BB-4-o-translation-Serruys">
                         <body>
-                            <p>
-                                <seg n="4">At guichou day [50] divination, (diviner) Zheng tested:
-                                    Starting from the present reaching till the day dingsi [54], we
-                                    shall not anticipate to destroy the Zhou.</seg>
-                            </p>
+                            <ab>
+                                <seg>At guichou day [50] divination, </seg>
+                                <seg>(diviner) Zheng tested: </seg>
+                                <seg>Starting from the present reaching till the day dingsi [54], we shall not anticipate to destroy the Zhou.</seg>
+                            </ab>
                         </body>
                     </text>
                 </group>
@@ -237,31 +237,31 @@
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-5-o-transcription-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg>庚申卜，</seg>
                                 <seg>王貞，</seg>
                                 <seg>余伐不。</seg>
                                 <seg>三月。</seg>
                                 <seg>一</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Takashima" xml:id="BB-5-o-translation-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg>Crack making on the gengshen day [57], </seg>
                                 <seg>His Majesty tested: </seg>
                                 <seg>I should launch an attack against the Pi [‘]. </seg>
                                 <seg>Third month.</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Serruys" xml:id="BB-5-o-translation-Serruys">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="5">At gengshen day [57] divination, the king tested: I shall
                                     attack (the) Bu. Third moon.</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                 </group>
@@ -280,31 +280,31 @@
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-6-o-transcription-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg>庚〔申卜〕，</seg>
                                 <seg>王，</seg>
                                 <seg>貞余勿伐不。</seg>
                                 <seg>一 二告</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Takashima" xml:id="BB-6-o-translation-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg>Crack making on the gengshen day [57], </seg>
                                 <seg>His Majesty tested: </seg>
                                 <seg>I should not launch an attack against the Pi [‘]. </seg>
                                 <seg>Second announcement [ 7].</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Serruys" xml:id="BB-6-o-translation-Serruys">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="6">At gengshen day [57] divination, the king tested: I do
                                     not attack (do not have [them] attack, do not decide/assume to
                                     attack) the Bu.14</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                 </group>
@@ -323,29 +323,29 @@
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-7-o-transcription-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg>庚申卜，</seg>
                                 <seg>王，</seg>
                                 <seg>貞余伐不。</seg>
                                 <seg>一</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Takashima" xml:id="BB-7-o-translation-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg>Crack making on the gengshen day [57],</seg>
                                 <seg>His Majesty tested:</seg>
                                 <seg>I should launch an attack against the Pi.</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Serruys" xml:id="BB-7-o-translation-Serruys">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="7">At gengshen day [57] divination, the king tested: I do
                                     attack/punish16 the Bu/Pei.</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                 </group>
@@ -364,28 +364,28 @@
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-8-o-transcription-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg>庚申卜，</seg>
                                 <seg>王貞，</seg>
                                 <seg>余勿伐不。</seg>
                                 <seg>一</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Takashima" xml:id="BB-8-o-translation-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="8">At gengshen day [57] divination, the king tested: I do
                                     not attack/punish the Bu/Pei.</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Serruys" xml:id="BB-8-o-translation-Serruys">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="8">Crack making on the gengshen day [57], His Majesty
                                     tested: I should not launch an attack against the Pi.</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                 </group>
@@ -404,28 +404,28 @@
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-9-o-transcription-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="1">壬子卜，</seg>
                                 <seg n="2">爭貞，</seg>
                                 <seg n="3">自今日我󰹨󽕦。</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Takashima" xml:id="BB-9-o-translation-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="9">Crack making on the gengshen day [57], [His Majesty]
                                     tested: (Qiao should be able to) capture the Fou/Tao (or Bao)
                                     [:].18 Second announcement [ 7].</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Serruys" xml:id="BB-9-o-translation-Serruys">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="9">At gengshen day [57] divination, (he) tested: (one, we)17
                                     shall capture the Fou.</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                 </group>
@@ -444,28 +444,28 @@
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-10-o-transcription-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="1">壬子卜，</seg>
                                 <seg n="2">爭貞，</seg>
                                 <seg n="3">自今日我󰹨󽕦。</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Takashima" xml:id="BB-10-o-translation-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="10">Crack making on the gengshen day [57], His Majesty
                                     tested: Qiao might not (be able to) capture the Fou/Tao (or Bao)
                                     [:].</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Serruys" xml:id="BB-1-o-translation-Serruys">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="10">At gengshen day [57] divination, the king tested: Que,
                                     (one) shall not anticipate he will capture the Fou.19</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                 </group>
@@ -484,27 +484,26 @@
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-11-o-transcription-Takashima">
                         <body>
-                            <p>
-                                <seg n="1">壬子卜，</seg>
-                                <seg n="2">爭貞，</seg>
-                                <seg n="3">自今日我󰹨󽕦。</seg>
-                            </p>
+                            <ab>
+                                <seg>雀弗其隻缶。</seg>
+                                <seg>一</seg>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Takashima" xml:id="BB-11-o-translation-Takashima">
                         <body>
-                            <p>
-                                <seg n="11">Qiao might not (be able to) capture the Fou/Tao (or
-                                    Bao).</seg>
-                            </p>
+                            <ab>
+                                <seg>Qiao might not (be able to) capture the Fou/Tao (or Bao).</seg>
+                                <seg>-</seg>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Serruys" xml:id="BB-11-o-translation-Serruys">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="11">As to Que, (one) shall not anticipate he will capture
                                     the Fou.</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                 </group>
@@ -523,28 +522,28 @@
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-12-o-transcription-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="1">壬子卜，</seg>
                                 <seg n="2">爭貞，</seg>
                                 <seg n="3">自今日我󰹨󽕦。</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Takashima" xml:id="BB-12-o-translation-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="12">Crack making on the xinyou day [58], Nan [b]21 [tested]:
                                     (On) the following renxu day [59], Pi [‘] will arrive. Second
                                     announcement [7].</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Serruys" xml:id="BB-12-o-translation-Serruys">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="12">At xinyou day [58] divination, Gu [tested]: (On) the
                                     next day renxu [59] Bu (Pei) will arrive.</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                 </group>
@@ -563,28 +562,28 @@
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-13-o-transcription-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="1">壬子卜，</seg>
                                 <seg n="2">爭貞，</seg>
                                 <seg n="3">自今日我󰹨󽕦。</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Takashima" xml:id="BB-13-o-translation-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="13">Crack making on the guihai day [60], Nan [b] tested: Our
                                     (military) officer will (be able to) harm (or: smite) the
                                     Fou/Tao (or Bao). Second announcement.</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Serruys" xml:id="BB-13-o-translation-Serruys">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="13">At guihai day [60] divination, Gu tested: our envoy(s)
                                     will destroy the Fou.</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                 </group>
@@ -603,29 +602,29 @@
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-14-o-transcription-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="1">壬子卜，</seg>
                                 <seg n="2">爭貞，</seg>
                                 <seg n="3">自今日我󰹨󽕦。</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Takashima" xml:id="BB-14-o-translation-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="14">Crack making on the guihai day [60], Nan tested: Our
                                     (military) officer might not (be able to) harm (or: smite) the
                                     Fou/Tao (or Bao). Second announcement [ 7].</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Serruys" xml:id="BB-14-o-translation-Serruys">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="14">At guihai day [60] divination, Gu tested: our
                                     envoy(s),22 be it not anticipated23 that they will destroy the
                                     Fou.</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                 </group>
@@ -644,28 +643,28 @@
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-15-o-transcription-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="1">壬子卜，</seg>
                                 <seg n="2">爭貞，</seg>
                                 <seg n="3">自今日我󰹨󽕦。</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Takashima" xml:id="BB-15-o-translation-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="15">Crack making on the guihai day [60], Nan tested: (On)
                                     the following yichou day [2] the Many Servitors will (be able
                                     to) harm (or: smite) the Fou/Tao (or Bao).</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Serruys" xml:id="BB-15-o-translation-Serruys">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="15">At guihai day [60] divination, Gu tested: (On) the next
                                     day yichou [2] the many servants will destroy the Fou.</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                 </group>
@@ -684,28 +683,28 @@
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-16-o-transcription-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="1">壬子卜，</seg>
                                 <seg n="2">爭貞，</seg>
                                 <seg n="3">自今日我󰹨󽕦。</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Takashima" xml:id="BB-16-o-translation-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="16">(On) the next yichou day [2] the Many Servitors might
                                     not (succeed in) harming the Fou/Tao (or Bao). ( (N.B. “succeed”
                                     = “be able to” used synonymously)</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Serruys" xml:id="BB-16-o-translation-Serruys">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="16">Next day yichou [2] the many servants, (one) shall not
                                     anticipate that they will destroy the Fou.</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                 </group>
@@ -724,28 +723,28 @@
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-17-o-transcription-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="1">壬子卜，</seg>
                                 <seg n="2">爭貞，</seg>
                                 <seg n="3">自今日我󰹨󽕦。</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Takashima" xml:id="BB-17-o-translation-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="17">Crack making on the yichou day, Nan tested: Zi Shang [E]
                                     might not (succeed in) capturing the Xin [F]. Second
                                     announcement [7].</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Serruys" xml:id="BB-17-o-translation-Serruys">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="17">At yichou day [2] divination, Gu tested: Childe Shang,
                                     (one) shall not anticipate that he will capture the Xian.</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                 </group>
@@ -764,27 +763,27 @@
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-18-o-transcription-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="1">壬子卜，</seg>
                                 <seg n="2">爭貞，</seg>
                                 <seg n="3">自今日我󰹨󽕦。</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Takashima" xml:id="BB-18-o-translation-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="18">Crack making on the bingyin day [3], Zheng tested: (We)
                                     should call upon Long, Lao, Hou Zhuan to afflict Pi [‘].24</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Serruys" xml:id="BB-18-o-translation-Serruys">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="18">At bingyin day [3] divination, Zheng [tested]: (One)
                                     shall call upon Long, Lao, Marquis Zhuan to afflict Bu.</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                 </group>
@@ -803,27 +802,27 @@
                     </xi:include>
                     <text type="transcription" subtype="Takashima" xml:id="BB-19-o-transcription-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="1">壬子卜，</seg>
                                 <seg n="2">爭貞，</seg>
                                 <seg n="3">自今日我󰹨󽕦。</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Takashima" xml:id="BB-19-o-translation-Takashima">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="19">Tested: Da might not (succeed in) managing [P] the
                                     king’s business.25 Second announcement [ 7].</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                     <text type="translation" subtype="Serruys" xml:id="BB-19-o-translation-Serruys">
                         <body>
-                            <p>
+                            <ab>
                                 <seg n="19">Tested: Da, one shall not anticipate he will harmonize
                                     (collaborate) with the king’s affairs.</seg>
-                            </p>
+                            </ab>
                         </body>
                     </text>
                 </group>
