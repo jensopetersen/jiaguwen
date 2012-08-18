@@ -108,9 +108,9 @@ function tls:search($node as node(), $model as map(*), $type as xs:string, $quer
     let $result := 
         switch ($type)
             case "text" return
-                $collections//tei:seg[ngram:contains(., $query)]
+                $collections//tei:text[@type eq "transcription"]//tei:seg[ngram:contains(., $query)]
             case "translation" return
-                $collections//tei:seg[ft:query(., $query)]                
+                $collections//tei:text[@type eq "translation"]//tei:seg[ft:query(., $query)]                
             (:title is treated as default:)
             default return
                 $collections//tei:title[ft:query(., $query)]

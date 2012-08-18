@@ -5,8 +5,7 @@
 
 @font-face {
     font-family: 'CHANT';
-    src: local('CHANT'), 
-        url('../fonts/CHANT.ttf') format('truetype');
+    src: local('CHANT'), url('../fonts/CHANT.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -87,8 +86,8 @@ body { font: 12px/20px Verdana, Arial, Helvetica, sans-serif; color: #222; /*bac
 
 #footer ul { float: left; width: 640px; margin: 0 0 0 -4px; }
 #footer ul li { display: inline; }
-#footer ul li a { padding: 2px 4px; color: #4d4d4d; }
-#footer ul li a:hover { background: #333; }
+#footer ul li a { padding: 2px 4px; /*color: #4d4d4d;*/ }
+/*#footer ul li a:hover { background: #333; }*/
 
 #copyright { float: right; width: 220px; }
 #copyright p { padding: 0; color: #4d4d4d; }
@@ -109,14 +108,22 @@ p { padding: 5px 0; }
 
 h1 { font-size: 16px; padding: 0px 0 5px; margin: 0; font-weight: bold; font-family: "Century Gothic", Verdana, Helvetica, sans-serif; letter-spacing: 1px; }
 h2 { font-size: 1.2em; padding: 10px 0; font-weight: bold; font-family: "Century Gothic", Verdana, Helvetica, sans-serif; letter-spacing: 1px; }
-h3 { font-size: 1.2em; padding: 10px 0 5px; margin: 0 0 5px; font-weight: bold; border-top: 1px dotted; }
+h3 { font-size: 1.2em; padding: 10px 0 5px; margin: 0 0 5px; font-weight: bold; border-top: 1px solid gray; }
 h4 { font-size: 1.1em; padding: 10px 0; font-weight: bold; }
 h5 { font-size: 1.0em; padding: 10px 0; font-weight: bold; }
 
-a { color: #0083cb; text-decoration: none;  }
-a:hover { color: #ffcb05; }
+a {
+    /*color: #0083cb; */
+    text-decoration: none;  
+    }
+
+a:hover {
+    /*color: #ffcb05; */
+    text-decoration: none;
+    }
 
 .clear { clear: both; }
+
 .imgborder { border: 1px solid #CCC; padding: 3px; margin: 3px; }
 
 
@@ -148,7 +155,9 @@ form {
 }
 .itemhead { background: #E0E0E0; padding-left: 8px; }
 
-.hi { background: #FFED3D; }
+.hi {
+    background: #FFED3D; 
+}
 
 .editor {
     position: relative;
@@ -210,14 +219,10 @@ form {
 .CHANT 
     {
     font-family: CHANT;
-}
+    }
 
 table {
     width:100%
-}
-
-.hit-info {
-    
 }
 
 .hit-link {
@@ -246,7 +251,9 @@ table {
     width: 100%;
 }
 
-button.btn, input.btn[type="submit"]  {
+button.btn, 
+input.btn[type="submit"]  
+{
     padding-left: 5px;
     padding-right: 5px;
 }
@@ -318,12 +325,14 @@ fieldset {
 }
 
 #content .middle .text-output ul {
-padding:0;
-margin:0;}
+    padding:0;
+    margin:0;
+    }
 
 #content .middle .text-output ul li {
-padding:0;
-margin:0;}
+    padding:0;
+    margin:0;
+    }
 
 .bone-image {
     float:right;
@@ -335,8 +344,9 @@ margin:0;}
     width:200px;
 }
 
-.page-controls {display:block}
-
+.page-controls {
+    display:block
+    }
 
 #navigation {
     margin-top:1em;
@@ -353,6 +363,7 @@ margin:0;}
     font-size:150%;
     margin-top: 1em;
     }
+
 #header img {
     width:200px;
     float:right;
@@ -402,7 +413,6 @@ form {
 #search select {
     width:175px;
 }
-
 
 button.login {
     left:0;
