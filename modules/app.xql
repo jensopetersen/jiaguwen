@@ -5,7 +5,7 @@ module namespace tls="http://exist-db.org/xquery/app";
 declare namespace tei="http://www.tei-c.org/ns/1.0";
 
 declare variable $tls:type-options := ('transcription', 'translation');
-declare variable $tls:subtype-options := ('yuanwen', 'shiwen', 'Serruys', 'Takashima');
+declare variable $tls:subtype-options := ('yuanwen', 'shiwen', 'Takashima');
 
 import module namespace templates="http://exist-db.org/xquery/templates" at "templates.xql";
 import module namespace config="http://exist-db.org/xquery/apps/config" at "config.xql";

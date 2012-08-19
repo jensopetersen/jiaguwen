@@ -1,846 +1,833 @@
 <?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg" xml:id="uuid-2C409146-4B2E-42AC-A213-5758523E4270">
+<TEI xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns="http://www.tei-c.org/ns/1.0"
+    xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg"
+    xml:id="uuid-2C409146-4B2E-42AC-A213-5758523E4270">
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>BB 3 (obverse)</title>
+                <title>BB-003</title>
             </titleStmt>
             <publicationStmt>
                 <p>Publication Information</p>
             </publicationStmt>
             <sourceDesc>
-                <p>
-                </p>
+                <p>Information about the source</p>
             </sourceDesc>
         </fileDesc>
     </teiHeader>
-    <text>
+    <text xml:id="BB-003">
         <group>
-            <text n="1">
+            <text xml:id="BB-003.text-1" n="1">
                 <group>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-1-yuanwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-1.text-transcription-yuanwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-1-shiwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-1.text-transcription-shiwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-1-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima"
+                        xml:id="BB-003.text-1.text-transcription-Takashima">
                         <body>
                             <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-1-translation-Takashima">
+                    <text type="translation" subtype="Takashima"
+                        xml:id="BB-003.text-1.text-translation-Takashima">
                         <body>
                             <ab>
-                                <seg/>
-                            </ab>
-                        </body>
-                    </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-1-translation-Serruys">
-                        <body>
-                            <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
                 </group>
             </text>
-            <text n="2">
+            <text xml:id="BB-003.text-2" n="2">
                 <group>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-2-yuanwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-2.text-transcription-yuanwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-2-shiwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-2.text-transcription-shiwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-2-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima"
+                        xml:id="BB-003.text-2.text-transcription-Takashima">
                         <body>
                             <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-2-translation-Takashima">
+                    <text type="translation" subtype="Takashima"
+                        xml:id="BB-003.text-2.text-translation-Takashima">
                         <body>
                             <ab>
-                                <seg/>
-                            </ab>
-                        </body>
-                    </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-2-translation-Serruys">
-                        <body>
-                            <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
                 </group>
             </text>
-            <text n="3">
+            <text xml:id="BB-003.text-3" n="3">
                 <group>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-3-yuanwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-3.text-transcription-yuanwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-3-shiwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-3.text-transcription-shiwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-3-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima"
+                        xml:id="BB-003.text-3.text-transcription-Takashima">
                         <body>
                             <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-3-translation-Takashima">
+                    <text type="translation" subtype="Takashima"
+                        xml:id="BB-003.text-3.text-translation-Takashima">
                         <body>
                             <ab>
-                                <seg/>
-                            </ab>
-                        </body>
-                    </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-3-translation-Serruys">
-                        <body>
-                            <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
                 </group>
             </text>
-            <text n="4">
+            <text xml:id="BB-003.text-4" n="4">
                 <group>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-4-yuanwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-4.text-transcription-yuanwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-4-shiwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-4.text-transcription-shiwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-4-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima"
+                        xml:id="BB-003.text-4.text-transcription-Takashima">
                         <body>
                             <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-4-translation-Takashima">
+                    <text type="translation" subtype="Takashima"
+                        xml:id="BB-003.text-4.text-translation-Takashima">
                         <body>
                             <ab>
-                                <seg/>
-                            </ab>
-                        </body>
-                    </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-4-translation-Serruys">
-                        <body>
-                            <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
                 </group>
             </text>
-            <text n="5">
+            <text xml:id="BB-003.text-5" n="5">
                 <group>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-5-yuanwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-5.text-transcription-yuanwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-5-shiwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-5.text-transcription-shiwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-5-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima"
+                        xml:id="BB-003.text-5.text-transcription-Takashima">
                         <body>
                             <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-5-translation-Takashima">
+                    <text type="translation" subtype="Takashima"
+                        xml:id="BB-003.text-5.text-translation-Takashima">
                         <body>
                             <ab>
-                                <seg/>
-                            </ab>
-                        </body>
-                    </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-5-translation-Serruys">
-                        <body>
-                            <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
                 </group>
             </text>
-            <text n="6">
+            <text xml:id="BB-003.text-6" n="6">
                 <group>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-6-yuanwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-6.text-transcription-yuanwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-6-shiwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-6.text-transcription-shiwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-6-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima"
+                        xml:id="BB-003.text-6.text-transcription-Takashima">
                         <body>
                             <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-6-translation-Takashima">
+                    <text type="translation" subtype="Takashima"
+                        xml:id="BB-003.text-6.text-translation-Takashima">
                         <body>
                             <ab>
-                                <seg/>
-                            </ab>
-                        </body>
-                    </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-6-translation-Serruys">
-                        <body>
-                            <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
                 </group>
             </text>
-            <text n="7">
+            <text xml:id="BB-003.text-7" n="7">
                 <group>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-7-yuanwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-7.text-transcription-yuanwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-7-shiwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-7.text-transcription-shiwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-7-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima"
+                        xml:id="BB-003.text-7.text-transcription-Takashima">
                         <body>
                             <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-7-translation-Takashima">
+                    <text type="translation" subtype="Takashima"
+                        xml:id="BB-003.text-7.text-translation-Takashima">
                         <body>
                             <ab>
-                                <seg/>
-                            </ab>
-                        </body>
-                    </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-7-translation-Serruys">
-                        <body>
-                            <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
                 </group>
             </text>
-            <text n="8">
+            <text xml:id="BB-003.text-8" n="8">
                 <group>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-8-yuanwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-8.text-transcription-yuanwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-8-shiwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-8.text-transcription-shiwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-8-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima"
+                        xml:id="BB-003.text-8.text-transcription-Takashima">
                         <body>
                             <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-8-translation-Takashima">
+                    <text type="translation" subtype="Takashima"
+                        xml:id="BB-003.text-8.text-translation-Takashima">
                         <body>
                             <ab>
-                                <seg/>
-                            </ab>
-                        </body>
-                    </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-8-translation-Serruys">
-                        <body>
-                            <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
                 </group>
             </text>
-            <text n="9">
+            <text xml:id="BB-003.text-9" n="9">
                 <group>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-9-yuanwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-9.text-transcription-yuanwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-9-shiwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-9.text-transcription-shiwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-9-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima"
+                        xml:id="BB-003.text-9.text-transcription-Takashima">
                         <body>
                             <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-9-translation-Takashima">
+                    <text type="translation" subtype="Takashima"
+                        xml:id="BB-003.text-9.text-translation-Takashima">
                         <body>
                             <ab>
-                                <seg/>
-                            </ab>
-                        </body>
-                    </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-9-translation-Serruys">
-                        <body>
-                            <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
                 </group>
             </text>
-            <text n="10">
+            <text xml:id="BB-003.text-10" n="10">
                 <group>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-10-yuanwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-10.text-transcription-yuanwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-10-shiwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-10.text-transcription-shiwen">>
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-10-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima"
+                        xml:id="BB-003.text-10.text-transcription-Takashima">
                         <body>
                             <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-10-translation-Takashima">
+                    <text type="translation" subtype="Takashima"
+                        xml:id="BB-003.text-10.text-translation-Takashima">
                         <body>
                             <ab>
-                                <seg/>
-                            </ab>
-                        </body>
-                    </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-10-translation-Serruys">
-                        <body>
-                            <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
                 </group>
             </text>
-            <text n="11">
+            <text xml:id="BB-003.text-11" n="11">
                 <group>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-11-yuanwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-11.text-transcription-yuanwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-11-shiwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-11.text-transcription-shiwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-11-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima"
+                        xml:id="BB-003.text-11.text-transcription-Takashima">
                         <body>
                             <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-11-translation-Takashima">
+                    <text type="translation" subtype="Takashima"
+                        xml:id="BB-003.text-11.text-translation-Takashima">
                         <body>
                             <ab>
-                                <seg/>
-                            </ab>
-                        </body>
-                    </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-11-translation-Serruys">
-                        <body>
-                            <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
                 </group>
             </text>
-            <text n="12">
+            <text xml:id="BB-003.text-12" n="12">
                 <group>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-12-yuanwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-12.text-transcription-yuanwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-12-shiwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-12.text-transcription-shiwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-12-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima"
+                        xml:id="BB-003.text-12.text-transcription-Takashima">
                         <body>
                             <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-12-translation-Takashima">
+                    <text type="translation" subtype="Takashima"
+                        xml:id="BB-003.text-12.text-translation-Takashima">
                         <body>
                             <ab>
-                                <seg/>
-                            </ab>
-                        </body>
-                    </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-12-translation-Serruys">
-                        <body>
-                            <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
                 </group>
             </text>
-            <text n="13">
+            <text xml:id="BB-003.text-13" n="13">
                 <group>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-13-yuanwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-13.text-transcription-yuanwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-13-shiwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-13.text-transcription-shiwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-13-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima"
+                        xml:id="BB-003.text-13.text-transcription-Takashima">
                         <body>
                             <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-13-translation-Takashima">
+                    <text type="translation" subtype="Takashima"
+                        xml:id="BB-003.text-13.text-translation-Takashima">
                         <body>
                             <ab>
-                                <seg/>
-                            </ab>
-                        </body>
-                    </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-13-translation-Serruys">
-                        <body>
-                            <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
                 </group>
             </text>
-            <text n="14">
+            <text xml:id="BB-003.text-14" n="14">
                 <group>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-14-yuanwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-14.text-transcription-yuanwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-14-shiwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-14.text-transcription-shiwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-14-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima"
+                        xml:id="BB-003.text-14.text-transcription-Takashima">
                         <body>
                             <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-14-translation-Takashima">
+                    <text type="translation" subtype="Takashima"
+                        xml:id="BB-003.text-14.text-translation-Takashima">
                         <body>
                             <ab>
-                                <seg/>
-                            </ab>
-                        </body>
-                    </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-14-translation-Serruys">
-                        <body>
-                            <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
                 </group>
             </text>
-            <text n="15">
+            <text xml:id="BB-003.text-15" n="15">
                 <group>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-15-yuanwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-15.text-transcription-yuanwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-15-shiwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-15.text-transcription-shiwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-15-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima"
+                        xml:id="BB-003.text-15.text-transcription-Takashima">
                         <body>
                             <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-15-translation-Takashima">
+                    <text type="translation" subtype="Takashima"
+                        xml:id="BB-003.text-15.text-translation-Takashima">
                         <body>
                             <ab>
-                                <seg/>
-                            </ab>
-                        </body>
-                    </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-15-translation-Serruys">
-                        <body>
-                            <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
                 </group>
             </text>
-            <text n="16">
+            <text xml:id="BB-003.text-16" n="16">
                 <group>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-16-yuanwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-16.text-transcription-yuanwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-16-shiwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-16.text-transcription-shiwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-16-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima"
+                        xml:id="BB-003.text-16.text-transcription-Takashima">
                         <body>
                             <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-16-translation-Takashima">
+                    <text type="translation" subtype="Takashima"
+                        xml:id="BB-003.text-16.text-translation-Takashima">
                         <body>
                             <ab>
-                                <seg/>
-                            </ab>
-                        </body>
-                    </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-16-translation-Serruys">
-                        <body>
-                            <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
                 </group>
             </text>
-            <text n="17">
+            <text xml:id="BB-003.text-17" n="17">
                 <group>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-17-yuanwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-17.text-transcription-yuanwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-17-shiwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-17.text-transcription-shiwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-17-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima"
+                        xml:id="BB-003.text-17.text-transcription-Takashima">
                         <body>
                             <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-17-translation-Takashima">
+                    <text type="translation" subtype="Takashima"
+                        xml:id="BB-003.text-17.text-translation-Takashima">
                         <body>
                             <ab>
-                                <seg/>
-                            </ab>
-                        </body>
-                    </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-17-translation-Serruys">
-                        <body>
-                            <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
                 </group>
             </text>
-            <text n="18">
+            <text xml:id="BB-003.text-18" n="18">
                 <group>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-18-yuanwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-18.text-transcription-yuanwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-18-shiwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-18.text-transcription-shiwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-18-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima"
+                        xml:id="BB-003.text-18.text-transcription-Takashima">
                         <body>
                             <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-18-translation-Takashima">
+                    <text type="translation" subtype="Takashima"
+                        xml:id="BB-003.text-18.text-translation-Takashima">
                         <body>
                             <ab>
-                                <seg/>
-                            </ab>
-                        </body>
-                    </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-18-translation-Serruys">
-                        <body>
-                            <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
                 </group>
             </text>
-            <text n="19">
+            <text xml:id="BB-003.text-19" n="19">
                 <group>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-19-yuanwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-19.text-transcription-yuanwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-19-shiwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-19.text-transcription-shiwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-19-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima"
+                        xml:id="BB-003.text-19.text-transcription-Takashima">
                         <body>
                             <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-19-translation-Takashima">
+                    <text type="translation" subtype="Takashima"
+                        xml:id="BB-003.text-19.text-translation-Takashima">
                         <body>
                             <ab>
-                                <seg/>
-                            </ab>
-                        </body>
-                    </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-19-translation-Serruys">
-                        <body>
-                            <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
                 </group>
+            </text>
+            <text xml:id="BB-003.text-20" n="20">
                 <group>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-20-yuanwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-20.text-transcription-yuanwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-20-shiwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-20.text-transcription-shiwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-20-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima"
+                        xml:id="BB-003.text-20.text-transcription-Takashima">
                         <body>
                             <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-20-translation-Takashima">
+                    <text type="translation" subtype="Takashima"
+                        xml:id="BB-003.text-20.text-translation-Takashima">
                         <body>
                             <ab>
-                                <seg/>
-                            </ab>
-                        </body>
-                    </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-20-translation-Serruys">
-                        <body>
-                            <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
                 </group>
+            </text>
+            <text xml:id="BB-003.text-21" n="21">
                 <group>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-21-yuanwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-21.text-transcription-yuanwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-21-shiwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-21.text-transcription-shiwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-21-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima"
+                        xml:id="BB-003.text-21.text-transcription-Takashima">
                         <body>
                             <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-21-translation-Takashima">
+                    <text type="translation" subtype="Takashima"
+                        xml:id="BB-003.text-21.text-translation-Takashima">
                         <body>
                             <ab>
-                                <seg/>
-                            </ab>
-                        </body>
-                    </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-21-translation-Serruys">
-                        <body>
-                            <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
                 </group>
+            </text>
+            <text xml:id="BB-003.text-22" n="22">
                 <group>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-22-yuanwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-22.text-transcription-yuanwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-22-shiwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-22.text-transcription-shiwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-22-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima"
+                        xml:id="BB-003.text-22.text-transcription-Takashima">
                         <body>
                             <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-22-translation-Takashima">
+                    <text type="translation" subtype="Takashima"
+                        xml:id="BB-003.text-22.text-translation-Takashima">
                         <body>
                             <ab>
-                                <seg/>
-                            </ab>
-                        </body>
-                    </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-22-translation-Serruys">
-                        <body>
-                            <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
                 </group>
+            </text>
+            <text xml:id="BB-003.text-23" n="23">
                 <group>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-23-yuanwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-23.text-transcription-yuanwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-23-shiwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-23.text-transcription-shiwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-23-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima"
+                        xml:id="BB-003.text-23.text-transcription-Takashima">
                         <body>
                             <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-23-translation-Takashima">
+                    <text type="translation" subtype="Takashima"
+                        xml:id="BB-003.text-23.text-translation-Takashima">
                         <body>
                             <ab>
-                                <seg/>
-                            </ab>
-                        </body>
-                    </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-23-translation-Serruys">
-                        <body>
-                            <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
                 </group>
+            </text>
+            <text xml:id="BB-003.text-24" n="24">
                 <group>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-24-yuanwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-24.text-transcription-yuanwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <xi:include href="/db/tls-data/CHANT/uuid-BD568406-4F41-4487-A085-7344C8410E59.xml" xpointer="H06834-正-24-shiwen">
+                    <xi:include
+                        href="/db/tls-data/CHANT/uuid-B68345DE-8CF3-4C8A-95F8-A4FE04840923.xml"
+                        xpointer="H-06834-正.text-24.text-transcription-shiwen">
                         <xi:fallback>
                             <note>XInclude failed!</note>
                         </xi:fallback>
                     </xi:include>
-                    <text type="transcription" subtype="Takashima" xml:id="BB-3-o-24-transcription-Takashima">
+                    <text type="transcription" subtype="Takashima"
+                        xml:id="BB-003.text-24.text-transcription-Takashima">
                         <body>
                             <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>
-                    <text type="translation" subtype="Takashima" xml:id="BB-3-o-24-translation-Takashima">
+                    <text type="translation" subtype="Takashima"
+                        xml:id="BB-003.text-24.text-translation-Takashima">
                         <body>
                             <ab>
-                                <seg/>
-                            </ab>
-                        </body>
-                    </text>
-                    <text type="translation" subtype="Serruys" xml:id="BB-3-o-24-translation-Serruys">
-                        <body>
-                            <ab>
-                                <seg/>
+                                <seg n="1">&#xA0;</seg>
                             </ab>
                         </body>
                     </text>

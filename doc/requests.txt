@@ -1,0 +1,20 @@
+Lucene indexing of PUA chars. (Having this will make possible advanced search syntax)
+
+Boolean search.
+
+Make the checkboxes stick.	
+
+Search by guests. (Right now, the whole app is closed; only editing should be closed.)
+
+Are permissions correct?
+
+Paging of search results. (With very repetitive inscriptions in the tens of thousands, this is necessary.)
+
+Annotation of whole <seg>s and <text>s, for starters.
+
+Editing header
+
+Noting editing progress.
+
+Revision history.
+

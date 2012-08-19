@@ -128,7 +128,13 @@ let $bone-number :=
     else $bone-image
 let $bone-image := 
     if ($bone-side) 
-    then concat($bone-number, if ($bone-side eq '正') then '.1' else '.2')
+    then concat($bone-number, 
+        if ($bone-side eq '正') 
+        then '.1' 
+        else 
+            if ($bone-side eq '反') 
+            then '.2' 
+            else '.3')
     else $bone-number
 let $bone-image := concat($bone-image, '.png')
 let $log := util:log("DEBUG", ("##$bone-image-2): ", $bone-image))

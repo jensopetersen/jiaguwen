@@ -1,3 +1,4 @@
+
 module namespace tei2html="http://xmlopenfoundation.org/tei2html";
 
 declare default function namespace "http://www.w3.org/2005/xpath-functions";
@@ -113,7 +114,6 @@ declare function tei2html:text($node as element(tei:text)) as element()? {
                 <div class="text-output">
                 {for $t in $node/tei:group/tei:text
                     [@subtype eq 'Takashima']
-                    (:[@subtype ne 'Serruys']:)
                 return 
                 if ($t/@type eq 'transcription')
                 then
