@@ -128,13 +128,7 @@ let $bone-number :=
     else $bone-image
 let $bone-image := 
     if ($bone-side) 
-    then concat($bone-number, 
-        if ($bone-side eq '正') 
-        then '.1' 
-        else 
-            if ($bone-side eq '反') 
-            then '.2' 
-            else '.3')
+    then concat($bone-number, if ($bone-side eq '正') then '.1' else '.2')
     else $bone-number
 let $bone-image := concat($bone-image, '.png')
 let $log := util:log("DEBUG", ("##$bone-image-2): ", $bone-image))
@@ -166,7 +160,7 @@ let $document :=
         if ($bone-type eq 'H') then
         <text xml:id="{$bone-id}" facs="{$bone-image}"><group>{
         for $bone at $i in $doc-minus-bone-ids/*
-        let $text-id := concat($bone-id, '-', $i)
+        let $text-id := concat($bone-id, '.text-', $i)
         
         let $transcription-1 := $bone//transcription-1
         let $log := util:log("DEBUG", ("##$transcription-1-0): ", $transcription-1))
@@ -179,7 +173,7 @@ let $document :=
         let $tokenized := tokenize($t-1,'¿')
         let $t-1 :=
             for $item at $i in $tokenized
-            return <seg xml:id="{concat($text-id, '-yuanwen-', $i)}">{$item}</seg>
+            return <seg xml:id="{concat($text-id, '.text-transcription-yuanwen.seg-', $i)}" n="{$i}">{$item}</seg>
         let $log := util:log("DEBUG", ("##$t-1-2): ", $t-1))
         
         for $t-2 in $transcription-2
@@ -188,21 +182,21 @@ let $document :=
         let $tokenized := tokenize($t-2,'¿')
         let $t-2 :=
             for $item at $i in $tokenized
-            return <seg xml:id="{concat($text-id, '-shiwen-', $i)}">{$item}</seg>
+            return <seg xml:id="{concat($text-id, '.text-transcription-shiwen.seg-', $i)}" n="{$i}">{$item}</seg>
         let $log := util:log("DEBUG", ("##$t-2-2): ", $t-2))
 
         return
             
             <text xml:id="{$text-id}">
                 <group>
-                    <text type="transcription" subtype="yuanwen" xml:id="{$text-id}-yuanwen">
+                    <text type="transcription" subtype="yuanwen" xml:id="{$text-id}.text-transcription-yuanwen">
                         <body>
                             <ab>
                                 {$t-1}
                             </ab>
                         </body>
                     </text>
-                    <text type="transcription" subtype="shiwen" xml:id="{$text-id}-shiwen">
+                    <text type="transcription" subtype="shiwen" xml:id="{$text-id}.text-transcription-shiwen">
                         <body>
                             <ab>
                                 {$t-2}

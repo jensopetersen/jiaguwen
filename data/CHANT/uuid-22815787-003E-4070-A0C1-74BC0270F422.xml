@@ -13,11 +13,11 @@
             </sourceDesc>
         </fileDesc>
     </teiHeader>
-    <text xml:id="H06834-反" facs="06834.00002.png">
+    <text xml:id="H-06834-反" facs="06834.2.png">
         <group>
-            <text xml:id="H06834-反-1">
+            <text xml:id="H-06834-反.text-1">
                 <group>
-                    <text type="transcription" subtype="yuanwen" xml:id="H06834-反-1-yuanwen">
+                    <text type="transcription" subtype="yuanwen" xml:id="H-06834-反.text-1.text-transcription-yuanwen">
                         <body>
                             <ab>
                                 <seg>󾑸󾒼󽲙，</seg>
@@ -26,7 +26,7 @@
                             </ab>
                         </body>
                     </text>
-                    <text type="transcription" subtype="shiwen" xml:id="H06834-反-1-shiwen">
+                    <text type="transcription" subtype="shiwen" xml:id="H-06834-反.text-1.text-transcription-shiwen">
                         <body>
                             <ab>
                                 <seg>辛酉卜，</seg>
@@ -37,9 +37,9 @@
                     </text>
                 </group>
             </text>
-            <text xml:id="H06834-反-2">
+            <text xml:id="H-06834-反.text-2">
                 <group>
-                    <text type="transcription" subtype="yuanwen" xml:id="H06834-反-2-yuanwen">
+                    <text type="transcription" subtype="yuanwen" xml:id="H-06834-反.text-2.text-transcription-yuanwen">
                         <body>
                             <ab>
                                 <seg>󾑸󾒼󽲙，</seg>
@@ -48,7 +48,7 @@
                             </ab>
                         </body>
                     </text>
-                    <text type="transcription" subtype="shiwen" xml:id="H06834-反-2-shiwen">
+                    <text type="transcription" subtype="shiwen" xml:id="H-06834-反.text-2.text-transcription-shiwen">
                         <body>
                             <ab>
                                 <seg>辛酉卜，</seg>
@@ -59,16 +59,16 @@
                     </text>
                 </group>
             </text>
-            <text xml:id="H06834-反-3">
+            <text xml:id="H-06834-反.text-3">
                 <group>
-                    <text type="transcription" subtype="yuanwen" xml:id="H06834-反-3-yuanwen">
+                    <text type="transcription" subtype="yuanwen" xml:id="H-06834-反.text-3.text-transcription-yuanwen">
                         <body>
                             <ab>
                                 <seg>󾂭。</seg>
                             </ab>
                         </body>
                     </text>
-                    <text type="transcription" subtype="shiwen" xml:id="H06834-反-3-shiwen">
+                    <text type="transcription" subtype="shiwen" xml:id="H-06834-反.text-3.text-transcription-shiwen">
                         <body>
                             <ab>
                                 <seg>㱿。</seg>
