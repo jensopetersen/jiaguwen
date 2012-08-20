@@ -1,5 +1,4 @@
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg" xml:id="uuid-BD568406-4F41-4487-A085-7344C8410E59">
+<TEI xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg" xml:id="uuid-bd568406-4f41-4487-a085-7344c8410e59">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -13,9 +12,9 @@
             </sourceDesc>
         </fileDesc>
     </teiHeader>
-    <text xml:id="H-06834-正" facs="06834.00001.png">
+    <text xml:id="H-06834-正" facs="06834.1.png">
         <group>
-            <text xml:id="H-06834-正.text-1">
+            <text xml:id="H-06834-正.text-1" n="1">
                 <group>
                     <text type="transcription" subtype="yuanwen" xml:id="H-06834-正.text-1.text-transcription-yuanwen">
                         <body>
@@ -37,7 +36,7 @@
                     </text>
                 </group>
             </text>
-            <text xml:id="H-06834-正.text-2">
+            <text xml:id="H-06834-正.text-2" n="2">
                 <group>
                     <text type="transcription" subtype="yuanwen" xml:id="H-06834-正.text-2.text-transcription-yuanwen">
                         <body>
@@ -55,7 +54,7 @@
                     </text>
                 </group>
             </text>
-            <text xml:id="H-06834-正.text-3">
+            <text xml:id="H-06834-正.text-3" n="3">
                 <group>
                     <text type="transcription" subtype="yuanwen" xml:id="H-06834-正.text-3.text-transcription-yuanwen">
                         <body>
@@ -91,7 +90,7 @@
                     </text>
                 </group>
             </text>
-            <text xml:id="H-06834-正.text-4">
+            <text xml:id="H-06834-正.text-4" n="4">
                 <group>
                     <text type="transcription" subtype="yuanwen" xml:id="H-06834-正.text-4.text-transcription-yuanwen">
                         <body>
@@ -115,7 +114,7 @@
                     </text>
                 </group>
             </text>
-            <text xml:id="H-06834-正.text-5">
+            <text xml:id="H-06834-正.text-5" n="5">
                 <group>
                     <text type="transcription" subtype="yuanwen" xml:id="H-06834-正.text-5.text-transcription-yuanwen">
                         <body>
@@ -141,7 +140,7 @@
                     </text>
                 </group>
             </text>
-            <text xml:id="H-06834-正.text-6">
+            <text xml:id="H-06834-正.text-6" n="6">
                 <group>
                     <text type="transcription" subtype="yuanwen" xml:id="H-06834-正.text-6.text-transcription-yuanwen">
                         <body>
@@ -165,7 +164,7 @@
                     </text>
                 </group>
             </text>
-            <text xml:id="H-06834-正.text-7">
+            <text xml:id="H-06834-正.text-7" n="7">
                 <group>
                     <text type="transcription" subtype="yuanwen" xml:id="H-06834-正.text-7.text-transcription-yuanwen">
                         <body>
@@ -189,7 +188,7 @@
                     </text>
                 </group>
             </text>
-            <text xml:id="H-06834-正.text-8">
+            <text xml:id="H-06834-正.text-8" n="8">
                 <group>
                     <text type="transcription" subtype="yuanwen" xml:id="H-06834-正.text-8.text-transcription-yuanwen">
                         <body>
@@ -213,7 +212,7 @@
                     </text>
                 </group>
             </text>
-            <text xml:id="H-06834-正.text-9">
+            <text xml:id="H-06834-正.text-9" n="9">
                 <group>
                     <text type="transcription" subtype="yuanwen" xml:id="H-06834-正.text-9.text-transcription-yuanwen">
                         <body>
@@ -237,7 +236,7 @@
                     </text>
                 </group>
             </text>
-            <text xml:id="H-06834-正.text-10">
+            <text xml:id="H-06834-正.text-10" n="10">
                 <group>
                     <text type="transcription" subtype="yuanwen" xml:id="H-06834-正.text-10.text-transcription-yuanwen">
                         <body>
@@ -261,7 +260,7 @@
                     </text>
                 </group>
             </text>
-            <text xml:id="H-06834-正.text-11">
+            <text xml:id="H-06834-正.text-11" n="11">
                 <group>
                     <text type="transcription" subtype="yuanwen" xml:id="H-06834-正.text-11.text-transcription-yuanwen">
                         <body>
@@ -281,7 +280,7 @@
                     </text>
                 </group>
             </text>
-            <text xml:id="H-06834-正.text-12">
+            <text xml:id="H-06834-正.text-12" n="12">
                 <group>
                     <text type="transcription" subtype="yuanwen" xml:id="H-06834-正.text-12.text-transcription-yuanwen">
                         <body>
@@ -305,7 +304,7 @@
                     </text>
                 </group>
             </text>
-            <text xml:id="H-06834-正.text-13">
+            <text xml:id="H-06834-正.text-13" n="13">
                 <group>
                     <text type="transcription" subtype="yuanwen" xml:id="H-06834-正.text-13.text-transcription-yuanwen">
                         <body>
@@ -329,7 +328,7 @@
                     </text>
                 </group>
             </text>
-            <text xml:id="H-06834-正.text-14">
+            <text xml:id="H-06834-正.text-14" n="14">
                 <group>
                     <text type="transcription" subtype="yuanwen" xml:id="H-06834-正.text-14.text-transcription-yuanwen">
                         <body>
@@ -353,7 +352,7 @@
                     </text>
                 </group>
             </text>
-            <text xml:id="H-06834-正.text-15">
+            <text xml:id="H-06834-正.text-15" n="15">
                 <group>
                     <text type="transcription" subtype="yuanwen" xml:id="H-06834-正.text-15.text-transcription-yuanwen">
                         <body>
@@ -377,7 +376,7 @@
                     </text>
                 </group>
             </text>
-            <text xml:id="H-06834-正.text-16">
+            <text xml:id="H-06834-正.text-16" n="16">
                 <group>
                     <text type="transcription" subtype="yuanwen" xml:id="H-06834-正.text-16.text-transcription-yuanwen">
                         <body>
@@ -397,7 +396,7 @@
                     </text>
                 </group>
             </text>
-            <text xml:id="H-06834-正.text-17">
+            <text xml:id="H-06834-正.text-17" n="17">
                 <group>
                     <text type="transcription" subtype="yuanwen" xml:id="H-06834-正.text-17.text-transcription-yuanwen">
                         <body>
@@ -421,7 +420,7 @@
                     </text>
                 </group>
             </text>
-            <text xml:id="H-06834-正.text-18">
+            <text xml:id="H-06834-正.text-18" n="18">
                 <group>
                     <text type="transcription" subtype="yuanwen" xml:id="H-06834-正.text-18.text-transcription-yuanwen">
                         <body>
@@ -445,7 +444,7 @@
                     </text>
                 </group>
             </text>
-            <text xml:id="H-06834-正.text-19">
+            <text xml:id="H-06834-正.text-19" n="19">
                 <group>
                     <text type="transcription" subtype="yuanwen" xml:id="H-06834-正.text-19.text-transcription-yuanwen">
                         <body>

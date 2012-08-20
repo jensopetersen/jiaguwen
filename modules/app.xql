@@ -27,6 +27,7 @@ declare
     %templates:wrap    
 function tls:title($node as node(), $model as map(*)) {
     let $title := $model("data")/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title/string()
+    (:NB: if the hit is from BB, the corresponding H title should be presented.:)
     (:let $log := util:log("DEBUG", ("##$title): ", $title)):)
         return $title
 };
@@ -103,6 +104,7 @@ declare %private function tls:get-collections($collections as xs:string*) {
 declare 
     %templates:default("type", "text")
 function tls:search($node as node(), $model as map(*), $type as xs:string, $query as xs:string?) {
+    (:defaulting to empty here means search in everything below tls-data:)
     let $collections := request:get-parameter("collection", '')
     let $collections := tls:get-collections($collections)
     let $result := 
@@ -130,22 +132,29 @@ declare
     %templates:default("start", 1)
 function tls:display-line($node as node(), $model as map(*), $start as xs:integer) {
     let $results := $model("search")
-    for $hit in subsequence($results, $start, 10)
+    for $hit at $i in subsequence($results, $start, 10)
     (:let $log := util:log("DEBUG", ("##$hit): ", $hit)):)
     let $doc-id := $hit/ancestor::tei:TEI/@xml:id/string()
     (:let $log := util:log("DEBUG", ("##$doc-id): ", $doc-id)):)
     let $editable :=  exists(collection("/db/tls-data/BB")/(id($doc-id))/@xml:id/string())
     (:let $log := util:log("DEBUG", ("##$editable): ", $editable)):)
     let $text-n := $hit/ancestor::tei:text[2]/@n/string()
+    (:NB: if the hit is from H, the corresponding H $text-n should be presented.:)
     (:let $log := util:log("DEBUG", ("##$text-n): ", $text-n)):)
     let $text-id := $hit/ancestor::tei:text[1]/@xml:id
     let $hit-title := $hit/ancestor::tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title/text()
+    (:let $log := util:log("DEBUG", ("##$hit-title): ", $hit-title)):)
+    (:NB: if the hit is from BB, the corresponding H title should be presented.:)
+    (:NB: can tls:title() be used here?:)
     let $type := $hit/ancestor::tei:text[1]/@type/string()
     let $subtype := $hit/ancestor::tei:text[1]/@subtype/string()
     (:let $log := util:log("DEBUG", ("##$hit-title): ", $hit-title)):)
+    order by $hit-title  
     return
         (
         <tr class="hit-info">
+            <!--NB: this does not work because of the scrolling paging.</td>-->
+            <!--<td class="hit-number">{$i}</td>-->
             <td class="hit-link">
                 <a href="display.html?doc-id={$doc-id}"><img src="resources/images/text.png"/></a>
             </td>
@@ -153,17 +162,18 @@ function tls:display-line($node as node(), $model as map(*), $start as xs:intege
             <td class="hit-link">
             {
             if ($editable) then 
-                <a href="edit.html?doc-id={$doc-id}&amp;text-n={string($text-n)}"><img src="resources/images/page-edit-icon.png"/></a>
+                <a href="edit.html?doc-id={$doc-id}&amp;text-n={$text-n}"><img src="resources/images/page-edit-icon.png"/></a>
                 else 
                 ()
             }
             </td>
-            <td class="text-n">{$text-n}</td>
-            <!--there are no types and subtypes if the hit is on title.-->
+            <td class="text-n">inscription {$text-n}</td>
+            <!--there are no types and subtypes if the hit is on the title.-->
             <td class="hit-type">{$type}{if ($type and $subtype) then "/" else ()}{$subtype}</td>
         </tr>,
         <tr class="hit-text">
             <td colspan="5" class="{$type}">{$hit/text()}</td>
+            <!--if the hit text is transcription, add translation - and vice versa-->
         </tr>
         )
 };
@@ -207,10 +217,10 @@ function tls:display-image($node as node(), $model as map(*), $doc-id as xs:stri
     let $doc := collection("/db/tls-data")/(id($doc-id))
     let $doc := util:expand($doc)
     let $image := $doc/tei:text/@facs/string()
-    (:NB: when in production, Heji images will be placed in subdirectories.:)
-    (:let $image-dir := substring($image, 1, 2)
-    let $image := ('../tls-data/Heji-images/' || $image-dir || "/" || $image):)
-    let $image := ('../tls-data/Heji-images/' || $image)
+    let $image-dir := substring($image, 1, 2)
+    let $image := ('../tls-data/Heji-images/' || $image-dir || "/" || $image)
+    let $log := util:log("DEBUG", ("##$image): ", $image))
+
     return
         <a href="{$image}" class="cloud-zoom"
             rel="zoomWidth: 400">

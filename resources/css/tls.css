@@ -199,9 +199,9 @@ form {
        generated content but not positioning it (Camino 2 is one example) */
     margin-right:8px;
     padding:4px;
-    border-top:1px solid #666;
+    border-top:1px solid #777;
     color:#fff;
-    background:#666;
+    background:#bbb;
     font-weight:bold;
     font-family:"Helvetica Neue", Arial, sans-serif;
     text-align:center;
@@ -216,7 +216,8 @@ form {
 /*Styling list numbers ends;*/
 
 .transcription,
-.CHANT 
+.CHANT,
+form .text
     {
     font-family: CHANT;
     }
@@ -225,26 +226,59 @@ table {
     width:100%
 }
 
+.hit-count {
+    margin-top:7em;
+}
+.hit-number {
+    top:-1px;
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    width:2em;
+    /* Some space between the number and the content in browsers that support
+       generated content but not positioning it (Camino 2 is one example) */
+    margin-right:8px;
+    padding-top:2px;
+    padding-bottom:2px;
+    padding-left:4px;
+    padding-right:4px;
+    border-top:1px solid #777;
+    color:#fff;
+    background:#bbb;
+    font-weight:bold;
+    font-family:"Helvetica Neue", Arial, sans-serif;
+    text-align:center;
+}
+
 .hit-link {
-    width: 5%;
+    width: 3em;
+    }
+    
+.hit-link a {
+    1margin-left: 1em;
     }
 
 .hit-title {
     color:grey;
-    width:10%;
+    width:15em;
     }
 
 .text-n {
-    width: 5%;
+    width: 1.5em;
+    color:gray;
     }
 
 .hit-type {
-    color:grey;
-    width:80%;
+    color:gray;
+    width:40em;
+    padding-left:2em;
 }
 
-.hit-text {
+.hit-text td {
     font-size: 125%;
+    padding-left:4em;
+    padding-bottom:.5em;
+    padding-top:.5em;
     }
 
 .editor textarea {
@@ -275,7 +309,9 @@ fieldset {
     float:left;
     left:50px;
     width:250px;
-    font-size:150%;    
+    font-size:125%;
+    margin-top:.3em;
+    color:gray;    
 }
 
 #edit .line {
@@ -299,6 +335,12 @@ fieldset {
     clear:both;
     padding-top: 1em;
     }
+
+.middle h3 {
+    font-size:100%;
+    font-weight:100;
+    color:gray;
+}
 
 .middle img {    
     padding-bottom: .5em;
@@ -424,10 +466,6 @@ button.login {
 
 #results {
     margin-top:1em;
-}
-
-.hit-count {
-    margin-top:5em;
 }
 
 .row {

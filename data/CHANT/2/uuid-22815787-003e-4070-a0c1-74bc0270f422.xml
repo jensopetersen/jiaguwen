@@ -1,5 +1,4 @@
-<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<TEI xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg" xml:id="uuid-22815787-003E-4070-A0C1-74BC0270F422">
+<TEI xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg" xml:id="uuid-22815787-003e-4070-a0c1-74bc0270f422">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -15,7 +14,7 @@
     </teiHeader>
     <text xml:id="H-06834-反" facs="06834.2.png">
         <group>
-            <text xml:id="H-06834-反.text-1">
+            <text xml:id="H-06834-反.text-1" n="1">
                 <group>
                     <text type="transcription" subtype="yuanwen" xml:id="H-06834-反.text-1.text-transcription-yuanwen">
                         <body>
@@ -37,7 +36,7 @@
                     </text>
                 </group>
             </text>
-            <text xml:id="H-06834-反.text-2">
+            <text xml:id="H-06834-反.text-2" n="2">
                 <group>
                     <text type="transcription" subtype="yuanwen" xml:id="H-06834-反.text-2.text-transcription-yuanwen">
                         <body>
@@ -59,7 +58,7 @@
                     </text>
                 </group>
             </text>
-            <text xml:id="H-06834-反.text-3">
+            <text xml:id="H-06834-反.text-3" n="3">
                 <group>
                     <text type="transcription" subtype="yuanwen" xml:id="H-06834-反.text-3.text-transcription-yuanwen">
                         <body>
