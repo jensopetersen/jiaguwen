@@ -1,8 +1,9 @@
 $(document).ready(function() {
     var editors = [];
     var line = $("#line-select").val();
+    var id = $("#text-id").val();
     $(".editor-container").each(function() {
-        editors.push(new TLS.Editor(this, line));
+        editors.push(new TLS.Editor(this, id, line));
     });
     $("#line-select").change(function(ev) {
         var line = $(this).val();
@@ -61,14 +62,15 @@ TLS.namespace = function (ns_string) {
 
 TLS.Editor = (function() {
     
-    Constr = function(container, line) {
+    Constr = function(container, id, line) {
         this.container = $(container);
         this.line = line;
+        this.id = id;
         
         this.editable = $(".editor", container);
         
         var $this = this;
-        $(".type-select", container).click(function(ev) {
+        $(".type-select", container).change(function(ev) {
             ev.preventDefault();
             $this.load();
         });
@@ -76,7 +78,17 @@ TLS.Editor = (function() {
             ev.preventDefault();
             var value = $this.editable.html();
             var type = $this.getType();
-            $.post("modules/store.xql", { data: value, type: type, line: $this.line });
+            $.ajax({
+                type: "POST",
+                url: "modules/store.xql",
+                data: { id: $this.id, data: value, type: type, line: $this.line },
+                success: function(data) {
+                    
+                },
+                error: function(xhr) {
+                    alert("Save failed! " + xhr.responseText);
+                }
+            });
         });
     };
     
@@ -93,7 +105,7 @@ TLS.Editor = (function() {
     Constr.prototype.load = function() {
         var $this = this;
         var type = this.getType();
-        $.get("modules/get-lines.xql", { type: type, line: this.line },
+        $.get("modules/get-lines.xql", { id: this.id, type: type, line: this.line },
             function(data) {
                 $this.editable.html(data);
             }

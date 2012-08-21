@@ -34,10 +34,16 @@ function tls:title($node as node(), $model as map(*)) {
 
 declare 
     %templates:wrap
-function tls:line-select($node as node(), $model as map(*), $text-n as xs:string) {
+function tls:get-id($node as node(), $model as map(*)) {
+    attribute value { $model("data")/@xml:id }
+};
+
+declare 
+    %templates:wrap
+function tls:line-select($node as node(), $model as map(*), $text-number as xs:string) {
     for $line at $i in $model("data")/tei:text[1]/tei:group[1]/tei:text
     return
-        if (number($text-n) eq $i) then
+        if (number($text-number) eq $i) then
         <option selected="selected">{$i}</option>
         else
         <option>{$i}</option>
@@ -138,9 +144,9 @@ function tls:display-line($node as node(), $model as map(*), $start as xs:intege
     (:let $log := util:log("DEBUG", ("##$doc-id): ", $doc-id)):)
     let $editable :=  exists(collection("/db/tls-data/BB")/(id($doc-id))/@xml:id/string())
     (:let $log := util:log("DEBUG", ("##$editable): ", $editable)):)
-    let $text-n := $hit/ancestor::tei:text[2]/@n/string()
-    (:NB: if the hit is from H, the corresponding H $text-n should be presented.:)
-    (:let $log := util:log("DEBUG", ("##$text-n): ", $text-n)):)
+    let $text-number := $hit/ancestor::tei:text[2]/@n/string()
+    (:NB: if the hit is from H, the corresponding H $text-number should be presented.:)
+    (:let $log := util:log("DEBUG", ("##$text-number): ", $text-number)):)
     let $text-id := $hit/ancestor::tei:text[1]/@xml:id
     let $hit-title := $hit/ancestor::tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title/text()
     (:let $log := util:log("DEBUG", ("##$hit-title): ", $hit-title)):)
@@ -162,12 +168,12 @@ function tls:display-line($node as node(), $model as map(*), $start as xs:intege
             <td class="hit-link">
             {
             if ($editable) then 
-                <a href="edit.html?doc-id={$doc-id}&amp;text-n={$text-n}"><img src="resources/images/page-edit-icon.png"/></a>
+                <a href="edit.html?doc-id={$doc-id}&amp;text-number={$text-number}"><img src="resources/images/page-edit-icon.png"/></a>
                 else 
                 ()
             }
             </td>
-            <td class="text-n">inscription {$text-n}</td>
+            <td class="text-n">inscription {$text-number}</td>
             <!--there are no types and subtypes if the hit is on the title.-->
             <td class="hit-type">{$type}{if ($type and $subtype) then "/" else ()}{$subtype}</td>
         </tr>,

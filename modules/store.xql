@@ -2,6 +2,11 @@ xquery version "3.0";
 
 declare namespace tei="http://www.tei-c.org/ns/1.0";
 
+declare namespace output = "http://www.w3.org/2010/xslt-xquery-serialization";
+
+declare option output:method "json";
+declare option output:media-type "application/json";
+
 declare function local:replace($doc as element(), $text-n as xs:integer, $type as xs:string, $subtype as xs:string, 
     $data as element()) {
     let $title := $doc/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title[1]/string()
@@ -18,16 +23,19 @@ declare function local:replace($doc as element(), $text-n as xs:integer, $type a
         }
         </ab>
     let $log := util:log("DEBUG", ($segs, "
-    replace:
-    ", $line/tei:ab,
-    "
-    with:
-    ", $content))
-    return
-        update replace $line/tei:ab with $content
+        replace:
+        ", $line/tei:ab,
+        "
+        with:
+        ", $content))
+    return (
+        update replace $line/tei:ab with $content,
+        <status>ok</status>
+    )
 };
 
-let $doc := collection("/db/tls-data/BB")/(id("uuid-1c03c3ab-3553-4325-9c69-52eea33225b6"))
+let $id := request:get-parameter("id", ())
+let $doc := collection("/db/tls-data/BB")/(id($id))
 let $data := util:parse-html(request:get-parameter("data", ()))/*
 let $type := request:get-parameter("type", ())
 let $text-n := request:get-parameter("line", "3")

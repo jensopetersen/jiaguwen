@@ -110,7 +110,7 @@ declare function tei2html:text($node as element(tei:text)) as element()? {
         then
             <div class="middle">
                 
-                <h3><a href="edit.html?doc-id={$doc-id}&amp;text-n={string($text-n)}"><img src="resources/images/page-edit-icon.png"/></a> Inscription {$node/@n/string()}</h3>
+                <h3><a href="edit.html?doc-id={$doc-id}&amp;text-number={string($text-n)}"><img src="resources/images/page-edit-icon.png"/></a> Inscription {$node/@n/string()}</h3>
                 <div class="text-output">
                 {
                 if (exists($node/tei:group/tei:text[@subtype eq 'Takashima'])) 

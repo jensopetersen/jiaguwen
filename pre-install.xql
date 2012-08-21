@@ -2,6 +2,7 @@ xquery version "1.0";
 
 import module namespace util="http://exist-db.org/xquery/util";
 import module namespace xdb="http://exist-db.org/xquery/xmldb";
+import module namespace dbutil="http://exist-db.org/xquery/dbutil" at "modules/dbutils.xql";
 
 (: file path pointing to the exist installation directory :)
 declare variable $home external;
@@ -30,6 +31,26 @@ declare variable $tls-data-collection := fn:concat($db-root, "/", $tls-data-coll
 declare variable $CHANT-collection := fn:concat($tls-data-collection, "/", $CHANT-collection-name);
 declare variable $BB-collection := fn:concat($tls-data-collection, "/", $BB-collection-name, "/");
 declare variable $Heji-image-collection := fn:concat($tls-data-collection, "/", $Heji-image-collection-name, "/");
+
+declare variable $local:user := "tls-editor";
+declare variable $local:group := "tls-editors";
+declare variable $local:new-permissions := "rw-rw-r--";
+declare variable $local:new-col-permissions := "rwxrwxr-x";
+declare variable $local:home-collection-path := "/db/tls-data";
+
+declare function local:find-resources-recursive($collection-path as xs:string) {
+    dbutil:scan(xs:anyURI($collection-path), function($collection, $resource) {
+        if (exists($resource)) then (
+            sm:chmod($resource, $local:new-permissions),
+            sm:chown($resource, $local:user),
+            sm:chgrp($resource, $local:group)
+        ) else (
+            sm:chmod($collection, $local:new-col-permissions),
+            sm:chown($collection, $local:user),
+            sm:chgrp($collection, $local:group)
+        )
+    })
+};
 
 declare function local:mkcol-recursive($collection, $components) {
     if (fn:exists($components)) then
@@ -69,7 +90,7 @@ util:log($log-level, fn:concat("Security: Creating user '", $tls-admin-user, "' 
     if (xdb:group-exists($tls-users-group)) then ()
     else xdb:create-group($tls-users-group),
     if (xdb:exists-user($tls-admin-user)) then ()
-    else xdb:create-user($tls-admin-user, $tls-admin-user, $tls-users-group, ()),
+    else xdb:create-user($tls-admin-user, 'BB', $tls-users-group, ()),
 util:log($log-level, "Create users and groups: Done."),
 
 (: Load collection.xconf documents :)
@@ -88,11 +109,13 @@ util:log($log-level, fn:concat("Config: Creating data collection '", $CHANT-coll
     util:log($log-level, "...Config: Uploading data..."),
         xdb:store-files-from-pattern($BB-collection, $dir, "data/BB/*.xml"),
         local:set-collection-resource-permissions($BB-collection, $tls-admin-user, $tls-users-group, util:base-to-integer(0775, 8)),
-        xdb:store-files-from-pattern($CHANT-collection, $dir, "data/CHANT/*.xml"),
+        xdb:store-files-from-pattern($CHANT-collection, concat($dir, "/data/CHANT"), "**/*.xml", 'application/xml', true()),
         local:set-collection-resource-permissions($CHANT-collection, $tls-admin-user, $tls-users-group, util:base-to-integer(0775, 8)),
-        xdb:store-files-from-pattern($Heji-image-collection, $dir, "data/Heji-images/*.png"),
+        xdb:store-files-from-pattern($Heji-image-collection, concat($dir, "/data/Heji-images"), "**/*.png", 'image/png', true()),
         local:set-collection-resource-permissions($Heji-image-collection, $tls-admin-user, $tls-users-group, util:base-to-integer(0444, 8)),
     util:log($log-level, "...Config: Done Uploading data."),
 util:log($log-level, "Config: Done."), 
 
+local:find-resources-recursive($local:home-collection-path)
+,
 util:log($log-level, "Script: Done.")
