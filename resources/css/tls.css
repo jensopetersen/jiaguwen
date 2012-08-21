@@ -177,7 +177,7 @@ form {
 
 .editor ol > li {
     position:relative; /* Create a positioning context */
-    margin:0 0 6px 2em; /* Give each list item a left margin to make room for the numbers */
+    margin:0 0 5px 2em; /* Give each list item a left margin to make room for the numbers */ /*only 5px to compensate for 1px top border*/
     padding:4px 8px; /* Add some spacing around the content */
     list-style:none; /* Disable the normal item numbering */
     border-top:1px solid #666;
@@ -304,7 +304,8 @@ fieldset {
     font-size:150%;    
 }
 
-#edit .title {
+#edit .title
+{
     position: absolute;
     float:left;
     left:50px;
@@ -314,6 +315,14 @@ fieldset {
     color:gray;    
 }
 
+fieldset .title{
+    position: absolute;
+    float:left;
+    width:250px;
+    font-size:125%;
+    margin-top:.3em;
+    color:gray;    
+}
 #edit .line {
     position: absolute;
     left:150px;   

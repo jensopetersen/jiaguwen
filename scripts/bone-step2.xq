@@ -10,11 +10,11 @@ declare option exist:serialize "method=xml media-type=text/xml omit-xml-declarat
 declare variable $username as xs:string := "admin";
 declare variable $password as xs:string := "";
 declare variable $in-collection := collection('/db/test/in');
-declare variable $out-collection := 'xmldb:exist:///db/test/out';
 
 declare function local:save-file($doc) {
-  let $login := xmldb:login($out-collection, $username, $password)
   let $doc-uid := $doc/@xml:id
+  let $out-collection := concat('xmldb:exist:///db/test/out', "/", substring($doc-uid, 6, 1))
+  let $login := xmldb:login($out-collection, $username, $password)
   return
     xmldb:store($out-collection,  concat($doc-uid, ".xml"), $doc)
 };
@@ -128,7 +128,14 @@ let $bone-number :=
     else $bone-image
 let $bone-image := 
     if ($bone-side) 
-    then concat($bone-number, if ($bone-side eq '正') then '.1' else '.2')
+    then concat($bone-number, 
+        if ($bone-side eq '正') 
+        then '.1' 
+            else 
+                if ($bone-side eq '反') 
+                then '.2'
+                else '.3'
+        )
     else $bone-number
 let $bone-image := concat($bone-image, '.png')
 let $log := util:log("DEBUG", ("##$bone-image-2): ", $bone-image))
@@ -172,8 +179,8 @@ let $document :=
         let $log := util:log("DEBUG", ("##$t-1-1): ", $t-1))
         let $tokenized := tokenize($t-1,'¿')
         let $t-1 :=
-            for $item at $i in $tokenized
-            return <seg xml:id="{concat($text-id, '.text-transcription-yuanwen.seg-', $i)}" n="{$i}">{$item}</seg>
+            for $item at $i in normalize-space($tokenized)
+            return <seg xml:id="{concat($text-id, '.text-transcription-yuanwen.seg-', $i)}" n="{$i}">{normalize-space($item)}</seg>
         let $log := util:log("DEBUG", ("##$t-1-2): ", $t-1))
         
         for $t-2 in $transcription-2
@@ -181,8 +188,8 @@ let $document :=
         let $log := util:log("DEBUG", ("##$t-2-1): ", $t-2))
         let $tokenized := tokenize($t-2,'¿')
         let $t-2 :=
-            for $item at $i in $tokenized
-            return <seg xml:id="{concat($text-id, '.text-transcription-shiwen.seg-', $i)}" n="{$i}">{$item}</seg>
+            for $item at $i in normalize-space($tokenized)
+            return <seg xml:id="{concat($text-id, '.text-transcription-shiwen.seg-', $i)}" n="{$i}">{normalize-space($item)}</seg>
         let $log := util:log("DEBUG", ("##$t-2-2): ", $t-2))
 
         return
@@ -224,7 +231,7 @@ let $document :=
         let $tokenized := tokenize($t-1,'¿')
         let $t-1 :=
             for $item at $i in $tokenized
-            return <seg xml:id="{concat($text-id, '-yuanwen-', $i)}">{$item}</seg>
+            return <seg xml:id="{concat($text-id, '-yuanwen-', $i)}">{normalize-space($item)}</seg>
         let $log := util:log("DEBUG", ("##$t-1-2): ", $t-1))
         
         for $t-2 in $transcription-2
@@ -233,7 +240,7 @@ let $document :=
         let $tokenized := tokenize($t-2,'¿')
         let $t-2 :=
             for $item at $i in $tokenized
-            return <seg xml:id="{concat($text-id, '-shiwen-', $i)}">{$item}</seg>
+            return <seg xml:id="{concat($text-id, '-shiwen-', $i)}">{normalize-space($item)}</seg>
         let $log := util:log("DEBUG", ("##$t-2-2): ", $t-2))
 
         return

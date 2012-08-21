@@ -112,15 +112,22 @@ declare function tei2html:text($node as element(tei:text)) as element()? {
                 
                 <h3><a href="edit.html?doc-id={$doc-id}&amp;text-n={string($text-n)}"><img src="resources/images/page-edit-icon.png"/></a> Inscription {$node/@n/string()}</h3>
                 <div class="text-output">
-                {for $t in $node/tei:group/tei:text
-                    [@subtype eq 'Takashima']
-                return 
-                if ($t/@type eq 'transcription')
+                {
+                if (exists($node/tei:group/tei:text[@subtype eq 'Takashima'])) 
                 then
-                    <ul class="transcription {$t/@subtype}">{tei2html:recurse($t)}</ul>
-                else
-                    <ul class="translation {$t/@subtype}">{tei2html:recurse($t)}</ul>
-                }</div>
+                    for $t in $node/tei:group/tei:text[@subtype eq 'Takashima']
+                        return 
+                            if ($t/@type eq 'transcription')
+                            then
+                                <ul class="transcription {$t/@subtype}">{tei2html:recurse($t)}</ul>
+                            else
+                                <ul class="translation {$t/@subtype}">{tei2html:recurse($t)}</ul>
+                else 
+                    for $t in $node/tei:group/tei:text
+                        return 
+                                <ul class="transcription {$t/@subtype}">{tei2html:recurse($t)}</ul>
+                }
+                </div>
             </div>
         else ()
 };

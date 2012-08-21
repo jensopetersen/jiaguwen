@@ -9,7 +9,6 @@ declare variable $home external;
 declare variable $dir external;
 (: the target collection into which the app is deployed :)
 (:NB: not used.:)
-declare variable $target external;
 declare variable $log-level := "INFO";
 declare variable $db-root := "/db";
 declare variable $system-collection := fn:concat($db-root, "/system/config");
@@ -97,7 +96,3 @@ util:log($log-level, fn:concat("Config: Creating data collection '", $CHANT-coll
 util:log($log-level, "Config: Done."), 
 
 util:log($log-level, "Script: Done.")
-
-(: store the collection configuration :)
-(:local:mkcol("/db/system/config", $target),
-xdb:store-files-from-pattern(concat("/system/config", $target), $dir, "*.xconf"):)

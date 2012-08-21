@@ -27,7 +27,7 @@ declare function local:replace($doc as element(), $text-n as xs:integer, $type a
         update replace $line/tei:ab with $content
 };
 
-let $doc := collection("/db/tls-data/BB")/(id("uuid-1C03C3AB-3553-4325-9C69-52EEA33225B6"))
+let $doc := collection("/db/tls-data/BB")/(id("uuid-1c03c3ab-3553-4325-9c69-52eea33225b6"))
 let $data := util:parse-html(request:get-parameter("data", ()))/*
 let $type := request:get-parameter("type", ())
 let $text-n := request:get-parameter("line", "3")

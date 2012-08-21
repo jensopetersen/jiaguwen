@@ -207,6 +207,7 @@ declare
 function tls:display-text($node as node(), $model as map(*), $doc-id as xs:string) {
 let $doc := collection("/db/tls-data")/(id($doc-id))
 let $doc := util:expand($doc)
+let $log := util:log("DEBUG", ("##$doc): ", $doc))
 return
         tei2html:main($doc)
 };
@@ -219,7 +220,7 @@ function tls:display-image($node as node(), $model as map(*), $doc-id as xs:stri
     let $image := $doc/tei:text/@facs/string()
     let $image-dir := substring($image, 1, 2)
     let $image := ('../tls-data/Heji-images/' || $image-dir || "/" || $image)
-    let $log := util:log("DEBUG", ("##$image): ", $image))
+    (:let $log := util:log("DEBUG", ("##$image): ", $image)):)
 
     return
         <a href="{$image}" class="cloud-zoom"
