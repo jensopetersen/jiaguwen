@@ -425,48 +425,26 @@ form {
     position:relative;
 }
 
-#search .checkbox {
-    position:absolute;
-    left:0;
-    float:left;
-    padding-right:5px;
-    width:50px;
+#search .checkboxes {
+    display: inline-block;
+    vertical-align: middle;
+    width: 70px;
+}
+/*#search .checkbox {
+    display: inline-block;
+    margin-right: 5px;
+    padding: 4px 8px;
+    width:70px;
     background-color:#FFF;
     border:1px solid gray;
-}
-
-#search select {
-    position:absolute;
-    left:75px;
-    float:left;
-    padding:5px;
-    width:200px;
-    margin-left:1em;
-}
+}*/
 
 #search input.text {
-    position:absolute;
-    left:275px;
-    float:left;
-    padding:5px;
     width:200px;
-}
-
-#search  button {
-    position:absolute;
-    left:500px;
-    float:left;
-    padding:5px;
-    margin-top:5px;
-    width:50px;
 }
 
 #search select {
     width:175px;
-}
-
-button.login {
-    left:0;
 }
 
 .result {

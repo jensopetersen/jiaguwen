@@ -2,18 +2,21 @@
 <div class="templates:surround?with=templates/page.html&amp;at=content">
     <div id="search">
         <h1 class="rounded">Search Form</h1>
-        <form method="POST" action="" class="login">
-            <div class="checkbox">
-                <input type="checkbox" name="collection" checked="yes" value="BB"/> BB <br/>
-                <input type="checkbox" name="collection" checked="yes" value="CHANT"/> CHANT <br/>
+        <form method="POST" action="" class="form-inline">
+            <div class="checkboxes">
+                <input type="checkbox" name="collection" checked="yes" value="BB"/> BB<br/>
+                <input type="checkbox" name="collection" checked="yes" value="CHANT"/> CHANT
             </div>
             <select name="type" class="templates:form-control">
                 <option value="text">Text</option>
                 <option value="title">Title</option>
                 <option value="translation">Translation</option>
             </select>
-            <input type="text" name="query" class="templates:form-control text"/>
-            <button type="submit">Search</button>
+            <div class="input-append">
+                <input type="text" name="query" class="templates:form-control text"/>
+                <button type="submit" class="btn">
+                    <i class="icon-search"/> Search</button>
+            </div>
         </form>
         <div class="tls:search result">
             <div class="tls:hit-count hit-count"/>

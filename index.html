@@ -1,18 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <div class="templates:surround?with=templates/page.html&amp;at=content">
     <h1 class="rounded">Login Page</h1>
-    <form method="POST" action="search.html" class="login">
-        <fieldset>
-            <label for="user">User Name:</label>
-            <input type="text" name="user" required="required"/>
-        </fieldset>
-        <fieldset>
-            <label for="password">Password:</label>
-            <input type="password" name="password"/>
-        </fieldset>
-        <fieldset>
-            <button type="submit" class="login">Login</button>
-        </fieldset>
+    <form method="POST" action="search.html" class="form-horizontal login">
+        <div class="control-group">
+            <label for="user" class="control-label">User Name:</label>
+            <div class="controls">
+                <input type="text" name="user" required="required"/>
+            </div>
+        </div>
+        <div class="control-group">
+            <label for="password" class="control-label">Password:</label>
+            <div class="controls">
+                <input type="password" name="password"/>
+            </div>
+        </div>
+        <div class="control-group">
+            <div class="controls">
+                <button type="submit" class="btn">
+                    <i class="icon-user"/> Login</button>
+            </div>
+        </div>
         <input type="hidden" name="duration" value="P14D"/>
     </form>
 </div>
