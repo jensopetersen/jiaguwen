@@ -179,7 +179,7 @@ let $document :=
         let $log := util:log("DEBUG", ("##$t-1-1): ", $t-1))
         let $tokenized := tokenize($t-1,'¿')
         let $t-1 :=
-            for $item at $i in normalize-space($tokenized)
+            for $item at $i in $tokenized where normalize-space($item)
             return <seg xml:id="{concat($text-id, '.text-transcription-yuanwen.seg-', $i)}" n="{$i}">{normalize-space($item)}</seg>
         let $log := util:log("DEBUG", ("##$t-1-2): ", $t-1))
         
@@ -188,7 +188,7 @@ let $document :=
         let $log := util:log("DEBUG", ("##$t-2-1): ", $t-2))
         let $tokenized := tokenize($t-2,'¿')
         let $t-2 :=
-            for $item at $i in normalize-space($tokenized)
+            for $item at $i in $tokenized where normalize-space($item)
             return <seg xml:id="{concat($text-id, '.text-transcription-shiwen.seg-', $i)}" n="{$i}">{normalize-space($item)}</seg>
         let $log := util:log("DEBUG", ("##$t-2-2): ", $t-2))
 
@@ -218,7 +218,7 @@ let $document :=
     else
             <text xml:id="{$bone-id/string()}"><group>{
         for $bone at $i in $doc-minus-bone-ids/*
-        let $text-id := concat($bone-id/string(), '-', $i)
+        let $text-id := concat($bone-id, '.text-', $i)
         
         let $transcription-1 := $bone//transcription-1
         let $log := util:log("DEBUG", ("##$transcription-1-0): ", $transcription-1))
@@ -230,8 +230,8 @@ let $document :=
         let $log := util:log("DEBUG", ("##$t-1-1): ", $t-1))
         let $tokenized := tokenize($t-1,'¿')
         let $t-1 :=
-            for $item at $i in $tokenized
-            return <seg xml:id="{concat($text-id, '-yuanwen-', $i)}">{normalize-space($item)}</seg>
+            for $item at $i in $tokenized where normalize-space($item)
+            return <seg xml:id="{concat($text-id, '.text-transcription-yuanwen.seg-', $i)}" n="{$i}">{normalize-space($item)}</seg>
         let $log := util:log("DEBUG", ("##$t-1-2): ", $t-1))
         
         for $t-2 in $transcription-2
@@ -239,22 +239,22 @@ let $document :=
         let $log := util:log("DEBUG", ("##$t-2-1): ", $t-2))
         let $tokenized := tokenize($t-2,'¿')
         let $t-2 :=
-            for $item at $i in $tokenized
-            return <seg xml:id="{concat($text-id, '-shiwen-', $i)}">{normalize-space($item)}</seg>
+            for $item at $i in $tokenized where normalize-space($item)
+            return <seg xml:id="{concat($text-id, '.text-transcription-shiwen.seg-', $i)}" n="{$i}">{normalize-space($item)}</seg>
         let $log := util:log("DEBUG", ("##$t-2-2): ", $t-2))
 
         return
             
-            <text xml:id="{$text-id}">
+           <text xml:id="{$text-id}">
                 <group>
-                    <text type="transcription" subtype="yuanwen" xml:id="{$text-id}-yuanwen">
+                    <text type="transcription" subtype="yuanwen" xml:id="{$text-id}.text-transcription-yuanwen">
                         <body>
                             <ab>
                                 {$t-1}
                             </ab>
                         </body>
                     </text>
-                    <text type="transcription" subtype="shiwen" xml:id="{$text-id}-shiwen">
+                    <text type="transcription" subtype="shiwen" xml:id="{$text-id}.text-transcription-shiwen">
                         <body>
                             <ab>
                                 {$t-2}
