@@ -116,9 +116,9 @@ function tls:search($node as node(), $model as map(*), $type as xs:string, $quer
     let $result := 
         switch ($type)
             case "text" return
-                $collections//tei:text[@type eq "transcription"]//tei:seg[ngram:contains(., $query)]
+                $collections//tei:seg[ngram:contains(., $query)]/ancestor::tei:text[@type eq "transcription"]
             case "translation" return
-                $collections//tei:text[@type eq "translation"]//tei:seg[ft:query(., $query)]                
+                $collections//tei:seg[ft:query(., $query)]/ancestor::tei:text[@type eq "translation"]
             (:title is treated as default:)
             default return
                 $collections//tei:title[ft:query(., $query)]
@@ -139,12 +139,13 @@ declare
 function tls:display-line($node as node(), $model as map(*), $start as xs:integer) {
     let $results := $model("search")
     for $hit at $i in subsequence($results, $start, 10)
-    (:let $log := util:log("DEBUG", ("##$hit): ", $hit)):)
+    let $log := util:log("DEBUG", ("##$hit): ", $hit))
     let $doc-id := $hit/ancestor::tei:TEI/@xml:id/string()
     (:let $log := util:log("DEBUG", ("##$doc-id): ", $doc-id)):)
     let $editable :=  exists(collection("/db/tls-data/BB")/(id($doc-id))/@xml:id/string())
     (:let $log := util:log("DEBUG", ("##$editable): ", $editable)):)
     let $text-number := $hit/ancestor::tei:text[2]/@n/string()
+    let $log := util:log("DEBUG", ("##$hit-text): ", $hit/ancestor::tei:text[2]))
     (:NB: if the hit is from H, the corresponding H $text-number should be presented.:)
     (:let $log := util:log("DEBUG", ("##$text-number): ", $text-number)):)
     let $text-id := $hit/ancestor::tei:text[1]/@xml:id
@@ -155,12 +156,10 @@ function tls:display-line($node as node(), $model as map(*), $start as xs:intege
     let $type := $hit/ancestor::tei:text[1]/@type/string()
     let $subtype := $hit/ancestor::tei:text[1]/@subtype/string()
     (:let $log := util:log("DEBUG", ("##$hit-title): ", $hit-title)):)
-    order by $hit-title  
+    order by $hit-title[1]
     return
         (
         <tr class="hit-info">
-            <!--NB: this does not work because of the scrolling paging.</td>-->
-            <!--<td class="hit-number">{$i}</td>-->
             <td class="hit-link">
                 <a href="display.html?doc-id={$doc-id}"><img src="resources/images/text.png"/></a>
             </td>
@@ -173,7 +172,7 @@ function tls:display-line($node as node(), $model as map(*), $start as xs:intege
                 ()
             }
             </td>
-            <td class="text-n">inscription {$text-number}</td>
+            <td class="text-n">{if ($text-number) then 'inscription ' else ()} {$text-number}</td>
             <!--there are no types and subtypes if the hit is on the title.-->
             <td class="hit-type">{$type}{if ($type and $subtype) then "/" else ()}{$subtype}</td>
         </tr>,
@@ -225,7 +224,7 @@ function tls:display-image($node as node(), $model as map(*), $doc-id as xs:stri
     let $doc := util:expand($doc)
     let $image := $doc/tei:text/@facs/string()
     let $image-dir := substring($image, 1, 2)
-    let $image := ('../tls-data/Heji-images/' || $image-dir || "/" || $image)
+    let $image := ('../tls-data/Heji-Images/' || $image-dir || "/" || $image)
     (:let $log := util:log("DEBUG", ("##$image): ", $image)):)
 
     return
