@@ -6,5 +6,6 @@
             <text qname="tei:title"/>
             <text qname="tei:seg"/>
         </lucene>
+        <create qname="@type" type="xs:string"/>
     </index>
 </collection>
