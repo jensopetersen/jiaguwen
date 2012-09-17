@@ -84,9 +84,10 @@ body { font: 12px/20px Verdana, Arial, Helvetica, sans-serif; color: #222; /*bac
 
 #footer { clear: both; width: 960px; margin: 0 auto; height: 50px; }
 
-#footer ul { float: left; width: 640px; margin: 0 0 0 -4px; }
-#footer ul li { display: inline; }
-#footer ul li a { padding: 2px 4px; /*color: #4d4d4d;*/ }
+#header ul, #footer ul { float: left; width: 640px; margin: 0 0 0 -4px; }
+#header ul li, #footer ul li { display: inline; }
+#header ul li a, #footer ul li a { padding: 2px 4px; /*color: #4d4d4d;*/ }
+#header ul { float: right; text-align: right;}
 /*#footer ul li a:hover { background: #333; }*/
 
 #copyright { float: right; width: 220px; }
@@ -276,7 +277,7 @@ table {
 
 .hit-text td {
     font-size: 125%;
-    padding-left:4em;
+    padding-left:3.75em;
     padding-bottom:.5em;
     padding-top:.5em;
     }

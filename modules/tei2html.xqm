@@ -103,8 +103,10 @@ declare function tei2html:text($node as element(tei:text)) as element()? {
             {tei2html:recurse($node)}
         </div>
     else
-        let $doc-id := $node/ancestor-or-self::tei:TEI/@xml:id
+        let $doc := $node/ancestor-or-self::tei:TEI
+        let $doc-id := $doc/@xml:id
         let $text-n := $node/@n/string()
+        let $collection := util:collection-name($doc)
         return
         if (($node/parent::tei:group) and ($node/child::tei:group))
         then

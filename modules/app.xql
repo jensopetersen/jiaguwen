@@ -110,6 +110,7 @@ declare %private function tls:get-collections($collections as xs:string*) {
 declare 
     %templates:default("type", "text")
 function tls:search($node as node(), $model as map(*), $type as xs:string, $query as xs:string?) {
+<<<<<<< HEAD
     if (empty($query)) then
         ()
     else
@@ -129,6 +130,24 @@ function tls:search($node as node(), $model as map(*), $type as xs:string, $quer
             session:set-attribute("tls.result", $result),
             map { "search":= $result }
         )
+=======
+    (:defaulting to empty here means search in everything below tls-data:)
+    let $collections := request:get-parameter("collection", '')
+    let $collections := tls:get-collections($collections)
+    let $result := 
+        switch ($type)
+            case "text" return
+                $collections//tei:seg[ngram:contains(., $query)]/ancestor::tei:text[@type eq "transcription"]
+            case "translation" return
+                $collections//tei:seg[ft:query(., $query)]/ancestor::tei:text[@type eq "translation"]
+            (:title is treated as default:)
+            default return
+                $collections//tei:title[ft:query(., $query)]
+    return (
+        session:set-attribute("tls.result", $result),
+        map { "search":= $result }
+    )
+>>>>>>> Scripts for generating base files
 };
 
 declare function tls:from-session($node as node(), $model as map(*)) {
@@ -148,7 +167,11 @@ function tls:display-line($node as node(), $model as map(*), $start as xs:intege
     let $editable :=  exists(collection("/db/tls-data/BB")/id($doc-id)/@xml:id)
     (:let $log := util:log("DEBUG", ("##$editable): ", $editable)):)
     let $text-number := $hit/ancestor::tei:text[2]/@n/string()
+<<<<<<< HEAD
 (:    let $log := util:log("DEBUG", ("##$hit-text): ", $hit/ancestor::tei:text[2])):)
+=======
+    (:let $log := util:log("DEBUG", ("##$hit-text): ", $hit/ancestor::tei:text[2])):)
+>>>>>>> Scripts for generating base files
     (:NB: if the hit is from H, the corresponding H $text-number should be presented.:)
     (:let $log := util:log("DEBUG", ("##$text-number): ", $text-number)):)
     let $text-id := $hit/ancestor::tei:text[1]/@xml:id

@@ -20,13 +20,17 @@ $element/node() }
 };
 
 
-  let $input := doc('/db/test/bones.2.xml')
+  let $input := doc('/db/test/bones.xml')
   let $bone-ids := distinct-values($input//bone-id)
   
   for $bone-id in $bone-ids
     let $same := $input//bone[bone-id eq $bone-id]
+    let $same := for $s in $same
+    order by number($s/bone-part) empty greatest
+    return $s
     let $myuid := concat("uuid-",util:uuid())
     let $a := <TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xi="http://www.w3.org/2001/XInclude">{$same}</TEI>
     let $a := $a/functx:add-attribute($a, "xml:id", $myuid)
+    
     return
         xmldb:store($out-collection,  concat($myuid, ".xml"), $a)
