@@ -110,27 +110,6 @@ declare %private function tls:get-collections($collections as xs:string*) {
 declare 
     %templates:default("type", "text")
 function tls:search($node as node(), $model as map(*), $type as xs:string, $query as xs:string?) {
-<<<<<<< HEAD
-    if (empty($query)) then
-        ()
-    else
-        (:defaulting to empty here means search in everything below tls-data:)
-        let $collections := request:get-parameter("collection", '')
-        let $collections := tls:get-collections($collections)
-        let $result := 
-            switch ($type)
-                case "text" return
-                    $collections//tei:text[@type = "transcription"]//tei:seg[ngram:contains(., $query)]
-                case "translation" return
-                    $collections//tei:text[@type = "translation"]//tei:seg[ft:query(., $query)]
-                (:title is treated as default:)
-                default return
-                    $collections//tei:title[ft:query(., $query)]
-        return (
-            session:set-attribute("tls.result", $result),
-            map { "search":= $result }
-        )
-=======
     (:defaulting to empty here means search in everything below tls-data:)
     let $collections := request:get-parameter("collection", '')
     let $collections := tls:get-collections($collections)
@@ -147,7 +126,6 @@ function tls:search($node as node(), $model as map(*), $type as xs:string, $quer
         session:set-attribute("tls.result", $result),
         map { "search":= $result }
     )
->>>>>>> Scripts for generating base files
 };
 
 declare function tls:from-session($node as node(), $model as map(*)) {
@@ -161,17 +139,13 @@ declare
 function tls:display-line($node as node(), $model as map(*), $start as xs:integer) {
     let $results := $model("search")
     for $hit at $i in subsequence($results, $start, 10)
-(:    let $log := util:log("DEBUG", ("##$hit): ", $hit)):)
+    let $log := util:log("DEBUG", ("##$hit): ", $hit))
     let $doc-id := $hit/ancestor::tei:TEI/@xml:id/string()
     (:let $log := util:log("DEBUG", ("##$doc-id): ", $doc-id)):)
-    let $editable :=  exists(collection("/db/tls-data/BB")/id($doc-id)/@xml:id)
+    let $editable :=  exists(collection("/db/tls-data/BB")/(id($doc-id))/@xml:id/string())
     (:let $log := util:log("DEBUG", ("##$editable): ", $editable)):)
     let $text-number := $hit/ancestor::tei:text[2]/@n/string()
-<<<<<<< HEAD
-(:    let $log := util:log("DEBUG", ("##$hit-text): ", $hit/ancestor::tei:text[2])):)
-=======
-    (:let $log := util:log("DEBUG", ("##$hit-text): ", $hit/ancestor::tei:text[2])):)
->>>>>>> Scripts for generating base files
+    let $log := util:log("DEBUG", ("##$hit-text): ", $hit/ancestor::tei:text[2]))
     (:NB: if the hit is from H, the corresponding H $text-number should be presented.:)
     (:let $log := util:log("DEBUG", ("##$text-number): ", $text-number)):)
     let $text-id := $hit/ancestor::tei:text[1]/@xml:id
@@ -250,7 +224,7 @@ function tls:display-image($node as node(), $model as map(*), $doc-id as xs:stri
     let $doc := util:expand($doc)
     let $image := $doc/tei:text/@facs/string()
     let $image-dir := substring($image, 1, 2)
-    let $image := ('../tls-data/Heji-Images/' || $image-dir || "/" || $image)
+    let $image := ('../tls-data/Heji-images/' || $image-dir || "/" || $image)
     (:let $log := util:log("DEBUG", ("##$image): ", $image)):)
 
     return
