@@ -3,13 +3,13 @@
 
 @import url('dropdowns.css');
 
-@font-face {
+/*@font-face {
     font-family: 'CHANT';
     src: local('CHANT'), url('../fonts/CHANT.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
-
+*/
 /* ---------------------------------------- LAYOUT ---------------------------------------- */
 
 body { font: 12px/20px Verdana, Arial, Helvetica, sans-serif; color: #222; /*background: url(../images/body.gif) repeat 50% 100%; */}
@@ -221,7 +221,13 @@ form {
 form .text
     {
     font-family: CHANT;
+    font-weight: normal;
+    font-style: normal;
     }
+
+.transcription {
+    font-size:120%;
+}
 
 table {
     width:100%
@@ -230,6 +236,7 @@ table {
 .hit-count {
     margin-top:7em;
 }
+
 .hit-number {
     top:-1px;
     -moz-box-sizing:border-box;
@@ -326,7 +333,7 @@ fieldset .title{
 }
 #edit .line {
     position: absolute;
-    left:150px;   
+    left:200px;   
 }
 
 .editor ol[contenteditable=true] > li {

@@ -10,6 +10,5 @@
     <repo:target>/db/tls</repo:target>
     <repo:prepare>pre-install.xql</repo:prepare>
     <repo:finish>post-install.xql</repo:finish>
-    <repo:cleanup>uninstall.xql</repo:cleanup>
-    <deployed>2012-08-21T15:58:40.977+02:00</deployed>
+    <deployed>2012-09-17T15:01:37.43+02:00</deployed>
 </repo:meta>

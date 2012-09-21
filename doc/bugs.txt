@@ -1,3 +1,0 @@
-Saving and updating lines works only in FF.
-
-No paging.

@@ -26,10 +26,22 @@ let $doc := collection("/db/tls-data")/(id($doc-id))
 declare 
     %templates:wrap    
 function tls:title($node as node(), $model as map(*)) {
-    let $title := $model("data")/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title/string()
-    (:NB: if the hit is from BB, the corresponding H title should be presented.:)
-    (:let $log := util:log("DEBUG", ("##$title): ", $title)):)
-        return $title
+    (:NB: duplicates code in tls:display-line:)
+    let $hit-title := $model("data")/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title/string()
+    let $log := util:log("DEBUG", ("##$hit-title): ", $hit-title))
+    let $corresp := $model("data")/tei:text/@corresp/string()
+    let $log := util:log("DEBUG", ("##$corresp): ", $corresp))
+    let $corresp := translate($corresp, '#', '')
+    (:let $log := util:log("DEBUG", ("##$corresp): ", $corresp)):)
+    (:There are parallel titles in CHANT.:)
+    let $hit-title := $hit-title[1]
+    (:Add the CHANT title to a BB title.:)
+    let $hit-title := 
+        if (substring($hit-title, 1, 3) eq 'BB-') 
+        then ($hit-title || ' (' || $corresp || ')') 
+        else $hit-title
+    (:let $log := util:log("DEBUG", ("##$hit-title): ", $hit-title)):)
+        return $hit-title
 };
 
 declare 
@@ -113,12 +125,24 @@ function tls:search($node as node(), $model as map(*), $type as xs:string, $quer
     (:defaulting to empty here means search in everything below tls-data:)
     let $collections := request:get-parameter("collection", '')
     let $collections := tls:get-collections($collections)
-    let $result := 
+    let $result :=
+    
+        (:Wolfgang's rewrite: removed text from search hits - why?
         switch ($type)
             case "text" return
                 $collections//tei:seg[ngram:contains(., $query)]/ancestor::tei:text[@type eq "transcription"]
             case "translation" return
                 $collections//tei:seg[ft:query(., $query)]/ancestor::tei:text[@type eq "translation"]
+            (\:title is treated as default:\)
+            default return
+                $collections//tei:title[ft:query(., $query)]
+:)        
+
+        switch ($type)
+            case "text" return
+                $collections//tei:text[@type eq "transcription"]//tei:seg[ngram:contains(., $query)]
+            case "translation" return
+                $collections//tei:text[@type eq "translation"]//tei:seg[ft:query(., $query)]                
             (:title is treated as default:)
             default return
                 $collections//tei:title[ft:query(., $query)]
@@ -139,20 +163,31 @@ declare
 function tls:display-line($node as node(), $model as map(*), $start as xs:integer) {
     let $results := $model("search")
     for $hit at $i in subsequence($results, $start, 10)
-    let $log := util:log("DEBUG", ("##$hit): ", $hit))
+    (:let $log := util:log("DEBUG", ("##$hit): ", $hit)):)
+    let $hit-context := local-name($hit) 
+    let $log := util:log("DEBUG", ("##$hit-context): ", $hit-context))
     let $doc-id := $hit/ancestor::tei:TEI/@xml:id/string()
     (:let $log := util:log("DEBUG", ("##$doc-id): ", $doc-id)):)
     let $editable :=  exists(collection("/db/tls-data/BB")/(id($doc-id))/@xml:id/string())
     (:let $log := util:log("DEBUG", ("##$editable): ", $editable)):)
     let $text-number := $hit/ancestor::tei:text[2]/@n/string()
-    let $log := util:log("DEBUG", ("##$hit-text): ", $hit/ancestor::tei:text[2]))
+    (:let $log := util:log("DEBUG", ("##$hit-text): ", $hit/ancestor::tei:text[2])):)
     (:NB: if the hit is from H, the corresponding H $text-number should be presented.:)
     (:let $log := util:log("DEBUG", ("##$text-number): ", $text-number)):)
     let $text-id := $hit/ancestor::tei:text[1]/@xml:id
     let $hit-title := $hit/ancestor::tei:TEI/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title/text()
     (:let $log := util:log("DEBUG", ("##$hit-title): ", $hit-title)):)
-    (:NB: if the hit is from BB, the corresponding H title should be presented.:)
-    (:NB: can tls:title() be used here?:)
+    let $corresp := $hit/ancestor::tei:TEI/tei:text/@corresp/string()
+    let $corresp := translate($corresp, '#', '')
+    let $log := util:log("DEBUG", ("##$corresp): ", $corresp))
+    (:There are parallel titles in CHANT.:)
+    let $hit-title := $hit-title[1]
+    (:Add the CHANT title to a BB title.:)
+    let $hit-title := 
+        if (substring($hit-title, 1, 3) eq 'BB-') 
+        then ($hit-title || ' (' || $corresp || ')') 
+        else $hit-title
+    (:let $log := util:log("DEBUG", ("##$hit-title): ", $hit-title)):)
     let $type := $hit/ancestor::tei:text[1]/@type/string()
     let $subtype := $hit/ancestor::tei:text[1]/@subtype/string()
     (:let $log := util:log("DEBUG", ("##$hit-title): ", $hit-title)):)
@@ -166,7 +201,8 @@ function tls:display-line($node as node(), $model as map(*), $start as xs:intege
             <td class="hit-title">{$hit-title}</td>
             <td class="hit-link">
             {
-            if ($editable) then 
+            if ($editable and $hit-context ne 'title')
+            then 
                 <a href="edit.html?doc-id={$doc-id}&amp;text-number={$text-number}"><img src="resources/images/page-edit-icon.png"/></a>
                 else 
                 ()

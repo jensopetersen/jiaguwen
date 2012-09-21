@@ -1,4 +1,3 @@
-
 module namespace tei2html="http://xmlopenfoundation.org/tei2html";
 
 declare default function namespace "http://www.w3.org/2005/xpath-functions";
@@ -106,13 +105,12 @@ declare function tei2html:text($node as element(tei:text)) as element()? {
         let $doc := $node/ancestor-or-self::tei:TEI
         let $doc-id := $doc/@xml:id
         let $text-n := $node/@n/string()
-        let $collection := util:collection-name($doc)
         return
         if (($node/parent::tei:group) and ($node/child::tei:group))
         then
             <div class="middle">
                 
-                <h3><a href="edit.html?doc-id={$doc-id}&amp;text-number={string($text-n)}"><img src="resources/images/page-edit-icon.png"/></a> Inscription {$node/@n/string()}</h3>
+                <h3><a href="edit.html?doc-id={$doc-id}&amp;text-number={string($text-n)}"><img src="resources/images/page-edit-icon.png"/></a> inscription {$text-n}</h3>
                 <div class="text-output">
                 {
                 if (exists($node/tei:group/tei:text[@subtype eq 'Takashima'])) 
