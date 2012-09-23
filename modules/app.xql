@@ -28,9 +28,9 @@ declare
 function tls:title($node as node(), $model as map(*)) {
     (:NB: duplicates code in tls:display-line:)
     let $hit-title := $model("data")/tei:teiHeader/tei:fileDesc/tei:titleStmt/tei:title/string()
-    let $log := util:log("DEBUG", ("##$hit-title): ", $hit-title))
+    (:let $log := util:log("DEBUG", ("##$hit-title): ", $hit-title)):)
     let $corresp := $model("data")/tei:text/@corresp/string()
-    let $log := util:log("DEBUG", ("##$corresp): ", $corresp))
+    (:let $log := util:log("DEBUG", ("##$corresp): ", $corresp)):)
     let $corresp := translate($corresp, '#', '')
     (:let $log := util:log("DEBUG", ("##$corresp): ", $corresp)):)
     (:There are parallel titles in CHANT.:)
@@ -126,24 +126,11 @@ function tls:search($node as node(), $model as map(*), $type as xs:string, $quer
     let $collections := request:get-parameter("collection", '')
     let $collections := tls:get-collections($collections)
     let $result :=
-    
-        (:Wolfgang's rewrite: removed text from search hits - why?
         switch ($type)
             case "text" return
-                $collections//tei:seg[ngram:contains(., $query)]/ancestor::tei:text[@type eq "transcription"]
+                $collections//tei:seg[ngram:contains(., $query)][ancestor::tei:text[@type eq "transcription"]]
             case "translation" return
-                $collections//tei:seg[ft:query(., $query)]/ancestor::tei:text[@type eq "translation"]
-            (\:title is treated as default:\)
-            default return
-                $collections//tei:title[ft:query(., $query)]
-:)        
-
-        switch ($type)
-            case "text" return
-                $collections//tei:text[@type eq "transcription"]//tei:seg[ngram:contains(., $query)]
-            case "translation" return
-                $collections//tei:text[@type eq "translation"]//tei:seg[ft:query(., $query)]                
-            (:title is treated as default:)
+                $collections//tei:seg[ft:query(., $query)][ancestor::tei:text[@type eq "translation"]]
             default return
                 $collections//tei:title[ft:query(., $query)]
     return (
@@ -165,7 +152,7 @@ function tls:display-line($node as node(), $model as map(*), $start as xs:intege
     for $hit at $i in subsequence($results, $start, 10)
     (:let $log := util:log("DEBUG", ("##$hit): ", $hit)):)
     let $hit-context := local-name($hit) 
-    let $log := util:log("DEBUG", ("##$hit-context): ", $hit-context))
+    (:let $log := util:log("DEBUG", ("##$hit-context): ", $hit-context)):)
     let $doc-id := $hit/ancestor::tei:TEI/@xml:id/string()
     (:let $log := util:log("DEBUG", ("##$doc-id): ", $doc-id)):)
     let $editable :=  exists(collection("/db/tls-data/BB")/(id($doc-id))/@xml:id/string())
@@ -179,7 +166,7 @@ function tls:display-line($node as node(), $model as map(*), $start as xs:intege
     (:let $log := util:log("DEBUG", ("##$hit-title): ", $hit-title)):)
     let $corresp := $hit/ancestor::tei:TEI/tei:text/@corresp/string()
     let $corresp := translate($corresp, '#', '')
-    let $log := util:log("DEBUG", ("##$corresp): ", $corresp))
+    (:let $log := util:log("DEBUG", ("##$corresp): ", $corresp)):)
     (:There are parallel titles in CHANT.:)
     let $hit-title := $hit-title[1]
     (:Add the CHANT title to a BB title.:)
@@ -246,12 +233,12 @@ return
 declare 
     %templates:wrap
 function tls:display-text($node as node(), $model as map(*), $doc-id as xs:string) {
-let $doc := collection("/db/tls-data")/(id($doc-id))
-let $doc := util:expand($doc)
-let $log := util:log("DEBUG", ("##$doc): ", $doc))
-return
-        tei2html:main($doc)
-};
+    let $doc := collection("/db/tls-data")/(id($doc-id))
+    let $doc := util:expand($doc)
+    (:let $log := util:log("DEBUG", ("##$doc): ", $doc)):)
+    return
+            tei2html:main($doc)
+    };
 
 declare 
     %templates:wrap
