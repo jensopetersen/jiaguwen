@@ -178,6 +178,8 @@ function tls:display-line($node as node(), $model as map(*), $start as xs:intege
     let $type := $hit/ancestor::tei:text[1]/@type/string()
     let $subtype := $hit/ancestor::tei:text[1]/@subtype/string()
     (:let $log := util:log("DEBUG", ("##$hit-title): ", $hit-title)):)
+    let $hit-text := replace($hit/text(), '(\p{Co})', '&lt;span class="CHANT">$1&lt;/span>')
+    let $hit-text := concat('&lt;span>', $hit-text, '&lt;/span>') 
     order by $hit-title[1]
     return
         (
@@ -200,7 +202,7 @@ function tls:display-line($node as node(), $model as map(*), $start as xs:intege
             <td class="hit-type">{$type}{if ($type and $subtype) then "/" else ()}{$subtype}</td>
         </tr>,
         <tr class="hit-text">
-            <td colspan="5" class="{$type}">{$hit/text()}</td>
+            <td colspan="5" class="{$type}">{util:parse($hit-text)}</td>
             <!--if the hit text is transcription, add translation - and vice versa-->
         </tr>
         )

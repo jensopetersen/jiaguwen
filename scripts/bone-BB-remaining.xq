@@ -1,5 +1,5 @@
 xquery version "3.0";
-(:make BB document:)
+(:make BB documents for files with incorrect H titles:)
 
 declare namespace util="http://exist-db.org/xquery/util";
 declare namespace xmldb="http://exist-db.org/xquery/xmldb";
@@ -10,7 +10,7 @@ declare option exist:serialize "method=xml media-type=text/xml omit-xml-declarat
 
 declare variable $username as xs:string := "admin";
 declare variable $password as xs:string := "";
-declare variable $in-collection := collection('/db/test/in');
+declare variable $in-collection := collection('/db/tls-data/CHANT');
 
 declare function local:save-file($doc) {
   let $doc-uid := $doc/@xml:id
@@ -55,38 +55,37 @@ declare function functx:number-of-matches
 
 let $input := 
 (
-(:'BB-187|H-00694-正',:)
-(:'BB-188|H-00694-反',:)
-(:'BB-219|H-02273-正',:)
-(:'BB-247|H-14002-正',:)
-(:'BB-249|H-06948-正',:)
-(:'BB-264|H-00536-正',:)
-(:'BB-269|H-05439-正',:)
-(:'BB-273|H-06649-正',:)
-(:'BB-274|H-06649-反',:)
-(:'BB-275|H-13490-正',:)
-(:'BB-307|H-06928-正',:)
-(:'BB-313|H-06478-正',:)
-(:'BB-315|H-06468-正',:)
-(:'BB-319|H-06530-正',:)
-(:'BB-323|H-10950-正',:)
-(:'BB-344|H-00894-正',:)
-(:'BB-351|H-07773-正',:)
-(:'BB-352|H-00368-正',:)
-(:'BB-370|H-10184-正',:)
-(:'BB-385|H-09524',:)
-(:'BB-394|H-01772-正',:)
-(:'BB-400|H-00655-正',:)
-(:'BB-401|H-00655-反',:)
-(:'BB-485|H-06949-正',:)
-(:'BB-529|H-14153-正',:)
-(:'BB-530|H-14153-反',:)
-(:'BB-531|H-04141-正',:)
-(:'BB-532|H-11940-正',:)
-(:'BB-537|H-14156-正',:)
-(:'BB-546|H-01076-正',:)
-(:'BB-547|H-01076-反',:)
-(:'BB-580|H-09271-反',:)
+'BB-187|H-00697-正',
+'BB-188|H-00697-反',
+'BB-219|H-02273-正反',
+'BB-247|H-14002-正',
+'BB-249|H-06948-正',
+'BB-264|H-00536-正',
+'BB-269|H-05439-正',
+'BB-273|H-06649-正甲',
+'BB-274|H-06649-反甲',
+'BB-275|H-13490-正',
+'BB-307|H-06928-正',
+'BB-313|H-06478-正',
+'BB-315|H-06468-正',
+'BB-319|H-06530-正',
+'BB-323|H-10950-正',
+'BB-344|H-00894-正',
+'BB-351|H-07773-正',
+'BB-352|H-00368-正',
+'BB-370|H-10184-正',
+'BB-394|H-01772-正',
+'BB-400|H-00655-正甲',
+'BB-401|H-00655-反甲',
+'BB-485|H-06949-正反',
+'BB-529|H-14153-正乙',
+'BB-530|H-14153-反乙',
+'BB-531|H-04141-正',
+'BB-532|H-11940-正',
+'BB-537|H-14156-正',
+'BB-546|H-01076-正甲',
+'BB-547|H-01076-反甲',
+'BB-580|H-09271-反'
 )
 
 
@@ -94,9 +93,9 @@ for $i in $input
 let $log := util:log("DEBUG", ("##$i): ", $i))
 let $BB-title := substring-before($i, '|')
 let $Heji-title := substring-after($i, '|')
-let $Heji-uuid := collection('/db/test/out')//tei:title[. eq $Heji-title]/ancestor::tei:TEI/@xml:id/string()
+let $Heji-uuid := collection('/db/tls-data/CHANT')//tei:title[. eq $Heji-title]/ancestor::tei:TEI/@xml:id/string()
 let $Heji-uuid-prefix := substring($Heji-uuid, 6, 1)
-let $Heji-doc := collection("/db/test/out")//(id($Heji-uuid))
+let $Heji-doc := collection("/db/tls-data/CHANT")//(id($Heji-uuid))
 
 let $bone-image := substring-after($Heji-title, '-')
 let $bone-side := substring-after($bone-image, '-')
@@ -137,7 +136,7 @@ let $a :=
         </fileDesc>
     </teiHeader>
 
-<text xml:id="{$BB-title}" facs="{$bone-image}">
+<text xml:id="{$BB-title}" facs="{$bone-image}" corresp="{$Heji-title}">
 <group>
     {
         for $t in (1 to $count-Heji-text)

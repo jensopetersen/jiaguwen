@@ -57,9 +57,13 @@ declare function tei2html:list($node as element(tei:list)) as element() {
 declare function tei2html:seg($node as element(tei:seg)) as element() {
     let $type := $node/ancestor::tei:text/@type
     let $subtype := $node/ancestor::tei:text/@subtype
+    (:format PUA characters with CHANT font.:)
+    let $node := replace($node/text(), '(\p{Co})', '&lt;span class="CHANT">$1&lt;/span>')
+    let $node := concat('&lt;span>', $node, '&lt;/span>')
     return
+    (:There is no markup inside <seg>, so there is no need to use tei2html:recurse($node) to recurse.:)
     <li class="seg {$type} {$subtype}">
-       {tei2html:recurse($node)}
+       {util:parse($node)}
     </li>
 };
 
