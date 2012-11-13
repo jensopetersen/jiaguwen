@@ -14,7 +14,7 @@ declare variable $in-collection := collection('/db/tls-data/CHANT');
 
 declare function local:save-file($doc) {
   let $doc-uid := $doc/@xml:id
-  let $out-collection := 'xmldb:exist:///db/test/BB4'
+  let $out-collection := 'xmldb:exist:///db/test/BB'
   let $login := xmldb:login($out-collection, $username, $password)
   return
     xmldb:store($out-collection,  concat($doc-uid, ".xml"), $doc)
@@ -55,126 +55,91 @@ declare function functx:number-of-matches
 
 let $input := 
 (
-'BB-006|H-05637-反',
+'BB-017|H-06484-反',
 'BB-022|H-00032-正',
-'BB-029|H-03946-反',
-'BB-031|H-03947-反',
-'BB-041|H-00248-正',
-'BB-043|H-01822-正',
-'BB-044|H-01822-反',
-'BB-052|H-00272-反',
-'BB-057|H-11484-正',
-'BB-063|H-12051-正',
-'BB-067|H-10171-正',
-'BB-068|H-10171-反',
-'BB-076|H-06771-正',
-'BB-078|H-09472-正',
-'BB-081|H-09525-正',
+'BB-032|H-00914-正',
+'BB-039|H-01402-正',
+'BB-047|H-00721-正',
+'BB-051|H-00272-正',
+'BB-053|H-00766-正',
+'BB-065|H-14129-正',
+'BB-086|H-10344-正',
 'BB-087|H-10344-反',
-'BB-090|H-00585-正',
 'BB-092|H-22074-正',
-'BB-093|H-14201',
+'BB-094|H-07103-正',
 'BB-096|H-00376-正',
-'BB-097|H-00376-反',
-'BB-101|H-11006-反',
-'BB-103|H-10408-反',
-'BB-104|H-03458-正',
-'BB-107|H-00456-反',
-'BB-114|H-06664-正',
-'BB-116|H-14732-正',
-'BB-120|H-00190-正',
-'BB-124|H-01027-正',
-'BB-128|H-00152-正',
-'BB-135|H-06648-反',
-'BB-150|H-05658-反',
-'BB-157|H-09177-正',
-'BB-159|H-06477-正',
-'BB-161|H-01772-正',
-'BB-163|H-10601-正',
-'BB-177|H-06945-正',
-'BB-181|H-10049-反',
-'BB-182|H-00924-正',
-'BB-184|H-14659',
-'BB-187|H-00697-正',
-'BB-190|H-13931',
-'BB-199|H-14207-正',
-'BB-202|H-11018-反',
-'BB-203|H-00776-正',
-'BB-211|H-06943',
-'BB-223|H-14755-正',
-'BB-226|H-01779-反',
-'BB-235|H-00902-正',
-'BB-243|H-00641-正',
-'BB-249|H-06948-正',
-'BB-251|H-00709-正',
-'BB-253|H-02652-正',
+'BB-102|H-10408-正',
+'BB-106|H-00456-正',
+'BB-108|H-14208-正',
+'BB-110|H-06033-正',
+'BB-112|H-14735-正',
+'BB-117|H-00672-正',
+'BB-126|H-09504-正',
+'BB-134|H-06648-正',
+'BB-139|H-06653-正',
+'BB-140|H-06653-反',
+'BB-141|H-06016-正',
+'BB-143|H-07426-正',
+'BB-144|H-07426-反',
+'BB-145|H-13506-正',
+'BB-149|H-05658-正',
+'BB-153|H-16131-正',
+'BB-156|H-00667-反',
+'BB-158|H-09177-反',
+'BB-162|H-01772-反',
+'BB-165|H-07772-正',
+'BB-171|H-06572-正',
+'BB-172|H-00590-正',
+'BB-173|H-00590-反',
+'BB-180|H-10049-正',
+'BB-200|H-14207-反',
+'BB-201|H-11018-正',
+'BB-205|H-00938-正',
+'BB-209|H-11498-正',
+'BB-220|H-02273-反',
+'BB-221|H-14315-正',
+'BB-229|H-00947-正',
+'BB-237|H-14198-正',
+'BB-252|H-00709-反',
+'BB-259|H-07076-正',
 'BB-261|H-06946-正',
-'BB-263|H-07768',
-'BB-264|H-00536-正',
-'BB-265|H-10299-正',
-'BB-268|H-02530-反',
+'BB-266|H-10299-反',
 'BB-269|H-05439-正',
-'BB-275|H-13490-正',
-'BB-276|H-06461-正',
-'BB-277|H-06461-反',
-'BB-285|H-10198-反',
-'BB-287|H-10910-反',
-'BB-289|H-14755-正',
-'BB-291|H-10346-正',
-'BB-294|H-00816-反',
-'BB-296|H-17079-正',
-'BB-297|H-17079-反',
-'BB-304|H-06947-正',
-'BB-306|H-06943',
-'BB-313|H-06478-正',
-'BB-314|H-06478-反',
-'BB-317|H-06653-正',
-'BB-323|H-10950-正',
-'BB-324|H-00893-正',
-'BB-326|H-07852-正',
-'BB-334|H-00709-正',
-'BB-337|H-03216-反',
-'BB-340|H-10136-正',
-'BB-360|H-00438-正',
-'BB-366|H-00671-正',
-'BB-375|H-09234-正',
-'BB-378|H-18911-反',
-'BB-381|H-00900-正',
-'BB-390|H-09608-正',
-'BB-391|H-09608-反',
-'BB-394|H-01772-正',
-'BB-413|H-00940-正',
-'BB-414|H-00940-反',
-'BB-419|H-01385-正',
-'BB-425|H-01052-正',
-'BB-439|H-00734-反',
-'BB-440|H-00478-正',
-'BB-442|H-14755-正',
-'BB-455|H-00893-正',
-'BB-457|H-00915-正',
-'BB-461|H-02231',
-'BB-476|H-14787-反',
-'BB-485|H-06949-正反',
-'BB-487|H-00098-正',
-'BB-489|H-00943-正',
-'BB-491|H-04121',
-'BB-504|H-17271-正',
-'BB-506|H-00991-正',
-'BB-508|H-13713-正',
-'BB-513|H-00795-正',
-'BB-514|H-00795-反',
-'BB-521|H-14161-正',
-'BB-527|H-11892-正',
-'BB-540|H-00775-正',
-'BB-603|H-06457-正',
-'BB-605|H-07075-正',
-'BB-607|H-01823-正',
-'BB-611|H-21586',
-'BB-617|H-00893-正'
+'BB-273|H-06649-正甲',
+'BB-299|H-09811-正',
+'BB-307|H-06928-正',
+'BB-320|H-06530-反',
+'BB-335|H-00709-反',
+'BB-350|H-00974-反',
+'BB-368|H-12487-正',
+'BB-373|H-09791-正',
+'BB-421|H-00140-正',
+'BB-441|H-00478-反',
+'BB-451|H-05477-反',
+'BB-462|H-02252',
+'BB-463|H-07387',
+'BB-467|H-00717-正',
+'BB-473|H-13666-正',
+'BB-498|H-00947-正',
+'BB-529|H-14153-正乙',
+'BB-532|H-11940-正',
+'BB-539|H-13333-反',
+'BB-546|H-01076-正甲',
+'BB-547|H-01076-反甲',
+'BB-554|H-10902',
+'BB-568|H-00273-正',
+'BB-569|H-00273-反',
+'BB-606|H-07075-反',
+'BB-345|H-13793-正',
+'BB-349|H-00974-正',
+'BB-393|H-01248-反',
+'BB-431|H-01140-正',
+'BB-477|H-13283-正',
+'BB-557|H-03481',
+'BB-609|H-22196',
+'BB-613|H-22098'
 
 )
-
-
 
 
 for $i in $input
@@ -204,7 +169,95 @@ let $bone-image :=
     else $bone-number
 let $bone-image := concat($bone-image, '.png')
 
-let $count-Heji-text := count($Heji-doc/tei:text/tei:group/tei:text)
+let $corresp1 :=
+<BBs>
+
+    <BB n="BB-017">10</BB>
+    <BB n="BB-022">8</BB>
+    <BB n="BB-032">27</BB>
+    <BB n="BB-039">18</BB>
+    <BB n="BB-047">28</BB>
+    <BB n="BB-051">9</BB>
+    <BB n="BB-053">12</BB>
+    <BB n="BB-065">8</BB>
+    <BB n="BB-086">15</BB>
+    <BB n="BB-087">11</BB>
+    <BB n="BB-092">16</BB>
+    <BB n="BB-094">2</BB>
+    <BB n="BB-096">27</BB>
+    <BB n="BB-102">15</BB>
+    <BB n="BB-106">21</BB>
+    <BB n="BB-108">6</BB>
+    <BB n="BB-110">6</BB>
+    <BB n="BB-112">14</BB>
+    <BB n="BB-117">41</BB>
+    <BB n="BB-126">17</BB>
+    <BB n="BB-134">10</BB>
+    <BB n="BB-139">8</BB>
+    <BB n="BB-140">2</BB>
+    <BB n="BB-141">19</BB>
+    <BB n="BB-143">24</BB>
+    <BB n="BB-144">12</BB>
+    <BB n="BB-145">8</BB>
+    <BB n="BB-149">23</BB>
+    <BB n="BB-153">14</BB>
+    <BB n="BB-156">19</BB>
+    <BB n="BB-158">6</BB>
+    <BB n="BB-162">2</BB>
+    <BB n="BB-165">23</BB>
+    <BB n="BB-171">9</BB>
+    <BB n="BB-172">15</BB>
+    <BB n="BB-173">3</BB>
+    <BB n="BB-180">10</BB>
+    <BB n="BB-200">9</BB>
+    <BB n="BB-201">29</BB>
+    <BB n="BB-205">10</BB>
+    <BB n="BB-209">7</BB>
+    <BB n="BB-220">7</BB>
+    <BB n="BB-221">8</BB>
+    <BB n="BB-229">12</BB>
+    <BB n="BB-237">8</BB>
+    <BB n="BB-252">23</BB>
+    <BB n="BB-259">32</BB>
+    <BB n="BB-261">15</BB>
+    <BB n="BB-266">2</BB>
+    <BB n="BB-269">12</BB>
+    <BB n="BB-273">20</BB>
+    <BB n="BB-299">3</BB>
+    <BB n="BB-307">7</BB>
+    <BB n="BB-320">5</BB>
+    <BB n="BB-335">23</BB>
+    <BB n="BB-350">22</BB>
+    <BB n="BB-368">3</BB>
+    <BB n="BB-373">4</BB>
+    <BB n="BB-421">7</BB>
+    <BB n="BB-441">6</BB>
+    <BB n="BB-451">4</BB>
+    <BB n="BB-462">6</BB>
+    <BB n="BB-463">3</BB>
+    <BB n="BB-467">8</BB>
+    <BB n="BB-473">5</BB>
+    <BB n="BB-498">12</BB>
+    <BB n="BB-529">17</BB>
+    <BB n="BB-532">2</BB>
+    <BB n="BB-539">2</BB>
+    <BB n="BB-546">15</BB>
+    <BB n="BB-547">17</BB>
+    <BB n="BB-554">8</BB>
+    <BB n="BB-568">4</BB>
+    <BB n="BB-569">3</BB>
+    <BB n="BB-606">7</BB>
+    <BB n="BB-345">7</BB>
+    <BB n="BB-349">48</BB>
+    <BB n="BB-393">17</BB>
+    <BB n="BB-431">11</BB>
+    <BB n="BB-477">2</BB>
+    <BB n="BB-557">5</BB>
+    <BB n="BB-609">7</BB>
+    <BB n="BB-613">5</BB>
+</BBs>
+
+let $count-BB-text := $corresp1/BB[@n eq $BB-title]/text()
 
 let $Takashima-transcription := '.text-transcription-Takashima'
 let $Takashima-translation := '.text-translation-Takashima'
@@ -227,22 +280,50 @@ let $a :=
 <text xml:id="{$BB-title}" facs="{$bone-image}" corresp="{$Heji-title}">
 <group>
     {
-        let $texts :=
-        for $H-text-number in (1 to $count-Heji-text)
-        let $corresp :=
+
+let $corresp :=
 <BBs>
-    <BB n="BB-006">
+    <!--david-->
+    <BB n="BB-017">
         <number>
             <BB>1</BB>
-            <H>2</H>
+            <H>3</H>
         </number>
         <number>
             <BB>2</BB>
-            <H>1</H>
+            <H>4</H>
         </number>
         <number>
             <BB>3</BB>
-            <H>3</H>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>6</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>7</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>8</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>9</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>10</H>
+        </number>
+        <number>
+            <BB>9</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>10</BB>
+            <H>2</H>
         </number>
     </BB>
     <BB n="BB-022">
@@ -272,50 +353,198 @@ let $a :=
         </number>
         <number>
             <BB>7</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>9</BB>
             <H>13</H>
         </number>
         <number>
-            <BB>10</BB>
+            <BB>8</BB>
             <H>14</H>
         </number>
+    </BB>
+    <BB n="BB-032">
         <number>
-            <BB>11</BB>
+            <BB>1</BB>
             <H>9</H>
         </number>
         <number>
-            <BB>12</BB>
+            <BB>2</BB>
             <H>10</H>
         </number>
-    </BB>
-    <BB n="BB-029">
         <number>
-            <BB>1</BB>
+            <BB>3</BB>
+            <H>11</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>14</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>13</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>15</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>12</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>9</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>10</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>11</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>12</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>13</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>14</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>15</BB>
+            <H>16</H>
+        </number>
+        <number>
+            <BB>16</BB>
+            <H>17</H>
+        </number>
+        <number>
+            <BB>17</BB>
+            <H>18</H>
+        </number>
+        <number>
+            <BB>18</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>19</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>20</BB>
+            <H>19</H>
+        </number>
+        <number>
+            <BB>21</BB>
+            <H>20</H>
+        </number>
+        <number>
+            <BB>22</BB>
+            <H>21</H>
+        </number>
+        <number>
+            <BB>23</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>24</BB>
             <H>2</H>
         </number>
         <number>
-            <BB>2</BB>
-            <H>1</H>
+            <BB>25</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>26</BB>
+            <H>8</H>
+        </number>
+        <number>
+            <BB>27</BB>
+            <H>7</H>
         </number>
     </BB>
-    <BB n="BB-031">
+    <BB n="BB-039">
         <number>
             <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
             <H>2</H>
         </number>
         <number>
-            <BB>2</BB>
-            <H>1</H>
+            <BB>3</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>9</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>10</BB>
+            <H>6</H>
+        </number>
+        <number>
+            <BB>11</BB>
+            <H>7</H>
+        </number>
+        <number>
+            <BB>12</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>13</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>14</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>15</BB>
+            <H>8</H>
+        </number>
+        <number>
+            <BB>16</BB>
+            <H>9</H>
+        </number>
+        <number>
+            <BB>17</BB>
+            <H>10</H>
+        </number>
+        <number>
+            <BB>18</BB>
+            <H>11</H>
         </number>
     </BB>
-    <BB n="BB-041">
+    <BB n="BB-047">
         <number>
             <BB>1</BB>
             <H>1</H>
@@ -342,15 +571,15 @@ let $a :=
         </number>
         <number>
             <BB>7</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>8</BB>
             <H>7</H>
         </number>
         <number>
-            <BB>9</BB>
+            <BB>8</BB>
             <H>8</H>
+        </number>
+        <number>
+            <BB>9</BB>
+            <H>9</H>
         </number>
         <number>
             <BB>10</BB>
@@ -374,19 +603,19 @@ let $a :=
         </number>
         <number>
             <BB>15</BB>
-            <H>15</H>
+            <H>-</H>
         </number>
         <number>
             <BB>16</BB>
-            <H>16</H>
+            <H>-</H>
         </number>
         <number>
             <BB>17</BB>
-            <H>17</H>
+            <H>-</H>
         </number>
         <number>
             <BB>18</BB>
-            <H>18</H>
+            <H>-</H>
         </number>
         <number>
             <BB>19</BB>
@@ -398,160 +627,76 @@ let $a :=
         </number>
         <number>
             <BB>21</BB>
-            <H>21</H>
+            <H>15</H>
         </number>
         <number>
             <BB>22</BB>
-            <H>-</H>
-        </number>
-    </BB>
-    <BB n="BB-043">
-        <number>
-            <BB>1</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>13</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>14</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>15</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>13</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>14</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>15</BB>
-            <H>1</H>
-        </number>
-    </BB>
-    <BB n="BB-044">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>2</H>
-        </number>
-    </BB>
-    <BB n="BB-052">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>13</BB>
-            <H>13</H>
-        </number>
-        <number>
-            <BB>14</BB>
-            <H>14</H>
-        </number>
-        <number>
-            <BB>15</BB>
-            <H>15</H>
-        </number>
-        <number>
-            <BB>16</BB>
             <H>16</H>
         </number>
         <number>
-            <BB>17</BB>
+            <BB>23</BB>
             <H>17</H>
         </number>
+        <number>
+            <BB>24</BB>
+            <H>18</H>
+        </number>
+        <number>
+            <BB>25</BB>
+            <H>21</H>
+        </number>
+        <number>
+            <BB>26</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>27</BB>
+            <H>22</H>
+        </number>
+        <number>
+            <BB>28</BB>
+            <H>23</H>
+        </number>
     </BB>
-    <BB n="BB-057">
+    <BB n="BB-051">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>6</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>7</H>
+        </number>
+        <number>
+            <BB>9</BB>
+            <H>8</H>
+        </number>
+    </BB>
+    <BB n="BB-053">
         <number>
             <BB>1</BB>
             <H>1</H>
@@ -562,31 +707,31 @@ let $a :=
         </number>
         <number>
             <BB>3</BB>
-            <H>3</H>
+            <H>-</H>
         </number>
         <number>
             <BB>4</BB>
-            <H>4</H>
+            <H>-</H>
         </number>
         <number>
             <BB>5</BB>
-            <H>11</H>
+            <H>-</H>
         </number>
         <number>
             <BB>6</BB>
-            <H>12</H>
+            <H>3</H>
         </number>
         <number>
             <BB>7</BB>
-            <H>9</H>
+            <H>4</H>
         </number>
         <number>
             <BB>8</BB>
-            <H>10</H>
+            <H>5</H>
         </number>
         <number>
             <BB>9</BB>
-            <H>5</H>
+            <H>-</H>
         </number>
         <number>
             <BB>10</BB>
@@ -600,77 +745,23 @@ let $a :=
             <BB>12</BB>
             <H>8</H>
         </number>
-        <number>
-            <BB>13</BB>
-            <H>13</H>
-        </number>
-        <number>
-            <BB>14</BB>
-            <H>14</H>
-        </number>
     </BB>
-    <BB n="BB-063">
+    <BB n="BB-065">
         <number>
             <BB>1</BB>
             <H>1</H>
         </number>
         <number>
             <BB>2</BB>
-            <H>2</H>
+            <H>-</H>
         </number>
         <number>
             <BB>3</BB>
-            <H>3</H>
+            <H>-</H>
         </number>
         <number>
             <BB>4</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>8</H>
-        </number>
-    </BB>
-    <BB n="BB-067">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
             <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>4</H>
         </number>
         <number>
             <BB>5</BB>
@@ -682,48 +773,14 @@ let $a :=
         </number>
         <number>
             <BB>7</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>11</H>
-        </number>
-    </BB>
-    <BB n="BB-068">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
             <H>3</H>
         </number>
         <number>
-            <BB>4</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>5</BB>
+            <BB>8</BB>
             <H>4</H>
         </number>
     </BB>
-    <BB n="BB-076">
+    <BB n="BB-086">
         <number>
             <BB>1</BB>
             <H>1</H>
@@ -750,166 +807,44 @@ let $a :=
         </number>
         <number>
             <BB>7</BB>
+            <H>7</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>9</BB>
+            <H>8</H>
+        </number>
+        <number>
+            <BB>10</BB>
             <H>9</H>
         </number>
         <number>
-            <BB>8</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>10</H>
-        </number>
-    </BB>
-    <BB n="BB-078">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>12</H>
-        </number>
-        <number>
             <BB>11</BB>
-            <H>13</H>
+            <H>10</H>
         </number>
         <number>
             <BB>12</BB>
-            <H>14</H>
+            <H>-</H>
         </number>
         <number>
             <BB>13</BB>
-            <H>9</H>
+            <H>-</H>
         </number>
         <number>
             <BB>14</BB>
-            <H>10</H>
-        </number>
-    </BB>
-    <BB n="BB-081">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
+            <H>11</H>
         </number>
         <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>9</H>
+            <BB>15</BB>
+            <H>12</H>
         </number>
     </BB>
     <BB n="BB-087">
         <number>
             <BB>1</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>11</H>
-        </number>
-    </BB>
-    <BB n="BB-090">
-        <number>
-            <BB>1</BB>
             <H>1</H>
         </number>
         <number>
@@ -946,61 +881,53 @@ let $a :=
         </number>
         <number>
             <BB>10</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>11</BB>
             <H>11</H>
         </number>
         <number>
-            <BB>12</BB>
-            <H>14</H>
-        </number>
-        <number>
-            <BB>13</BB>
+            <BB>11</BB>
             <H>12</H>
-        </number>
-        <number>
-            <BB>14</BB>
-            <H>13</H>
         </number>
     </BB>
     <BB n="BB-092">
         <number>
             <BB>1</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>4</BB>
             <H>1</H>
         </number>
         <number>
-            <BB>5</BB>
-            <H>6</H>
+            <BB>2</BB>
+            <H>2</H>
         </number>
         <number>
-            <BB>6</BB>
+            <BB>3</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>5</BB>
             <H>5</H>
         </number>
         <number>
+            <BB>6</BB>
+            <H>6</H>
+        </number>
+        <number>
             <BB>7</BB>
-            <H>10</H>
+            <H>0</H>
         </number>
         <number>
             <BB>8</BB>
+            <H>8</H>
+        </number>
+        <number>
+            <BB>9</BB>
             <H>9</H>
         </number>
         <number>
             <BB>10</BB>
-            <H>8</H>
+            <H>10</H>
         </number>
         <number>
             <BB>11</BB>
@@ -1020,41 +947,21 @@ let $a :=
         </number>
         <number>
             <BB>15</BB>
-            <H>16</H>
+            <H>15</H>
         </number>
         <number>
             <BB>16</BB>
-            <H>15</H>
+            <H>16</H>
         </number>
     </BB>
-    <BB n="BB-093">
+    <BB n="BB-094">
         <number>
             <BB>1</BB>
             <H>1</H>
         </number>
         <number>
             <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
             <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>7</H>
         </number>
     </BB>
     <BB n="BB-096">
@@ -1068,23 +975,23 @@ let $a :=
         </number>
         <number>
             <BB>3</BB>
-            <H>6</H>
+            <H>5</H>
         </number>
         <number>
             <BB>4</BB>
-            <H>7</H>
+            <H>6</H>
         </number>
         <number>
             <BB>5</BB>
-            <H>3</H>
+            <H>7</H>
         </number>
         <number>
             <BB>6</BB>
-            <H>4</H>
+            <H>3</H>
         </number>
         <number>
             <BB>7</BB>
-            <H>5</H>
+            <H>4</H>
         </number>
         <number>
             <BB>8</BB>
@@ -1167,7 +1074,1003 @@ let $a :=
             <H>27</H>
         </number>
     </BB>
-    <BB n="BB-097">
+    <BB n="BB-102">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>6</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>7</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>9</BB>
+            <H>8</H>
+        </number>
+        <number>
+            <BB>10</BB>
+            <H>9</H>
+        </number>
+        <number>
+            <BB>11</BB>
+            <H>10</H>
+        </number>
+        <number>
+            <BB>12</BB>
+            <H>11</H>
+        </number>
+        <number>
+            <BB>13</BB>
+            <H>12</H>
+        </number>
+        <number>
+            <BB>14</BB>
+            <H>13</H>
+        </number>
+        <number>
+            <BB>15</BB>
+            <H>14</H>
+        </number>
+    </BB>
+    <BB n="BB-106">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>9</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>10</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>11</BB>
+            <H>7</H>
+        </number>
+        <number>
+            <BB>12</BB>
+            <H>8</H>
+        </number>
+        <number>
+            <BB>13</BB>
+            <H>9</H>
+        </number>
+        <number>
+            <BB>14</BB>
+            <H>10</H>
+        </number>
+        <number>
+            <BB>15</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>16</BB>
+            <H>11</H>
+        </number>
+        <number>
+            <BB>17</BB>
+            <H>12</H>
+        </number>
+        <number>
+            <BB>18</BB>
+            <H>13</H>
+        </number>
+        <number>
+            <BB>19</BB>
+            <H>14</H>
+        </number>
+        <number>
+            <BB>20</BB>
+            <H>15</H>
+        </number>
+        <number>
+            <BB>21</BB>
+            <H>16</H>
+        </number>
+    </BB>
+    <BB n="BB-108">
+        <number>
+            <BB>1</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>4</H>
+        </number>
+    </BB>
+    <BB n="BB-110">
+        <number>
+            <BB>1</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>7</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>6</H>
+        </number>
+    </BB>
+    <BB n="BB-112">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>6</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>8</H>
+        </number>
+        <number>
+            <BB>9</BB>
+            <H>9</H>
+        </number>
+        <number>
+            <BB>10</BB>
+            <H>12</H>
+        </number>
+        <number>
+            <BB>11</BB>
+            <H>13</H>
+        </number>
+        <number>
+            <BB>12</BB>
+            <H>7</H>
+        </number>
+        <number>
+            <BB>13</BB>
+            <H>10</H>
+        </number>
+        <number>
+            <BB>14</BB>
+            <H>11</H>
+        </number>
+    </BB>
+    <BB n="BB-117">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>6</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>7</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>9</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>10</H>
+        </number>
+        <number>
+            <BB>9</BB>
+            <H>11</H>
+        </number>
+        <number>
+            <BB>10</BB>
+            <H>12</H>
+        </number>
+        <number>
+            <BB>11</BB>
+            <H>13</H>
+        </number>
+        <number>
+            <BB>12</BB>
+            <H>14</H>
+        </number>
+        <number>
+            <BB>13</BB>
+            <H>15</H>
+        </number>
+        <number>
+            <BB>14</BB>
+            <H>16</H>
+        </number>
+        <number>
+            <BB>15</BB>
+            <H>17</H>
+        </number>
+        <number>
+            <BB>16</BB>
+            <H>18</H>
+        </number>
+        <number>
+            <BB>17</BB>
+            <H>19</H>
+        </number>
+        <number>
+            <BB>18</BB>
+            <H>20</H>
+        </number>
+        <number>
+            <BB>19</BB>
+            <H>21</H>
+        </number>
+        <number>
+            <BB>20</BB>
+            <H>22</H>
+        </number>
+        <number>
+            <BB>21</BB>
+            <H>23</H>
+        </number>
+        <number>
+            <BB>22</BB>
+            <H>24</H>
+        </number>
+        <number>
+            <BB>23</BB>
+            <H>25</H>
+        </number>
+        <number>
+            <BB>24</BB>
+            <H>26</H>
+        </number>
+        <number>
+            <BB>25</BB>
+            <H>28</H>
+        </number>
+        <number>
+            <BB>26</BB>
+            <H>27</H>
+        </number>
+        <number>
+            <BB>27</BB>
+            <H>29</H>
+        </number>
+        <number>
+            <BB>28</BB>
+            <H>30</H>
+        </number>
+        <number>
+            <BB>31</BB>
+            <H>32</H>
+        </number>
+        <number>
+            <BB>32</BB>
+            <H>33</H>
+        </number>
+        <number>
+            <BB>33</BB>
+            <H>34</H>
+        </number>
+        <number>
+            <BB>34</BB>
+            <H>35</H>
+        </number>
+        <number>
+            <BB>35</BB>
+            <H>36</H>
+        </number>
+        <number>
+            <BB>36</BB>
+            <H>37</H>
+        </number>
+        <number>
+            <BB>37</BB>
+            <H>38</H>
+        </number>
+        <number>
+            <BB>38</BB>
+            <H>40</H>
+        </number>
+        <number>
+            <BB>39</BB>
+            <H>41</H>
+        </number>
+        <number>
+            <BB>40</BB>
+            <H>42</H>
+        </number>
+        <number>
+            <BB>41</BB>
+            <H>43</H>
+        </number>
+        <number>
+            <BB>42</BB>
+            <H>44</H>
+        </number>
+        <number>
+            <BB>43</BB>
+            <H>45</H>
+        </number>
+    </BB>
+    <BB n="BB-126">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>6</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>7</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>8</H>
+        </number>
+        <number>
+            <BB>9</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>10</BB>
+            <H>9</H>
+        </number>
+        <number>
+            <BB>11</BB>
+            <H>10</H>
+        </number>
+        <number>
+            <BB>12</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>13</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>14</BB>
+            <H>11</H>
+        </number>
+        <number>
+            <BB>15</BB>
+            <H>12</H>
+        </number>
+        <number>
+            <BB>16</BB>
+            <H>13</H>
+        </number>
+        <number>
+            <BB>17</BB>
+            <H>14</H>
+        </number>
+    </BB>
+    <BB n="BB-134">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>7</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>9</BB>
+            <H>6</H>
+        </number>
+        <number>
+            <BB>10</BB>
+            <H>3</H>
+        </number>
+    </BB>
+    <BB n="BB-139">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>9</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>12</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>13</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>14</H>
+        </number>
+    </BB>
+    <BB n="BB-140">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>3</H>
+        </number>
+
+    </BB>
+    <BB n="BB-141">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>9</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>10</BB>
+            <H>8</H>
+        </number>
+        <number>
+            <BB>11</BB>
+            <H>6</H>
+        </number>
+        <number>
+            <BB>12</BB>
+            <H>7</H>
+        </number>
+        <number>
+            <BB>13</BB>
+            <H>9</H>
+        </number>
+        <number>
+            <BB>14</BB>
+            <H>10</H>
+        </number>
+        <number>
+            <BB>15</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>16</BB>
+            <H>11</H>
+        </number>
+        <number>
+            <BB>17</BB>
+            <H>12</H>
+        </number>
+        <number>
+            <BB>18</BB>
+            <H>13</H>
+        </number>
+        <number>
+            <BB>19</BB>
+            <H>14</H>
+        </number>
+    </BB>
+    <BB n="BB-143">
+
+        <number>
+            <BB>1</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>9</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>10</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>11</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>12</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>13</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>14</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>15</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>16</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>17</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>18</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>19</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>20</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>21</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>22</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>23</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>24</BB>
+            <H>2</H>
+        </number>
+    </BB>
+    <BB n="BB-144">
+
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>7</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>9</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>10</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>8</H>
+        </number>
+        <number>
+            <BB>9</BB>
+            <H>11</H>
+        </number>
+        <number>
+            <BB>10</BB>
+            <H>12</H>
+        </number>
+        <number>
+            <BB>11</BB>
+            <H>13</H>
+        </number>
+        <number>
+            <BB>12</BB>
+            <H>14</H>
+        </number>
+    </BB>
+    <BB n="BB-145">
+
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>6</H>
+        </number>
+    </BB>
+    <BB n="BB-149">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>6</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>7</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>9</BB>
+            <H>8</H>
+        </number>
+        <number>
+            <BB>10</BB>
+            <H>9</H>
+        </number>
+        <number>
+            <BB>11</BB>
+            <H>10</H>
+        </number>
+        <number>
+            <BB>12</BB>
+            <H>11</H>
+        </number>
+        <number>
+            <BB>13</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>14</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>15</BB>
+            <H>12</H>
+        </number>
+        <number>
+            <BB>16</BB>
+            <H>13</H>
+        </number>
+        <number>
+            <BB>17</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>18</BB>
+            <H>17</H>
+        </number>
+        <number>
+            <BB>19</BB>
+            <H>18</H>
+        </number>
+        <number>
+            <BB>20</BB>
+            <H>16</H>
+        </number>
+        <number>
+            <BB>21</BB>
+            <H>14</H>
+        </number>
+        <number>
+            <BB>22</BB>
+            <H>15</H>
+        </number>
+        <number>
+            <BB>23</BB>
+            <H>19</H>
+        </number>
+    </BB>
+    <BB n="BB-153">
+        <number>
+            <BB>1</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>9</BB>
+            <H>6</H>
+        </number>
+        <number>
+            <BB>10</BB>
+            <H>7</H>
+        </number>
+        <number>
+            <BB>11</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>12</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>13</BB>
+            <H>8</H>
+        </number>
+        <number>
+            <BB>14</BB>
+            <H>9</H>
+        </number>
+    </BB>
+    <BB n="BB-156">
         <number>
             <BB>1</BB>
             <H>1</H>
@@ -1222,7 +2125,7 @@ let $a :=
         </number>
         <number>
             <BB>14</BB>
-            <H>14</H>
+            <H>16</H>
         </number>
         <number>
             <BB>15</BB>
@@ -1230,7 +2133,7 @@ let $a :=
         </number>
         <number>
             <BB>16</BB>
-            <H>16</H>
+            <H>14</H>
         </number>
         <number>
             <BB>17</BB>
@@ -1242,46 +2145,452 @@ let $a :=
         </number>
         <number>
             <BB>19</BB>
-            <H>19</H>
+            <H>18</H>
+        </number>
+    </BB>
+    <BB n="BB-158">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>6</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>7</H>
+        </number>
+    </BB>
+    <BB n="BB-162">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>2</H>
+        </number>
+    </BB>
+    <BB n="BB-165">
+        <number>
+            <BB>1</BB>
+            <H>14</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>15</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>12</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>13</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>10</H>
+        </number>
+        <number>
+            <BB>9</BB>
+            <H>11</H>
+        </number>
+        <number>
+            <BB>10</BB>
+            <H>6</H>
+        </number>
+        <number>
+            <BB>11</BB>
+            <H>7</H>
+        </number>
+        <number>
+            <BB>12</BB>
+            <H>8</H>
+        </number>
+        <number>
+            <BB>13</BB>
+            <H>9</H>
+        </number>
+        <number>
+            <BB>14</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>15</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>16</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>17</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>18</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>19</BB>
+            <H>-</H>
         </number>
         <number>
             <BB>20</BB>
-            <H>20</H>
+            <H>16</H>
         </number>
         <number>
             <BB>21</BB>
-            <H>21</H>
+            <H>17</H>
         </number>
         <number>
             <BB>22</BB>
-            <H>22</H>
+            <H>18</H>
         </number>
         <number>
             <BB>23</BB>
-            <H>23</H>
+            <H>19</H>
+        </number>
+    </BB>
+    <BB n="BB-171">
+        <number>
+            <BB>1</BB>
+            <H>2</H>
         </number>
         <number>
-            <BB>24</BB>
-            <H>24</H>
+            <BB>2</BB>
+            <H>-</H>
         </number>
         <number>
-            <BB>25</BB>
+            <BB>3</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>6</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>7</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>8</H>
+        </number>
+        <number>
+            <BB>9</BB>
+            <H>9</H>
+        </number>
+    </BB>
+    <BB n="BB-172">
+        <number>
+            <BB>1</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>9</BB>
+            <H>6</H>
+        </number>
+        <number>
+            <BB>10</BB>
+            <H>7</H>
+        </number>
+        <number>
+            <BB>11</BB>
+            <H>8</H>
+        </number>
+        <number>
+            <BB>12</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>13</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>14</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>15</BB>
+            <H>9</H>
+        </number>
+    </BB>
+    <BB n="BB-173">
+        <number>
+            <BB>1</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>1</H>
+        </number>
+    </BB>
+    <BB n="BB-180">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>9</BB>
+            <H>6</H>
+        </number>
+        <number>
+            <BB>10</BB>
+            <H>7</H>
+        </number>
+    </BB>
+    <BB n="BB-200">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>6</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>7</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>8</H>
+        </number>
+        <number>
+            <BB>9</BB>
+            <H>8</H>
+        </number>
+    </BB>
+    <BB n="BB-201">
+        <number>
+            <BB>1</BB>
             <H>25</H>
         </number>
         <number>
-            <BB>26</BB>
+            <BB>2</BB>
             <H>26</H>
         </number>
         <number>
+            <BB>3</BB>
+            <H>23</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>24</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>15</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>16</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>17</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>18</H>
+        </number>
+        <number>
+            <BB>9</BB>
+            <H>19</H>
+        </number>
+        <number>
+            <BB>10</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>11</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>12</BB>
+            <H>8</H>
+        </number>
+        <number>
+            <BB>13</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>14</BB>
+            <H>6</H>
+        </number>
+        <number>
+            <BB>15</BB>
+            <H>7</H>
+        </number>
+        <number>
+            <BB>16</BB>
+            <H>13</H>
+        </number>
+        <number>
+            <BB>17</BB>
+            <H>14</H>
+        </number>
+        <number>
+            <BB>18</BB>
+            <H>9</H>
+        </number>
+        <number>
+            <BB>19</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>20</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>21</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>22</BB>
+            <H>10</H>
+        </number>
+        <number>
+            <BB>23</BB>
+            <H>20</H>
+        </number>
+        <number>
+            <BB>24</BB>
+            <H>21</H>
+        </number>
+        <number>
+            <BB>25</BB>
+            <H>22</H>
+        </number>
+        <number>
+            <BB>26</BB>
+            <H>11</H>
+        </number>
+        <number>
             <BB>27</BB>
-            <H>28</H>
+            <H>12</H>
         </number>
         <number>
             <BB>28</BB>
             <H>27</H>
         </number>
+        <number>
+            <BB>29</BB>
+            <H>28</H>
+        </number>
     </BB>
-    <BB n="BB-101">
+    <BB n="BB-205">
         <number>
             <BB>1</BB>
             <H>1</H>
@@ -1292,47 +2601,83 @@ let $a :=
         </number>
         <number>
             <BB>3</BB>
-            <H>4</H>
+            <H>3</H>
         </number>
         <number>
             <BB>4</BB>
-            <H>3</H>
+            <H>4</H>
         </number>
         <number>
             <BB>5</BB>
             <H>5</H>
         </number>
+        <number>
+            <BB>6</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>6</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>7</H>
+        </number>
+        <number>
+            <BB>9</BB>
+            <H>8</H>
+        </number>
+        <number>
+            <BB>10</BB>
+            <H>9</H>
+        </number>
     </BB>
-    <BB n="BB-103">
+    <BB n="BB-209">
         <number>
             <BB>1</BB>
-            <H>2</H>
+            <H>1</H>
         </number>
         <number>
             <BB>2</BB>
-            <H>1</H>
+            <H>2</H>
         </number>
         <number>
             <BB>3</BB>
             <H>3</H>
         </number>
+        <number>
+            <BB>4</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>7</H>
+        </number>
     </BB>
-    <BB n="BB-104">
+    <BB n="BB-220">
         <number>
             <BB>1</BB>
-            <H>7</H>
+            <H>1</H>
         </number>
         <number>
             <BB>2</BB>
-            <H>8</H>
+            <H>2</H>
         </number>
         <number>
             <BB>3</BB>
-            <H>11</H>
+            <H>3</H>
         </number>
         <number>
             <BB>4</BB>
-            <H>2</H>
+            <H>4</H>
         </number>
         <number>
             <BB>5</BB>
@@ -1344,238 +2689,128 @@ let $a :=
         </number>
         <number>
             <BB>7</BB>
-            <H>10</H>
+            <H>8</H>
+        </number>
+    </BB>
+    <BB n="BB-221">
+        <number>
+            <BB>1</BB>
+            <H>2</H>
         </number>
         <number>
-            <BB>8</BB>
-            <H>9</H>
+            <BB>2</BB>
+            <H>1</H>
         </number>
         <number>
-            <BB>9</BB>
+            <BB>3</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>4</BB>
             <H>4</H>
         </number>
         <number>
-            <BB>10</BB>
+            <BB>5</BB>
+            <H>6</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>7</H>
+        </number>
+    </BB>
+    <BB n="BB-229">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>3</BB>
             <H>3</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>6</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>7</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>8</H>
+        </number>
+        <number>
+            <BB>9</BB>
+            <H>9</H>
+        </number>
+        <number>
+            <BB>10</BB>
+            <H>10</H>
         </number>
         <number>
             <BB>11</BB>
-            <H>1</H>
-        </number>
-    </BB>
-    <BB n="BB-107">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>9</H>
-        </number>
-    </BB>
-    <BB n="BB-114">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>7</BB>
             <H>12</H>
         </number>
         <number>
-            <BB>8</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>10</H>
-        </number>
-        <number>
             <BB>12</BB>
-            <H>11</H>
-        </number>
-    </BB>
-    <BB n="BB-116">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>4</H>
-        </number>
-    </BB>
-    <BB n="BB-120">
-        <number>
-            <BB>1</BB>
-            <H>14</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>13</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>14</BB>
             <H>13</H>
         </number>
+    </BB>
+    <BB n="BB-237">
         <number>
-            <BB>15</BB>
-            <H>15</H>
+            <BB>1</BB>
+            <H>5</H>
         </number>
         <number>
-            <BB>16</BB>
-            <H>17</H>
+            <BB>2</BB>
+            <H>8</H>
         </number>
         <number>
-            <BB>17</BB>
-            <H>16</H>
+            <BB>3</BB>
+            <H>6</H>
         </number>
         <number>
-            <BB>18</BB>
-            <H>18</H>
+            <BB>4</BB>
+            <H>7</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>4</H>
         </number>
     </BB>
-    <BB n="BB-124">
+    <BB n="BB-252">
         <number>
             <BB>1</BB>
             <H>1</H>
@@ -1622,7 +2857,7 @@ let $a :=
         </number>
         <number>
             <BB>12</BB>
-            <H>11</H>
+            <H>-</H>
         </number>
         <number>
             <BB>13</BB>
@@ -1647,708 +2882,10 @@ let $a :=
         <number>
             <BB>18</BB>
             <H>18</H>
-        </number>
-    </BB>
-    <BB n="BB-128">
-        <number>
-            <BB>1</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>7</H>
-        </number>
-    </BB>
-    <BB n="BB-135">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>4</H>
-        </number>
-    </BB>
-    <BB n="BB-150">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>8</H>
-        </number>
-    </BB>
-    <BB n="BB-157">
-        <number>
-            <BB>1</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>10</H>
-        </number>
-    </BB>
-    <BB n="BB-159">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>13</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>13</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>14</BB>
-            <H>-</H>
-        </number>
-    </BB>
-    <BB n="BB-161">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>8</H>
-        </number>
-    </BB>
-    <BB n="BB-394">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>8</H>
-        </number>
-    </BB>
-    <BB n="BB-163">
-        <number>
-            <BB>1</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>1</H>
-        </number>
-    </BB>
-    <BB n="BB-177">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>13</BB>
-            <H>13</H>
-        </number>
-        <number>
-            <BB>14</BB>
-            <H>14</H>
-        </number>
-    </BB>
-    <BB n="BB-181">
-        <number>
-            <BB>1</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>1</H>
-        </number>
-    </BB>
-    <BB n="BB-182">
-        <number>
-            <BB>1</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>13</BB>
-            <H>-</H>
-        </number>
-        <number>
-            <BB>14</BB>
-            <H>-</H>
-        </number>
-        <number>
-            <BB>15</BB>
-            <H>-</H>
-        </number>
-    </BB>
-    <BB n="BB-184">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>-</H>
-        </number>
-    </BB>
-    <BB n="BB-187">
-        <number>
-            <BB>1</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>1</H>
-        </number>
-    </BB>
-    <BB n="BB-190">
-        <number>
-            <BB>1</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>4</H>
-        </number>
-    </BB>
-    <BB n="BB-199">
-        <number>
-            <BB>1</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>2</H>
-        </number>
-    </BB>
-    <BB n="BB-202">
-        <number>
-            <BB>1</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>3</H>
-        </number>
-    </BB>
-    <BB n="BB-203">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>13</BB>
-            <H>13</H>
-        </number>
-        <number>
-            <BB>14</BB>
-            <H>15</H>
-        </number>
-        <number>
-            <BB>15</BB>
-            <H>14</H>
-        </number>
-        <number>
-            <BB>16</BB>
-            <H>18</H>
-        </number>
-        <number>
-            <BB>17</BB>
-            <H>19</H>
-        </number>
-        <number>
-            <BB>18</BB>
-            <H>16</H>
         </number>
         <number>
             <BB>19</BB>
-            <H>17</H>
+            <H>19</H>
         </number>
         <number>
             <BB>20</BB>
@@ -2366,515 +2903,57 @@ let $a :=
             <BB>23</BB>
             <H>23</H>
         </number>
-        <number>
-            <BB>24</BB>
-            <H>24</H>
-        </number>
+
     </BB>
-    <BB n="BB-211">
+    <BB n="BB-259">
+
         <number>
             <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
             <H>2</H>
         </number>
         <number>
-            <BB>3</BB>
+            <BB>2</BB>
             <H>3</H>
         </number>
         <number>
-            <BB>4</BB>
+            <BB>3</BB>
             <H>4</H>
         </number>
         <number>
-            <BB>5</BB>
+            <BB>4</BB>
             <H>5</H>
         </number>
         <number>
-            <BB>6</BB>
+            <BB>5</BB>
             <H>6</H>
         </number>
         <number>
-            <BB>7</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>11</BB>
+            <BB>6</BB>
             <H>11</H>
         </number>
         <number>
-            <BB>12</BB>
+            <BB>7</BB>
+            <H>12</H>
+        </number>
+        <number>
+            <BB>8</BB>
             <H>15</H>
         </number>
         <number>
-            <BB>13</BB>
+            <BB>9</BB>
             <H>16</H>
         </number>
         <number>
-            <BB>14</BB>
+            <BB>10</BB>
             <H>17</H>
         </number>
         <number>
-            <BB>15</BB>
-            <H>18</H>
-        </number>
-        <number>
-            <BB>16</BB>
-            <H>19</H>
-        </number>
-        <number>
-            <BB>17</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>18</BB>
-            <H>13</H>
-        </number>
-        <number>
-            <BB>19</BB>
-            <H>14</H>
-        </number>
-        <number>
-            <BB>20</BB>
-            <H>20</H>
-        </number>
-        <number>
-            <BB>21</BB>
-            <H>21</H>
-        </number>
-    </BB>
-    <BB n="BB-306">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>7</BB>
+            <BB>11</BB>
             <H>7</H>
         </number>
         <number>
-            <BB>8</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>11</H>
-        </number>
-        <number>
             <BB>12</BB>
-            <H>15</H>
-        </number>
-        <number>
-            <BB>13</BB>
-            <H>16</H>
-        </number>
-        <number>
-            <BB>14</BB>
-            <H>17</H>
-        </number>
-        <number>
-            <BB>15</BB>
-            <H>18</H>
-        </number>
-        <number>
-            <BB>16</BB>
-            <H>19</H>
-        </number>
-        <number>
-            <BB>17</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>18</BB>
-            <H>13</H>
-        </number>
-        <number>
-            <BB>19</BB>
-            <H>14</H>
-        </number>
-        <number>
-            <BB>20</BB>
-            <H>20</H>
-        </number>
-        <number>
-            <BB>21</BB>
-            <H>21</H>
-        </number>
-    </BB>
-    <BB n="BB-223">
-        <number>
-            <BB>1</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>8</BB>
             <H>8</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>13</BB>
-            <H>13</H>
-        </number>
-        <number>
-            <BB>14</BB>
-            <H>14</H>
-        </number>
-        <number>
-            <BB>15</BB>
-            <H>15</H>
-        </number>
-        <number>
-            <BB>16</BB>
-            <H>-</H>
-        </number>
-        <number>
-            <BB>17</BB>
-            <H>-</H>
-        </number>
-        <number>
-            <BB>18</BB>
-            <H>-</H>
-        </number>
-        <number>
-            <BB>19</BB>
-            <H>-</H>
-        </number>
-        <number>
-            <BB>20</BB>
-            <H>-</H>
-        </number>
-        <number>
-            <BB>21</BB>
-            <H>-</H>
-        </number>
-    </BB>
-    <BB n="BB-289">
-        <number>
-            <BB>1</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>13</BB>
-            <H>13</H>
-        </number>
-        <number>
-            <BB>14</BB>
-            <H>14</H>
-        </number>
-        <number>
-            <BB>15</BB>
-            <H>15</H>
-        </number>
-        <number>
-            <BB>16</BB>
-            <H>-</H>
-        </number>
-        <number>
-            <BB>17</BB>
-            <H>-</H>
-        </number>
-        <number>
-            <BB>18</BB>
-            <H>-</H>
-        </number>
-        <number>
-            <BB>19</BB>
-            <H>-</H>
-        </number>
-        <number>
-            <BB>20</BB>
-            <H>-</H>
-        </number>
-        <number>
-            <BB>21</BB>
-            <H>-</H>
-        </number>
-    </BB>
-    <BB n="BB-442">
-        <number>
-            <BB>1</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>13</BB>
-            <H>13</H>
-        </number>
-        <number>
-            <BB>14</BB>
-            <H>14</H>
-        </number>
-        <number>
-            <BB>15</BB>
-            <H>15</H>
-        </number>
-        <number>
-            <BB>16</BB>
-            <H>-</H>
-        </number>
-        <number>
-            <BB>17</BB>
-            <H>-</H>
-        </number>
-        <number>
-            <BB>18</BB>
-            <H>-</H>
-        </number>
-        <number>
-            <BB>19</BB>
-            <H>-</H>
-        </number>
-        <number>
-            <BB>20</BB>
-            <H>-</H>
-        </number>
-        <number>
-            <BB>21</BB>
-            <H>-</H>
-        </number>
-    </BB>
-    <BB n="BB-226">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>5</H>
-        </number>
-    </BB>
-    <BB n="BB-235">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>16</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>17</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>22</H>
         </number>
         <number>
             <BB>13</BB>
@@ -2882,367 +2961,79 @@ let $a :=
         </number>
         <number>
             <BB>14</BB>
-            <H>14</H>
-        </number>
-        <number>
-            <BB>15</BB>
-            <H>15</H>
-        </number>
-        <number>
-            <BB>16</BB>
             <H>24</H>
         </number>
         <number>
+            <BB>15</BB>
+            <H>25</H>
+        </number>
+        <number>
+            <BB>16</BB>
+            <H>26</H>
+        </number>
+        <number>
             <BB>17</BB>
-            <H>10</H>
+            <H>27</H>
         </number>
         <number>
             <BB>18</BB>
-            <H>11</H>
+            <H>28</H>
         </number>
         <number>
             <BB>19</BB>
-            <H>12</H>
+            <H>29</H>
         </number>
         <number>
             <BB>20</BB>
-            <H>13</H>
+            <H>30</H>
         </number>
         <number>
             <BB>21</BB>
-            <H>18</H>
+            <H>31</H>
         </number>
         <number>
             <BB>22</BB>
-            <H>19</H>
+            <H>32</H>
         </number>
         <number>
             <BB>23</BB>
-            <H>20</H>
+            <H>33</H>
         </number>
         <number>
             <BB>24</BB>
-            <H>21</H>
+            <H>1</H>
         </number>
         <number>
             <BB>25</BB>
-            <H>-</H>
-        </number>
-    </BB>
-    <BB n="BB-337">
-        <number>
-            <BB>1</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>2</H>
-        </number>
-    </BB>
-    <BB n="BB-243">
-        <number>
-            <BB>1</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>-</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>-</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>-</H>
-        </number>
-    </BB>
-    <BB n="BB-249">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>10</H>
-        </number>
-    </BB>
-    <BB n="BB-251">
-        <number>
-            <BB>1</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>9</BB>
             <H>10</H>
         </number>
         <number>
-            <BB>10</BB>
-            <H>8</H>
+            <BB>26</BB>
+            <H>9</H>
         </number>
         <number>
-            <BB>11</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>13</BB>
+            <BB>27</BB>
             <H>18</H>
         </number>
         <number>
-            <BB>14</BB>
+            <BB>28</BB>
             <H>19</H>
         </number>
         <number>
-            <BB>15</BB>
-            <H>17</H>
-        </number>
-        <number>
-            <BB>16</BB>
-            <H>15</H>
-        </number>
-        <number>
-            <BB>17</BB>
-            <H>16</H>
-        </number>
-        <number>
-            <BB>18</BB>
-            <H>13</H>
-        </number>
-        <number>
-            <BB>19</BB>
-            <H>14</H>
-        </number>
-        <number>
-            <BB>20</BB>
+            <BB>29</BB>
             <H>20</H>
         </number>
-    </BB>
-    <BB n="BB-334">
         <number>
-            <BB>1</BB>
-            <H>2</H>
+            <BB>30</BB>
+            <H>21</H>
         </number>
         <number>
-            <BB>2</BB>
-            <H>3</H>
+            <BB>31</BB>
+            <H>22</H>
         </number>
         <number>
-            <BB>3</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>13</BB>
-            <H>18</H>
-        </number>
-        <number>
-            <BB>14</BB>
-            <H>19</H>
-        </number>
-        <number>
-            <BB>15</BB>
-            <H>17</H>
-        </number>
-        <number>
-            <BB>16</BB>
-            <H>15</H>
-        </number>
-        <number>
-            <BB>17</BB>
-            <H>16</H>
-        </number>
-        <number>
-            <BB>18</BB>
-            <H>13</H>
-        </number>
-        <number>
-            <BB>19</BB>
+            <BB>33</BB>
             <H>14</H>
-        </number>
-        <number>
-            <BB>20</BB>
-            <H>20</H>
-        </number>
-    </BB>
-    <BB n="BB-253">
-        <number>
-            <BB>1</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>2</H>
         </number>
     </BB>
     <BB n="BB-261">
@@ -3288,160 +3079,35 @@ let $a :=
         </number>
         <number>
             <BB>11</BB>
-            <H>15</H>
+            <H>0</H>
         </number>
         <number>
             <BB>12</BB>
-            <H>13</H>
+            <H>12</H>
         </number>
         <number>
             <BB>13</BB>
+            <H>13</H>
+        </number>
+        <number>
+            <BB>14</BB>
             <H>14</H>
         </number>
         <number>
             <BB>15</BB>
-            <H>12</H>
+            <H>15</H>
         </number>
     </BB>
-    <BB n="BB-263">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>4</H>
-        </number>
-    </BB>
-    <BB n="BB-264">
-        <number>
-            <BB>1</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>12</H>
-        </number>
-    </BB>
-    <BB n="BB-265">
+    <BB n="BB-266">
         <number>
             <BB>1</BB>
             <H>3</H>
         </number>
         <number>
             <BB>2</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>3</BB>
             <H>1</H>
         </number>
-        <number>
-            <BB>4</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>8</H>
-        </number>
-    </BB>
-    <BB n="BB-268">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>2</H>
-        </number>
+
     </BB>
     <BB n="BB-269">
         <number>
@@ -3450,52 +3116,6 @@ let $a :=
         </number>
         <number>
             <BB>2</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>8</H>
-        </number>
-    </BB>
-    <BB n="BB-275">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
             <H>2</H>
         </number>
         <number>
@@ -3504,125 +3124,7 @@ let $a :=
         </number>
         <number>
             <BB>4</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>13</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>14</H>
-        </number>
-        <number>
-            <BB>13</BB>
-            <H>15</H>
-        </number>
-        <number>
-            <BB>14</BB>
-            <H>16</H>
-        </number>
-        <number>
-            <BB>15</BB>
-            <H>17</H>
-        </number>
-        <number>
-            <BB>16</BB>
-            <H>18</H>
-        </number>
-        <number>
-            <BB>17</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>18</BB>
-            <H>10</H>
-        </number>
-    </BB>
-    <BB n="BB-276">
-        <number>
-            <BB>1</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>1</H>
-        </number>
-    </BB>
-    <BB n="BB-277">
-        <number>
-            <BB>1</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>3</H>
-        </number>
-    </BB>
-    <BB n="BB-285">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>4</H>
+            <H>-</H>
         </number>
         <number>
             <BB>5</BB>
@@ -3656,33 +3158,15 @@ let $a :=
             <BB>12</BB>
             <H>12</H>
         </number>
-        <number>
-            <BB>13</BB>
-            <H>14</H>
-        </number>
-        <number>
-            <BB>14</BB>
-            <H>13</H>
-        </number>
     </BB>
-    <BB n="BB-287">
+    <BB n="BB-273">
         <number>
             <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
             <H>2</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>1</H>
-        </number>
-    </BB>
-    <BB n="BB-291">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>5</H>
         </number>
         <number>
             <BB>3</BB>
@@ -3694,824 +3178,138 @@ let $a :=
         </number>
         <number>
             <BB>5</BB>
-            <H>2</H>
+            <H>5</H>
         </number>
         <number>
             <BB>6</BB>
-            <H>6</H>
-        </number>
-    </BB>
-    <BB n="BB-294">
-        <number>
-            <BB>1</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>3</H>
-        </number>
-    </BB>
-    <BB n="BB-296">
-        <number>
-            <BB>1</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>7</H>
-        </number>
-    </BB>
-    <BB n="BB-297">
-        <number>
-            <BB>1</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>8</BB>
             <H>8</H>
-        </number>
-    </BB>
-    <BB n="BB-304">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>13</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>13</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>14</BB>
-            <H>14</H>
-        </number>
-        <number>
-            <BB>15</BB>
-            <H>15</H>
-        </number>
-        <number>
-            <BB>16</BB>
-            <H>16</H>
-        </number>
-        <number>
-            <BB>17</BB>
-            <H>21</H>
-        </number>
-        <number>
-            <BB>18</BB>
-            <H>17</H>
-        </number>
-        <number>
-            <BB>19</BB>
-            <H>18</H>
-        </number>
-        <number>
-            <BB>20</BB>
-            <H>19</H>
-        </number>
-        <number>
-            <BB>21</BB>
-            <H>20</H>
-        </number>
-        <number>
-            <BB>22</BB>
-            <H>22</H>
-        </number>
-        <number>
-            <BB>23</BB>
-            <H>23</H>
-        </number>
-        <number>
-            <BB>24</BB>
-            <H>24</H>
-        </number>
-        <number>
-            <BB>25</BB>
-            <H>25</H>
-        </number>
-        <number>
-            <BB>26</BB>
-            <H>26</H>
-        </number>
-        <number>
-            <BB>27</BB>
-            <H>27</H>
-        </number>
-    </BB>
-    <BB n="BB-313">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>6</H>
         </number>
         <number>
             <BB>7</BB>
             <H>-</H>
         </number>
-    </BB>
-    <BB n="BB-314">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>4</H>
-        </number>
-    </BB>
-    <BB n="BB-317">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>7</H>
-        </number>
         <number>
             <BB>8</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>13</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>14</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>15</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>13</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>14</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>15</BB>
-            <H>12</H>
-        </number>
-    </BB>
-    <BB n="BB-323">
-        <number>
-            <BB>1</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>13</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>14</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>15</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>16</H>
-        </number>
-        <number>
-            <BB>13</BB>
-            <H>17</H>
-        </number>
-        <number>
-            <BB>14</BB>
-            <H>18</H>
-        </number>
-        <number>
-            <BB>15</BB>
-            <H>19</H>
-        </number>
-        <number>
-            <BB>16</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>17</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>18</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>19</BB>
-            <H>3</H>
-        </number>
-    </BB>
-    <BB n="BB-324">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>14</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>15</H>
-        </number>
-        <number>
-            <BB>13</BB>
-            <H>16</H>
-        </number>
-        <number>
-            <BB>14</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>15</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>16</BB>
-            <H>13</H>
-        </number>
-        <number>
-            <BB>17</BB>
             <H>-</H>
         </number>
-    </BB>
-    <BB n="BB-326">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>10</H>
-        </number>
         <number>
             <BB>9</BB>
-            <H>9</H>
+            <H>-</H>
         </number>
         <number>
             <BB>10</BB>
             <H>-</H>
         </number>
-    </BB>
-    <BB n="BB-340">
-        <number>
-            <BB>1</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>6</H>
-        </number>
-    </BB>
-    <BB n="BB-360">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>7</H>
-        </number>
         <number>
             <BB>11</BB>
-            <H>11</H>
-        </number>
-    </BB>
-    <BB n="BB-366">
-        <number>
-            <BB>1</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>5</H>
-        </number>
-    </BB>
-    <BB n="BB-375">
-        <number>
-            <BB>1</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-    </BB>
-    <BB n="BB-378">
-        <number>
-            <BB>1</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>1</H>
-        </number>
-    </BB>
-    <BB n="BB-381">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>11</H>
-        </number>
-    </BB>
-    <BB n="BB-390">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>5</H>
-        </number>
-    </BB>
-    <BB n="BB-391">
-        <number>
-            <BB>1</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>4</H>
-        </number>
-    </BB>
-    <BB n="BB-413">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>11</H>
+            <H>-</H>
         </number>
         <number>
             <BB>12</BB>
-            <H>12</H>
+            <H>-</H>
         </number>
         <number>
             <BB>13</BB>
-            <H>13</H>
+            <H>-</H>
         </number>
         <number>
             <BB>14</BB>
-            <H>16</H>
+            <H>-</H>
         </number>
         <number>
             <BB>15</BB>
-            <H>19</H>
+            <H>-</H>
         </number>
         <number>
             <BB>16</BB>
-            <H>20</H>
+            <H>-</H>
         </number>
         <number>
             <BB>17</BB>
-            <H>14</H>
+            <H>-</H>
         </number>
         <number>
             <BB>18</BB>
-            <H>15</H>
+            <H>-</H>
         </number>
         <number>
             <BB>19</BB>
-            <H>17</H>
+            <H>-</H>
         </number>
         <number>
             <BB>20</BB>
-            <H>18</H>
+            <H>-</H>
+        </number>
+
+    </BB>
+    <BB n="BB-299">
+        <number>
+            <BB>1</BB>
+            <H>6</H>
         </number>
         <number>
-            <BB>21</BB>
-            <H>21</H>
+            <BB>2</BB>
+            <H>7</H>
         </number>
         <number>
-            <BB>22</BB>
-            <H>22</H>
-        </number>
-        <number>
-            <BB>23</BB>
-            <H>23</H>
-        </number>
-        <number>
-            <BB>24</BB>
-            <H>24</H>
+            <BB>3</BB>
+            <H>8</H>
         </number>
     </BB>
-    <BB n="BB-414">
+    <!--marco-->
+    <BB n="BB-307">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>6</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>8</H>
+        </number>
+    </BB>
+    <BB n="BB-320">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>4</H>
+        </number>
+    </BB>
+    <BB n="BB-335">
         <number>
             <BB>1</BB>
             <H>1</H>
@@ -4542,22 +3340,22 @@ let $a :=
         </number>
         <number>
             <BB>8</BB>
-            <H>9</H>
+            <H>8</H>
         </number>
         <number>
             <BB>9</BB>
-            <H>8</H>
+            <H>9</H>
         </number>
         <number>
             <BB>10</BB>
             <H>10</H>
         </number>
         <number>
-            <BB>11</BB>
+            <BB>12</BB>
             <H>11</H>
         </number>
         <number>
-            <BB>12</BB>
+            <BB>11</BB>
             <H>12</H>
         </number>
         <number>
@@ -4571,1068 +3369,6 @@ let $a :=
         <number>
             <BB>15</BB>
             <H>15</H>
-        </number>
-    </BB>
-    <BB n="BB-419">
-        <number>
-            <BB>1</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>5</H>
-        </number>
-    </BB>
-    <BB n="BB-425">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>7</H>
-        </number>
-    </BB>
-    <BB n="BB-439">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>9</H>
-        </number>
-    </BB>
-    <BB n="BB-440">
-        <number>
-            <BB>1</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>10</H>
-        </number>
-    </BB>
-    <BB n="BB-455">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>14</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>15</H>
-        </number>
-        <number>
-            <BB>13</BB>
-            <H>16</H>
-        </number>
-        <number>
-            <BB>14</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>15</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>16</BB>
-            <H>13</H>
-        </number>
-        <number>
-            <BB>17</BB>
-            <H>17</H>
-        </number>
-    </BB>
-    <BB n="BB-457">
-        <number>
-            <BB>1</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>10</H>
-        </number>
-    </BB>
-    <BB n="BB-461">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>2</H>
-        </number>
-    </BB>
-    <BB n="BB-476">
-        <number>
-            <BB>1</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>8</H>
-        </number>
-    </BB>
-    <BB n="BB-485">
-        <number>
-            <BB>1</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>13</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>14</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>13</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>14</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>15</BB>
-            <H>15</H>
-        </number>
-        <number>
-            <BB>16</BB>
-            <H>16</H>
-        </number>
-    </BB>
-    <BB n="BB-487">
-        <number>
-            <BB>1</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>5</H>
-        </number>
-    </BB>
-    <BB n="BB-489">
-        <number>
-            <BB>1</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>1</H>
-        </number>
-    </BB>
-    <BB n="BB-491">
-        <number>
-            <BB>1</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>2</H>
-        </number>
-    </BB>
-    <BB n="BB-504">
-        <number>
-            <BB>1</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>1</H>
-        </number>
-    </BB>
-    <BB n="BB-506">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>5</H>
-        </number>
-    </BB>
-    <BB n="BB-508">
-        <number>
-            <BB>1</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>12</H>
-        </number>
-    </BB>
-    <BB n="BB-513">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>13</BB>
-            <H>13</H>
-        </number>
-        <number>
-            <BB>14</BB>
-            <H>14</H>
-        </number>
-        <number>
-            <BB>15</BB>
-            <H>16</H>
-        </number>
-        <number>
-            <BB>16</BB>
-            <H>15</H>
-        </number>
-    </BB>
-    <BB n="BB-514">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>14</H>
-        </number>
-        <number>
-            <BB>13</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>14</BB>
-            <H>13</H>
-        </number>
-        <number>
-            <BB>15</BB>
-            <H>15</H>
-        </number>
-        <number>
-            <BB>16</BB>
-            <H>16</H>
-        </number>
-        <number>
-            <BB>17</BB>
-            <H>17</H>
-        </number>
-        <number>
-            <BB>18</BB>
-            <H>18</H>
-        </number>
-        <number>
-            <BB>19</BB>
-            <H>19</H>
-        </number>
-        <number>
-            <BB>20</BB>
-            <H>20</H>
-        </number>
-        <number>
-            <BB>21</BB>
-            <H>21</H>
-        </number>
-        <number>
-            <BB>22</BB>
-            <H>22</H>
-        </number>
-    </BB>
-    <BB n="BB-521">
-        <number>
-            <BB>1</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>13</BB>
-            <H>13</H>
-        </number>
-        <number>
-            <BB>14</BB>
-            <H>14</H>
-        </number>
-        <number>
-            <BB>15</BB>
-            <H>15</H>
-        </number>
-        <number>
-            <BB>16</BB>
-            <H>16</H>
-        </number>
-        <number>
-            <BB>17</BB>
-            <H>17</H>
-        </number>
-    </BB>
-    <BB n="BB-527">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>13</H>
-        </number>
-        <number>
-            <BB>13</BB>
-            <H>12</H>
-        </number>
-    </BB>
-    <BB n="BB-530">
-        <number>
-            <BB>1</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>1</H>
-        </number>
-    </BB>
-    <BB n="BB-540">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>13</BB>
-            <H>13</H>
-        </number>
-        <number>
-            <BB>14</BB>
-            <H>14</H>
-        </number>
-        <number>
-            <BB>15</BB>
-            <H>15</H>
-        </number>
-        <number>
-            <BB>16</BB>
-            <H>16</H>
-        </number>
-        <number>
-            <BB>17</BB>
-            <H>17</H>
-        </number>
-    </BB>
-    <BB n="BB-603">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>6</H>
-        </number>
-    </BB>
-    <BB n="BB-605">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>9</H>
-        </number>
-    </BB>
-    <BB n="BB-607">
-        <number>
-            <BB>1</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>10</H>
-        </number>
-    </BB>
-    <BB n="BB-611">
-        <number>
-            <BB>1</BB>
-            <H>1</H>
-        </number>
-        <number>
-            <BB>2</BB>
-            <H>2</H>
-        </number>
-        <number>
-            <BB>3</BB>
-            <H>3</H>
-        </number>
-        <number>
-            <BB>4</BB>
-            <H>4</H>
-        </number>
-        <number>
-            <BB>5</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>6</BB>
-            <H>5</H>
-        </number>
-        <number>
-            <BB>7</BB>
-            <H>6</H>
-        </number>
-        <number>
-            <BB>8</BB>
-            <H>7</H>
-        </number>
-        <number>
-            <BB>9</BB>
-            <H>8</H>
-        </number>
-        <number>
-            <BB>10</BB>
-            <H>9</H>
-        </number>
-        <number>
-            <BB>11</BB>
-            <H>10</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>11</H>
-        </number>
-        <number>
-            <BB>13</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>14</BB>
-            <H>13</H>
-        </number>
-        <number>
-            <BB>15</BB>
-            <H>14</H>
         </number>
         <number>
             <BB>16</BB>
@@ -5666,184 +3402,892 @@ let $a :=
             <BB>23</BB>
             <H>23</H>
         </number>
+    </BB>
+    <BB n="BB-350">
         <number>
-            <BB>24</BB>
-            <H>24</H>
+            <BB>1</BB>
+            <H>1</H>
         </number>
         <number>
-            <BB>25</BB>
-            <H>25</H>
+            <BB>2</BB>
+            <H>2</H>
         </number>
         <number>
-            <BB>26</BB>
-            <H>26</H>
+            <BB>3</BB>
+            <H>3</H>
         </number>
         <number>
-            <BB>27</BB>
-            <H>27</H>
+            <BB>4</BB>
+            <H>4</H>
         </number>
         <number>
-            <BB>28</BB>
-            <H>28</H>
+            <BB>5</BB>
+            <H>5</H>
         </number>
         <number>
-            <BB>29</BB>
-            <H>29</H>
+            <BB>6</BB>
+            <H>6</H>
         </number>
         <number>
-            <BB>30</BB>
-            <H>30</H>
+            <BB>7</BB>
+            <H>7</H>
         </number>
         <number>
-            <BB>31</BB>
-            <H>31</H>
+            <BB>8</BB>
+            <H>8</H>
         </number>
         <number>
-            <BB>32</BB>
-            <H>32</H>
+            <BB>9</BB>
+            <H>9</H>
         </number>
         <number>
-            <BB>33</BB>
-            <H>33</H>
+            <BB>10</BB>
+            <H>-</H>
         </number>
         <number>
-            <BB>34</BB>
-            <H>34</H>
+            <BB>11</BB>
+            <H>10</H>
         </number>
         <number>
-            <BB>35</BB>
-            <H>35</H>
+            <BB>12</BB>
+            <H>11</H>
         </number>
         <number>
-            <BB>36</BB>
-            <H>36</H>
+            <BB>13</BB>
+            <H>12</H>
         </number>
         <number>
-            <BB>37</BB>
-            <H>37</H>
+            <BB>14</BB>
+            <H>13</H>
         </number>
         <number>
-            <BB>38</BB>
-            <H>38</H>
+            <BB>15</BB>
+            <H>14</H>
         </number>
         <number>
-            <BB>39</BB>
-            <H>39</H>
+            <BB>16</BB>
+            <H>15</H>
         </number>
         <number>
-            <BB>40</BB>
-            <H>40</H>
+            <BB>17</BB>
+            <H>16</H>
         </number>
         <number>
-            <BB>41</BB>
+            <BB>18</BB>
+            <H>17</H>
+        </number>
+        <number>
+            <BB>19</BB>
+            <H>18</H>
+        </number>
+        <number>
+            <BB>20</BB>
+            <H>19</H>
+        </number>
+        <number>
+            <BB>21</BB>
+            <H>20</H>
+        </number>
+        <number>
+            <BB>22</BB>
+            <H>21</H>
+        </number>
+    </BB>
+    <BB n="BB-368">
+        <number>
+            <BB>2</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>1</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>-</H>
+        </number>
+    </BB>
+    <BB n="BB-373">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>3</H>
+        </number>
+    </BB>
+    <BB n="BB-421">
+        <number>
+            <BB>4</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>1</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>6</H>
+        </number>
+    </BB>
+    <BB n="BB-441">
+        <number>
+            <BB>1</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>4</H>
+        </number>
+    </BB>
+    <BB n="BB-451">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>4</H>
+        </number>
+    </BB>
+    <BB n="BB-462">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>6</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>8</H>
+        </number>
+    </BB>
+    <BB n="BB-463">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>4</H>
+        </number>
+    </BB>
+    <BB n="BB-467">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>6</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>7</H>
+        </number>
+    </BB>
+    <BB n="BB-473">
+        <number>
+            <BB>3</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>1</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>6</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>7</H>
+        </number>
+    </BB>
+    <BB n="BB-498">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>6</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>7</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>8</H>
+        </number>
+        <number>
+            <BB>9</BB>
+            <H>9</H>
+        </number>
+        <number>
+            <BB>10</BB>
+            <H>10</H>
+        </number>
+        <number>
+            <BB>11</BB>
+            <H>12</H>
+        </number>
+        <number>
+            <BB>12</BB>
+            <H>13</H>
+        </number>
+    </BB>
+    <BB n="BB-529">
+        <number>
+            <BB>1</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>6</H>
+        </number>
+        <number>
+            <BB>9</BB>
+            <H>7</H>
+        </number>
+        <number>
+            <BB>10</BB>
+            <H>8</H>
+        </number>
+        <number>
+            <BB>11</BB>
+            <H>9</H>
+        </number>
+        <number>
+            <BB>12</BB>
+            <H>10</H>
+        </number>
+        <number>
+            <BB>13</BB>
+            <H>11</H>
+        </number>
+        <number>
+            <BB>14</BB>
+            <H>12</H>
+        </number>
+        <number>
+            <BB>15</BB>
+            <H>13</H>
+        </number>
+        <number>
+            <BB>16</BB>
+            <H>14</H>
+        </number>
+        <number>
+            <BB>17</BB>
+            <H>15</H>
+        </number>
+    </BB>
+    <BB n="BB-532">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>-</H>
+        </number>
+    </BB>
+    <BB n="BB-539">
+        <number>
+            <BB>1</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>1</H>
+        </number>
+    </BB>
+    <BB n="BB-546">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>- </H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>9</BB>
+            <H>6</H>
+        </number>
+        <number>
+            <BB>10</BB>
+            <H>7</H>
+        </number>
+        <number>
+            <BB>11</BB>
+            <H>8</H>
+        </number>
+        <number>
+            <BB>13</BB>
+            <H>9</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>10</H>
+        </number>
+        <number>
+            <BB>15</BB>
+            <H>11</H>
+        </number>
+        <number>
+            <BB>12</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>14</BB>
+            <H>-</H>
+        </number>
+    </BB>
+    <BB n="BB-547">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>14</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>13</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>6</H>
+        </number>
+        <number>
+            <BB>12</BB>
+            <H>7</H>
+        </number>
+        <number>
+            <BB>9</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>9</H>
+        </number>
+        <number>
+            <BB>11</BB>
+            <H>10</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>11</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>12</H>
+        </number>
+        <number>
+            <BB>10</BB>
+            <H>13</H>
+        </number>
+        <number>
+            <BB>17</BB>
+            <H>14</H>
+        </number>
+        <number>
+            <BB>15</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>16</BB>
+            <H>- </H>
+        </number>
+    </BB>
+    <BB n="BB-554">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>6</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>7</H>
+        </number>
+    </BB>
+    <BB n="BB-568">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>2</H>
+        </number>
+    </BB>
+    <BB n="BB-569">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>2</H>
+        </number>
+    </BB>
+    <BB n="BB-606">
+        <number>
+            <BB>2</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>1</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>-</H>
+        </number>
+    </BB>
+    <BB n="BB-345">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>7</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>4</H>
+        </number>
+    </BB>
+    <BB n="BB-349">
+        <number>
+            <BB>1</BB>
+            <H>23</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>6</H>
+        </number>
+        <number>
+            <BB>6</BB>
             <H>41</H>
         </number>
         <number>
-            <BB>42</BB>
+            <BB>7</BB>
+            <H>27</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>9</BB>
+            <H>26</H>
+        </number>
+        <number>
+            <BB>10</BB>
+            <H>40</H>
+        </number>
+        <number>
+            <BB>11</BB>
             <H>42</H>
         </number>
         <number>
-            <BB>43</BB>
+            <BB>12</BB>
             <H>43</H>
         </number>
         <number>
-            <BB>44</BB>
-            <H>44</H>
+            <BB>13</BB>
+            <H>17</H>
         </number>
         <number>
-            <BB>45</BB>
-            <H>45</H>
+            <BB>14</BB>
+            <H>18</H>
         </number>
         <number>
-            <BB>46</BB>
-            <H>46</H>
+            <BB>15</BB>
+            <H>19</H>
         </number>
         <number>
-            <BB>47</BB>
-            <H>47</H>
+            <BB>16</BB>
+            <H>20</H>
         </number>
         <number>
-            <BB>48</BB>
+            <BB>17</BB>
+            <H>21</H>
+        </number>
+        <number>
+            <BB>18</BB>
+            <H>22</H>
+        </number>
+        <number>
+            <BB>19</BB>
+            <H>29</H>
+        </number>
+        <number>
+            <BB>20</BB>
+            <H>30</H>
+        </number>
+        <number>
+            <BB>21</BB>
+            <H>24</H>
+        </number>
+        <number>
+            <BB>22</BB>
+            <H>28</H>
+        </number>
+        <number>
+            <BB>23</BB>
+            <H>33</H>
+        </number>
+        <number>
+            <BB>24</BB>
+            <H>34</H>
+        </number>
+        <number>
+            <BB>25</BB>
+            <H>32</H>
+        </number>
+        <number>
+            <BB>26</BB>
+            <H>35</H>
+        </number>
+        <number>
+            <BB>27</BB>
+            <H>36</H>
+        </number>
+        <number>
+            <BB>28</BB>
+            <H>37</H>
+        </number>
+        <number>
+            <BB>29</BB>
+            <H>25</H>
+        </number>
+        <number>
+            <BB>30</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>31</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>32</BB>
+            <H>39</H>
+        </number>
+        <number>
+            <BB>33</BB>
             <H>48</H>
         </number>
         <number>
-            <BB>49</BB>
-            <H>49</H>
+            <BB>34</BB>
+            <H>47</H>
         </number>
         <number>
-            <BB>50</BB>
-            <H>50</H>
+            <BB>35</BB>
+            <H>31</H>
         </number>
         <number>
-            <BB>51</BB>
-            <H>51</H>
+            <BB>36</BB>
+            <H>15</H>
         </number>
         <number>
-            <BB>52</BB>
-            <H>52</H>
+            <BB>37</BB>
+            <H>16</H>
         </number>
         <number>
-            <BB>53</BB>
-            <H>53</H>
+            <BB>38</BB>
+            <H>11</H>
         </number>
         <number>
-            <BB>54</BB>
-            <H>54</H>
+            <BB>39</BB>
+            <H>12</H>
         </number>
         <number>
-            <BB>55</BB>
-            <H>55</H>
+            <BB>40</BB>
+            <H>13</H>
         </number>
         <number>
-            <BB>56</BB>
-            <H>56</H>
+            <BB>41</BB>
+            <H>14</H>
         </number>
         <number>
-            <BB>57</BB>
-            <H>57</H>
+            <BB>42</BB>
+            <H>10</H>
         </number>
         <number>
-            <BB>58</BB>
-            <H>58</H>
+            <BB>43</BB>
+            <H>44</H>
         </number>
         <number>
-            <BB>59</BB>
-            <H>59</H>
+            <BB>44</BB>
+            <H>45</H>
         </number>
         <number>
-            <BB>60</BB>
-            <H>60</H>
+            <BB>45</BB>
+            <H>-</H>
         </number>
         <number>
-            <BB>61</BB>
-            <H>61</H>
+            <BB>46</BB>
+            <H>7</H>
         </number>
         <number>
-            <BB>62</BB>
-            <H>62</H>
+            <BB>47</BB>
+            <H>8</H>
         </number>
         <number>
-            <BB>63</BB>
-            <H>63</H>
-        </number>
-        <number>
-            <BB>64</BB>
-            <H>64</H>
-        </number>
-        <number>
-            <BB>65</BB>
-            <H>65</H>
-        </number>
-        <number>
-            <BB>66</BB>
-            <H>66</H>
-        </number>
-        <number>
-            <BB>67</BB>
-            <H>67</H>
+            <BB>48</BB>
+            <H>9</H>
         </number>
     </BB>
-    <BB n="BB-617">
+    <BB n="BB-393">
         <number>
             <BB>1</BB>
             <H>1</H>
@@ -5886,38 +4330,180 @@ let $a :=
         </number>
         <number>
             <BB>11</BB>
-            <H>14</H>
-        </number>
-        <number>
-            <BB>12</BB>
-            <H>15</H>
-        </number>
-        <number>
-            <BB>13</BB>
-            <H>16</H>
-        </number>
-        <number>
-            <BB>14</BB>
-            <H>12</H>
-        </number>
-        <number>
-            <BB>15</BB>
             <H>11</H>
         </number>
         <number>
+            <BB>12</BB>
+            <H>12</H>
+        </number>
+        <number>
+            <BB>13</BB>
+            <H>-</H>
+        </number>
+        <number>
+            <BB>14</BB>
+            <H>14</H>
+        </number>
+        <number>
+            <BB>15</BB>
+            <H>15</H>
+        </number>
+        <number>
             <BB>16</BB>
-            <H>13</H>
+            <H>16</H>
         </number>
         <number>
             <BB>17</BB>
             <H>17</H>
+        </number>
+    </BB>
+    <BB n="BB-431">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>10</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>6</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>8</BB>
+            <H>7</H>
+        </number>
+        <number>
+            <BB>9</BB>
+            <H>10</H>
+        </number>
+        <number>
+            <BB>10</BB>
+            <H>9</H>
+        </number>
+        <number>
+            <BB>11</BB>
+            <H>11</H>
+        </number>
+    </BB>
+    <BB n="BB-477">
+        <number>
+            <BB>1</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>1</H>
+        </number>
+    </BB>
+    <BB n="BB-557">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>3</H>
+        </number>
+    </BB>
+    <BB n="BB-609">
+        <number>
+            <BB>1</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>5</H>
+        </number>
+        <number>
+            <BB>6</BB>
+            <H>7</H>
+        </number>
+        <number>
+            <BB>7</BB>
+            <H>6</H>
+        </number>
+    </BB>
+    <BB n="BB-613">
+        <number>
+            <BB>1</BB>
+            <H>2</H>
+        </number>
+        <number>
+            <BB>2</BB>
+            <H>1</H>
+        </number>
+        <number>
+            <BB>3</BB>
+            <H>3</H>
+        </number>
+        <number>
+            <BB>4</BB>
+            <H>4</H>
+        </number>
+        <number>
+            <BB>5</BB>
+            <H>5</H>
         </number>
     </BB>
 </BBs>
 
-        let $BB-text-number := $corresp/BB[@n eq $BB-title]/number[BB eq string($H-text-number)]/H
+    let $texts :=
+        for $BB-text-number in (1 to $count-BB-text)
+
+        let $H-text-number := $corresp/BB[@n/string() eq $BB-title]/number[BB eq string($BB-text-number)]/H/text()
+        let $H-text-number := if ($H-text-number eq '-') then 0 else number($H-text-number)
+        
+        let $log := util:log("DEBUG", ("##$H-text-number): ", $H-text-number))
+        let $log := util:log("DEBUG", ("##$BB-title): ", $BB-title))
+        let $log := util:log("DEBUG", ("##$BB-text-number): ", $BB-text-number))
+
         let $shiwen := $Heji-doc/tei:text[1]/tei:group[1]/tei:text[$H-text-number]/tei:group/tei:text[2]/tei:body/tei:ab
+        let $log := util:log("DEBUG", ("##$shiwen): ", $shiwen))
+        
         return 
+        if ($H-text-number gt 0) then    
     <text xml:id="{concat($BB-title, '.text-', $BB-text-number)}" n="{$BB-text-number}">
         <group>
             <xi:include href="{concat('/db/tls-data/CHANT/', $Heji-uuid-prefix, '/', $Heji-uuid, '.xml')}" xpointer="{concat($Heji-title, '.text-', $H-text-number, '.text-transcription-yuanwen')}">
@@ -5946,6 +4532,28 @@ let $a :=
             </text>
         </group>
     </text>
+    else
+            
+    <text xml:id="{concat($BB-title, '.text-', $BB-text-number)}" n="{$BB-text-number}">
+        <group>
+            
+            <text type="transcription" subtype="Takashima" xml:id="{concat($BB-title, '.text-', $BB-text-number, '.text-transcription-Takashima')}">
+                <body>
+                    <ab>
+                        <seg xml:id="{concat($BB-title, '.text-', $BB-text-number, '.text-transcription-Takashima.seg-1')}">&#xA0;</seg>
+                    </ab>
+                </body>
+            </text>
+            <text type="translation" subtype="Takashima" xml:id="{concat($BB-title, '.text-', $BB-text-number, '.text-translation-Takashima')}">
+                <body>
+                    <ab>
+                        <seg xml:id="{concat($BB-title, '.text-', $BB-text-number, '.text-translation-Takashima.seg-1')}">&#xA0;</seg>
+                    </ab>
+                </body>
+            </text>
+        </group>
+    </text>
+    
     return
     let $texts := <x>{$texts}</x>
     for $text in $texts/tei:text
