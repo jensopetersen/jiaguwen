@@ -10,6 +10,7 @@ declare variable $tls:subtype-options := ('yuanwen', 'shiwen', 'Takashima');
 import module namespace templates="http://exist-db.org/xquery/templates" at "templates.xql";
 import module namespace config="http://exist-db.org/xquery/apps/config" at "config.xql";
 import module namespace tei2html="http://xmlopenfoundation.org/tei2html" at "tei2html.xqm";
+import module namespace login="http://exist-db.org/xquery/app/wiki/session" at "login.xql";
 
 (:~
  : This function can be called from the HTML templating. It shows which parameters
@@ -179,25 +180,29 @@ function tls:display-line($node as node(), $model as map(*), $start as xs:intege
     let $subtype := $hit/ancestor::tei:text[1]/@subtype/string()
     (:let $log := util:log("DEBUG", ("##$hit-title): ", $hit-title)):)
     let $hit-text := replace($hit/text(), '(\p{Co})', '&lt;span class="CHANT">$1&lt;/span>')
-    let $hit-text := concat('&lt;span>', $hit-text, '&lt;/span>') 
+    let $hit-text := concat('&lt;span>', $hit-text, '&lt;/span>')
+    let $loggedIn := login:set-user("org.exist.login", ())
+    (:let $loggedIn := '':)
     order by $hit-title[1]
     return
         (
         <tr class="hit-info">
             <td class="hit-link">
-                <a href="display.html?doc-id={$doc-id}"><img src="resources/images/text.png"/></a>
+                <a href="display.html?doc-id={$doc-id}&amp;#{$text-number}"><img src="resources/images/text.png"/></a>
             </td>
             <td class="hit-title">{$hit-title}</td>
             <td class="hit-link">
             {
             if ($editable and $hit-context ne 'title')
-            then 
+            then
+                if ($loggedIn) 
+                then
                 <a href="edit.html?doc-id={$doc-id}&amp;text-number={$text-number}"><img src="resources/images/page-edit-icon.png"/></a>
-                else 
-                ()
+                else ()
+            else ()
             }
             </td>
-            <td class="text-n">{if ($text-number) then 'inscription ' else ()} {$text-number}</td>
+            <td class="text-n">{if ($text-number) then 'Inscription ' else ()} {$text-number}</td>
             <!--there are no types and subtypes if the hit is on the title.-->
             <td class="hit-type">{$type}{if ($type and $subtype) then "/" else ()}{$subtype}</td>
         </tr>,

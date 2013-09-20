@@ -169,7 +169,7 @@ blockquote p { padding: 0 0 10px; }
 
 /* ---------------------------------------- Local styles ----------------------------------- */
 form { 
-    margin: 20px 0; 
+    margin: 25px 0; 
     }
 .item { 
     background: #FFFFFF;
@@ -481,7 +481,7 @@ form {
 }
 
 .row {
-    margin-top:250px;
+    margin-top:50px;
     
 }
 
