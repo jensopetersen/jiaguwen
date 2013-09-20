@@ -1,14 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <repo:meta xmlns="http://exist-db.org/xquery/repo" xmlns:repo="http://exist-db.org/xquery/repo">
     <repo:description>TLS</repo:description>
-    <repo:author/>
+    <repo:author>Wolfgang Meier</repo:author>
+    <repo:author>Jens Østergaard Petersen</repo:author>
     <repo:website/>
     <repo:status>alpha</repo:status>
     <repo:license>GNU-LGPL</repo:license>
     <repo:copyright>true</repo:copyright>
     <repo:type>application</repo:type>
-    <repo:target>/db/tls</repo:target>
+    <repo:target>tls</repo:target>
     <repo:prepare>pre-install.xql</repo:prepare>
     <repo:finish>post-install.xql</repo:finish>
-    <deployed>2012-09-17T15:01:37.43+02:00</deployed>
+    <deployed/>
 </repo:meta>

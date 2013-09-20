@@ -6,6 +6,8 @@ declare default element namespace "http://www.w3.org/1999/xhtml";
 declare namespace tei="http://www.tei-c.org/ns/1.0";
 declare namespace xmldb="http://exist-db.org/xquery/xmldb";
 
+import module namespace login="http://exist-db.org/xquery/app/wiki/session" at "login.xql";
+
 declare function tei2html:main($content as node()*) as item()* {
     for $node in $content/node()
     return 
@@ -109,12 +111,19 @@ declare function tei2html:text($node as element(tei:text)) as element()? {
         let $doc := $node/ancestor-or-self::tei:TEI
         let $doc-id := $doc/@xml:id
         let $text-n := $node/@n/string()
+        let $loggedIn := login:set-user("org.exist.login", ())
+        let $loggedIn := ''
         return
         if (($node/parent::tei:group) and ($node/child::tei:group))
         then
-            <div class="middle">
-                
-                <h3><a href="edit.html?doc-id={$doc-id}&amp;text-number={string($text-n)}"><img src="resources/images/page-edit-icon.png"/></a> inscription {$text-n}</h3>
+            <div class="middle" id="{$text-n}">
+                <h3>
+                {if ($loggedIn) 
+                    then 
+                    <a href="edit.html?doc-id={$doc-id}&amp;text-number={string($text-n)}"><img src="resources/images/page-edit-icon.png"/></a>
+                    else ()}
+                    Inscription {$text-n}
+                </h3>
                 <div class="text-output">
                 {
                 if (exists($node/tei:group/tei:text[@subtype eq 'Takashima'])) 

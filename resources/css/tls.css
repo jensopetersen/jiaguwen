@@ -13,7 +13,32 @@
 /* ---------------------------------------- LAYOUT ---------------------------------------- */
 
 body { font: 12px/20px Verdana, Arial, Helvetica, sans-serif; color: #222; /*background: url(../images/body.gif) repeat 50% 100%; */}
+/*new rules start*/
+.input-append .add-on, .input-append .btn {margin-left: 4px;}
 
+.bone-image {
+    position:absolute;
+    right: 0;
+    width:20em;
+    margin-right:325px;
+    margin-top:-200px;
+
+}
+.subtitle {margin-left:5px;}
+.bone-image img {
+    width:200px;
+}
+
+.bone-text {
+    1position:absolute;
+    left: 0;
+    width:0em;
+    
+}
+
+#header ul, #footer ul { float: left; width: 640px; margin: 10px 0 0 2px; }
+
+/*new rules end*/
 #grey-top { background: #fafafa /*url(../images/horizontal.gif) repeat-x 50% 0*/; float: left; width: 100%; height: 100%; }
 #grey-bot { /*background: url(../images/body-base.gif) repeat-x 50% 100%; */float: left; width: 100%; height: 100%; }
 
@@ -84,10 +109,10 @@ body { font: 12px/20px Verdana, Arial, Helvetica, sans-serif; color: #222; /*bac
 
 #footer { clear: both; width: 960px; margin: 0 auto; height: 50px; }
 
-#header ul, #footer ul { float: left; width: 640px; margin: 0 0 0 -4px; }
+
 #header ul li, #footer ul li { display: inline; }
 #header ul li a, #footer ul li a { padding: 2px 4px; /*color: #4d4d4d;*/ }
-#header ul { float: right; text-align: right;}
+/*#header ul { float: right; text-align: right;}*/
 /*#footer ul li a:hover { background: #333; }*/
 
 #copyright { float: right; width: 220px; }
@@ -234,7 +259,7 @@ table {
 }
 
 .hit-count {
-    margin-top:7em;
+    margin-top:3em;
 }
 
 .hit-number {
@@ -357,6 +382,7 @@ fieldset .title{
     font-size:100%;
     font-weight:100;
     color:gray;
+    width:10em;
 }
 
 .middle img {    
@@ -393,15 +419,6 @@ fieldset .title{
     margin:0;
     }
 
-.bone-image {
-    float:right;
-    margin-right:350px;
-    margin-top:-100px;
-}
-
-.bone-image img {
-    width:200px;
-}
 
 .page-controls {
     display:block

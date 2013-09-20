@@ -14,6 +14,7 @@ declare variable $templates:CONFIGURATION := QName("http://exist-db.org/xquery/t
 
 declare variable $templates:NOT_FOUND := QName("http://exist-db.org/xquery/templates", "NotFound");
 declare variable $templates:TOO_MANY_ARGS := QName("http://exist-db.org/xquery/templates", "TooManyArguments");
+declare variable $templates:TYPE_ERROR := QName("http://exist-db.org/xquery/templates", "TypeError");
 
 (:~
  : Start processing the provided content. Template functions are looked up by calling the
@@ -175,7 +176,7 @@ declare %private function templates:map-argument($arg as element(argument), $par
             templates:cast($param, $type)
         } catch * {
             error($templates:TYPE_ERROR, "Failed to cast parameter value '" || $param || "' to the required target type for " ||
-                "template function parameter $" || $name || " of function " || ($arg/../@name) || ". Required type was: " ||
+                "template function parameter $" || $var || " of function " || ($arg/../@name) || ". Required type was: " ||
                 $type || ". " || $err:description)
         }
     return
