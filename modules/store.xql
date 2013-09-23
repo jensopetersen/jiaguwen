@@ -35,7 +35,7 @@ declare function local:replace($doc as element(), $text-n as xs:integer, $type a
 };
 
 let $id := request:get-parameter("id", ())
-let $doc := collection("/db/tls-data/BB")/(id($id))
+let $doc := collection("/db/jiaguwen-data/BB")/(id($id))
 let $data := util:parse-html(request:get-parameter("data", ()))/*
 let $type := request:get-parameter("type", ())
 let $text-n := request:get-parameter("line", "3")

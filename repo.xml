@@ -1,5 +1,5 @@
 <repo:meta xmlns="http://exist-db.org/xquery/repo" xmlns:repo="http://exist-db.org/xquery/repo">
-    <repo:description>TLS</repo:description>
+    <repo:description>Jiaguwen</repo:description>
     <repo:author>Wolfgang Meier</repo:author>
     <repo:author>Jens Østergaard Petersen</repo:author>
     <repo:website/>
@@ -7,7 +7,7 @@
     <repo:license>GNU-LGPL</repo:license>
     <repo:copyright>true</repo:copyright>
     <repo:type>application</repo:type>
-    <repo:target>tls</repo:target>
+    <repo:target>jiaguwen</repo:target>
     <repo:prepare>pre-install.xql</repo:prepare>
     <repo:finish>post-install.xql</repo:finish>
     <deployed/>

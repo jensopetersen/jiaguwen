@@ -19,24 +19,24 @@ declare variable $tls-admin-user := "tls-editor";
 declare variable $tls-users-group := "tls-editors";
 
 (:~ Collection names :)
-declare variable $tls-collection-name := "tls";
-declare variable $tls-data-collection-name := "tls-data";
+declare variable $jiaguwen-collection-name := "jiaguwen";
+declare variable $jiaguwen-data-collection-name := "jiaguwen-data";
 declare variable $CHANT-collection-name := "CHANT";
 declare variable $BB-collection-name := "BB";
 declare variable $Heji-image-collection-name := "Heji-images";
 
 (:~ Collection paths :)
-declare variable $tls-collection := fn:concat($db-root, "/", $tls-collection-name);
-declare variable $tls-data-collection := fn:concat($db-root, "/", $tls-data-collection-name);
-declare variable $CHANT-collection := fn:concat($tls-data-collection, "/", $CHANT-collection-name);
-declare variable $BB-collection := fn:concat($tls-data-collection, "/", $BB-collection-name, "/");
-declare variable $Heji-image-collection := fn:concat($tls-data-collection, "/", $Heji-image-collection-name, "/");
+declare variable $jiaguwen-collection := fn:concat($db-root, "/", $jiaguwen-collection-name);
+declare variable $jiaguwen-data-collection := fn:concat($db-root, "/", $jiaguwen-data-collection-name);
+declare variable $CHANT-collection := fn:concat($jiaguwen-data-collection, "/", $CHANT-collection-name);
+declare variable $BB-collection := fn:concat($jiaguwen-data-collection, "/", $BB-collection-name, "/");
+declare variable $Heji-image-collection := fn:concat($jiaguwen-data-collection, "/", $Heji-image-collection-name, "/");
 
 declare variable $local:user := "tls-editor";
 declare variable $local:group := "tls-editors";
 declare variable $local:new-permissions := "rw-rw-r--";
 declare variable $local:new-col-permissions := "rwxrwxr-x";
-declare variable $local:home-collection-path := "/db/tls-data";
+declare variable $local:home-collection-path := "/db/jiaguwen-data";
 
 declare function local:find-resources-recursive($collection-path as xs:string) {
     dbutil:scan(xs:anyURI($collection-path), function($collection, $resource) {
@@ -95,8 +95,8 @@ util:log($log-level, "Create users and groups: Done."),
 
 (: Load collection.xconf documents :)
 util:log($log-level, "Config: Loading collection configuration ..."),
-    local:mkcol($system-collection, $tls-data-collection),
-    xdb:store-files-from-pattern(fn:concat($system-collection, $tls-data-collection), $dir, "*.xconf"),
+    local:mkcol($system-collection, $jiaguwen-data-collection),
+    xdb:store-files-from-pattern(fn:concat($system-collection, $jiaguwen-data-collection), $dir, "*.xconf"),
 util:log($log-level, "Loading collection.xconf documents: Done."),
 
 (: Create data collections :)

@@ -91,7 +91,7 @@ declare function login:set-user($domain as xs:string, $maxAge as xs:dayTimeDurat
             $maxAge
     let $cookie := request:get-cookie-value($domain)
     return
-        if ($logout eq "logout") then
+        if ($logout eq "yes") then
             login:clear-credentials($cookie)
         else if ($user) then
             login:create-login-session($domain, $user, $password, $duration)

@@ -5,7 +5,7 @@ declare option exist:serialize "media-type=text/text";
 import module namespace tls="http://exist-db.org/xquery/app" at "app.xql";
 
 let $id := request:get-parameter("id", ())
-let $doc := util:expand(collection("/db/tls-data/BB")/(id($id)))
+let $doc := util:expand(collection("/db/jiaguwen-data/BB")/(id($id)))
 let $line := request:get-parameter("line", "1")
 let $type := request:get-parameter("type", ())
 let $subtype := substring-after($type, "/")

@@ -18,7 +18,7 @@ import module namespace login="http://exist-db.org/xquery/app/wiki/session" at "
  : your application, add more functions to this module.
  :)
 declare function tls:load($node as node(), $model as map(*), $doc-id as xs:string) {
-let $doc := collection("/db/tls-data")/(id($doc-id))
+let $doc := collection("/db/jiaguwen-data")/(id($doc-id))
     return
         map { "data" := $doc }
 
@@ -68,7 +68,7 @@ declare function tls:get-lines($model as element(tei:TEI), $text-number as xs:st
     let $text :=
         $model/tei:text[1]/tei:group[1]/tei:text[@n eq $text-number]/tei:group[1]/tei:text[@type eq $type][@subtype eq $subtype]
     let $text-id := $text/@xml:id/string()
-    let $doc := collection("/db/tls-data")/(id($text-id))/ancestor::tei:TEI    
+    let $doc := collection("/db/jiaguwen-data")/(id($text-id))/ancestor::tei:TEI    
     let $doc-id := $doc/@xml:id/string()
     let $editable :=  if ($host-id eq $doc-id) then "true" else "false"
     return
@@ -117,13 +117,13 @@ function tls:editor($node as node(), $model as map(*), $type as xs:string, $subt
 declare %private function tls:get-collections($collections as xs:string*) {
     for $collection in $collections
     return
-        collection("/db/tls-data/" || $collection)
+        collection("/db/jiaguwen-data/" || $collection)
 };
 
 declare 
     %templates:default("type", "text")
 function tls:search($node as node(), $model as map(*), $type as xs:string, $query as xs:string?) {
-    (:defaulting to empty here means search in everything below tls-data:)
+    (:defaulting to empty here means search in everything below jiaguwen-data:)
     let $collections := request:get-parameter("collection", '')
     let $collections := tls:get-collections($collections)
     let $result :=
@@ -156,7 +156,7 @@ function tls:display-line($node as node(), $model as map(*), $start as xs:intege
     (:let $log := util:log("DEBUG", ("##$hit-context): ", $hit-context)):)
     let $doc-id := $hit/ancestor::tei:TEI/@xml:id/string()
     (:let $log := util:log("DEBUG", ("##$doc-id): ", $doc-id)):)
-    let $editable :=  exists(collection("/db/tls-data/BB")/(id($doc-id))/@xml:id/string())
+    let $editable :=  exists(collection("/db/jiaguwen-data/BB")/(id($doc-id))/@xml:id/string())
     (:let $log := util:log("DEBUG", ("##$editable): ", $editable)):)
     let $text-number := $hit/ancestor::tei:text[2]/@n/string()
     (:let $log := util:log("DEBUG", ("##$hit-text): ", $hit/ancestor::tei:text[2])):)
@@ -222,7 +222,7 @@ function tls:hit-count($node as node(), $model as map(*)) {
 };
 
 declare function tls:link-to-home($node as node(), $model as map(*)) {
-    <a href="{request:get-context-path()}/apps/tls">{ 
+    <a href="{request:get-context-path()}/apps/jiaguwen">{ 
         $node/@* except $node/@href,
         $node/node() 
     }</a>
@@ -240,7 +240,7 @@ return
 declare 
     %templates:wrap
 function tls:display-text($node as node(), $model as map(*), $doc-id as xs:string) {
-    let $doc := collection("/db/tls-data")/(id($doc-id))
+    let $doc := collection("/db/jiaguwen-data")/(id($doc-id))
     let $doc := util:expand($doc)
     (:let $log := util:log("DEBUG", ("##$doc): ", $doc)):)
     return
@@ -250,11 +250,11 @@ function tls:display-text($node as node(), $model as map(*), $doc-id as xs:strin
 declare 
     %templates:wrap
 function tls:display-image($node as node(), $model as map(*), $doc-id as xs:string) {
-    let $doc := collection("/db/tls-data")/(id($doc-id))
+    let $doc := collection("/db/jiaguwen-data")/(id($doc-id))
     let $doc := util:expand($doc)
     let $image := $doc/tei:text/@facs/string()
     let $image-dir := substring($image, 1, 2)
-    let $image := ('../tls-data/Heji-images/' || $image-dir || "/" || $image)
+    let $image := ('../jiaguwen-data/Heji-images/' || $image-dir || "/" || $image)
     (:let $log := util:log("DEBUG", ("##$image): ", $image)):)
 
     return
@@ -262,4 +262,21 @@ function tls:display-image($node as node(), $model as map(*), $doc-id as xs:stri
             rel="zoomWidth: 400">
             <img src="{$image}" alt="" title="" />
         </a>
+};
+
+declare 
+    %templates:wrap
+function tls:logon-link($node as node(), $model as map(*)) {
+    let $loggedIn := login:set-user("org.exist.login", ())
+    return
+    if ($loggedIn) then
+    
+        <li><a href="search.html?logout=yes">
+            Log Out
+            {login:set-user("org.exist.login", ())}
+        </a></li>
+        else
+        <li><a href="index.html">
+            Log In
+        </a></li>
 };

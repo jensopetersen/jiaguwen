@@ -2,4 +2,4 @@ xquery version "1.0";
 
 import module namespace xdb="http://exist-db.org/xquery/xmldb";
 
-xmldb:remove("/db/apps/tls/data")
+xmldb:remove("/db/apps/jiaguwen/data")

@@ -10,9 +10,9 @@ if ($exist:path eq '') then
             <redirect url="{concat(request:get-uri(), '/')}"/>
         </dispatch>
 else if ($exist:path = ("/", "")) then
-    (: forward root path to index.xql :)
+    (: forward root path to search.html :)
     <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
-        <redirect url="index.html"/>
+        <redirect url="search.html"/>
     </dispatch>
 else if (ends-with($exist:resource, ".html")) then
     let $loggedIn := login:set-user("org.exist.login", ())
@@ -22,25 +22,20 @@ else if (ends-with($exist:resource, ".html")) then
             <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
                 <view>
                     <forward url="modules/view.xql">
-                    {login:set-user("org.exist.login", ())}
+                        {login:set-user("org.exist.login", ())}
                     </forward>
                 </view>
             </dispatch>
         else
             <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
-                <forward url="index.html"/>
+                <!--<forward url="index.html"/>-->
+                <!--uncomment if users are required to log in-->
                 <view>
                     <forward url="modules/view.xql">
                     {login:set-user("org.exist.login", ())}
                     </forward>
                 </view>
             </dispatch>
-(: paths starting with /libs/ will be loaded from the webapp directory on the file system :)
-else if (starts-with($exist:path, "/libs/")) then
-    <dispatch xmlns="http://exist.sourceforge.net/NS/exist">
-        <forward url="/{substring-after($exist:path, 'libs/')}" absolute="yes"/>
-    </dispatch>
-
     
 else
     (: everything else is passed through :)
