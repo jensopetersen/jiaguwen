@@ -13,7 +13,25 @@
 /* ---------------------------------------- LAYOUT ---------------------------------------- */
 
 body { font: 12px/20px Verdana, Arial, Helvetica, sans-serif; color: #222; /*background: url(../images/body.gif) repeat 50% 100%; */}
+
 /*new rules start*/
+
+html {
+    background-color: #FAFAFA;
+    }
+
+.about {
+    margin-left:10px !important;
+}
+.title {
+    margin-left:-1px;
+}
+
+p {
+    color:#656565;
+    font-size:1.2em;
+}
+
 .input-append .add-on, .input-append .btn {margin-left: 4px;}
 
 .bone-image {
@@ -24,21 +42,31 @@ body { font: 12px/20px Verdana, Arial, Helvetica, sans-serif; color: #222; /*bac
     margin-top:-200px;
 
 }
+
 .subtitle {margin-left:5px;}
+
 .bone-image img {
     width:200px;
 }
 
 .bone-text {
-    1position:absolute;
     left: 0;
     width:0em;
     
 }
 
-#header ul, #footer ul { float: left; width: 640px; margin: 10px 0 0 2px; }
+#header ul, #footer ul { 
+    float: left; 
+    width: 640px; 
+    margin: 10px 0 0 1px; 
+    }
+
+.login {
+    margin-top:3em;
+    }
 
 /*new rules end*/
+
 #grey-top { background: #fafafa /*url(../images/horizontal.gif) repeat-x 50% 0*/; float: left; width: 100%; height: 100%; }
 #grey-bot { /*background: url(../images/body-base.gif) repeat-x 50% 100%; */float: left; width: 100%; height: 100%; }
 
@@ -132,7 +160,16 @@ body { font: 12px/20px Verdana, Arial, Helvetica, sans-serif; color: #222; /*bac
 
 p { padding: 5px 0; }
 
-h1 { font-size: 16px; padding: 0px 0 5px; margin: 0; font-weight: bold; font-family: "Century Gothic", Verdana, Helvetica, sans-serif; letter-spacing: 1px; }
+h1 { 
+    color: gray; 
+    font-size: 16px; 
+    padding: 0px 0 5px; 
+    margin: 15px 0 0 0; 
+    font-weight: bold; 
+    font-family: "Century Gothic", 
+    Verdana, Helvetica, sans-serif; 
+    letter-spacing: 1px; 
+    }
 h2 { font-size: 1.2em; padding: 10px 0; font-weight: bold; font-family: "Century Gothic", Verdana, Helvetica, sans-serif; letter-spacing: 1px; }
 h3 { font-size: 1.2em; padding: 10px 0 5px; margin: 0 0 5px; font-weight: bold; border-top: 1px solid gray; }
 h4 { font-size: 1.1em; padding: 10px 0; font-weight: bold; }
@@ -169,7 +206,7 @@ blockquote p { padding: 0 0 10px; }
 
 /* ---------------------------------------- Local styles ----------------------------------- */
 form { 
-    margin: 25px 0; 
+    margin: 0; 
     }
 .item { 
     background: #FFFFFF;
@@ -354,7 +391,8 @@ fieldset .title{
     width:250px;
     font-size:125%;
     margin-top:.3em;
-    color:gray;    
+    color:gray;
+    margin-left:-1px;    
 }
 #edit .line {
     position: absolute;
@@ -375,7 +413,7 @@ fieldset .title{
 
 .middle {    
     clear:both;
-    padding-top: 1em;
+    padding-top: 3em;
     }
 
 .middle h3 {
