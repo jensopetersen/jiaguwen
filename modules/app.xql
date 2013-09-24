@@ -250,11 +250,14 @@ function tls:display-text($node as node(), $model as map(*), $doc-id as xs:strin
 declare 
     %templates:wrap
 function tls:display-image($node as node(), $model as map(*), $doc-id as xs:string) {
+    let $uri := request:get-url()
+    let $uri := substring-before($uri, '/apps/')
+    let $uri := concat($uri, '/rest/db/jiaguwen-data/Heji-images/')
     let $doc := collection("/db/jiaguwen-data")/(id($doc-id))
     let $doc := util:expand($doc)
     let $image := $doc/tei:text/@facs/string()
     let $image-dir := substring($image, 1, 2)
-    let $image := ('../jiaguwen-data/Heji-images/' || $image-dir || "/" || $image)
+    let $image := concat($uri, $image-dir, "/", $image)
     (:let $log := util:log("DEBUG", ("##$image): ", $image)):)
 
     return
