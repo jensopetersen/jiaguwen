@@ -23,6 +23,7 @@ html {
 .about {
     margin-left:10px !important;
 }
+
 .title {
     margin-left:-1px;
 }
@@ -38,12 +39,10 @@ p {
     position:absolute;
     right: 0;
     width:20em;
-    margin-right:325px;
+    margin-right:535px;
     margin-top:-200px;
 
 }
-
-.subtitle {margin-left:5px;}
 
 .bone-image img {
     width:200px;
@@ -109,7 +108,7 @@ p {
 /* ---------------------------------------- INDEX ---------------------------------------- */
 
 
-#content { padding: 0 10px; }
+#content { padding: 10.5em 10px; }
 
 #right { width: 240px; float: right; background: url(../images/grey-box-rpt.gif) repeat-y;  }
 #r-top { width: 240px; float: right; background: url(../images/grey-box-top.gif) no-repeat;  }
@@ -149,7 +148,10 @@ p {
 
 /* ---------------------------------------- TYPE ---------------------------------------- */
 
-#main ul { padding: 0 10px; }
+#main ul {
+    padding: 1.5em 10px;
+    color: gray;
+}
 #main ul li { list-style-type: none; padding: 0 5px; margin: 5px 20px; }
 #main ul li ul li { list-style-type: circle; padding: 0 5px; margin: 5px 20px; }
 
@@ -468,7 +470,8 @@ fieldset .title{
 
 #header .main-title {
     color:#5db0e6;
-    font-size:275%;
+    font-size:230%;
+    1font-weight: bold;
     margin-top: 1em;
     }
     
@@ -476,6 +479,14 @@ fieldset .title{
     color:#5db0e6;
     font-size:150%;
     margin-top: 1em;
+    margin-left:4px;
+    }
+
+#header .subsubtitle {
+    color:#5db0e6;
+    font-size:110%;
+    margin-top: .5em;
+    margin-left:4px;
     }
 
 #header img {
@@ -519,7 +530,7 @@ form {
 }
 
 .row {
-    margin-top:50px;
+    margin-top:10em;
     
 }
 
